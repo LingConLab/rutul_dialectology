@@ -1,0 +1,13 @@
+---
+title: "About"
+link-citations: true
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+    include:
+      in_header: ./html/header_about.html
+---
+ 
+This is a website for Rutul atlas.
