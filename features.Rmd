@@ -10,7 +10,7 @@ library(tidyverse)
 library(DT)
 
 # table with features
-db <- readxl::read_xlsx("data/database.xlsx")
+db <- read_csv("data/database.csv")
 
 db$feature_id_0 <- sprintf(paste0("%0", nchar(max(db$feature_id))+1, "d_"), 
                          db$feature_id)
