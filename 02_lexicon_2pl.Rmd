@@ -61,5 +61,4 @@ db %>%
                    paginate = TRUE))
 ```
 
-## Reference {-}
 

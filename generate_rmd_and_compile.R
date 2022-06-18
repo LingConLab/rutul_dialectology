@@ -23,6 +23,8 @@ db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id))+1, "d_"),
                      db$filename,
                      ".Rmd")
 
+file.remove(unique(db$filename))
+
 options(ymlthis.rmd_body = "
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
@@ -74,7 +76,7 @@ db %>%
                    paginate = TRUE))
 ```
 
-## Reference {-}\n")
+PUT_REFERENCE_TITLE_HERE")
 
 db %>% 
   distinct(feature_id, feature_title, feature_description, collected, 
@@ -115,12 +117,21 @@ map(rmd_creation$feature_id, function(i){
                 "PUT_FEATURE_DESCRIPTION_HERE", 
                 as.character(rmd_creation$feature_description[i]))
   # remove references
-  if(!str_detect(rmd_creation$feature_description[1], "\\@")){
-    t[str_which(t, "PUT_FEATURE_DESCRIPTION_HERE")] <- 
-      str_replace(t[str_which(t, "PUT_FEATURE_DESCRIPTION_HERE")],
-                  "## Reference \\{-\\}",
+  if(!str_detect(rmd_creation$feature_description[i], "\\@")){
+    t[str_which(t, "PUT_REFERENCE_TITLE_HERE")] <- 
+      str_replace(t[str_which(t, "PUT_REFERENCE_TITLE_HERE")],
+                  "PUT_REFERENCE_TITLE_HERE",
                   "")
+  } else {
+    t[str_which(t, "PUT_REFERENCE_TITLE_HERE")] <- 
+      str_replace(t[str_which(t, "PUT_REFERENCE_TITLE_HERE")],
+                  "PUT_REFERENCE_TITLE_HERE",
+                  "## Reference \\{-\\}")
   }
   write_lines(t, rmd_creation$filename[i])
 })
+
+# RENDER ------------------------------------------------------------------
+rmarkdown::render_site()
+
 
