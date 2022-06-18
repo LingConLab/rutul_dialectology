@@ -1,0 +1,34 @@
+---
+title: "Features"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, echo=FALSE, message = FALSE}
+library(tidyverse)
+library(DT)
+
+# table with features
+db <- readxl::read_xlsx("data/database.xlsx")
+
+db$feature_id_0 <- sprintf(paste0("%0", nchar(max(db$feature_id))+1, "d_"), 
+                         db$feature_id)
+
+db %>% 
+  mutate(feature_title = str_c("<a href='",
+                         str_c(feature_id_0, filename),
+                         ".html'>",
+                         feature_title,
+                         "</a>")) %>% 
+  select(feature_title, collected, area) %>% 
+  rename(feature = feature_title) %>% 
+  mutate(area = factor(area)) %>% 
+  distinct() %>% 
+  DT::datatable(filter = 'top', 
+                escape = FALSE,
+                rownames = FALSE,
+                options = list(pageLength = 150, 
+                               autoWidth = TRUE,
+                               dom = 'fltpi'))
+```

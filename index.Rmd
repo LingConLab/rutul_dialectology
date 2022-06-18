@@ -1,0 +1,6 @@
+---
+title: "Atlas of Rutul dialects"
+output: html_document
+---
+
+Here will be short text about the project.
