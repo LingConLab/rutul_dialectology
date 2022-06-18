@@ -16,7 +16,8 @@ test_that("Test that there are correct village names", {
   
   if(length(bad_villages) != 0){
     observed <- str_c("There are wrong village names: ", bad_villages)
+  } else {
+    observed <- ""
   }
-  
   expect_equal(observed, "")
 })
