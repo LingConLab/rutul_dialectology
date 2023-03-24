@@ -8,6 +8,6 @@ df %>%
          feature_id = as.double(factor(feature_title)),
          compiled = "Asya Alekseeva") %>% 
   select(feature_id, feature_title, feature_description, compiled, updated_day, 
-         updated_month, updated_year, domain, settlement, speaker_code, value, stimuli, raw_data) %>% 
+         updated_month, updated_year, domain, settlement, value, stimuli, raw_data) %>% 
   rename(answer = raw_data) %>% 
   write_csv("data/database.csv", na = "")
