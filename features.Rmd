@@ -17,13 +17,14 @@ db$feature_id_0 <- sprintf(paste0("%0", nchar(max(db$feature_id))+1, "d_"),
 
 db %>% 
   mutate(feature_title = str_c("<a href='",
-                         str_c(feature_id_0, filename),
+                         str_c(feature_id_0, 
+                               str_replace_all(db$feature_title, "[\\s:\\.]", "_")),
                          ".html'>",
                          feature_title,
                          "</a>")) %>% 
-  select(feature_title, collected, area) %>% 
+  select(feature_title, compiled, domain) %>% 
   rename(feature = feature_title) %>% 
-  mutate(area = factor(area)) %>% 
+  mutate(domain = factor(domain)) %>% 
   distinct() %>% 
   DT::datatable(filter = 'top', 
                 escape = FALSE,
