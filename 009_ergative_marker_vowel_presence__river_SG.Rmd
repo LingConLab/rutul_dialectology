@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv')  %>% filter(feature_id == 14)
+db <- read_csv('data/database.csv')  %>% filter(feature_id == 9)
 villages <- read_csv('data/villages.csv')
 db %>% 
   distinct(settlement, value) %>% 

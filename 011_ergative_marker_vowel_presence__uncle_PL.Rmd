@@ -1,5 +1,5 @@
 ---
-title: 'ergative marker vowel presence: fish.SG'
+title: 'ergative marker vowel presence: uncle.PL'
 author: Asya Alekseeva
 date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
 output:
@@ -24,7 +24,7 @@ db %>%
   for_map
 ```
 
-Is vowel present in ergative marker in fish.SG? Is it -ara or -ar, -a or -∅?
+Is vowel present in ergative marker in uncle.PL? Is it -ara or -ar, -a or -∅?
 
 ## Map
 

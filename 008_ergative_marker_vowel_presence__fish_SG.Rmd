@@ -1,5 +1,5 @@
 ---
-title: 'ergative marker vowel presence: uncle.PL'
+title: 'ergative marker vowel presence: fish.SG'
 author: Asya Alekseeva
 date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
 output:
@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv')  %>% filter(feature_id == 17)
+db <- read_csv('data/database.csv')  %>% filter(feature_id == 8)
 villages <- read_csv('data/villages.csv')
 db %>% 
   distinct(settlement, value) %>% 
@@ -24,7 +24,7 @@ db %>%
   for_map
 ```
 
-Is vowel present in ergative marker in uncle.PL? Is it -ara or -ar, -a or -∅?
+Is vowel present in ergative marker in fish.SG? Is it -ara or -ar, -a or -∅?
 
 ## Map
 

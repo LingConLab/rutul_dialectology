@@ -119,5 +119,3 @@ map(rmd_creation$feature_id, function(i){
 
 # RENDER ------------------------------------------------------------------
 rmarkdown::render_site()
-
-
