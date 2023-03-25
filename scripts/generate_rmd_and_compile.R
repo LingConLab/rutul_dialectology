@@ -14,7 +14,7 @@ if(length(to_install) > 0){
 # GENERATE RMD ------------------------------------------------------------
 library(tidyverse)
 
-db <- read_csv("data/database.csv")
+db <- read_csv("data/database.csv") %>% filter(!is.na(value))
 
 # create variable with leading 0 -------------------------------------------
 # remove +1 when we will have more then 100 topics
