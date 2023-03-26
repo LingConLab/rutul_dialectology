@@ -4,4 +4,5 @@
 .RData
 .Ruserdata
 *.~lock.*
-data/ergative.csv
+data/ergative_asya.csv
+data/phonetiics_nikita.csv

@@ -20,7 +20,7 @@ db <- read_csv("data/database.csv") %>% filter(!is.na(value))
 # remove +1 when we will have more then 100 topics
 db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id))+1, "d_"), 
                            db$feature_id),
-                     str_replace_all(db$feature_title, "[\\s:\\.]", "_"),
+                     str_replace_all(db$feature_title, "[\\s:\\./]", "_"),
                      ".Rmd")
 
 file.remove(unique(db$filename))
