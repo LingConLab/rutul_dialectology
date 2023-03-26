@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Nikita Beklemishev" />
+
+
+<title>Change of a to o before labialized — nettle</title>
+
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.1.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.1.2/leaflet-providers-plugin.js"></script>
+<link href="site_libs/minichart-0.2.2/minicharts.css" rel="stylesheet" />
+<script src="site_libs/minichart-0.2.2/leaflet.minicharts.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.27/datatables.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.12.1/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.12.1/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.12.1/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.12.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.12.1/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.12.1/js/buttons.print.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Rutul atlas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="./about.html">About</a>
+</li>
+<li>
+  <a href="./features.html">
+    <span class="fa fa-atlas"></span>
+     
+    Features
+  </a>
+</li>
+<li>
+  <a href="./team.html">Team</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Change of a to o before labialized —
+nettle</h1>
+<h4 class="author">Nikita Beklemishev</h4>
+<h4 class="date">Last update: 2023-03-25</h4>
+
+</div>
+
+
+<p>In a simple rule, some dialects are expected to have an a &gt; o /
+_[+cons, +round] phonetic alternation or sound change. By this rule, /a/
+is rounded before a labialized consonant. In practice, we diagnose this
+by asking for cognates of two Kina word forms (which find a cognate in
+most dialects): /ʁagʷas/ ‘to see’ and /maɢːʷal/ ‘nettle’. The sounds in
+check (preliminary values) are the vowels in the first syllable and one
+the consonantal segment after it. In final values, values aw / äCʷ / eCʷ
+/ and absence (-) are grouped together as not matching the sample,
+marked as NA, values agʷ / aɢʷ / aɢːʷ / aqʷ are grouped together as
+having the sound [a], and values ogʷ / oɢʷ as having [o]. It’s important
+to note that I don’t know enough to interpret the phonological nature of
+the combinations. I consider only labialization on a surface level:
+regardless of whether it is intrinsic or due to proximity to a rounded
+vowel. Same applies for o ~ a: we can’t say don’t care whether the
+distinction has been phonologised or it is a surface-level
+alternation.</p>
+<div id="map" class="section level1 hasAnchor" number="1">
+<h1 class="hasAnchor"><span class="header-section-number">1</span> Map<a
+href="#map" class="anchor-section"
+aria-label="Anchor link to header"></a></h1>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-244aaddf2639520a3f5a" style="width:912px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-244aaddf2639520a3f5a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false},"calls":[{"method":"addTiles","args":["OpenStreetMap.Mapnik",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,"OpenStreetMap.Mapnik",{"errorTileUrl":"","noWrap":false,"opacity":1,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[41.6166,41.60988,41.68,41.693931,41.65545,41.378607,41.53146,41.577819,41.618658,41.60348,41.5342,41.564115],[47.2647,47.307307,47.29,47.210005,47.26768,47.443605,47.48171,47.3499843,47.375666,47.33116,47.4269,47.376937],3,null,["","","","","","","","","","","",""],{"interactive":true,"className":"","stroke":false,"color":["#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4","#1f77b4"],"fillOpacity":0},null,null,["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 0<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 0<br> NA: 0<br> ogʷ / oɢʷ: 1<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 1<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],null,["Kina","Luchek","Myukhrek","Ikhrek","Dzhilikhur","Khnov","Kiche","Kala","Shinaz","Amsar","Rutul","Kufa"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"15px","font-family":"sans-serif"},"className":"","sticky":true},null]},{"method":"addMinicharts","args":[[{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.210005,41.693931)","lat":41.693931,"lng":47.210005},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.2647,41.6166)","lat":41.6166,"lng":47.2647},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.26768,41.65545)","lat":41.65545,"lng":47.26768},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.29,41.68)","lat":41.68,"lng":47.29},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.307307,41.60988)","lat":41.60988,"lng":47.307307},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.33116,41.60348)","lat":41.60348,"lng":47.33116},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.3499843,41.577819)","lat":41.577819,"lng":47.3499843},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.375666,41.618658)","lat":41.618658,"lng":47.375666},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.376937,41.564115)","lat":41.564115,"lng":47.376937},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.4269,41.5342)","lat":41.5342,"lng":47.4269},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.443605,41.378607)","lat":41.378607,"lng":47.443605},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#1f77b4","layerId":"_minichart (47.48171,41.53146)","lat":41.53146,"lng":47.48171},"timeSteps":1}],[[[1,1,0,0]],[[1,0,0,0]],[[0,1,0,0]],[[1,0,0,0]],[[1,1,0,0]],[[1,0,0,0]],[[1,0,0,0]],[[1,0,0,0]],[[1,0,0,0]],[[1,0,0,0]],[[0,0,1,0]],[[1,0,0,1]]],1,["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#17becf","cyan4","lightslateblue","darkseagreen2","peachpuff2","lightsalmon3","lavenderblush3","yellowgreen","lemonchiffon4","turquoise","burlywood4","firebrick2","magenta2","honeydew4","brown4","thistle3","violetred3","springgreen","honeydew3","aquamarine4","orchid4","seagreen","thistle4","violetred4","lightyellow","lightcyan3","tan2","yellow","wheat","olivedrab","aquamarine3","papayawhip","palegreen2","rosybrown","indianred4","seagreen4","lightblue2","aquamarine2","sandybrown","mediumvioletred","lightgoldenrod","coral4","tomato4","chocolate","green2","yellow2","tan3","lightsteelblue4","darkseagreen4","seashell3","chocolate3","paleturquoise4","blueviolet","paleturquoise3","rosybrown4","khaki4","springgreen3","deepskyblue3","violetred","lightskyblue","darkkhaki","goldenrod3","firebrick4","mediumpurple4","darkgoldenrod3","deepskyblue4","chartreuse4","orangered4","rosybrown2","darkolivegreen2","chartreuse","deepskyblue2","honeydew2","orange","lavenderblush2","dodgerblue2","lemonchiffon2","maroon4","snow4","indianred2","darksalmon","royalblue3","mediumslateblue","magenta3","aliceblue","lightgoldenrod4","orangered2","lightcoral","sienna","darkgoldenrod4","lightsalmon","paleturquoise","cornsilk2","cornsilk","slateblue2","gold4","mediumturquoise","skyblue4","cadetblue","khaki","mistyrose3","salmon2","royalblue2","blue3","indianred","beige","mediumorchid2","peachpuff3","mistyrose2","violetred2","salmon","indianred3","orchid2","chartreuse3","limegreen","gold","palegreen3","coral2","gold2","orangered","dodgerblue","blue4","chocolate2","maroon3","mintcream","blue","wheat2","lightsteelblue","cornflowerblue","darkorange4","darkgreen","lightskyblue4","goldenrod","palevioletred2","forestgreen","honeydew","darkolivegreen3","peachpuff4","orangered3","lawngreen","orange3","sienna2","lightsteelblue2","snow3","cadetblue4","seashell4","coral","mediumpurple","orchid","snow","skyblue","darkturquoise","mediumspringgreen","lightsteelblue3","wheat4","steelblue4","lemonchiffon3","orchid3","palegreen","paleturquoise2","cadetblue3","chartreuse2","seagreen2","darkseagreen3","lightsalmon2","darkolivegreen4","blue2","steelblue2","mediumseagreen","darkorange","wheat3","palevioletred4","khaki2","purple","palevioletred3","mediumorchid4","aquamarine","thistle2","tomato3","springgreen2","mediumpurple2","oldlace","darkcyan","turquoise2","cyan2","sienna4","bisque4","lightgoldenrodyellow","seashell2","tan4","gainsboro","seagreen3","plum2","turquoise3","deepskyblue","mediumorchid3","firebrick","purple2","lightskyblue2","green","linen","green4","burlywood2","cadetblue2","salmon4","khaki3","lightblue","plum","springgreen4","darkmagenta","cornsilk4","steelblue3","rosybrown3","darkviolet","saddlebrown","olivedrab3","thistle","magenta4","darkorange3","maroon2","lightskyblue3","blanchedalmond","lightblue4","brown2","steelblue","peachpuff","chocolate4","violet","royalblue","lavenderblush4","darkred","lightyellow4","mediumaquamarine","dodgerblue3","plum4","moccasin","lightyellow2","orange4","darkseagreen","burlywood3","red3","brown3","mediumorchid","gold3","mediumblue","darkolivegreen","lightyellow3","skyblue3","burlywood","darkorchid4","lightcyan4","yellow4","bisque","green3","lightgoldenrod3","darkgoldenrod2","lightgoldenrod2","lightcyan2","skyblue2","lavenderblush","seashell","lightsalmon4","red4","greenyellow","firebrick3","cyan","magenta","palegoldenrod","sienna3","lightblue3","tomato","palevioletred","salmon3","dodgerblue4","purple3","slateblue4","darkorchid2","goldenrod2","peru","purple4","darkgoldenrod","mediumpurple3","darkblue","lavender","darkorchid3","navyblue","red","snow2","mistyrose","midnightblue","powderblue","navy","coral3","royalblue4","lightcyan","lightseagreen","olivedrab4","cyan3","tomato2","bisque3","darkorange2","red2","lightgreen","slateblue","darkorchid","goldenrod4","olivedrab2","darkslateblue","slateblue3","palegreen4","orange2","tan","cornsilk3","yellow3","turquoise4","maroon","brown","plum3","bisque2","mistyrose4","lemonchiffon"],["1"],null,{"showTitle":true,"showValues":true,"labels":["agʷ / aɢʷ / aɢːʷ / aqʷ","NA","ogʷ / oɢʷ","agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ"],"supValues":null,"supLabels":[],"html":[["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 0<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 1<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 0<br> NA: 0<br> ogʷ / oɢʷ: 1<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>agʷ / aɢʷ / aɢːʷ / aqʷ: 1<br> NA: 0<br> ogʷ / oɢʷ: 0<br> agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ: 1<br> "]],"noPopup":false,"digits":null},null,null]},{"method":"addLegend","args":[{"colors":["#1f77b4","#ff7f0e","#2ca02c","#d62728"],"labels":["agʷ / aɢʷ / aɢːʷ / aqʷ","NA","ogʷ / oɢʷ","agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":null,"extra":null,"layerId":"minichartsLegend","className":"info legend","group":null}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]}],"limits":{"lat":[41.378607,41.693931],"lng":[47.210005,47.48171]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="data" class="section level1 hasAnchor" number="2">
+<h1 class="hasAnchor"><span class="header-section-number">2</span>
+Data<a href="#data" class="anchor-section"
+aria-label="Anchor link to header"></a></h1>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6f66dca5431bfb50b4e6" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6f66dca5431bfb50b4e6">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"data":[["Kina","Luchek","Luchek","Myukhrek","Myukhrek","Kina","Ikhrek","Ikhrek","Ikhrek","Dzhilikhur","Dzhilikhur","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kala","Kala","Shinaz","Shinaz","Amsar","Amsar","Rutul","Rutul","Kufa","Kufa"],["agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ",null,"agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ",null,"agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ",null,null,"ogʷ / oɢʷ","ogʷ / oɢʷ","ogʷ / oɢʷ","ogʷ / oɢʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ ; ogʷ / oɢʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ","agʷ / aɢʷ / aɢːʷ / aqʷ"],["мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал","мОкъал"],["maɢʷal","maɢʷul","-","maɢʷal","maɢʷal","maɢʷal","-","maɢːʷal","maɢːʷal","-","-","moɢʷal","muɢal","moɢʷal","móɢal","maɢʷal","maɢʷal [o]","maɢʷal","maɢʷal","maɢʷal","maqʷal","maɢul","maqul","maɢʷal","maɢːʷal","maɢol","maɢʷal / maɢol"],["Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev","Nikita Beklemishev"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>settlement<\/th>\n      <th>value<\/th>\n      <th>stimuli<\/th>\n      <th>answer<\/th>\n      <th>collected<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":42,"autoWidth":true,"info":false,"dom":"fBltp","buttons":[{"extend":"collection","buttons":["csv","excel","pdf"],"text":"<i class=\"fas fa-download\"><\/i>"}],"paginate":true,"columnDefs":[],"order":[],"orderClasses":false,"orderCellsTop":true,"lengthMenu":[10,25,42,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

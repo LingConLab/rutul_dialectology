@@ -1,0 +1,61 @@
+---
+title: Change of a to o before w — poison
+author: Nikita Beklemishev
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 24)`'
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+db <- read_csv('data/database.csv')  %>% filter(feature_id == 22)
+villages <- read_csv('data/villages.csv')
+db %>% 
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+```
+
+In a simple rule, some dialects are expected to have an a > o / _w phonetic alternation or sound change. By this rule, /a/ is rounded before a voiced labial approximant (or whatever its realisation is in a given utterance). In practice, we diagnose this by asking for cognates of two inter-dialectal lexemes: /ɢaw/ 'ceiling' and /awʁu/ 'poison'. For a number of dialects we also asked for the words /awči/ 'hunter' and /sawχura/ 'sleep(3ASG)' (as in 'The cow is sleeping'). The sounds in check (preliminary values) are the vowels in the first syllable before /w/. In this feature, ɨ and ə values of the correspondent vowel in these words are considered, because it is a freqent correspondence, even though it doesn't fall under the generalization of presence or abscence of a > o change. Final values are a, o and oː (from monophtongisation of ow), ɨ / ə (as non-low mid vowels), NA (when the congate wasn't attested or when it was attested, but with aː / äw / a, bleeding the a > o change).
+
+## Map
+
+```{r}
+map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            label = for_map$settlement,
+            label.position = 'top',
+            label.hide = FALSE,
+            minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3)
+```
+
+## Data
+
+```{r}
+db %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
