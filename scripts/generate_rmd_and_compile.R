@@ -8,6 +8,8 @@ if(length(to_install) > 0){
   install.packages(to_install, dependencies = TRUE)
 }
 
+rm(packages, to_install)
+
 # RUN TESTS ----------------------------------------------------------------
 # testthat::test_dir("tests")
 
@@ -30,37 +32,58 @@ options(ymlthis.rmd_body = "
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv')  %>% filter(feature_id == PUT_FEATURE_ID_HERE)
+db <- read_csv('data/database.csv') %>% filter(feature_id == PUT_FEATURE_ID_HERE)
 villages <- read_csv('data/villages.csv')
+```
+
+PUT_FEATURE_DESCRIPTION_HERE
+
+")
+
+make_section <- function(section_title){
+  glue::glue("
+## {section_title} {{.tabset .tabset-fade .tabset-pills}}
+
+### Map
+
+```{{r}}
 db %>% 
+  filter(feature_lexeme == '{section_title}')  %>%
+  filter(!is.na(value)) %>%
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
   left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
   mutate(language = 'Rutul') ->
   for_map
+  
+if(length(for_map) == 5){{
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+}} else {{
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}}
 ```
 
-PUT_FEATURE_DESCRIPTION_HERE
+### Data
 
-## Map
-
-```{r}
-map.feature(languages = for_map$language,
-            latitude = for_map$lat,
-            longitude = for_map$lon,
-            label = for_map$settlement,
-            label.position = 'top',
-            label.hide = FALSE,
-            minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
-            minichart = 'pie', 
-            width = 3)
-```
-
-## Data
-
-```{r}
+```{{r}}
 db %>% 
+  filter(feature_lexeme == '{section_title}') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -75,14 +98,17 @@ db %>%
                                        text = '<i class=\"fas fa-download\"></i>')),
                    paginate = TRUE))
 ```
+
+
 ")
+}
 
 db %>% 
   distinct(feature_id, feature_title, feature_description, compiled, 
            updated_day, updated_month, updated_year, filename) ->
   rmd_creation
 
-map(rmd_creation$feature_id, function(i){
+silence <- map(rmd_creation$feature_id, function(i){
   ymlthis::yml_empty() %>% 
     ymlthis::yml_title(rmd_creation$feature_title[i]) %>% 
     ymlthis::yml_author(rmd_creation$compiled[i]) %>% 
@@ -101,7 +127,15 @@ map(rmd_creation$feature_id, function(i){
                            open_doc = FALSE, 
                            quiet = TRUE,
                            include_body = FALSE,
-                           body = NULL) 
+                           body = NULL)
+  
+    db %>% 
+      filter(feature_id == i) %>% 
+      pull(feature_lexeme) %>% 
+      unique() %>% 
+      map(make_section) %>% 
+      write_lines(rmd_creation$filename[i], append = TRUE)
+  
   t <- read_lines(rmd_creation$filename[i])
   # change id
   t[str_which(t, "PUT_FEATURE_ID_HERE")] <- 
@@ -113,6 +147,14 @@ map(rmd_creation$feature_id, function(i){
     str_replace(t[str_which(t, "PUT_FEATURE_DESCRIPTION_HERE")], 
                 "PUT_FEATURE_DESCRIPTION_HERE", 
                 as.character(rmd_creation$feature_description[i]))
+  
+  # fix in case there is no feature_lexeme
+  t[str_which(t, "\\#\\# NA \\{\\.tabset \\.tabset-fade \\.tabset-pills\\}")] <- 
+    str_replace(t[str_which(t, "\\#\\# NA \\{\\.tabset \\.tabset-fade \\.tabset-pills\\}")], 
+                "\\#\\# NA \\{\\.tabset \\.tabset-fade \\.tabset-pills\\}", 
+                "## {.tabset .tabset-fade .tabset-pills}")
+  
+  t <- t[str_which(t, "feature_lexeme == 'NA'", negate = TRUE)]
 
   write_lines(t, rmd_creation$filename[i])
 })

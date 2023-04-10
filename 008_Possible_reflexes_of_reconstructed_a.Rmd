@@ -1,0 +1,486 @@
+---
+title: Possible reflexes of reconstructed a
+author: Nikita Beklemishev
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+db <- read_csv('data/database.csv') %>% filter(feature_id == 8)
+villages <- read_csv('data/villages.csv')
+```
+
+Reconstructed proto Rutul *a gave a lot of possible reflexes across modern dialects. According to the common assumption, different palatalisation of the neighbouring vowels resulted in different reflexes. Roughly, *CʲaC gave fronted ä and e, and reconstruted a in *CaCʲ, which we denote by /â/, can realize in a variety of centralized vowels, like ɜ, ɞ, o, ö, ɨ, aˁ, ä and a. (Please correct me, I'm talking about a rough tendency here). This is an 'umbrella-feature', documenting many inter-dialectal roots that potentially have a reflex of *a. It is meant not to check which varieties underwent a particular sound change, but to see, which groupings naturally occur on a random arbitrary set of roots. The sounds in check (preliminary values) are the first vowels in cognates of Kina words /bel/ 'forehead', /hejeg/ 'pot',  /ǯad/ 'forge', /kʼatʼ/ 'chicken', xed 'water', /čʼar/ 'a hair', /ekul/ 'nest' and /netʼ/ 'nit'. In this feature, the values ɜ / ɞ / o / ö are grouped together as realizations of /â/ (on this variation, see feature â > ö / _Cʷ), other values are presented as they are.
+
+
+## forehead {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'forehead')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'forehead') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## pot {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'pot')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'pot') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## forge {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'forge')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'forge') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## chicken {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'chicken')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'chicken') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## water {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'water')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'water') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## a hair {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'a hair')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'a hair') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## nest {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'nest')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'nest') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## nit {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'nit')  %>%
+  filter(!is.na(value)) %>%
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'nit') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
