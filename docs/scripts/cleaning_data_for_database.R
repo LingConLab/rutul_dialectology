@@ -23,7 +23,7 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
   pull(feature_id) ->
   max_id_in_db
 
-df <- read_csv("data/phonetiics_nikita.csv")
+df <- read_csv("data/phonetics_nikita.csv")
 df %>% 
   rename(feature_title = feature) %>% 
   separate(feature_title, into = c("feature_title", "feature_lexeme"), sep = " — ") %>% 
