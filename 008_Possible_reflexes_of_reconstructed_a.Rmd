@@ -1,7 +1,7 @@
 ---
 title: Possible reflexes of reconstructed a
 author: Nikita Beklemishev
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 25)`'
 output:
   html_document:
     number_sections: true
@@ -28,6 +28,8 @@ Reconstructed proto Rutul *a gave a lot of possible reflexes across modern diale
 db %>% 
   filter(feature_lexeme == 'forehead')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -86,6 +88,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'pot')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -144,6 +148,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'forge')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -202,6 +208,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'chicken')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -260,6 +268,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'water')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -318,6 +328,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'a hair')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -376,6 +388,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'nest')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -434,6 +448,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'nit')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 

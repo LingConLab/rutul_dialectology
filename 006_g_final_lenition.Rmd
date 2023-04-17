@@ -1,7 +1,7 @@
 ---
 title: g final lenition
 author: Nikita Beklemishev
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 23)`'
 output:
   html_document:
     number_sections: true
@@ -28,6 +28,8 @@ In a simple rule, some dialects are expected to have a [+velar, +high, -back, -c
 db %>% 
   filter(feature_lexeme == 'ram')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -86,6 +88,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'wild duck')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 

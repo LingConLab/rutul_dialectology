@@ -14,18 +14,20 @@ rm(packages, to_install)
 # testthat::test_dir("tests")
 
 # GENERATE RMD ------------------------------------------------------------
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 db <- read_csv("data/database.csv") %>% filter(!is.na(value))
 
 # create variable with leading 0 -------------------------------------------
 # remove +1 when we will have more then 100 topics
 db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id))+1, "d_"), 
-                           db$feature_id),
+                             db$feature_id),
                      str_replace_all(db$feature_title, "[\\s:\\./]", "_"),
                      ".Rmd")
 
-file.remove(unique(db$filename))
+to_remove <- list.files(".", pattern = ".Rmd")
+to_remove <- to_remove[!(to_remove %in% c("about.Rmd", "index.Rmd", "team.Rmd", "features.Rmd"))]
+file.remove(to_remove)
 
 options(ymlthis.rmd_body = "
 ```{r, include=FALSE}
@@ -50,6 +52,8 @@ make_section <- function(section_title){
 db %>% 
   filter(feature_lexeme == '{section_title}')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -105,36 +109,41 @@ db %>%
 
 db %>% 
   distinct(feature_id, feature_title, feature_description, compiled, 
-           updated_day, updated_month, updated_year, filename) ->
+           updated_day, updated_month, updated_year, filename, feature_lexeme) %>% 
+  count(feature_id, feature_title, feature_description, compiled, 
+        updated_day, updated_month, updated_year, filename) %>% 
+  mutate(number_section = n > 1) ->
   rmd_creation
 
+library(ymlthis)
+
 silence <- map(rmd_creation$feature_id, function(i){
-  ymlthis::yml_empty() %>% 
-    ymlthis::yml_title(rmd_creation$feature_title[i]) %>% 
-    ymlthis::yml_author(rmd_creation$compiled[i]) %>% 
-    ymlthis::yml_date(str_c('Last update: ', 
-                            '`r lubridate::make_datetime(year = ',
-                            rmd_creation$updated_year[i],
-                            ', month = ',
-                            rmd_creation$updated_month[i],
-                            ', day = ',
-                            rmd_creation$updated_day[i],
-                            ')`')) %>% 
-    ymlthis::yml_output(html_document(number_sections = TRUE,
-                                      anchor_sections = TRUE,
-                                      pandoc_args = "--shift-heading-level-by=-1")) %>% 
-    ymlthis::use_rmarkdown(path = rmd_creation$filename[i], 
-                           open_doc = FALSE, 
-                           quiet = TRUE,
-                           include_body = FALSE,
-                           body = NULL)
+  yml_empty() %>% 
+    yml_title(rmd_creation$feature_title[i]) %>% 
+    yml_author(rmd_creation$compiled[i]) %>% 
+    yml_date(str_c('Last update: ', 
+                   '`r lubridate::make_datetime(year = ',
+                   rmd_creation$updated_year[i],
+                   ', month = ',
+                   rmd_creation$updated_month[i],
+                   ', day = ',
+                   rmd_creation$updated_day[i],
+                   ')`')) %>% 
+    yml_output(html_document(number_sections = TRUE,
+                             anchor_sections = TRUE,
+                             pandoc_args = "--shift-heading-level-by=-1")) %>% 
+    use_rmarkdown(path = rmd_creation$filename[i], 
+                  open_doc = FALSE, 
+                  quiet = TRUE,
+                  include_body = FALSE,
+                  body = NULL)
   
-    db %>% 
-      filter(feature_id == i) %>% 
-      pull(feature_lexeme) %>% 
-      unique() %>% 
-      map(make_section) %>% 
-      write_lines(rmd_creation$filename[i], append = TRUE)
+  db %>% 
+    filter(feature_id == i) %>% 
+    pull(feature_lexeme) %>% 
+    unique() %>% 
+    map(make_section) %>% 
+    write_lines(rmd_creation$filename[i], append = TRUE)
   
   t <- read_lines(rmd_creation$filename[i])
   # change id
@@ -154,8 +163,16 @@ silence <- map(rmd_creation$feature_id, function(i){
                 "\\#\\# NA \\{\\.tabset \\.tabset-fade \\.tabset-pills\\}", 
                 "## {.tabset .tabset-fade .tabset-pills}")
   
+  # fix section enumiration
+  if(!rmd_creation$number_section[i]){
+    t[str_which(t, "    number_sections: true")] <- 
+      str_replace(t[str_which(t, "    number_sections: true")], 
+                  "    number_sections: true", 
+                  "    number_sections: false")
+  }
+  
   t <- t[str_which(t, "feature_lexeme == 'NA'", negate = TRUE)]
-
+  
   write_lines(t, rmd_creation$filename[i])
 })
 

@@ -20,14 +20,16 @@ villages <- read_csv('data/villages.csv')
 What type of ergative marker is attached - vowel-type (-a, -e, etc.) or r-type (-ara, -ere, etc.)?
 
 
-## fish.PL {.tabset .tabset-fade .tabset-pills}
+## uncle.SG {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'fish.PL')  %>%
+  filter(feature_lexeme == 'uncle.SG')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -61,7 +63,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'fish.PL') %>% 
+  filter(feature_lexeme == 'uncle.SG') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -78,14 +80,16 @@ db %>%
 ```
 
 
-## fish.SG {.tabset .tabset-fade .tabset-pills}
+## uncle.PL {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'fish.SG')  %>%
+  filter(feature_lexeme == 'uncle.PL')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -119,7 +123,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'fish.SG') %>% 
+  filter(feature_lexeme == 'uncle.PL') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -144,6 +148,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'river.SG')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -202,6 +208,8 @@ db %>%
 db %>% 
   filter(feature_lexeme == 'rock.PL')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -252,14 +260,16 @@ db %>%
 ```
 
 
-## uncle.PL {.tabset .tabset-fade .tabset-pills}
+## fish.SG {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'uncle.PL')  %>%
+  filter(feature_lexeme == 'fish.SG')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -293,7 +303,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'uncle.PL') %>% 
+  filter(feature_lexeme == 'fish.SG') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -310,14 +320,16 @@ db %>%
 ```
 
 
-## uncle.SG {.tabset .tabset-fade .tabset-pills}
+## fish.PL {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'uncle.SG')  %>%
+  filter(feature_lexeme == 'fish.PL')  %>%
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
@@ -351,7 +363,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'uncle.SG') %>% 
+  filter(feature_lexeme == 'fish.PL') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

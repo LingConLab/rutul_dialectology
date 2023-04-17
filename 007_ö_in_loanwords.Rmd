@@ -1,10 +1,10 @@
 ---
 title: ö in loanwords
 author: Nikita Beklemishev
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 24)`'
 output:
   html_document:
-    number_sections: true
+    number_sections: false
     anchor_sections: true
     pandoc_args: --shift-heading-level-by=-1
 ---
@@ -27,6 +27,8 @@ A sound like /ö/, namely a mid front or central rounded vowel, appears in the i
 ```{r}
 db %>% 
   filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
   distinct(settlement, value) %>% 
   mutate(n = 1) %>% 
   pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
