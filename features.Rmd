@@ -13,9 +13,6 @@ library(DT)
 db <- read_csv("data/database.csv")
 
 db %>% 
-  filter(domain == "noun")
-
-db %>% 
   mutate(feature_id_0 = sprintf(paste0("%0", nchar(max(feature_id))+1, "d_"), 
                                  db$feature_id),
          feature_title_link = str_replace_all(feature_title, "[\\s:\\.]", "_"),
