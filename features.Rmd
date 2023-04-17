@@ -12,16 +12,20 @@ library(DT)
 # table with features
 db <- read_csv("data/database.csv")
 
-db$feature_id_0 <- sprintf(paste0("%0", nchar(max(db$feature_id))+1, "d_"), 
-                         db$feature_id)
+db %>% 
+  filter(domain == "noun")
 
 db %>% 
+  mutate(feature_id_0 = sprintf(paste0("%0", nchar(max(feature_id))+1, "d_"), 
+                                 db$feature_id),
+         feature_title_link = str_replace_all(feature_title, "[\\s:\\.]", "_"),
+         feature_title_link = str_replace_all(feature_title_link, "[\\(\\)]", "-"),
+         feature_title_link = str_c(feature_id_0, feature_title_link)) %>% 
   mutate(feature_title = str_c("<a href='",
-                         str_c(feature_id_0, 
-                               str_replace_all(db$feature_title, "[\\s:\\.]", "_")),
-                         ".html'>",
-                         feature_title,
-                         "</a>")) %>% 
+                               feature_title_link,
+                               ".html'>",
+                               feature_title,
+                               "</a>")) %>% 
   select(feature_title, compiled, domain) %>% 
   rename(feature = feature_title) %>% 
   mutate(domain = factor(domain)) %>% 

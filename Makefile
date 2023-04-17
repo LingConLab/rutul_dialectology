@@ -10,6 +10,6 @@ docs/%.html: %.Rmd
 compile:
 	Rscript scripts/generate_rmd_and_compile.R
 clean:
-	rm -rf docs/data docs/html docs/tests docs/data docs/DESCRIPTION docs/LICENSE docs/Makefile
+	rm -rf docs/data docs/html docs/tests docs/data docs/DESCRIPTION docs/LICENSE docs/Makefile docs/scripts
 test:
 	R -q -e 'testthat::test_dir("tests")'
