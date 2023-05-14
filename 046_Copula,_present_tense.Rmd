@@ -1,7 +1,7 @@
 ---
 title: Copula, present tense
 author: Nastya Ivanova
-date: .na.character
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 5, day = 14)`'
 output:
   html_document:
     number_sections: true
@@ -124,6 +124,66 @@ if(length(for_map) == 5){
 ```{r}
 db %>% 
   filter(feature_lexeme == 'II class (riʔi vs. ri)') %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## III class (wiʔi vs. wi) {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'III class (wiʔi vs. wi)')  %>%
+  filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  filter(feature_lexeme == 'III class (wiʔi vs. wi)') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

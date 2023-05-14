@@ -1,5 +1,5 @@
 ---
-title: ergative marker vowel presence
+title: Ergative marker type
 author: Asya Alekseeva
 date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 21)`'
 output:
@@ -13,11 +13,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') %>% filter(feature_id == 2)
+db <- read_csv('data/database.csv') %>% filter(feature_id == 1)
 villages <- read_csv('data/villages.csv')
 ```
 
-Is vowel present in ergative marker? Is it -ara or -ar, -a or -∅?
+What type of ergative marker is attached - vowel-type (-a, -e, etc.) or r-type (-ara, -ere, etc.)?
 
 
 ## uncle.SG {.tabset .tabset-fade .tabset-pills}
