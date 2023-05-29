@@ -3,9 +3,32 @@ title: "About"
 link-citations: true
 output:
   html_document:
-    number_sections: true
+    number_sections: false
     anchor_sections: true
     pandoc_args: --shift-heading-level-by=-1
 ---
  
-Here will be a long text about the project.
+This page presents the results of a dialectological survey of twelve Rutul villages located in the Rutulsky district and Akhtynsky district of the Republic of Daghestan, Russian Federation. These settlements are Amsar, Dzhilikhur, Ikhrek, Kala, Khnov, Kiche, Kina, Kufa, Luchek, Myukhrek, Rutul, Shinaz.
+
+The [Rutul language](https://en.wikipedia.org/wiki/Rutul_language) (ISO 639–3 rut; glottocode rutu1240) belongs to the Lezgiс branch of the Nakh-Daghestanian (East Caucasian) language family. The majority of speakers (approximately 33 000, according to the [latest census](https://rosstat.gov.ru/vpn_popul) of 2020) live in Daghestan.
+
+The dialectological survey was carried out in July 2022 by a group of linguists from HSE University. Speakers of various Rutul dialects were interviewed using the same questionnaire compiled by the research team. The questionnaire was partly based on the existing descriptions (ADD REFERENCES) of the varieties of Rutul. Nevertheless, in addition to documentation and quantitative assessment of the established parameters of dialectal variation, we also aimed at identifying new, previously unreported regional variants.
+
+For each phenomenon selected for the comparison, several Russian stimuli were compiled. Translations of these sentences by two, three, or four speakers in each of the villages in the survey were recorded and transcribed. We are investigating dialectal differences at all levels of language structure, including lexicon, phonetics, morphology, and syntax. 
+
+Our aim was a systematic mapping of dialectal variation of Rutul in a set of pre-selected parameters. As expected, in many cases, variation in the realization of a phenomenon was attested. The variation could be observed not only between villages, but also between villagers (different speakers from the same village) and also at the intra-speaker level (in the data recorded from an individual speaker). Such cases are reflected on the map as circles containing sectors of different colors. The relative frequency of variations is not reflected on the maps.
+
+### Acknowledgements
+
+The authors of the project express their deep gratitude to the residents of Rutul villages for their hospitality and willingness to translate, explain, and help.
+
+### How to cite
+
+A. Alekseeva, N. Beklemishev, M. Daniel, N. Dobrushina, K. Filatov, A. Ivanova, T. Maisak, M. Melenchenko, G. Moroz, I. Netkachev, I. Sadakov. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. <https://lingconlab.github.io/rutul_dialectology/index.html>
+
+### The group of researchers
+
+See our [Team page](team.html)
+  
+### Financial support
+
