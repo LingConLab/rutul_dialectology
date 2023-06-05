@@ -1,0 +1,80 @@
+---
+title: Hortative ‘Let’s go!’
+author: Nina Dobrushina
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 5, day = 23)`'
+output:
+  html_document:
+    number_sections: false
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+db <- read_csv('data/database.csv') %>% filter(feature_id == 60)
+villages <- read_csv('data/villages.csv')
+```
+
+There can be a hortative particle which conveys an appeal ‘Let’s go!’ which may or may not be used to form hortatives (see Map Hortative marking). In some dialects, the imperative of the verb ‘go’ can be used.
+
+
+## {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db %>% 
+  filter(!is.na(value)) %>%
+  mutate(value = str_split(value, ' ; ')) %>% 
+  unnest_longer(value) %>% 
+  distinct(settlement, value) %>% 
+  mutate(n = 1) %>% 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              features = colnames(for_map)[2])  
+} else {
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart = 'pie', 
+              width = 3)
+}
+```
+
+### Data
+
+```{r}
+db %>% 
+  select(settlement, value, stimuli, answer, collected) %>% 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+

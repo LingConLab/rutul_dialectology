@@ -20,13 +20,13 @@ villages <- read_csv('data/villages.csv')
 Copula, present tense
 
 
-## I class (jiʔi vs. i) {.tabset .tabset-fade .tabset-pills}
+## Gender 1 (jiʔi vs. i) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'I class (jiʔi vs. i)')  %>%
+  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)')  %>%
   filter(!is.na(value)) %>%
   mutate(value = str_split(value, ' ; ')) %>% 
   unnest_longer(value) %>% 
@@ -63,7 +63,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'I class (jiʔi vs. i)') %>% 
+  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -80,13 +80,13 @@ db %>%
 ```
 
 
-## II class (riʔi vs. ri) {.tabset .tabset-fade .tabset-pills}
+## Gender 2 (riʔi vs. ri) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'II class (riʔi vs. ri)')  %>%
+  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)')  %>%
   filter(!is.na(value)) %>%
   mutate(value = str_split(value, ' ; ')) %>% 
   unnest_longer(value) %>% 
@@ -123,7 +123,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'II class (riʔi vs. ri)') %>% 
+  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -140,13 +140,13 @@ db %>%
 ```
 
 
-## III class (wiʔi vs. wi) {.tabset .tabset-fade .tabset-pills}
+## Gender 3 (wiʔi vs. wi) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'III class (wiʔi vs. wi)')  %>%
+  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)')  %>%
   filter(!is.na(value)) %>%
   mutate(value = str_split(value, ' ; ')) %>% 
   unnest_longer(value) %>% 
@@ -183,7 +183,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'III class (wiʔi vs. wi)') %>% 
+  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -200,13 +200,13 @@ db %>%
 ```
 
 
-## IV class (jiʔi vs. i) {.tabset .tabset-fade .tabset-pills}
+## Gender 4 (jiʔi vs. i) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'IV class (jiʔi vs. i)')  %>%
+  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)')  %>%
   filter(!is.na(value)) %>%
   mutate(value = str_split(value, ' ; ')) %>% 
   unnest_longer(value) %>% 
@@ -243,7 +243,7 @@ if(length(for_map) == 5){
 
 ```{r}
 db %>% 
-  filter(feature_lexeme == 'IV class (jiʔi vs. i)') %>% 
+  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)') %>% 
   select(settlement, value, stimuli, answer, collected) %>% 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

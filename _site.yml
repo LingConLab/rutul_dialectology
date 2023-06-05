@@ -1,16 +1,13 @@
 name: "rutul_dialectology"
 output_dir: "docs"
-new_session: yes # resolves problem with same? references
 output:
   html_document:
     include:  
     theme: lumen   
 navbar:
-  title: "Rutul atlas"
+  title: "Atlas of Rutul dialects"
   type: inverse
   left:
-    - text: "About"
-      href: ./about.html
     - text: "Features"
       icon: fa-atlas
       href: ./features.html
