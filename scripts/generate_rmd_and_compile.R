@@ -75,7 +75,7 @@ map.feature(languages = 'Rutul',
             label.hide = FALSE,
             width = 10,
             color = 'gray',
-            tile = 'Stamen.TonerLite',
+            tile = 'OpenStreetMap.HOT',
             opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
@@ -84,6 +84,7 @@ map.feature(languages = 'Rutul',
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
+              tile = 'OpenStreetMap.HOT',
               features = colnames(for_map)[2],
               pipe.data = _)  
 }} else {{
@@ -95,7 +96,7 @@ map.feature(languages = 'Rutul',
             label.hide = FALSE,
             width = 10,
             color = 'gray',
-            tile = 'Stamen.TonerLite',
+            tile = 'OpenStreetMap.HOT',
             opacity = 0.4) |> 
   map.feature(languages = for_map$language,
             latitude = for_map$lat,
@@ -103,7 +104,7 @@ map.feature(languages = 'Rutul',
             minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
             minichart = 'pie', 
             width = 3,
-            tile = 'Stamen.TonerLite',
+            tile = 'OpenStreetMap.HOT',
             pipe.data = _)
 }}
 ```
