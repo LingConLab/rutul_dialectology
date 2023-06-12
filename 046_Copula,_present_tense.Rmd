@@ -13,11 +13,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') %>% filter(feature_id == 46)
+db <- read_csv('data/database.csv') |> filter(feature_id == 46)
 villages <- read_csv('data/villages.csv')
 ```
 
-Copula, present tense
+In the present tense, the affirmative copula can have a long and a short form. The long copula is jiʔi, with a prefixal gender marker (jiʔi in Genders 1/4, r-iʔi in Gender 2, w-iʔi in Gender 3 in the singular). The short copula is i, with or without a prefixal gender marker depending on the variary. In some varieties, only the long or only the short copula occurs in the stimuli sentences.
 
 
 ## Gender 1 (jiʔi vs. i) {.tabset .tabset-fade .tabset-pills}
@@ -25,15 +25,16 @@ Copula, present tense
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -53,7 +54,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -62,9 +63,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 1 (jiʔi vs. i)') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -85,15 +86,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -113,7 +115,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -122,9 +124,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 2 (riʔi vs. ri)') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -145,15 +147,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -173,7 +176,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -182,9 +185,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 3 (wiʔi vs. wi)') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -205,15 +208,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -233,7 +237,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -242,9 +246,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'Gender 4 (jiʔi vs. i)') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 

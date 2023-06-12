@@ -16,7 +16,7 @@ rm(packages, to_install)
 # GENERATE RMD ------------------------------------------------------------
 suppressPackageStartupMessages(library(tidyverse))
 
-db <- read_csv("data/database.csv") %>% filter(!is.na(value))
+db <- read_csv("data/database.csv") |> filter(!is.na(value))
 
 # create variable with leading 0 -------------------------------------------
 # remove +1 when we will have more then 100 topics
@@ -34,7 +34,7 @@ options(ymlthis.rmd_body = "
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') %>% filter(feature_id == PUT_FEATURE_ID_HERE)
+db <- read_csv('data/database.csv') |> filter(feature_id == PUT_FEATURE_ID_HERE)
 villages <- read_csv('data/villages.csv')
 ```
 
@@ -49,15 +49,16 @@ make_section <- function(section_title){
 ### Map
 
 ```{{r}}
-db %>% 
-  filter(feature_lexeme == '{section_title}')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == '{section_title}')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -77,7 +78,7 @@ if(length(for_map) == 5){{
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }}
@@ -86,9 +87,9 @@ if(length(for_map) == 5){{
 ### Data
 
 ```{{r}}
-db %>% 
-  filter(feature_lexeme == '{section_title}') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == '{section_title}') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -107,20 +108,20 @@ db %>%
 ")
 }
 
-db %>% 
+db |> 
   distinct(feature_id, feature_title, feature_description, compiled, 
-           updated_day, updated_month, updated_year, filename, feature_lexeme) %>% 
+           updated_day, updated_month, updated_year, filename, feature_lexeme) |> 
   count(feature_id, feature_title, feature_description, compiled, 
-        updated_day, updated_month, updated_year, filename) %>% 
+        updated_day, updated_month, updated_year, filename) |> 
   mutate(number_section = n > 1) ->
   rmd_creation
 
 library(ymlthis)
 
-silence <- map(rmd_creation$feature_id, function(i){
-  yml_empty() %>% 
-    yml_title(rmd_creation$feature_title[i]) %>% 
-    yml_author(rmd_creation$compiled[i]) %>% 
+walk(rmd_creation$feature_id, function(i){
+  yml_empty() |> 
+    yml_title(rmd_creation$feature_title[i]) |> 
+    yml_author(rmd_creation$compiled[i]) |> 
     yml_date(str_c('Last update: ', 
                    '`r lubridate::make_datetime(year = ',
                    rmd_creation$updated_year[i],
@@ -128,21 +129,21 @@ silence <- map(rmd_creation$feature_id, function(i){
                    rmd_creation$updated_month[i],
                    ', day = ',
                    rmd_creation$updated_day[i],
-                   ')`')) %>% 
+                   ')`')) |> 
     yml_output(html_document(number_sections = TRUE,
                              anchor_sections = TRUE,
-                             pandoc_args = "--shift-heading-level-by=-1")) %>% 
+                             pandoc_args = "--shift-heading-level-by=-1")) |> 
     use_rmarkdown(path = rmd_creation$filename[i], 
                   open_doc = FALSE, 
                   quiet = TRUE,
                   include_body = FALSE,
                   body = NULL)
   
-  db %>% 
-    filter(feature_id == i) %>% 
-    pull(feature_lexeme) %>% 
-    unique() %>% 
-    map(make_section) %>% 
+  db |> 
+    filter(feature_id == i) |> 
+    pull(feature_lexeme) |> 
+    unique() |> 
+    map(make_section) |> 
     write_lines(rmd_creation$filename[i], append = TRUE)
   
   t <- read_lines(rmd_creation$filename[i])

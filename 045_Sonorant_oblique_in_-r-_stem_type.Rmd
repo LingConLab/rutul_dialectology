@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') %>% filter(feature_id == 45)
+db <- read_csv('data/database.csv') |> filter(feature_id == 45)
 villages <- read_csv('data/villages.csv')
 ```
 
@@ -25,15 +25,16 @@ What type of stem is employed in the declension with the *-Vr- oblique stem mark
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'moon.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'moon.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -53,7 +54,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -62,9 +63,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'moon.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'moon.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -85,15 +86,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'snow.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'snow.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -113,7 +115,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -122,9 +124,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'snow.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'snow.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -145,15 +147,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'chicken.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'chicken.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -173,7 +176,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -182,9 +185,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'chicken.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'chicken.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -205,15 +208,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'ice.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'ice.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -233,7 +237,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -242,9 +246,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'ice.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'ice.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -265,15 +269,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'sheaf.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'sheaf.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -293,7 +298,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -302,9 +307,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'sheaf.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'sheaf.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -325,15 +330,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'cat.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'cat.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -353,7 +359,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -362,9 +368,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'cat.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'cat.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
@@ -385,15 +391,16 @@ db %>%
 ### Map
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'eagle.ATTR')  %>%
-  filter(!is.na(value)) %>%
-  mutate(value = str_split(value, ' ; ')) %>% 
-  unnest_longer(value) %>% 
-  distinct(settlement, value) %>% 
-  mutate(n = 1) %>% 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) %>% 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) %>% 
+db |> 
+  filter(feature_lexeme == 'eagle.ATTR')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
   mutate(language = 'Rutul') ->
   for_map
   
@@ -413,7 +420,7 @@ if(length(for_map) == 5){
               label = for_map$settlement,
               label.position = 'top',
               label.hide = FALSE,
-              minichart.data = for_map %>% select(-settlement, -lat, -lon, -language),
+              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
               minichart = 'pie', 
               width = 3)
 }
@@ -422,9 +429,9 @@ if(length(for_map) == 5){
 ### Data
 
 ```{r}
-db %>% 
-  filter(feature_lexeme == 'eagle.ATTR') %>% 
-  select(settlement, value, stimuli, answer, collected) %>% 
+db |> 
+  filter(feature_lexeme == 'eagle.ATTR') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
     filter = 'top', 
