@@ -16,7 +16,7 @@ rm(packages, to_install)
 # GENERATE RMD ------------------------------------------------------------
 suppressPackageStartupMessages(library(tidyverse))
 
-db <- read_csv("data/database.csv") |> filter(!is.na(value))
+db <- read_csv("data/database.csv", show_col_types = FALSE) |> filter(!is.na(value))
 
 # create variable with leading 0 -------------------------------------------
 # remove +1 when we will have more then 100 topics
@@ -34,8 +34,12 @@ options(ymlthis.rmd_body = "
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') |> filter(feature_id == PUT_FEATURE_ID_HERE)
-villages <- read_csv('data/villages.csv')
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == PUT_FEATURE_ID_HERE) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch',  'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
 ```
 
 PUT_FEATURE_DESCRIPTION_HERE
@@ -63,6 +67,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){{
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -70,17 +84,27 @@ if(length(for_map) == 5){{
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 }} else {{
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }}
 ```
 

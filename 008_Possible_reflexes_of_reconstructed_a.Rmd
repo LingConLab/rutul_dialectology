@@ -13,8 +13,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') |> filter(feature_id == 8)
-villages <- read_csv('data/villages.csv')
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == 8) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch',  'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
 ```
 
 Reconstructed proto Rutul *a gave a lot of possible reflexes across modern dialects. According to the common assumption, different palatalisation of the neighbouring vowels resulted in different reflexes. Roughly, *CʲaC gave fronted ä and e, and reconstruted a in *CaCʲ, which we denote by /â/, can realize in a variety of centralized vowels, like ɜ, ɞ, o, ö, ɨ, aˁ, ä and a. (Please correct me, I'm talking about a rough tendency here). This is an 'umbrella-feature', documenting many inter-dialectal roots that potentially have a reflex of *a. It is meant not to check which varieties underwent a particular sound change, but to see, which groupings naturally occur on a random arbitrary set of roots. The sounds in check (preliminary values) are the first vowels in cognates of Kina words /bel/ 'forehead', /hejeg/ 'pot',  /ǯad/ 'forge', /kʼatʼ/ 'chicken', xed 'water', /čʼar/ 'a hair', /ekul/ 'nest' and /netʼ/ 'nit'. In this feature, the values ɜ / ɞ / o / ö are grouped together as realizations of /â/ (on this variation, see feature â > ö / _Cʷ), other values are presented as they are.
@@ -39,6 +43,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -46,17 +60,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -100,6 +124,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -107,17 +141,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -161,6 +205,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -168,17 +222,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -222,6 +286,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -229,17 +303,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -283,6 +367,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -290,17 +384,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -344,6 +448,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -351,17 +465,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -405,6 +529,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -412,17 +546,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
@@ -466,6 +610,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -473,17 +627,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 

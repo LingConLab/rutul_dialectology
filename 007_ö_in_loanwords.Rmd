@@ -13,8 +13,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
 library(tidyverse)
 library(lingtypology)
-db <- read_csv('data/database.csv') |> filter(feature_id == 7)
-villages <- read_csv('data/villages.csv')
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == 7) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch',  'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
 ```
 
 A sound like /ö/, namely a mid front or central rounded vowel, appears in the inventories across dialects contigently. A particular potential source for it are Azeri loawords with /ö/. In most instances, Azeri /ö/ is rendered as /e/. Here we measure the geographic determinant of retaining the /ö/ by asking for cognates of the inter-dialectal lexeme /güzge/ 'mirror' (cf. Az. güzgü). The sounds in check (preliminary values) are the final vowels. The values are ä / e for adaptation with /e/ and ö for retaining /ö/. Most importantly, we don't characterize this distinction as always phonological. Among some speakers both values were interchangeable. Among others [ö] appeared in first response or fast speech but when asked to name what sound there is or in careful speech [e] occured. Also worth mentioning that if /ü/ was adopted as /u/ in the first syllable, /ö/ always was adopted as /e/ in the second syllable.
@@ -38,6 +42,16 @@ db |>
   for_map
   
 if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
               latitude = for_map$lat,
               longitude = for_map$lon,
@@ -45,17 +59,27 @@ if(length(for_map) == 5){
               label.position = 'top',
               label.hide = FALSE,
               width = 10,
-              features = colnames(for_map)[2])  
+              features = colnames(for_map)[2],
+              pipe.data = _)  
 } else {
+map.feature(languages = 'Rutul',
+            latitude = villages$lat,
+            longitude = villages$lon,
+            label = villages$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'Stamen.TonerLite',
+            opacity = 0.4) |> 
   map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-              minichart = 'pie', 
-              width = 3)
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'Stamen.TonerLite',
+            pipe.data = _)
 }
 ```
 
