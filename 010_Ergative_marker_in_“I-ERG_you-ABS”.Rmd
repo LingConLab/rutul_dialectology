@@ -1,7 +1,7 @@
 ---
 title: Ergative marker in “I-ERG you-ABS”
 author: Ilya Sadakov
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 4, day = 16)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 18)`'
 output:
   html_document:
     number_sections: false
@@ -21,7 +21,7 @@ read_csv('data/villages.csv') |>
   villages
 ```
 
-In the context with the ergative 1st person participant and the absolutive 2nd person participant ('I-ERG you-ABS'), is the ergative case marker zero, overt, or it varies?
+In the context with the ergative 1st person participant and the absolutive 2nd person participant ('I-ERG you-ABS'), is overt ergative case marker obligatory?
 
 
 ## {.tabset .tabset-fade .tabset-pills}
