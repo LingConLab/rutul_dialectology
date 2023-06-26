@@ -17,8 +17,13 @@ read_csv('data/database.csv', show_col_types = FALSE) |>
   filter(feature_id == 3) ->
   db
 read_csv('data/villages.csv') |> 
-  filter(!(village %in% c('Kazankulak', 'Novyy Borch',  'Vrush', 'Aran', 'Khnyukh'))) ->
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch', 'Vrush', 'Aran', 'Khnyukh'))) ->
   villages
+  
+villages |> 
+  filter(!(village %in% c('Tsudik', 'Borch'))) ->
+  villages4map
+  
 ```
 
 Is it possible to add or to eliminate vowel in ergative marker (depending on the form of the first reaction)?
@@ -44,9 +49,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -65,9 +70,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -126,9 +131,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -147,9 +152,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -208,9 +213,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -229,9 +234,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -290,9 +295,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -311,9 +316,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -372,9 +377,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -393,9 +398,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -454,9 +459,9 @@ db |>
   
 if(length(for_map) == 5){
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -475,9 +480,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 } else {
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,

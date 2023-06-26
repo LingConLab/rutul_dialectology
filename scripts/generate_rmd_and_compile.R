@@ -19,8 +19,7 @@ suppressPackageStartupMessages(library(tidyverse))
 db <- read_csv("data/database.csv", show_col_types = FALSE) |> filter(!is.na(value))
 
 # create variable with leading 0 -------------------------------------------
-# remove +1 when we will have more then 100 topics
-db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id))+1, "d_"), 
+db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id)), "d_"), 
                              db$feature_id),
                      str_replace_all(db$feature_title, "[\\s:\\./]", "_"),
                      ".Rmd")
@@ -38,8 +37,13 @@ read_csv('data/database.csv', show_col_types = FALSE) |>
   filter(feature_id == PUT_FEATURE_ID_HERE) ->
   db
 read_csv('data/villages.csv') |> 
-  filter(!(village %in% c('Kazankulak', 'Novyy Borch',  'Vrush', 'Aran', 'Khnyukh'))) ->
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch', 'Vrush', 'Aran', 'Khnyukh'))) ->
   villages
+  
+villages |> 
+  filter(!(village %in% c('Tsudik', 'Borch'))) ->
+  villages4map
+  
 ```
 
 PUT_FEATURE_DESCRIPTION_HERE
@@ -68,9 +72,9 @@ db |>
   
 if(length(for_map) == 5){{
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,
@@ -89,9 +93,9 @@ map.feature(languages = 'Rutul',
               pipe.data = _)  
 }} else {{
 map.feature(languages = 'Rutul',
-            latitude = villages$lat,
-            longitude = villages$lon,
-            label = villages$village,
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
             label.position = 'top',
             label.hide = FALSE,
             width = 10,

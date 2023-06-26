@@ -25,8 +25,6 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
 
 df <- read_csv("data/phonetics_nikita.csv")
 df %>% 
-  rename(feature_title = feature) %>% 
-  separate(feature_title, into = c("feature_title", "feature_lexeme"), sep = " — ") %>% 
   mutate(feature_id = as.double(factor(feature_title))+max_id_in_db) %>% 
   select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
          updated_month, updated_year, domain, settlement, value, stimuli, answer) %>% 
