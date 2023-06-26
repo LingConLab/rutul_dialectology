@@ -1,5 +1,5 @@
 ---
-title: fronting of u to ü in plural verbal stems
+title: Fronting of u to ü in plural verbal stems
 author: Nikita Beklemishev
 date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 25)`'
 output:

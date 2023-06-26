@@ -145,6 +145,8 @@ db |>
   mutate(number_section = n > 1) ->
   rmd_creation
 
+# If there are problems, check rmd_creation dataset!
+
 library(ymlthis)
 
 walk(rmd_creation$feature_id, function(i){

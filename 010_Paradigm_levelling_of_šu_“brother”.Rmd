@@ -1,5 +1,5 @@
 ---
-title: Paradigm levelling of /šu/ 'brother'
+title: Paradigm levelling of šu “brother”
 author: Nikita Beklemishev
 date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 24)`'
 output:

@@ -1,7 +1,7 @@
 ---
-title: Possible reflexes of reconstructed *ɣ
+title: Possible reflexes of reconstructed a
 author: Nikita Beklemishev
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 25)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 3, day = 25)`'
 output:
   html_document:
     number_sections: true
@@ -26,16 +26,16 @@ villages |>
   
 ```
 
-/ɣ/ is tought of as a rare phoneme, cross-linguistically in Daghestan and in Rutul [no sources yet], and thus ɨ expect that it tends to change into other sounds. In Rutul, /ɣ/ in some dialects in some morphs can correspond to other similar sounds in other dialects. This feature tests possible reflexes of historical *ɣ in a given dialect. Mainly the options are /j, x, ɣ, g, w, ʁ/. The context of these changes is not entirely clear, but presumably involves palatalisation, labialization and changes in word onsets. [@ibragimov2004] To test these changes, we took the lexemes with the following sounds that are reported to have the correspondences to /ɣ/ in other dialects, and also some random lexemes with /ɣ/ in Kina for control: /ɣarɣal/ 'wild oat, oat', /ɣɨrɣɨmdɨ/ 'with a certain pungent, unpleasant taste', /ɣɨrɨɣ/ 'lamb stomach (used for cheese fermentation)', /rabɣantʼej/ 'firefly', /wirɨɣ/ 'sun', /wɨɣɨl/ 'husband', /ɣar/ 'snake'. Here, the vaules are the sounds in place of the first *ɣ.
+Reconstructed proto Rutul *a gave a lot of possible reflexes across modern dialects. According to the common assumption, different palatalisation of the neighbouring vowels resulted in different reflexes. Roughly, *CʲaC gave fronted ä and e, and reconstruted a in *CaCʲ, which we denote by /â/, can realize in a variety of centralized vowels, like ɜ, ɞ, o, ö, ɨ, aˁ, ä and a. (Please correct me, I'm talking about a rough tendency here). This is an 'umbrella-feature', documenting many inter-dialectal roots that potentially have a reflex of *a. It is meant not to check which varieties underwent a particular sound change, but to see, which groupings naturally occur on a random arbitrary set of roots. The sounds in check (preliminary values) are the first vowels in cognates of Kina words /bel/ 'forehead', /hejeg/ 'pot',  /ǯad/ 'forge', /kʼatʼ/ 'chicken', xed 'water', /čʼar/ 'a hair', /ekul/ 'nest' and /netʼ/ 'nit'. In this feature, the values ɜ / ɞ / o / ö are grouped together as realizations of /â/ (on this variation, see feature â > ö / _Cʷ), other values are presented as they are.
 
 
-## “sun” //wirɨƔ// {.tabset .tabset-fade .tabset-pills}
+## “forehead” //b(ʲ)Al(ʲ)// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“sun” //wirɨƔ//')  |>
+  filter(feature_lexeme == '“forehead” //b(ʲ)Al(ʲ)//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -94,7 +94,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“sun” //wirɨƔ//') |> 
+  filter(feature_lexeme == '“forehead” //b(ʲ)Al(ʲ)//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -111,13 +111,13 @@ db |>
 ```
 
 
-## “husband” //wɨƔɨl// {.tabset .tabset-fade .tabset-pills}
+## “pot” //hAjeg// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“husband” //wɨƔɨl//')  |>
+  filter(feature_lexeme == '“pot” //hAjeg//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -176,7 +176,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“husband” //wɨƔɨl//') |> 
+  filter(feature_lexeme == '“pot” //hAjeg//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -193,13 +193,13 @@ db |>
 ```
 
 
-## “snake” //Ɣar// {.tabset .tabset-fade .tabset-pills}
+## “forge” //ǯAd// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“snake” //Ɣar//')  |>
+  filter(feature_lexeme == '“forge” //ǯAd//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -258,7 +258,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“snake” //Ɣar//') |> 
+  filter(feature_lexeme == '“forge” //ǯAd//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -275,13 +275,13 @@ db |>
 ```
 
 
-## “wild oat” //Ɣarɣal|r// {.tabset .tabset-fade .tabset-pills}
+## “chicken” //kʼAtʼ// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“wild oat” //Ɣarɣal|r//')  |>
+  filter(feature_lexeme == '“chicken” //kʼAtʼ//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -340,7 +340,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“wild oat” //Ɣarɣal|r//') |> 
+  filter(feature_lexeme == '“chicken” //kʼAtʼ//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -357,13 +357,13 @@ db |>
 ```
 
 
-## “tasting musty” //Ɣɨrɣɨm(a)dɨ// {.tabset .tabset-fade .tabset-pills}
+## “water” //xEd// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“tasting musty” //Ɣɨrɣɨm(a)dɨ//')  |>
+  filter(feature_lexeme == '“water” //xEd//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -422,7 +422,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“tasting musty” //Ɣɨrɣɨm(a)dɨ//') |> 
+  filter(feature_lexeme == '“water” //xEd//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -439,13 +439,13 @@ db |>
 ```
 
 
-## “lamb stomach” //Ɣɨrɨɣ// {.tabset .tabset-fade .tabset-pills}
+## “a hair” //čʼAr// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“lamb stomach” //Ɣɨrɨɣ//')  |>
+  filter(feature_lexeme == '“a hair” //čʼAr//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -504,7 +504,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“lamb stomach” //Ɣɨrɨɣ//') |> 
+  filter(feature_lexeme == '“a hair” //čʼAr//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -521,13 +521,13 @@ db |>
 ```
 
 
-## “firefly” //rabƔantʼej// {.tabset .tabset-fade .tabset-pills}
+## “nest” //Akʷalʲ// {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“firefly” //rabƔantʼej//')  |>
+  filter(feature_lexeme == '“nest” //Akʷalʲ//')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -586,7 +586,89 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“firefly” //rabƔantʼej//') |> 
+  filter(feature_lexeme == '“nest” //Akʷalʲ//') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## “eggs of lice, nit” //nEtʼ// {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '“eggs of lice, nit” //nEtʼ//')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '“eggs of lice, nit” //nEtʼ//') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
