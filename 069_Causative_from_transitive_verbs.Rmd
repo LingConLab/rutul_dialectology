@@ -1,7 +1,7 @@
 ---
 title: Causative from transitive verbs
 author: Nina Dobrushina
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 5, day = 23)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 28)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-Transitive verbs can form causatives in several different ways. The most frequent one is to combine the infinitive of the main verb with the complex verb maǯbɨr hɨʔɨr (‘force do’, dialect of Rutul). The combination of the infinitive with the verb wɨr (‘give’, dialect of Rutul) is also common. Much more rarely, the verbs guǯ hɨʔɨr ‘force do’, sigɨr ‘let’, bɨjɨrmiš / bijirmiš hɨʔɨr (‘force do’) or huxur (‘say’, dialect of Amsar) have been recorded as translations of our stimuli.
+Transitive verbs can form causatives in several different ways. The most frequent one is to combine the infinitive of the main verb with the complex verb maǯbɨr hɨʔɨr (‘force do’, dialect of Rutul). The combination of the infinitive with the verb wɨr (‘give’, dialect of Rutul) is also common. Interestingly, in the dialect of Rutul contaminated constructions with the verb maǯbɨr hɨʔɨr and the verb wɨr were used several times. Much more rarely, the verbs guǯ hɨʔɨr ‘force do’, sigɨr ‘let’, bɨjɨrmiš / bijirmiš hɨʔɨr (‘order do’) or huxur (‘say’, dialect of Amsar) have been recorded as translations of our stimuli.
 
 
 ## {.tabset .tabset-fade .tabset-pills}

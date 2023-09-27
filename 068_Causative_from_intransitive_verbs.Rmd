@@ -1,7 +1,7 @@
 ---
 title: Causative from intransitive verbs
 author: Nina Dobrushina
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 5, day = 23)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 6, day = 28)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-Intransitive verbs can form causatives in several different ways. The most frequent one is to combine a special form of the main verb with the verb hɨʔɨr (‘do’, dialect of Rutul). Another way is to combine the infinitive of the main verb with the complex verb maǯbɨr hɨʔɨr (‘force do’, dialect of Rutul). Much more rarely, the verbs ʁaʁur (‘force’), sigɨr (‘send’), χar hɨʔɨr (‘force do’) or wɨr (‘give’, dialect of Rutul) have been recorded as translations of our stimuli.
+Intransitive verbs can form causatives in several different ways. The most frequent one is to combine a special form of the main verb with the verb hɨʔɨr (‘do’, dialect of Rutul). Another way is to combine the infinitive of the main verb with the complex verb maǯbɨr hɨʔɨr (‘force do’, dialect of Rutul). Much more rarely, the verbs ʁaʁur (‘force’), sigɨr (‘send’), χar hɨʔɨr (‘force do’), bɨjɨrmiš / bijirmiš haq'ɨri ('order do', dialect of Khnov) or wɨr (‘give’, dialect of Rutul) have been recorded as translations of our stimuli.
 
 
 ## {.tabset .tabset-fade .tabset-pills}
