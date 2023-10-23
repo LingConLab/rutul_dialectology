@@ -7,7 +7,20 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Anastasija Alekseeva, Nikita Beklemishev, Michael Daniel, Nina Dobrushina, Konstantin Filatov, Anastasija Ivanova, Timur Maisak, Maksim Melenchenko, George Moroz, Ivan Netkachev, Ilja Sadakov. [George Moroz](https://orcid.org/0000-0003-1990-6083) is responsible for the website.
+person                  | affiliation
+------------------------|------------------------------------------------
+Anastasija Alekseeva    |HSE
+Nikita Beklemishev      |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
+Michael Daniel          |Collegium de Lyon / Laboratoire Dynamique du Langage
+Nina Dobrushina         |CNRS
+Konstantin Filatov      |HSE / ILS RAS
+Anastasija Ivanova      |HSE
+Timur Maisak            |HSE / ILS RAS
+Maksim Melenchenko      |HSE
+Ivan Netkachev          |HSE
+Ilja Sadakov            |HSE
+
+All people listed above collected and coded data. [George Moroz](https://orcid.org/0000-0003-1990-6083) is responsible for the website.
 
 ## Contact us
 
