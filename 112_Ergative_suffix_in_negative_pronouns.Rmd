@@ -1,7 +1,7 @@
 ---
 title: Ergative suffix in negative pronouns
 author: Maksim Melenchenko
-date: .na.character
+date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 12, day = 7)`'
 output:
   html_document:
     number_sections: false
