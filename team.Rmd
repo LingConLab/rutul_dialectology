@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 person                  | affiliation
-------------------------|------------------------------------------------
+:----------------------:|:----------------------------------------------:
 Anastasija Alekseeva    |HSE
 Nikita Beklemishev      |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
 Michael Daniel          |Collegium de Lyon / Laboratoire Dynamique du Langage
@@ -17,6 +17,7 @@ Konstantin Filatov      |HSE / ILS RAS
 Anastasija Ivanova      |HSE
 Timur Maisak            |HSE / ILS RAS
 Maksim Melenchenko      |HSE
+George Moroz            |HSE
 Ivan Netkachev          |HSE
 Ilja Sadakov            |HSE
 

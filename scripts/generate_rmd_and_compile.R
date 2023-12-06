@@ -26,7 +26,7 @@ db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id)), "d_"),
 
 to_remove <- list.files(".", pattern = ".Rmd")
 to_remove <- to_remove[!(to_remove %in% c("about.Rmd", "index.Rmd", "team.Rmd", "features.Rmd"))]
-file.remove(to_remove)
+file.remove(c(to_remove, list.files(".", pattern = ".html")))
 
 options(ymlthis.rmd_body = "
 ```{r, include=FALSE}
