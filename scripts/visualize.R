@@ -42,6 +42,14 @@ df_pairwise_total |>
   mutate(n = ifelse(n > total, total, n)) |> 
   mutate(percentage = round(n/total*100, 2)) |> 
   select(item1, item2, percentage) |> 
+  group_by(item1) |>
+  mutate(sum_i1 = sum(percentage)) |> 
+  ungroup() |>
+  group_by(item2) |>
+  mutate(sum_i2 = sum(percentage)) |> 
+  ungroup() |>
+  mutate(item1 = fct_reorder(item1, sum_i1),
+         item2 = fct_reorder(item2, sum_i2)) |> 
   ggplot(aes(item1, item2))+
   geom_tile(aes(fill = percentage), colour = "white") +
   geom_text(aes(label = str_c(percentage, "%")), colour = "white") +
@@ -49,7 +57,6 @@ df_pairwise_total |>
   coord_fixed()+
   labs(x = "", y = "", title = "Heatmap with all stimuli") +
   theme(legend.position = "bottom")
-
 
 df_pairwise_total |> 
   left_join(df_pairwise_within_construction) |>
