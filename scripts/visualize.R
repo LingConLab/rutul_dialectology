@@ -82,3 +82,25 @@ dist_gold_standard |>
   neighborNet() |> 
   plot()
 title(main = "neighborNet for all stimuli")
+
+
+# MCA ---------------------------------------------------------------------
+
+
+df |> 
+  count(feature_id, feature_title, feature_lexeme, settlement, value) |> 
+  mutate(feature_lexeme = ifelse(is.na(feature_lexeme), "", feature_lexeme),
+         feature = str_c(feature_id, "_", feature_title, "_", feature_lexeme, ": ", value)) |> 
+  select(settlement, feature, n) |> 
+  pivot_wider(names_from = feature, values_from = n, values_fill = 0) |> 
+  column_to_rownames("settlement") |> 
+  ca::ca() ->
+  ca
+
+ca$rowcoord |> 
+  as.data.frame() |> 
+  rownames_to_column("settlement") |> 
+  ggplot(aes(Dim1, Dim2, label = settlement))+
+  geom_point()+
+  ggrepel::geom_label_repel()+
+  theme_minimal()
