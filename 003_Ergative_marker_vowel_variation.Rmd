@@ -26,7 +26,171 @@ villages |>
   
 ```
 
-Is it possible to add or to eliminate vowel in ergative marker (depending on the form of the first reaction)?
+We collected 6 sentences with three nouns in singular and in plural: uncle.SG and uncle.PL (animate, human), fish.SG and fish.PL (animate, non-human), river.SG and rock.PL (inanimate, non-human). The sentences are the following: The fish ate the flies: '(My) uncle helped me build a house', '(My) uncles helped me to build a house', 'The fish (SG) ate the fly', 'The fish (PL) ate the flies', 'The river demolished the bridge', 'The rocks broke the roof'. Ergative marker can be of r-type (balʁu-ra fish.OBL-ERG) or of vowel-type (gagaj-e uncle-ERG). In each case the vowel in the marker can be present (balʁu-ra fish.OBL-ERG, gagaj-e uncle-ERG) or omitted (balʁu-r fish.OBL-ERG, gagaj-Ø uncle-ERG). This feature shows if the opposite variant of first reaction is possible. For example, speaker's first reaction was balʁu-ra (fish.OBL-ERG), then we asked if it is possible to say balʁu-r, or vice versa, speaker's first reaction was balʁu-r (fish.OBL-ERG), then we asked if it is possible to say balʁu-ra. If the opposite variant is possible, then we say there is a variation in vowel presence, if it not possible, there is no variation.
+
+
+## fish.PL {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == 'fish.PL')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == 'fish.PL') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## fish.SG {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == 'fish.SG')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == 'fish.SG') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
 
 
 ## uncle.SG {.tabset .tabset-fade .tabset-pills}
@@ -95,88 +259,6 @@ map.feature(languages = 'Rutul',
 ```{r}
 db |> 
   filter(feature_lexeme == 'uncle.SG') |> 
-  select(settlement, value, stimuli, answer, collected) |> 
-  DT::datatable(class = 'cell-border stripe', 
-    rownames = FALSE, 
-    filter = 'top', 
-    extensions = 'Buttons',
-    options = list(pageLength = 42, 
-                   autoWidth = TRUE, 
-                   info = FALSE,
-                   dom = 'fBltp',
-                   buttons = list(list(extend = 'collection',
-                                       buttons = c('csv', 'excel', 'pdf'),
-                                       text = '<i class="fas fa-download"></i>')),
-                   paginate = TRUE))
-```
-
-
-## uncle.PL {.tabset .tabset-fade .tabset-pills}
-
-### Map
-
-```{r}
-db |> 
-  filter(feature_lexeme == 'uncle.PL')  |>
-  filter(!is.na(value),
-         value != 'NO DATA') |>
-  mutate(value = str_split(value, ' ; ')) |> 
-  unnest_longer(value) |> 
-  distinct(settlement, value) |> 
-  mutate(n = 1) |> 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
-  mutate(language = 'Rutul') ->
-  for_map
-  
-if(length(for_map) == 5){
-map.feature(languages = 'Rutul',
-            latitude = villages4map$lat,
-            longitude = villages4map$lon,
-            label = villages4map$village,
-            label.position = 'top',
-            label.hide = FALSE,
-            width = 10,
-            color = 'gray',
-            tile = 'OpenStreetMap.HOT',
-            opacity = 0.4) |> 
-  map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              width = 10,
-              tile = 'OpenStreetMap.HOT',
-              features = colnames(for_map)[2],
-              pipe.data = _)  
-} else {
-map.feature(languages = 'Rutul',
-            latitude = villages4map$lat,
-            longitude = villages4map$lon,
-            label = villages4map$village,
-            label.position = 'top',
-            label.hide = FALSE,
-            width = 10,
-            color = 'gray',
-            tile = 'OpenStreetMap.HOT',
-            opacity = 0.4) |> 
-  map.feature(languages = for_map$language,
-            latitude = for_map$lat,
-            longitude = for_map$lon,
-            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-            minichart = 'pie', 
-            width = 3,
-            tile = 'OpenStreetMap.HOT',
-            pipe.data = _)
-}
-```
-
-### Data
-
-```{r}
-db |> 
-  filter(feature_lexeme == 'uncle.PL') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -357,13 +439,13 @@ db |>
 ```
 
 
-## fish.SG {.tabset .tabset-fade .tabset-pills}
+## uncle.PL {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'fish.SG')  |>
+  filter(feature_lexeme == 'uncle.PL')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -422,89 +504,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'fish.SG') |> 
-  select(settlement, value, stimuli, answer, collected) |> 
-  DT::datatable(class = 'cell-border stripe', 
-    rownames = FALSE, 
-    filter = 'top', 
-    extensions = 'Buttons',
-    options = list(pageLength = 42, 
-                   autoWidth = TRUE, 
-                   info = FALSE,
-                   dom = 'fBltp',
-                   buttons = list(list(extend = 'collection',
-                                       buttons = c('csv', 'excel', 'pdf'),
-                                       text = '<i class="fas fa-download"></i>')),
-                   paginate = TRUE))
-```
-
-
-## fish.PL {.tabset .tabset-fade .tabset-pills}
-
-### Map
-
-```{r}
-db |> 
-  filter(feature_lexeme == 'fish.PL')  |>
-  filter(!is.na(value),
-         value != 'NO DATA') |>
-  mutate(value = str_split(value, ' ; ')) |> 
-  unnest_longer(value) |> 
-  distinct(settlement, value) |> 
-  mutate(n = 1) |> 
-  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
-  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
-  mutate(language = 'Rutul') ->
-  for_map
-  
-if(length(for_map) == 5){
-map.feature(languages = 'Rutul',
-            latitude = villages4map$lat,
-            longitude = villages4map$lon,
-            label = villages4map$village,
-            label.position = 'top',
-            label.hide = FALSE,
-            width = 10,
-            color = 'gray',
-            tile = 'OpenStreetMap.HOT',
-            opacity = 0.4) |> 
-  map.feature(languages = for_map$language,
-              latitude = for_map$lat,
-              longitude = for_map$lon,
-              label = for_map$settlement,
-              label.position = 'top',
-              label.hide = FALSE,
-              width = 10,
-              tile = 'OpenStreetMap.HOT',
-              features = colnames(for_map)[2],
-              pipe.data = _)  
-} else {
-map.feature(languages = 'Rutul',
-            latitude = villages4map$lat,
-            longitude = villages4map$lon,
-            label = villages4map$village,
-            label.position = 'top',
-            label.hide = FALSE,
-            width = 10,
-            color = 'gray',
-            tile = 'OpenStreetMap.HOT',
-            opacity = 0.4) |> 
-  map.feature(languages = for_map$language,
-            latitude = for_map$lat,
-            longitude = for_map$lon,
-            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
-            minichart = 'pie', 
-            width = 3,
-            tile = 'OpenStreetMap.HOT',
-            pipe.data = _)
-}
-```
-
-### Data
-
-```{r}
-db |> 
-  filter(feature_lexeme == 'fish.PL') |> 
+  filter(feature_lexeme == 'uncle.PL') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

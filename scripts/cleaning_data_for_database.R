@@ -1,7 +1,7 @@
 # asya ergative -----------------------------------------------------------
 
 library(tidyverse)
-df <- read_csv("data/ergative_asya.csv")
+df <- read_csv("data/asya_new_21.12.23.csv")
 df %>% 
   filter(to_map == 1) %>% 
   mutate(updated_day = 21,
