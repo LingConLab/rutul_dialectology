@@ -83,9 +83,7 @@ dist_gold_standard |>
   plot()
 title(main = "neighborNet for all stimuli")
 
-
-# MCA ---------------------------------------------------------------------
-
+# CA ----------------------------------------------------------------------
 
 df |> 
   count(feature_id, feature_title, feature_lexeme, settlement, value) |> 
