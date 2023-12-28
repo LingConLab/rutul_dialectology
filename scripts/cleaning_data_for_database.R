@@ -1,7 +1,7 @@
 # asya ergative -----------------------------------------------------------
 
 library(tidyverse)
-df <- read_csv("data/asya_new_21.12.23.csv")
+df <- read_csv("data/asya_features_dec2023.csv")
 df %>% 
   filter(to_map == 1) %>% 
   mutate(updated_day = 21,
@@ -10,8 +10,7 @@ df %>%
          feature_id = as.double(factor(feature_title)),
          compiled = "Asya Alekseeva") %>% 
   select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
-         updated_month, updated_year, domain, settlement, value, stimuli, raw_data) %>% 
-  rename(answer = raw_data) %>% 
+         updated_month, updated_year, domain, settlement, value, stimuli, answer) %>% 
   arrange(feature_id) %>% 
   write_csv("data/database.csv", na = "")
 
@@ -74,7 +73,7 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
   pull(feature_id) ->
   max_id_in_db
 
-read_csv("data/sonorant_oblique_in_r_kostya.csv") %>% 
+read_csv("data/kostya_oblique.csv") %>% 
   filter(!is.na(value)) ->
   df
 
@@ -174,8 +173,14 @@ readxl::read_xlsx("data/rutul_dialectology_Maks.xlsx") %>%
 
 df %>% 
   mutate(feature_id = as.double(factor(feature_title))+max_id_in_db) |> 
-  select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
-         updated_month, updated_year, domain, settlement, value, stimuli, answer) |> 
+  select(feature_id, feature_title, feature_lexeme, feature_description, 
+         collected, compiled, updated_day, updated_month, updated_year, domain, 
+         settlement, value, stimuli, answer) |> 
   arrange(feature_id) |> 
   write_csv("data/database.csv", na = "", append = TRUE)
 
+# after_merge_fix ---------------------------------------------------------
+
+read_csv("data/database.csv") |> 
+  mutate_at(c("collected", "compiled", "domain", "settlement"), str_to_title) |> 
+  write_csv("data/database.csv", na = "")
