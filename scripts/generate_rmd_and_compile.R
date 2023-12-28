@@ -22,10 +22,10 @@ db <- read_csv("data/database.csv", show_col_types = FALSE) |> filter(!is.na(val
 db$filename <- str_c(sprintf(str_c("%0", nchar(max(db$feature_id)), "d_"), 
                              db$feature_id),
                      str_replace_all(db$feature_title, "[\\s:\\./]", "_"),
-                     ".Rmd")
+                     ".qmd")
 
-to_remove <- list.files(".", pattern = ".Rmd")
-to_remove <- to_remove[!(to_remove %in% c("about.Rmd", "index.Rmd", "team.Rmd", "features.Rmd"))]
+to_remove <- list.files(".", pattern = ".qmd")
+to_remove <- to_remove[!(to_remove %in% c("about.qmd", "index.qmd", "team.qmd", "features.qmd"))]
 file.remove(c(to_remove, list.files(".", pattern = ".html")))
 
 options(ymlthis.rmd_body = "
