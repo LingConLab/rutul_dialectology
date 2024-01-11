@@ -2,6 +2,7 @@
 title: "Atlas of Rutul dialects"
 link-citations: true
 bibliography: bibliography.bib
+csl: apa.csl
 output:
   html_document:
     number_sections: false
@@ -13,7 +14,7 @@ This page presents the results of a dialectological survey of twelve Rutul villa
 
 The [Rutul language](https://en.wikipedia.org/wiki/Rutul_language) (ISO 639–3 rut; glottocode rutu1240) belongs to the Lezgiс branch of the Nakh-Daghestanian (East Caucasian) language family. The majority of speakers (approximately 33 000, according to the [latest census](https://rosstat.gov.ru/vpn_popul) of 2020) live in Daghestan.
 
-The dialectological survey was carried out in July 2022 by [a group of linguists](team.html) from [HSE University](https://ling.hse.ru/en/). Speakers of various Rutul dialects were interviewed using the same questionnaire compiled by the research team. The questionnaire was partly based on the existing descriptions ([@ibragimov2004; @alekseyev_rutul_2016; @alisultanov_suleymanova2019; @ismailova2011; @islamov2014; @alisultanov_islamov2022; @makhmudova2002; @ibragimov1978; @alekseyev_rutul_1994; @ibragimova2009; @authier_mukhad; @authier_ikhrek; @dirr1912; @dzhamalov2006]) of the varieties of Rutul. Nevertheless, in addition to documentation and quantitative assessment of the established parameters of dialectal variation, we also aimed at identifying new, previously unreported regional variants.
+The dialectological survey was carried out in July 2022 by [a group of linguists](team.html) from [HSE University](https://ling.hse.ru/en/). Speakers of various Rutul dialects were interviewed using the same questionnaire compiled by the research team. The questionnaire was partly based on the existing descriptions [@ibragimov2004; @alekseyev_rutul_2016; @alisultanov_suleymanova2019; @ismailova2011; @islamov2014; @alisultanov_islamov2022; @makhmudova2002; @ibragimov1978; @alekseyev_rutul_1994; @ibragimova2009; @authier_mukhad; @authier_ikhrek; @dirr1912; @dzhamalov2006] of the varieties of Rutul. Nevertheless, in addition to documentation and quantitative assessment of the established parameters of dialectal variation, we also aimed at identifying new, previously unreported regional variants.
 
 For each phenomenon selected for the comparison, several Russian stimuli were compiled. Translations of these sentences by two, three, or four speakers in each of the villages in the survey were recorded and transcribed. We are investigating dialectal differences at all levels of language structure, including lexicon, phonetics, morphology, and syntax. 
 
