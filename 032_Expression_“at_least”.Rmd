@@ -1,7 +1,7 @@
 ---
 title: Expression “at least”
 author: Ilya Sadakov
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 12, day = 28)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 11)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-The map shows the means of expressing the meaning ‘at least’. The distinction is made between three non-cognate words, HADANA (and its variants haadan / hadan / dan), BET (and its variant pet) and MAN. A special construction with the verbal form JIŠIJNE (literally ‘if become’) was attested in Khnov. The relatively frequent alternative Russian χotʲa bɨ ‘at least’ as well as occasional replies meaning ‘somehow’, ‘a few’, etc. were coded as OTHER.
+The map shows the means of expressing the meaning ‘at least’. The distinction is made between three non-cognate words, hadana (and its variants haadan / hadan / dan), bet (and its variant pet) and man. Please note that hadana and bet are verb modifiers and man is an enclitic, but mostly in our data these words are interchangeable, except for one response from Luchek where hadan and man were used together (ečbɨr hadan lewša-man). Also relatively frequently the Russian expression χotʲa bɨ ‘at least’ (and its variants χotʲ bɨ / χotʲa / χotʲ) was used. A special construction with the verbal form jišijne (literally ‘if become’) was attested in Khnov. Occasional periphrases meaning ‘somehow’, ‘a few’, ‘if you can’, ‘there is no choise’ were coded as OTHER.
 
 
 ## {.tabset .tabset-fade .tabset-pills}

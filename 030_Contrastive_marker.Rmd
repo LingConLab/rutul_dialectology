@@ -1,0 +1,277 @@
+---
+title: Contrastive marker
+author: Ilya Sadakov
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 11)`'
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == 30) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch', 'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
+  
+villages |> 
+  filter(!(village %in% c('Tsudik', 'Borch'))) ->
+  villages4map
+  
+```
+
+The map shows the form of the contrastive marker on attributive in constructions like ‘the X which is Attr, in contrast to other Xs’. Except for Khnov and Kiche, the form =baj / =bɨj / =bej was used. In Khnov and Kiche the marker has the form =ki. Cases when the marker was not used are listed as NO DATA.
+
+
+## ‘Older brother’ vs ‘younger brother’ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘Older brother’ vs ‘younger brother’')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘Older brother’ vs ‘younger brother’') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘The one’ vs ‘the other’ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘The one’ vs ‘the other’')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘The one’ vs ‘the other’') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘Exactly the white cow’ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘Exactly the white cow’')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘Exactly the white cow’') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
