@@ -4,10 +4,7 @@ library(tidyverse)
 df <- read_csv("data/asya_features_15-01-24.csv")
 df %>% 
   filter(to_map == 1) %>% 
-  mutate(updated_day = 21,
-         updated_month = 3,
-         updated_year = 2023,
-         feature_id = as.double(factor(feature_title)),
+  mutate(feature_id = as.double(factor(feature_title)),
          compiled = "Asya Alekseeva") %>% 
   select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
          updated_month, updated_year, domain, settlement, value, stimuli, answer) %>% 
@@ -201,3 +198,4 @@ df %>%
 read_csv("data/database.csv") |> 
   mutate_at(c("collected", "compiled", "domain", "settlement"), str_to_title) |> 
   write_csv("data/database.csv", na = "")
+
