@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-These maps show the comitative markers used in two contexts: ‘Rasul went hunting with a dog’ and ‘Rasul went to Makhachkala by car’. The markers attested are the following: -kʷan, -kan, -xʷan, -xan, -fan. The variants -kʷan and -kan are attested in Kina, Luchek, Amsar and Kiche, -fan — only in Ikhrek and Khnov, -xan — in Ikhrek and Rutul. And -xʷan is attested everywhere but Kina, Luchek and Khnov. The label OTHER is used if the comitative meaning is expressed not by means of a nominal marker, but a locative copula: χana, χan, xʷana.
+These maps show the comitative markers used in two contexts: ‘Rasul went hunting with a dog’ and ‘Rasul went to Makhachkala by car’. The markers attested are the following: *-kʷan*, *-kan*, *-xʷan*, *-xan*, *-fan*. The variants *-kʷan* and *-kan* are attested in Kina, Luchek, Amsar and Kiche, *-fan* — only in Ikhrek and Khnov, *-xan* — in Ikhrek and Rutul. And *-xʷan* is attested everywhere but Kina, Luchek and Khnov. The label OTHER is used if the comitative meaning is expressed not by means of a nominal marker, but a locative copula: *χana*, *χan*, *xʷana*.
 
 
 ## dog {.tabset .tabset-fade .tabset-pills}
