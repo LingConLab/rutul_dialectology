@@ -4,7 +4,7 @@
 .RData
 .Ruserdata
 *.~lock.*
-*/asya_features_dec2023.csv
+*/asya_features_21-01-24.csv
 */phonetics_nikita.csv
 */rutul_dialectology_ilya.csv
 */lexicon_moroz_full.csv
@@ -17,3 +17,4 @@
 */nastya_verb_review-6.xlsx
 */nastya_verb_review-6.xlsx
 */netkachev_oct23.csv
+*/rutul_dialects_200.csv
