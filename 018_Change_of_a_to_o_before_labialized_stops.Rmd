@@ -26,16 +26,16 @@ villages |>
   
 ```
 
-In a simple rule, some dialects are expected to have an a > o / _[+cons, +round] phonetic alternation or sound change. By this rule, /a/ is rounded before a labialized consonant. In practice, we diagnose this by asking for cognates of two Kina word forms (which find a cognate in most dialects): /ʁagʷas/ 'to see' and /maɢːʷal/ 'nettle'. The sounds in check (preliminary values) are the vowels in the first syllable and one the consonantal segment after it. In final values, values aw / äCʷ / eCʷ / and absence (-) are grouped together as not matching the sample, marked as NA, values agʷ / aɢʷ / aɢːʷ / aqʷ are grouped together as having the sound [a], and values ogʷ / oɢʷ as having [o]. It's important to note that I don't know enough to interpret the phonological nature of the combinations. I consider only labialization on a surface level: regardless of whether it is intrinsic or due to proximity to a rounded vowel. Same applies for o ~ a: we can't assume whether the distinction has been phonologised or it is a surface-level alternation.
+In a simple rule, some dialects are expected to have an a > o / _[+cons, +round] phonetic alternation or sound change. By this rule, /a/ is rounded before a labialized consonant. In practice, we diagnose this by asking for cognates of two Kina word forms (which find a cognate in most dialects): /ʁagʷas/ ‘to see’ and /maɢːʷal/ ‘nettle’. The sounds in check (preliminary values) are the vowels in the first syllable and the consonants after it. In final values, values aw / äCʷ / eCʷ / and cognate not given (N/A) are grouped together as not matching the sample, marked as OTHER, values agʷ / aɢʷ / aɢːʷ / aqʷ are grouped together as having the sound [a], and values ogʷ / oɢʷ as having [o]. It’s important to note that I don’t know enough to interpret the phonological nature of the combinations. I consider only labialization in the surface form: regardless of whether it is intrinsic or due to proximity to a rounded vowel. Same applies for o ~ a alternation: we can’t assume whether the distinction has been phonologised or it is a surface-level alternation.
 
 
-## “to see” //ʁAgʷas// {.tabset .tabset-fade .tabset-pills}
+## ‘nettle’ /maɢːʷal/ {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“to see” //ʁAgʷas//')  |>
+  filter(feature_lexeme == '‘nettle’ /maɢːʷal/')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -94,7 +94,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“to see” //ʁAgʷas//') |> 
+  filter(feature_lexeme == '‘nettle’ /maɢːʷal/') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -111,13 +111,13 @@ db |>
 ```
 
 
-## “nettle” //mAɢːʷal// {.tabset .tabset-fade .tabset-pills}
+## ‘to see’ /ʁagʷas/ {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“nettle” //mAɢːʷal//')  |>
+  filter(feature_lexeme == '‘to see’ /ʁagʷas/')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -176,7 +176,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“nettle” //mAɢːʷal//') |> 
+  filter(feature_lexeme == '‘to see’ /ʁagʷas/') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

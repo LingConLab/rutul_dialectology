@@ -19,7 +19,7 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
   pull(feature_id) ->
   max_id_in_db
 
-df <- read_csv("data/phonetics_nikita.csv")
+df <- read_csv("data/nikita_phonology_3.csv")
 df %>% 
   mutate(feature_id = as.double(factor(feature_title))+max_id_in_db) %>% 
   select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
@@ -89,7 +89,7 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
   pull(feature_id) ->
   max_id_in_db
 
-readxl::read_xlsx("data/nastya_verb_review-2.xlsx") %>% 
+readxl::read_xlsx("data/verb-28-01-2024-2.xlsx") %>% 
   filter(!is.na(value)) ->
   df
 
@@ -99,42 +99,6 @@ df %>%
          updated_month, updated_year, domain, settlement, value, stimuli, answer) |> 
   arrange(feature_id) |> 
   write_csv("data/database.csv", na = "", append = TRUE)
-
-
-read_csv("data/database.csv", col_select = "feature_id") %>% 
-  distinct() %>% 
-  filter(feature_id == max(feature_id)) %>% 
-  pull(feature_id) ->
-  max_id_in_db
-
-readxl::read_xlsx("data/nastya_verb_review-5.xlsx") %>% 
-  filter(!is.na(value)) ->
-  df
-
-df %>% 
-  mutate(feature_id = as.double(factor(feature_title))+max_id_in_db) |> 
-  select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
-         updated_month, updated_year, domain, settlement, value, stimuli, answer) |> 
-  arrange(feature_id) |> 
-  write_csv("data/database.csv", na = "", append = TRUE)
-
-read_csv("data/database.csv", col_select = "feature_id") %>% 
-  distinct() %>% 
-  filter(feature_id == max(feature_id)) %>% 
-  pull(feature_id) ->
-  max_id_in_db
-
-readxl::read_xlsx("data/nastya_verb_review-6.xlsx") %>% 
-  filter(!is.na(value)) ->
-  df
-
-df %>% 
-  mutate(feature_id = as.double(factor(feature_title))+max_id_in_db) |> 
-  select(feature_id, feature_title, feature_lexeme, feature_description, collected, compiled, updated_day, 
-         updated_month, updated_year, domain, settlement, value, stimuli, answer) |> 
-  arrange(feature_id) |> 
-  write_csv("data/database.csv", na = "", append = TRUE)
-
 
 # add Nina's verb ---------------------------------------------------------
 

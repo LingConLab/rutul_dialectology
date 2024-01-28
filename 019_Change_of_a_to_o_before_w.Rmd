@@ -26,16 +26,16 @@ villages |>
   
 ```
 
-In a simple rule, some dialects are expected to have an a > o / _w phonetic alternation or sound change. By this rule, /a/ is rounded before a voiced labial approximant (or whatever its realisation is in a given utterance). In practice, we diagnose this by asking for cognates of two inter-dialectal lexemes: /ɢaw/ 'ceiling' and /awʁu/ 'poison'. For a number of dialects we also asked for the words /awči/ 'hunter' and /sawχura/ 'sleeps(III, PRS)' (as in 'The cow is sleeping'). The sounds in check (preliminary values) are the vowels in the first syllable before /w/. In this feature, ɨ and ə values of the correspondent vowel in these words are considered, because it is a freqent correspondence, even though it doesn't fall under the generalization of presence or abscence of a > o change. Final values are a, o and oː (from monophtongisation of ow), ɨ / ə (as non-low mid vowels), NA (when the congate wasn't attested or when it was attested, but with aː / äw / a, bleeding the a > o change).
+In a simple rule, some dialects are expected to have an a > o / _w phonetic alternation or sound change. By this rule, /a/ is rounded before a voiced labial approximant (or whatever its realisation is in a given utterance). In practice, we diagnose this by asking for cognates of two inter-dialectal lexemes: /ɢaw/ ‘ceiling’ and /awʁu/ ‘poison’. For a number of dialects we also asked for the words /awči/ ‘hunter’ and /sawχura/ ‘sleeps(III, PRS)’ (as in ‘The cow is sleeping’). The sounds in check (preliminary values) are the vowels in the first syllable before /w/. In this feature, ɨ and ə values of the correspondent vowel in these words are considered, because it is a frequent correspondence, even though it doesn’t fall under the generalization of presence or absence of the a > o change. Final values are a, o and oː (from monophtongisation of ow), ɨ / ə (as non-low mid vowels), OTHER (when the cognate wasn’t attested or when it was attested, but with aː / äw / a, bleeding the a > o change).
 
 
-## “ceiling, roof” //ɢAw// {.tabset .tabset-fade .tabset-pills}
+## ‘<III>sleep=PRS’ /sawχur a/ {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“ceiling, roof” //ɢAw//')  |>
+  filter(feature_lexeme == '‘<III>sleep=PRS’ /sawχur a/')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -94,7 +94,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“ceiling, roof” //ɢAw//') |> 
+  filter(feature_lexeme == '‘<III>sleep=PRS’ /sawχur a/') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -111,13 +111,13 @@ db |>
 ```
 
 
-## “poison” //Awʁu// {.tabset .tabset-fade .tabset-pills}
+## ‘ceiling, roof’ /ɢaw/ {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“poison” //Awʁu//')  |>
+  filter(feature_lexeme == '‘ceiling, roof’ /ɢaw/')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -176,7 +176,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“poison” //Awʁu//') |> 
+  filter(feature_lexeme == '‘ceiling, roof’ /ɢaw/') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -193,13 +193,13 @@ db |>
 ```
 
 
-## “<III>sleep=PRS” //sAwχur a// {.tabset .tabset-fade .tabset-pills}
+## ‘poison’ /awʁu/ {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“<III>sleep=PRS” //sAwχur a//')  |>
+  filter(feature_lexeme == '‘poison’ /awʁu/')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -258,7 +258,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '“<III>sleep=PRS” //sAwχur a//') |> 
+  filter(feature_lexeme == '‘poison’ /awʁu/') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
