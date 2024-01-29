@@ -1,7 +1,7 @@
 # asya ergative -----------------------------------------------------------
 
 library(tidyverse)
-df <- read_csv("data/asya_features_21-01-24.csv")
+df <- read_csv("data/asya_features_28-01-24.csv")
 df %>% 
   filter(to_map == 1) %>% 
   mutate(feature_id = as.double(factor(feature_title)),
@@ -203,5 +203,7 @@ df %>%
 
 read_csv("data/database.csv") |> 
   mutate_at(c("collected", "compiled", "domain", "settlement"), str_to_title) |> 
+  mutate(feature_title = str_replace_all(feature_title, "'", "’"),
+         feature_lexeme = str_replace_all(feature_lexeme, "'", "’")) |> 
   write_csv("data/database.csv", na = "")
 

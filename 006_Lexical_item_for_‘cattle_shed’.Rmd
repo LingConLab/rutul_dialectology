@@ -1,7 +1,7 @@
 ---
 title: Lexical item for ‘cattle shed’
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 15)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 28)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-We collected the context ‘Cow is in the cattle shed’, and this map shows which lexeme for ‘cattle shed’ is used in it. The forms of these lexemes in the context are the forms of Inessive case, that is why we label the lexemes by their stems, not by their full forms. These stems should not be treated as real oblique stems of these nouns, they are just labels to represent the lexemes (i. e. there is no morphological reality beyond them). The lexemes for ‘cattle shed’ are the following: *tawli-* / *towli-* (attested in Myukhrek and Dzhilikhur) and *wixʲ-* (attested elsewhere).
+We elicited the word for ‘cattle shed’ in the context ‘Cow is in the cattle shed’. The noun was elicited in the inessive. On the map, the stems of the lexical items are shown rather than their full forms in the context. The stems are not necessarily actual oblique stems, but rather labels that represent the lexemes. The lexemes for ‘cattle shed’ are the following: *tawli-* / *towli-* (attested in Myukhrek and Dzhilikhur) and *wixʲ-* (attested elsewhere).
 
 
 ## {.tabset .tabset-fade .tabset-pills}

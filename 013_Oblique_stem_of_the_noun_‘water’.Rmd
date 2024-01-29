@@ -1,7 +1,7 @@
 ---
 title: Oblique stem of the noun ‘water’
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 21)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 28)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-We asked a context ‘There are a lot of fish in the water’, and this map shows the variation of oblique stems of the word ‘water’, forms attested: *xid-* / *šid-* (Ikhrek, Khnov, Rutul, Kufa and Kiche) and *xi-* (Shinaz and partly Kala), *xij-* (elsewhere). To see the diffrences in case marking in this context, see @feature.
+We elicited the form of the noun 'water' in the context ‘There are a lot of fish in the water’. The map shows the variation in the oblique stem of the noun. The attested variants include: *xid-* / *šid-* (Ikhrek, Khnov, Rutul, Kufa and Kiche), *xi-* (Shinaz and partly Kala), and *xij-* (elsewhere). To see the differences in case marking observed in this context, see @feature.
 
 
 ## {.tabset .tabset-fade .tabset-pills}

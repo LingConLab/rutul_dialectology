@@ -1,7 +1,7 @@
 ---
 title: Ergative marker type
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 15)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 28)`'
 output:
   html_document:
     number_sections: true
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-Ergative marker can be of r-type (*balʁu-ra* fish.OBL-ERG) or of vowel-type (*gagaj-e* uncle-ERG). We collected 6 sentences with three nouns in singular and in plural: uncle.SG and uncle.PL (animate, human), fish.SG and fish.PL (animate, non-human), river.SG and rock.PL (inanimate, non-human). The sentences are the following: ‘(My) uncle helped me build a house’, ‘(My) uncles helped me build a house’, ‘The fish (SG) ate the fly’, ‘The fish (PL) ate the flies’, ‘The river demolished the bridge’, ‘The rocks broke the roof’. In these maps the type (r-type or vowel-type) for each context is shown.
+We classified the variants of the ergative marker into r-type (e.g. *balʁu-ra* fish.OBL-ERG) and non-r-type (e.g. *gagaj-e* uncle-ERG, *gagaj-Ø* uncle-ERG). We elicited four nouns in the singular and in the plural: ‘uncle‘ (SG) and ‘uncle‘ (PL) (animate, human), ‘fish‘ (SG) and ‘fish‘ (PL) (animate, non-human), ‘river‘ (SG) and ‘rock‘ (PL) (inanimate, non-human). The elicited contexts were as follows: ‘(My) uncle helped me to build a house’, ‘(My) uncles helped me to build a house’, ‘The fish (SG) ate the fly’, ‘The fish (PL) ate the flies’, ‘The river demolished the bridge’, ‘The rocks broke the roof’. The maps show the type (r-type or non-r-type) of the ergative marker used in each of the contexts, respectively.
 
 
 ## fish.PL {.tabset .tabset-fade .tabset-pills}

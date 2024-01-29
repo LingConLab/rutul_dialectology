@@ -1,7 +1,7 @@
 ---
 title: Ergative marker vowel presence
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 15)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 28)`'
 output:
   html_document:
     number_sections: true
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-Ergative marker can be of r-type (*balʁu-ra* fish.OBL-ERG) or of vowel-type (*gagaj-e* uncle-ERG). In each case the vowel in the marker can be present (*balʁu-ra* fish.OBL-ERG, *gagaj-e* uncle-ERG) or absent (*balʁu-r* fish.OBL-ERG, *gagaj-Ø* uncle-ERG). We collected 6 sentences with three nouns in singular and in plural: uncle.SG and uncle.PL (animate, human), fish.SG and fish.PL (animate, non-human), river.SG and rock.PL (inanimate, non-human). The sentences are the following: ‘(My) uncle helped me build a house’, ‘(My) uncles helped me build a house’, ‘The fish (SG) ate the fly’, ‘The fish (PL) ate the flies’, ‘The river demolished the bridge’, ‘The rocks broke the roof’. In these maps the presence of the vowel in ergative marker is shown in these 6 contexts.
+Apart from the ergative marker being of r-type (*balʁu-ra* fish.OBL-ERG) or non-r-type (*gagaj-e* uncle-ERG, *gagaj-Ø* uncle-ERG), it may either contain (*balʁu-ra* fish.OBL-ERG, *gagaj-e* uncle-ERG) or lack (*balʁu-r* fish.OBL-ERG, *gagaj-Ø* uncle-ERG) the final vowel. We elicited four nouns in the singular and in the plural: ‘uncle‘ (SG) and ‘uncle‘ (PL) (animate, human), ‘fish‘ (SG) and ‘fish‘ (PL) (animate, non-human), ‘river‘ (SG) and ‘rock‘ (PL) (inanimate, non-human). The elicited contexts were as follows: ‘(My) uncle helped me to build a house’, ‘(My) uncles helped me to build a house’, ‘The fish (SG) ate the fly’, ‘The fish (PL) ate the flies’, ‘The river demolished the bridge’, ‘The rocks broke the roof’. The maps show the presence of the vowel in the ergative marker.
 
 
 ## fish.PL {.tabset .tabset-fade .tabset-pills}
