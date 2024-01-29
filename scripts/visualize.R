@@ -2,17 +2,17 @@ library(tidyverse)
 library(widyr)
 
 # all
-read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
-  df
-
-for_plot_title <- "with all stimuli" 
+# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
+#   df
+# 
+# for_plot_title <- "with all stimuli"
 
 # without 200
-# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |> 
+# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |>
 #   filter(domain != "Basic Lexicon") ->
 #   df
-#
-# for_plot_title <- "without 200 lists" 
+# 
+# for_plot_title <- "with only 200 lists"
 
 # just 200
 # read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |>
@@ -59,7 +59,7 @@ df |>
 df_pairwise_total |> 
   left_join(df_pairwise_within_construction) |> 
   mutate(n = ifelse(n > total, total, n)) |> 
-  mutate(percentage = round(n/total*100, 2)) |> 
+  mutate(percentage = round(n/total*100, 1)) |> 
   select(item1, item2, percentage) |> 
   group_by(item1) |>
   mutate(sum_i1 = sum(percentage)) |> 
@@ -80,7 +80,7 @@ df_pairwise_total |>
 df_pairwise_total |> 
   left_join(df_pairwise_within_construction) |>
   mutate(n = ifelse(n > total, total, n)) |> 
-  mutate(percentage = 100-round(n/total*100, 2)) |> 
+  mutate(percentage = 100-n/total*100) |> 
   select(item1, item2, percentage) |> 
   pivot_wider(names_from = item2, values_from = percentage) |> 
   arrange(item1) |> 

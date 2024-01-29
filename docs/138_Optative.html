@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Nina Dobrushina" />
+
+
+<title>Optative</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.1/leaflet-providers-plugin.js"></script>
+<link href="site_libs/minichart-0.2.2/minicharts.css" rel="stylesheet" />
+<script src="site_libs/minichart-0.2.2/leaflet.minicharts.min.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.31/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.13.6/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.13.6/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.13.6/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Atlas of Rutul dialects</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="./features.html">
+    <span class="fa fa-atlas"></span>
+     
+    Features
+  </a>
+</li>
+<li>
+  <a href="./team.html">Team</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Optative</h1>
+<h4 class="author">Nina Dobrushina</h4>
+<h4 class="date">Last update: 2023-06-28</h4>
+
+</div>
+
+
+<p>Optative suffixes vary across dialects. Suffixes -j, -xʲ, -x, -š, -k,
+-kij and -jkij are attested in our data.</p>
+<div id="section"
+class="section level1 tabset tabset-fade tabset-pills">
+<h1 class="tabset tabset-fade tabset-pills"></h1>
+<div id="map" class="section level2 hasAnchor">
+<h2 class="hasAnchor">Map<a href="#map" class="anchor-section"
+aria-label="Anchor link to header"></a></h2>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-672d55ebbb9c6a793294" style="width:912px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-672d55ebbb9c6a793294">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"zoomControl":false},"calls":[{"method":"addTiles","args":["OpenStreetMap.HOT",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.HOT",null,"OpenStreetMap.HOT",{"errorTileUrl":"","noWrap":false,"opacity":1,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[41.378607,41.53146,41.5342,41.564115,41.60348,41.60988,41.6166,41.618658,41.65545,41.68,41.693931,41.577819],[47.443605,47.48171,47.4269,47.376937,47.33116,47.307307,47.2647,47.375666,47.26768,47.29,47.210005,47.3499843],10,null,["","","","","","","","","","","",""],{"interactive":true,"className":"","stroke":false,"color":"#03F","weight":1,"opacity":0.5,"fill":true,"fillColor":["gray","gray","gray","gray","gray","gray","gray","gray","gray","gray","gray","gray"],"fillOpacity":0.4},null,null,["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>"],null,["Khnov","Kiche","Rutul","Kufa","Amsar","Luchek","Kina","Shinaz","Dzhilikhur","Myukhrek","Ikhrek","Kala"],{"interactive":false,"permanent":true,"direction":"top","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":true,"style":{"font-size":"15px","font-family":"sans-serif"},"className":"","sticky":true},null]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]},{"method":"addTiles","args":["OpenStreetMap.HOT",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap.HOT",null,"OpenStreetMap.HOT",{"errorTileUrl":"","noWrap":false,"opacity":1,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[41.60348,41.65545,41.693931,41.577819,41.378607,41.53146,41.6166,41.564115,41.60988,41.68,41.5342,41.618658,41.66611],[47.33116,47.26768,47.210005,47.3499843,47.443605,47.48171,47.2647,47.376937,47.307307,47.29,47.4269,47.375666,47.28056],3,null,["","","","","","","","","","","","",""],{"interactive":true,"className":"","stroke":false,"color":["#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6","#3B8BC6"],"fillOpacity":0},null,null,["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 1<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 1<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 1<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 0<br> xʲ: 1<br> š: 1<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 1<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> ","<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],null,null,{"interactive":false,"permanent":false,"direction":"right","opacity":1,"offset":[7.5,0],"textsize":"10px","textOnly":true,"style":{"font-size":"15px","font-family":"sans-serif"},"className":"","sticky":true},null]},{"method":"addMinicharts","args":[[{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.210005,41.693931)","lat":41.693931,"lng":47.210005},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.2647,41.6166)","lat":41.6166,"lng":47.2647},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.26768,41.65545)","lat":41.65545,"lng":47.26768},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.28056,41.66611)","lat":41.66611,"lng":47.28056},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.29,41.68)","lat":41.68,"lng":47.29},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.307307,41.60988)","lat":41.60988,"lng":47.307307},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.33116,41.60348)","lat":41.60348,"lng":47.33116},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.3499843,41.577819)","lat":41.577819,"lng":47.3499843},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.375666,41.618658)","lat":41.618658,"lng":47.375666},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.376937,41.564115)","lat":41.564115,"lng":47.376937},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.4269,41.5342)","lat":41.5342,"lng":47.4269},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.443605,41.378607)","lat":41.378607,"lng":47.443605},"timeSteps":1},{"dyn":{},"static":{"type":"pie","width":21,"height":30,"opacity":1,"labels":"none","labelMinSize":8,"labelMaxSize":24,"transitionTime":750,"fillColor":"#3B8BC6","layerId":"_minichart (47.48171,41.53146)","lat":41.53146,"lng":47.48171},"timeSteps":1}],[[[1,0,0,0,1,0]],[[1,0,0,0,0,0]],[[1,0,0,0,0,1]],[[1,0,0,0,0,0]],[[1,0,0,0,0,0]],[[1,0,0,0,0,0]],[[1,1,0,1,0,0]],[[1,1,0,0,0,0]],[[1,1,0,0,0,0]],[[1,1,0,0,0,1]],[[1,1,0,0,0,0]],[[0,1,1,0,0,0]],[[1,1,0,0,0,0]]],1,["#3B8BC6","#F78716","#35A532","#E62651","#8D63B9","#8E5D4D","#EB88CD","#93898C","#2ED1E5","#F3DD0D","#F135FF","#3832F2","#F61CAF","#35FE2E","#D9E5A4","#E5717D","#0DE0B9","#E7A962","#C9D8FC","#1C8062","#AF5AF5","#ADE535","#BDEDDB","#BF00A8","#358DFC","#85224F","#FDD4C8","#E97FF8","#22FBA1","#998932","#9DEEAA","#E7B4F8","#5697A4","#FB72B0","#F89FB8","#E72A7E","#A1B116","#A872A1","#628322","#AEB3FE","#6E6E92","#FDD6F1","#6C45C2","#FD0DE6","#81855D","#F5DA89","#7DF156","#FC9B6D","#00FAF4","#49C4BB","#9491FC","#8DD0FD","#F5C232","#22A469","#A9DB77","#BF0073","#E0E0E0","#D1DF0D","#DAB386","#EC704B","#923B9B","#BBC6A6","#C28A96","#D0A0FE","#AF32C7","#851CF1","#F5A71C","#BE7169","#CF7ED6","#9EE5ED","#32A7F5","#F958C4","#C1479B","#6EE582","#EC6DDC","#E04953","#6E8D81","#A79ECE","#D735D8","#E9A7CE","#3D6594","#FA0D7D","#FD9E92","#7058E9","#A45A77","#7CD8AF","#F02ECB","#4063AD","#D535FF","#1C7A2E","#6D9FC5","#B8AA22","#B468E0","#A44F8E","#CA425C","#906CA8","#B2DAA5","#AF4D4B","#16C5EF","#CBB9B0"],["1"],null,{"showTitle":true,"showValues":true,"labels":["j","xʲ","š","x","jkij/kij/k","OTHER"],"supValues":null,"supLabels":[],"html":[["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 1<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 1<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 0<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 1<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 1<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 0<br> xʲ: 1<br> š: 1<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "],["<a href='https://glottolog.org/resource/languoid/id/rutu1240' target='_blank'>Rutul<\/a><br>j: 1<br> xʲ: 1<br> š: 0<br> x: 0<br> jkij/kij/k: 0<br> OTHER: 0<br> "]],"noPopup":false,"digits":null},null,null]},{"method":"addLegend","args":[{"colors":["#3B8BC6","#F78716","#35A532","#E62651","#8D63B9","#8E5D4D"],"labels":["j","xʲ","š","x","jkij/kij/k","OTHER"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":null,"extra":null,"layerId":"minichartsLegend","className":"info legend","group":null}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]}],"limits":{"lat":[41.378607,41.693931],"lng":[47.210005,47.48171]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="data" class="section level2 hasAnchor">
+<h2 class="hasAnchor">Data<a href="#data" class="anchor-section"
+aria-label="Anchor link to header"></a></h2>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-03a79d1274655dc3153a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-03a79d1274655dc3153a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"data":[["Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Amsar","Amsar","Amsar","Dzhilikhur","Dzhilikhur","Ikhrek","Ikhrek","Ikhrek","Kala","Kala","Kala","Kala","Khnov","Khnov","Khnov","Khnov","Kiche","Kiche","Kina","Kina","Kina","Kufa","Kufa","Kufa","Kufa","Luchek","Luchek","Luchek","Luchek","Myukhrek","Myukhrek","Rutul","Rutul","Rutul","Shinaz","Shinaz","Shinaz","Tsudik","Kufa","Kufa","Kufa"],["j","xʲ","xʲ ; j","j","j","j","j","j","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","xʲ","j","j","j","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","j","xʲ","xʲ","xʲ ; j","j","NO DATA","j","j","NO DATA","j","j","j","xʲ","š","š","xʲ","xʲ","j","NO DATA","j","NO DATA","NO DATA","j","j","xʲ","xʲ","j","NO DATA","NO DATA","NO DATA","j","NO DATA","j","xʲ","xʲ","xʲ ; j","xʲ ; j","j","x","xʲ","xʲ","j","j","j","j","jkij/kij/k","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ ; j","xʲ","xʲ","xʲ","NO DATA","x","xʲ","xʲ","j","j","j","jkij/kij/k ; j","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","xʲ ; j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","x","xʲ","xʲ ; j","j","j","j","jkij/kij/k ; j","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","x","xʲ","xʲ","j","j","j","j","NO DATA","j","j","NO DATA","xʲ","š","š","š","xʲ","j","NO DATA","j","j","NO DATA","j","j","j","xʲ","j","NO DATA","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ ; j","xʲ","xʲ","xʲ","NO DATA","xʲ","xʲ","xʲ","j","j","j","jkij/kij/k","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","x","xʲ","xʲ","j","j","j","jkij/kij/k ; jkij/kij/k ; j","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","NO DATA","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","x","xʲ","xʲ ; j","j","OTHER","j","j","jkij/kij/k","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","OTHER","xʲ","j","j","j","NO DATA","j","j","xʲ","xʲ","xʲ ; j","xʲ","xʲ","xʲ","j","x","xʲ","xʲ","j","j","j","jkij/kij/k","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ ; j","NO DATA","x","xʲ","xʲ","j","j","j","j","jkij/kij/k ; jkij/kij/k","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","xʲ","xʲ","xʲ","j","j","j","j","j","j","j","j","xʲ","š","š","š","xʲ","j","xʲ ; j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","j","j","xʲ","xʲ","xʲ","xʲ","NO DATA","j","x","xʲ","j","j","j","jkij/kij/k ; j","NO DATA","j","j","j","xʲ","š","š","š","xʲ","j","j","j","j","NO DATA","j","j","j","xʲ","j","j","NO DATA","NO DATA","j","j","xʲ","xʲ","xʲ","xʲ","xʲ","xʲ","NO DATA","NO DATA","NO DATA","NO DATA"],["Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","Да поможет тебе Аллах!","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","доброго пути","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть бежит","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть даст","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть лежит","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть начнет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть пишет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","пусть плачет","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","Пусть родители придут в школу","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть стоит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть увидит","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть умрет","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит","пусть уходит",null,null,null],["wɨ allahar uˁχuˁj!","was allahar kʲümegʲ wijixʲ!","ǧɨnčir kumag wɨixʲ was! / ǧɨnčir kumag wišij was!","was allah kumag jišij!","was allahar kumaǧ hap'ɨj!","hɨnčira kumag wajij ʁʷas","ʁʷas hinɨš kumagdar hišij","allahara kumag waajij","allax kumag wɨj!","allaχ kumeg jišij!","allax kumag jišij was!","allahara was kʲümegʲ wɨxʲ!","kʲümek haq'ɨš ʁʷas hɨnčire","allahar kümek haq'ɨš","hɨniš kʲümekʲ ʁʷas jišišʲ","ʁʷas hɨniš kümekʲ jišixʲ","was allahara kʲümegʲ wij!","allah was kʲümegʲ (ikij / išij)!","allahad kumag hišij was","allahara kumag hijij was",null,"allahara was kʲümegʲ hɨʔɨj!","jikij was ǧʲinčikla kʲümegʲ!","allahara wixʲ was kʲümegʲ!","allahar was kumag wijij","allahar was kumag jišij","allahar was kumag wijej / allahar kumag wišej",null,"allahar kumag waʔaj was","was allahar kumag wiʔij","allah was kʲümegʲ jišixʲ!","was allahara kʲümegʲ hɨʔɨxʲ jaʔallah!","allahara kʲümegʲ hɨʔɨxʲ!","allah kumag wišixʲ / wixʲ","allah kumag wišixʲ!","allahar χɨl gʲawkɨxʲ waχda","allahara kumag wijij was / allahara χɨl gʲaqaj waχda","jɨxdɨ wes raˁq wišixʲ","jixdɨ raˁq wišixʲ","jɨxdɨ raˁq wišij / wišixʲ","jɨxdɨ raˁʁ wišij",null,"ʁʷas uɣur wɨšij","uɣur wɨšij / wɨxdɨ raˁq wišij",null,"jixdɨ raˁq wišij","jixdɨ raˁq wišij","jiχdɨ raˁq (wišij)!","baχdɨ rišixʲ! raˁq jiχdɨ wišixʲ!","jixdɨ raˁq wišiš","jixdɨ raˁq wišiš","jixdɨ raˁq wišixʲ","jixdɨ raˁq wišixʲ","was ačiχdɨ raˁq wišij",null,"hɨxdɨ raˁq wišij",null,null,"jiχdɨ raˁq wišij! / χidinabi rɨq'e gɨˁχɨˁj","jiχdɨ raˁq (wišij)!","jixdɨ raˁq wišixʲ!","was raˁq jiχdɨ wišixʲ!","hɨxdɨ raˁq wišij",null,null,null,"hɨxdɨ raˁʁ wišij",null,"uɣurula, uɣur wišj","jɨxdɨ raˁq wišixʲ","jɨxdɨ raˁq wišixʲ","hɨxdɨ raˁq wišij / wišixʲ","hɨxdɨ raˁq wišij / wišixʲ","hɨxdɨ raˁʁ wišij","sat jaχχɨx!","sat jaχχɨxʲ!","sat jaχχɨxʲ!","sat jaχχaj!","hɨggan jaχaj!","sata suχuj!","sata suχuj!","suχukij","jixxɨr jaχχɨj!","aj jaχχɨj!","jaχχɨj haj!","jaχχɨxʲ!","sata suχaːš!","jäχɨš!","sata suχaːš!","sata jaχɨxʲ!","jaχɨj!","jiggara jaχɨj!","sata jaχχaj!","sata jaχχaj!",null,"jaχχɨj!","ha jaχχɨj!","jiggana jaχχɨj!","ha jaχχɨxʲ!","jaχχaj","jaχχaj",null,null,"sat jaχχaj!","sat jaχχaj!","jaχχɨxʲ!","jiggana jaχɨxʲ!","jaχχɨxʲ (mɨ)! jaχχɨj","hɨkkan jaχɨxʲ!","jaχɨxʲ!","jaχɨxʲ!",null,"sat wijix!","sat wijixʲ!","wijixʲ!","sat jijij!","jijaj*. hak! = daj! hak / hakaj (ok)","satɨ hakɨj!","hakɨj! / hakɨjkij!",null,"hanij miʔ wɨjij","kɨwɨjij!","wɨjij!","hanij wɨjixʲ!","sata jiːš!","sata jiːš!","sata jiːš!","sata jiːxʲ!","sata wij!","jiggana wixʲ / wij!","sata jiij /hakaj","sata hijij /hakaj",null,"jiggana wijij!","wijij!","jiggana wɨj!","wixʲ!","satɨ wijej","wijej",null,null,"sat hijij /hakaj","hakaj!","hanije wijxʲ! (wijixʲ)","qiwiːxʲ!","jigara (qɨ)wijixʲ!","hɨkkan wixʲ!","wixʲ!","wixʲ! / wixʲixʲ!",null,"haːs aːlukux!","haːs lukuxʲ!","sat lukuxʲ! lukuj","sat subq'aj!","hɨggan awqupt'aj!","sata owqutuj!","owqutuj / owqutujkij!",null,"a lukuj!","aj lukuj!","lukuj haj!","sukuxʲ / lukuxʲ!","sata lukaš!","sata lukaš!","sata lukaš!","sata lukaxʲ!","sata lukuj!","jiggana lukuj!","sata lukaj","sata lukaj",null,"jiggana lukuj!","ha lukuj","jiggana lukuj!","ha lukuxʲ!","lukʷaj","lukaj",null,null,"owqubdaj, subq'aj owqubdur пусть лежит","sapt owqubdaj!","lukuxʲ!","jiggana lukuxʲ!","jigara lukuxʲ!","hɨkkan lukuxʲ!","lukuxʲ!","sukuxʲ aː lukur!",null,"sat kijič'ix! / sat haːlgɨx!","sat kijičixʲ","sat kijč'ixʲ!","sat kijič'ij!","hɨggan kijič'ij!","sata kijič'ij!","lakajij! / kijič'ij!",null,"jixxɨr kečʷuj!","keč'ij!","???","kʲäč'uxʲ!","sata kijč'iš!","sata kijič'iš!","sata kijč'iš!","bašlamiš jišixʲ!","jiggana kečuj!","......","sata kijič'ij!","sata kijič'ij!",null,"jigganakun kijiʔij!","keč'uj! / koč'uj!","jiggana koč'uj!","ha kuč'uxʲ!","satɨ kučej",null,null,null,"sat kijič'ij!","sat kijič'ij!","kɨč'uxʲ!","keč'uxʲ!","jigara kɨč'uxʲ! kɨč'uj","koč'exʲ","koč'ixʲ или koč'exʲ, не слышно","kəč'uxʲ!",null,"kixʲixʲ","sat kixʲixʲ!","sat kixʲixʲ!","sat kixʲij!","kixij! / hɨggan kixij! = pustj pišet!","sata kʲixʲij!","kixʲijkij!",null,"kixʲij!","kixʲij!","kixʲij!","sat kʲixʲixʲ!","sata kixʲiš!","kišiš","sata kišišʲ!","kixixʲ!","sata kixij!","jiggana kixij!","sata kʲiχij!","sata kʲiχij!",null,"kʲixʲij!","kixʲij!","jiggana kixʲij!","ha kixʲixʲ!","satɨ kixej","kʲixej",null,null,"sat kʲixij!","sat qʲikʲixij!","kixʲixʲ!","jigganakun kixʲixʲ!","jigara kixixʲ!","hɨkkan kixʲixʲ!","kixʲixʲ!","kixʲixʲ!",null,"sat ješix!","sat ješixʲ!","sat ješixʲ!","sat ješej!","hɨggan ješej / rešej!","sata ješij!","sata ješij! / (sata) ješijkij! / (sata) ješikij!",null,"ješij!","aj ješij!","ješij haj!","ješixʲ!","sata ješiš!","sata ješiš!","sata ješiš!","sata ješixʲ!","(sata) ješij!","jiggana rešij!","sata rešej!","sata rešej!",null,"jiggana ješij!","ha ješij!","jiggana ješij!","ha ješixʲ!","ješej",null,null,null,"sat rešej!","sat rešej!","ha ješixʲ!","jiggana ješixʲ!","jigara ješixʲ!","hɨkkan jišixʲ!","ješixʲ!","ješixʲ!",null,"bɨga didnanin mexʲteb dɨq'ɨx!","sata dɨq'ɨxʲ hanudɨ didnɨnin mexʲteb","ninabar dɨq'ɨxʲ / dɨq'ɨj mixʲteb!","sat did-nin mixʲtab dɨq'aj!","didnɨnin dɨq'a mixʲtaba!","sata ninnädid diq'ɨj maxtaba!","juʁdɨ did-na-nin diq'ɨj mäxtäbä","nindid diq'ɨjkij maxdaba","didnanin mixʲtʲeb dɨq'ɨj!","didnanindɨ dɨq'a xuj mixʲteb / ...???","dɨq'ɨj bɨga ninabar mixʲteb!","didninɨn dɨq'ɨxʲ mexʲtebe!","diq'aš didni mixʲtaba","didni školada diq'aš","sata ʁud didnani školadɨ diq'aš!","didabarna ninabar mixʲtebe diq'axʲ!","didneni(n) dɨq'ɨj mixʲtebe","didnin dɨq'aj mixʲtebe / didnin jidq'aj mixʲtebe","dɨq'aj didnanin mixʲtaba","didnin mixʲtaba dɨq'aj",null,"didnin dɨq'ɨj mixʲtebe!","dɨq'aj radʲitʲeler mexʲtebe","didnaninxana mexʲtebe dɨq'a!","didabar ninabar dɨrɨχɨxʲ mexʲtebe!","nindid mɨxʲtaba dɨq’aj (*dɨq’axʲ)","dɨq'aj didnin mixtabɨ","ninnɨdid mixtabɨ dɨq'aj",null,"didnɨnin dɨq'aj mixʲdab","dɨq'aj mixʲdab didnɨnin","wɨdɨ bɨga didnenin mixʲtebe dɨq'ɨxʲ!","didnänin mexʲtebe dɨq'ɨxʲ!","didnin daχɨxʲ /daχɨj mixʲtebe","didnanin mixʲteb dɨq'ɨxʲ!","didɨnin dɨq'ɨxʲ mixʲtebe","dɨq'ɨxʲ didabar mexʲtebe!","didnin mixʲtab dɨq'aj wɨdɨ","sat luzux!","luzuxʲ","sat luzuxʲ! sat luzɨxʲ!","sat luzaj!","hɨggan luzaj!","sata luzuj!","luzujkij!",null,"la luzɨj / luzuj","luzuj!","luzuj!","luzuxʲ!","sata luzaš!","sata luzaš!","sata luzaš!","luzaxʲ!","sata luzuj!","jiggana luzuj!","sata luzaj!","sata luzaj!",null,"luzuj!","luzuj!","jiggana luzuj!","ha luzuxʲ!","satɨ luzaj","luzaj!",null,null,"sat luzaj!","sat luzaj!","luzuxʲ!","jigganakun luzuxʲ!","jigara luzuxʲ!","luzɨxʲ!","luzɨxʲ! luzuxʲ","hɨkkan luzuj / luzuxʲ",null,"sat hagux!","sat haguxʲ!","sat haguxʲ!","sat ʁajijij!","hɨggan ʁajijij!","sata ʁaguj!","sata ʁaguj!","sata ʁaguk,  ʁagukij","haguj!","harguj!","sata haguj!","haguxʲ!","sata ʁegiš!","hawɨsa ʁejegiš","sata ʁejgiš! / ʁogaš!","sata ʁejegixʲ!","sata haguj!","jiggana haguj!","sata ʁagʷaj!","sata ʁagʷaj!",null,"jigganakun haguj!","haguj!","jiggana haguj!","sata haguxʲ!","hagʷaj","hagʷaj",null,null,"sat ʁaʁʷaj!","sat ʁaʁʷaj!","haguxʲ!","hanijis haguxʲ!","jigara haguxʲ! / haguj!","hɨkkan haguxʲ!","haguxʲ!","haguxʲ!",null,"je allahar wɨ jiq'ixʲ!","sat jiq'ixʲ!","haːsɨ riq'ixʲ!","sat jiq'ij!","hɨggan jiq'ej!","sata jiq'ij","jiq'ij had!","sata jiq'ij!","jiq'ɨj!","aj jiq'ij!","jiq'ij","jiq'ixʲ!","howsa jiq'iš!","hawɨsa jiq'iš!","sata jiq'iš!","sata jiq'ixʲ!","jiq'ij (h)a!","jiggana / jiggara jiq'ɨxʲ / jiq'ɨj","sata jiq'ij!","sata jiq'ij!",null,"ha jiq'ij!","ha jiq'ij!","jiq'ij wɨǯ!","ha jiq'ixʲ!","jiq'ej","jiq'ej",null,null,"sat jiq'ij!","had jiq'irij!","ha jiq'ij!","jiq'ij ha!","ha jiq'ir jigadʔɨ / jikkana jiq'ixʲ!","hɨkkan jiq'ixʲ!","jiq'ɨxʲ!","jiq'ixʲ!",null,"sat qɨrɨχɨj!","sat qɨrɨχɨx!","sat rɨχɨxʲ!","sat qɨrɨχɨj!","hɨggan qɨrɨχɨj!","sata qɨrɨχɨj!","qɨrɨχɨj! / qɨrɨχɨjkij!",null,"jixxɨr qɨrɨχɨj!","aj qɨrɨχɨj!","qɨrɨχɨj!","qɨrɨχɨxʲ!","sat qɨwɨraš!","sata qɨwɨraš!","sata wɨraaš!","sata wɨraxʲ!","sata qɨrɨχɨj!","jiggana kɨrɨχɨj!","sata rɨχɨj!","sata kɨrɨχɨj!",null,"jigganakun qɨrɨχɨj!","ha qɨrɨχɨj!","jiggana qɨrɨχɨj!","ha qɨrɨχɨxʲ!","qɨrɨχaj","kɨrɨχaj",null,null,"sat qɨrɨχɨj!","sapt qɨwrɨχɨj!","qɨrɨχɨxʲ!","jiggana qɨrɨχɨxʲ!","jigganakun qɨrɨχɨxʲ!","hɨkkan qɨrɨχɨxʲ!","qɨrɨχɨxʲ!","qɨrɨχɨxʲ!",null,null,null,null],["Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina","Nina Dobrushina"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>settlement<\/th>\n      <th>value<\/th>\n      <th>stimuli<\/th>\n      <th>answer<\/th>\n      <th>collected<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":42,"autoWidth":true,"info":false,"dom":"fBltp","buttons":[{"extend":"collection","buttons":["csv","excel","pdf"],"text":"<i class=\"fas fa-download\"><\/i>"}],"paginate":true,"columnDefs":[{"name":"settlement","targets":0},{"name":"value","targets":1},{"name":"stimuli","targets":2},{"name":"answer","targets":3},{"name":"collected","targets":4}],"order":[],"orderClasses":false,"orderCellsTop":true,"lengthMenu":[10,25,42,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
