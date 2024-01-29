@@ -1,6 +1,25 @@
 library(tidyverse)
 library(widyr)
-df <- read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv")
+
+# all
+read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
+  df
+
+for_plot_title <- "with all stimuli" 
+
+# without 200
+# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |> 
+#   filter(domain != "Basic Lexicon") ->
+#   df
+#
+# for_plot_title <- "without 200 lists" 
+
+# just 200
+# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |>
+#   filter(domain == "Basic Lexicon") ->
+#   df
+#
+# for_plot_title <- "based on 200 lists" 
 
 df |> 
   select(feature_title, feature_lexeme, value, settlement, value) |> 
@@ -55,7 +74,7 @@ df_pairwise_total |>
   geom_text(aes(label = str_c(percentage, "%")), colour = "white") +
   scale_fill_gradient(low = "lightblue", high = "navy")+
   coord_fixed()+
-  labs(x = "", y = "", title = "Heatmap with all stimuli") +
+  labs(x = "", y = "", title = str_c("Heatmap ", for_plot_title)) +
   theme(legend.position = "bottom")
 
 df_pairwise_total |> 
@@ -73,7 +92,7 @@ library("ape")
 dist_gold_standard |>   
   hclust() |> 
   as.phylo() %>% 
-  plot(main = "Clusterization with all stimuli",
+  plot(main = str_c("Clusterization ", for_plot_title),
        cex = 1.5,
        font = 2)
 
@@ -81,7 +100,7 @@ library(phangorn)
 dist_gold_standard |> 
   neighborNet() |> 
   plot()
-title(main = "neighborNet for all stimuli")
+title(main = str_c("neighborNet ", for_plot_title))
 
 # CA ----------------------------------------------------------------------
 
@@ -101,4 +120,5 @@ ca$rowcoord |>
   ggplot(aes(Dim1, Dim2, label = settlement))+
   geom_point()+
   ggrepel::geom_label_repel()+
-  theme_minimal()
+  theme_minimal()+
+  labs(title = str_c("CA ", for_plot_title))
