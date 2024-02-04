@@ -89,7 +89,7 @@ read_csv("data/database.csv", col_select = "feature_id") %>%
   pull(feature_id) ->
   max_id_in_db
 
-readxl::read_xlsx("data/verb-28-01-2024-4.xlsx") %>% 
+readxl::read_xlsx("data/verb_2024-02-04.xlsx") %>% 
   filter(!is.na(value)) ->
   df
 
