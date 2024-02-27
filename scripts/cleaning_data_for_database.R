@@ -1,7 +1,7 @@
 # asya ergative -----------------------------------------------------------
 
 library(tidyverse)
-df <- read_csv("data/asya_features_28-01-24.csv")
+df <- read_csv("data/asya_features.csv")
 df %>% 
   filter(to_map == 1) %>% 
   mutate(feature_id = as.double(factor(feature_title)),

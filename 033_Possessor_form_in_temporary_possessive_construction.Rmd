@@ -1,0 +1,195 @@
+---
+title: Possessor form in temporary possessive construction
+author: Asya Alekseeva
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 28)`'
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == 33) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch', 'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
+  
+villages |> 
+  filter(!(village %in% c('Tsudik', 'Borch'))) ->
+  villages4map
+  
+```
+
+Temporary possessor is a participant that carries a possessum but who does not own it (cf. *I do not have your book with me*). We elicited two contexts: ‘Do not search for your passport, I have it’ and ‘Who has a pen?’. We considered the reaction to the first context as primary evidence. The maps show the forms of pronouns ‘I’ and ‘who’ in these contexts. The attested variants for ‘I’ include *zada*, *zadɨ*, *zad* and *zadːa*, and are never identical to the marking used in possessive predication (see feature @). The second context is probably ambiguous, because some consultants used the form (*halɨχda*) that was used in possessive predication, which we believe suggests “permanent” interpretation of the context with pragmatic inference of having it also here and now, such cases are labeled as OTHER. The attested variants for ‘who’ include *halda* and *haldɨ*.
+
+
+## ‘who’ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘who’')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘who’') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘I’ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘I’')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘I’') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+

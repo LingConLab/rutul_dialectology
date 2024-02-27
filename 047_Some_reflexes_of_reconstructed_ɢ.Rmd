@@ -1,0 +1,441 @@
+---
+title: Some reflexes of reconstructed ɢ
+author: Nikita Beklemishev
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 1, day = 27)`'
+output:
+  html_document:
+    number_sections: true
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE, fig.width = 9.5)
+library(tidyverse)
+library(lingtypology)
+read_csv('data/database.csv', show_col_types = FALSE) |> 
+  filter(feature_id == 47) ->
+  db
+read_csv('data/villages.csv') |> 
+  filter(!(village %in% c('Kazankulak', 'Novyy Borch', 'Vrush', 'Aran', 'Khnyukh'))) ->
+  villages
+  
+villages |> 
+  filter(!(village %in% c('Tsudik', 'Borch'))) ->
+  villages4map
+  
+```
+
+Uvular lenis stop /ɢ/ in some roots tends to alternate with other uvulars and sometimes laryngeals between dialects [@ibragimov2004], which is attributed sometimes to <reinterpretation> of devoicing of /ɢ/, since most realisations of it are indeed fully voiceless [q]. This umbrella-feature checks different random words with /ɢ/ across dialects and comprises the corresponding sounds that appear in their cognates. The preliminary values are the initial consonants in cognates of /ɢaːd/ ‘twenty’, /ɢarg/ ‘male sheep’, /ɢač/ ‘eyebrow’, muˁɢ ‘village’ and the inital of the second syllable in word /paɢʷal/ ‘burdock’. The final values are ɢ / ɢʷ / ɢˁ as voiceless, q / qˁ as aspirated and qʼʷ / qʼˁʷ as ejectives.
+
+
+## ‘twenty’ /ɢaːd/ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘twenty’ /ɢaːd/')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘twenty’ /ɢaːd/') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘ram’ /ɢarg/ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘ram’ /ɢarg/')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘ram’ /ɢarg/') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘eyebrow’ /ɢač/ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘eyebrow’ /ɢač/')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘eyebrow’ /ɢač/') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘burdock’ /paɢʷal/ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘burdock’ /paɢʷal/')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘burdock’ /paɢʷal/') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
+## ‘village’ /muˁɢ/ {.tabset .tabset-fade .tabset-pills}
+
+### Map
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘village’ /muˁɢ/')  |>
+  filter(!is.na(value),
+         value != 'NO DATA') |>
+  mutate(value = str_split(value, ' ; ')) |> 
+  unnest_longer(value) |> 
+  distinct(settlement, value) |> 
+  mutate(n = 1) |> 
+  pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+  left_join(villages[,c('village', 'lat', 'lon')], c('settlement' = 'village')) |> 
+  mutate(language = 'Rutul') ->
+  for_map
+  
+if(length(for_map) == 5){
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+              latitude = for_map$lat,
+              longitude = for_map$lon,
+              label = for_map$settlement,
+              label.position = 'top',
+              label.hide = FALSE,
+              width = 10,
+              tile = 'OpenStreetMap.HOT',
+              features = colnames(for_map)[2],
+              pipe.data = _)  
+} else {
+map.feature(languages = 'Rutul',
+            latitude = villages4map$lat,
+            longitude = villages4map$lon,
+            label = villages4map$village,
+            label.position = 'top',
+            label.hide = FALSE,
+            width = 10,
+            color = 'gray',
+            tile = 'OpenStreetMap.HOT',
+            opacity = 0.4) |> 
+  map.feature(languages = for_map$language,
+            latitude = for_map$lat,
+            longitude = for_map$lon,
+            minichart.data = for_map |> select(-settlement, -lat, -lon, -language),
+            minichart = 'pie', 
+            width = 3,
+            tile = 'OpenStreetMap.HOT',
+            pipe.data = _)
+}
+```
+
+### Data
+
+```{r}
+db |> 
+  filter(feature_lexeme == '‘village’ /muˁɢ/') |> 
+  select(settlement, value, stimuli, answer, collected) |> 
+  DT::datatable(class = 'cell-border stripe', 
+    rownames = FALSE, 
+    filter = 'top', 
+    extensions = 'Buttons',
+    options = list(pageLength = 42, 
+                   autoWidth = TRUE, 
+                   info = FALSE,
+                   dom = 'fBltp',
+                   buttons = list(list(extend = 'collection',
+                                       buttons = c('csv', 'excel', 'pdf'),
+                                       text = '<i class="fas fa-download"></i>')),
+                   paginate = TRUE))
+```
+
+
