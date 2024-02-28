@@ -1,7 +1,7 @@
 ---
 title: Marking of topological relation ‘in contact on top of’
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 2, day = 13)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 2, day = 26)`'
 output:
   html_document:
     number_sections: false
@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-We elicited the context ‘There is a stain on the table’. The map shows the case marking on the noun ‘table’. The attested variants include: *-k* / *-kʲ*, *-a*, *-aj* (in Ikhrek) and *-xde* (attested with only one consultant, in Kiche).
+We elicited the context ‘There is a stain on the table’. The map shows the case marking on the noun ‘table’. The attested variants include: *-k* / *-kʲ*, *-a*, *-j* (in Ikhrek) and *-xde* (attested with only one consultant, in Kiche).
 
 
 ## {.tabset .tabset-fade .tabset-pills}

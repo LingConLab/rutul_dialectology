@@ -1,7 +1,7 @@
 ---
 title: Marking of topological relation ‘from in contact with’
 author: Asya Alekseeva
-date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 2, day = 13)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 2, day = 26)`'
 output:
   html_document:
     number_sections: false
