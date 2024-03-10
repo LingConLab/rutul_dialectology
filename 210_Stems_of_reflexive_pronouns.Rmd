@@ -26,18 +26,18 @@ villages |>
   
 ```
 
-This feature shows the specific forms of reflexive stems used in reflexive pronouns such as ‘themselves’. There were eight distinct stimuli to distinguish between singular / plural referents of all four genders. The speakers were asked to translate eight sentences: ‘The boy came himself’ (gender I), ‘The girl came herself’ (gender II), ‘The cow came itself’ (gender III), ‘The wall broke down by itself’ (gender IV), and their plural counterparts. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context).
-With singular gender I referent (‘boy’), the majority of the villages used slightly different phonetic versions of the default root wɨǯ / vɨǯ / wuǯ / viǯ / wiǯ. The precise phonetic and phonemic analysis of this root across dialects has not been done yet. It seems that in the Khnov dialect, the vowel in this root resembles /i/ more than /ɨ/. In Kina, a special form juǯ was used. With singular gender II referent (‘girl’), speakers in Khnov and one speaker in Kiche used the same root, while in other villages a special gender II form was used: riǯ. With singular gender III referent (‘cow’), all the speakers used the “default” root (with dialectal phonetic varations). With singular gender IV referent (‘wall’), speakers in Khnov and Kiche used the same root, while in other villages a special gender IV form was used: jiǯ.
-With plural referents, almost all the time speakers used the root ǯor / ǯʷer / ǯʷär in all genders. Variance is attested with gender IV (‘wall’), in which some speakers in the northwestern villages used the singular form jiǯ.
+This feature shows the specific forms of reflexive stems used in reflexive pronouns such as ‘themselves’. There were eight distinct stimuli to distinguish between singular / plural referents of all four genders. The speakers were asked to translate eight sentences: ‘The boy came **himself**’ (gender I), ‘The girl came **herself**’ (gender II), ‘The cow came **itself**’ (gender III), ‘The wall broke down **by itself**’ (gender IV), and their plural counterparts. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context).
+With singular gender I referent (‘boy’), the majority of the villages used slightly different phonetic versions of the default root *wɨǯ* / *vɨǯ* / *wuǯ* / *viǯ* / *wiǯ*. The precise phonetic and phonemic analysis of this root across dialects has not been done yet. It seems that in the Khnov dialect, the vowel in this root resembles /i/ more than /ɨ/. In Kina, a special form *juǯ* was used. With singular gender II referent (‘girl’), speakers in Khnov and one speaker in Kiche used the same root, while in other villages a special gender II form was used: *riǯ*. With singular gender III referent (‘cow’), all the speakers used the “default” root (with dialectal phonetic varations). With singular gender IV referent (‘wall’), speakers in Khnov and Kiche used the same root, while in other villages a special gender IV form was used: *jiǯ*.
+With plural referents, almost all the time speakers used the root *ǯor* / *ǯʷer* / *ǯʷär* in all genders. Variance is attested with gender IV (‘wall’), in which some speakers in the northwestern villages used the singular form *jiǯ*.
 
 
-## 1.SG {.tabset .tabset-fade .tabset-pills}
+## 1st person, singular {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '1.SG')  |>
+  filter(feature_lexeme == '1st person, singular')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -96,7 +96,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '1.SG') |> 
+  filter(feature_lexeme == '1st person, singular') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -113,13 +113,13 @@ db |>
 ```
 
 
-## 1.PL {.tabset .tabset-fade .tabset-pills}
+## 1st person, plural {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '1.PL')  |>
+  filter(feature_lexeme == '1st person, plural')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -178,7 +178,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '1.PL') |> 
+  filter(feature_lexeme == '1st person, plural') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -195,13 +195,13 @@ db |>
 ```
 
 
-## 2.SG {.tabset .tabset-fade .tabset-pills}
+## 2nd person, singular {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '2.SG')  |>
+  filter(feature_lexeme == '2nd person, singular')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -260,7 +260,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '2.SG') |> 
+  filter(feature_lexeme == '2nd person, singular') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -277,13 +277,13 @@ db |>
 ```
 
 
-## 2.PL {.tabset .tabset-fade .tabset-pills}
+## 2nd person, plural {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '2.PL')  |>
+  filter(feature_lexeme == '2nd person, plural')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -342,7 +342,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '2.PL') |> 
+  filter(feature_lexeme == '2nd person, plural') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -359,13 +359,13 @@ db |>
 ```
 
 
-## 3.SG {.tabset .tabset-fade .tabset-pills}
+## 3rd person, singular {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.SG')  |>
+  filter(feature_lexeme == '3rd person, singular')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -424,7 +424,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.SG') |> 
+  filter(feature_lexeme == '3rd person, singular') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -441,13 +441,13 @@ db |>
 ```
 
 
-## 3.PL {.tabset .tabset-fade .tabset-pills}
+## 3rd person, plural {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.PL')  |>
+  filter(feature_lexeme == '3rd person, plural')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -506,7 +506,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.PL') |> 
+  filter(feature_lexeme == '3rd person, plural') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -523,13 +523,13 @@ db |>
 ```
 
 
-## 4.SG {.tabset .tabset-fade .tabset-pills}
+## 4th person, singular {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '4.SG')  |>
+  filter(feature_lexeme == '4th person, singular')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -588,7 +588,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '4.SG') |> 
+  filter(feature_lexeme == '4th person, singular') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -605,13 +605,13 @@ db |>
 ```
 
 
-## 4.PL {.tabset .tabset-fade .tabset-pills}
+## 4th person, plural {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '4.PL')  |>
+  filter(feature_lexeme == '4th person, plural')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -670,7 +670,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '4.PL') |> 
+  filter(feature_lexeme == '4th person, plural') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

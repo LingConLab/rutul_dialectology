@@ -26,17 +26,17 @@ villages |>
   
 ```
 
-This feature shows the specific form of the attributive suffix -d(V) in the three demonstratives: proximal, medial and distal. For each of the three demonstratives, speakers were provided a specific context which required the use of one of the demonstratives and asked to translate a Russian sentence with the word книга ‘book’. The contexts were as follows: ‘[I am holding this book.] I am going to give *this book* to you’ (for proximal), ‘[You are holding this book.] Give *this book* to me!’ (for medial), ‘[There is a book lying in the corner of the room.] Give me *that book*!’ (for distal). In each context, use of a specific demonstrative root was expected: mi- for proximal, ha-/hawa- for medial, ti-/či- for distal. In a small number of cases, speakers used a demonstrative root which was not expected in the given context; such cases were marked as OTHER. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context). Presence or absence of the emphatic prefix he- was ignored for this feature.
-The distribution for each of the demonstratives is slightly different but overall, the form with an attributive marker is often used in Ikhrek, Khnov, and Shinaz, sometimes also Myukhrek. The medial demonstrative ha- has been used with the attributive marker in more utterances than other demonstratives. In Ikhrek, there is a specific form of the attributive marker for the proximal demonstrative: mi-dɨ.
+This feature shows the specific form of the attributive suffix -*d(V)* in the three demonstratives: proximal, medial and distal. For each of the three demonstratives, speakers were provided a specific context which required the use of one of the demonstratives and asked to translate a Russian sentence with the word *книга* ‘book’. The contexts were as follows: ‘[I am holding this book.] I am going to give **this book** to you’ (for proximal), ‘[You are holding this book.] Give **this book** to me!’ (for medial), ‘[There is a book lying in the corner of the room.] Give me **that book**!’ (for distal). In each context, use of a specific demonstrative root was expected: *mi*- for proximal, *ha*-/*hawa*- for medial, *ti*-/*či*- for distal. In a small number of cases, speakers used a demonstrative root which was not expected in the given context; such cases were marked as OTHER. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context). Presence or absence of the emphatic prefix *he*- was ignored for this feature.
+The distribution for each of the demonstratives is slightly different but overall, the form with an attributive marker is often used in Ikhrek, Khnov, and Shinaz, sometimes also Myukhrek. The medial demonstrative *ha*- has been used with the attributive marker in more utterances than other demonstratives. In Ikhrek, there is a specific form of the attributive marker for the proximal demonstrative: *mi-dɨ*.
 
 
-## PROX (mi-) {.tabset .tabset-fade .tabset-pills}
+## Proximal (*mi*-) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'PROX (mi-)')  |>
+  filter(feature_lexeme == 'Proximal (*mi*-)')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -95,7 +95,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'PROX (mi-)') |> 
+  filter(feature_lexeme == 'Proximal (*mi*-)') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -112,13 +112,13 @@ db |>
 ```
 
 
-## MED (ha-) {.tabset .tabset-fade .tabset-pills}
+## Medial (*ha*-) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'MED (ha-)')  |>
+  filter(feature_lexeme == 'Medial (*ha*-)')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -177,7 +177,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'MED (ha-)') |> 
+  filter(feature_lexeme == 'Medial (*ha*-)') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -194,13 +194,13 @@ db |>
 ```
 
 
-## DIST (ti-/či-) {.tabset .tabset-fade .tabset-pills}
+## Distal (*ti*-/*či*-) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'DIST (ti-/či-)')  |>
+  filter(feature_lexeme == 'Distal (*ti*-/*či*-)')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -259,7 +259,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'DIST (ti-/či-)') |> 
+  filter(feature_lexeme == 'Distal (*ti*-/*či*-)') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

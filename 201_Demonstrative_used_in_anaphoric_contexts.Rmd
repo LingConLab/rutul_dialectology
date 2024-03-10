@@ -26,17 +26,17 @@ villages |>
   
 ```
 
-This feature shows the form of demonstrative which is used in anaphoric contexts. Two contexts were elicited with each speaker. The first one is: ‘[I have a brother.] *He* lives in Makhachkala’ (human referent), and the second is: ‘[What happened to our house?] *It* is destroyed’ (non-human referent). Almost in all cases, the speakers used the medial demonstrative root. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context).
-In most villages, the form of the demonstrative in both cases was ha-d. In Rutul and surrounding villages (Kufa and Kiche) the use of ha without the attributive marker was attested in reply to the first context (with the human referent) and sometimes to the second context (with the non-human referent). In Ikhrek and Khnov, the form of the attributive marker distinguishes human and non-human referents: -d is used with the non-human context, while in the human context a special form -dɨ is used.
+This feature shows the form of demonstrative which is used in anaphoric contexts. Two contexts were elicited with each speaker. The first one is: ‘[I have a brother.] **He** lives in Makhachkala’ (human referent), and the second is: ‘[What happened to our house?] **It** is destroyed’ (non-human referent). Almost in all cases, the speakers used the medial demonstrative root. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context).
+In most villages, the form of the demonstrative in both cases was *ha-d*. In Rutul and surrounding villages (Kufa and Kiche) the use of *ha*- without the attributive marker was attested in reply to the first context (with the human referent) and sometimes to the second context (with the non-human referent). In Ikhrek and Khnov, the form of the attributive marker distinguishes human and non-human referents: -*d* is used with the non-human context, while in the human context a special form -*dɨ* is used.
 
 
-## 3.H {.tabset .tabset-fade .tabset-pills}
+## 3rd person singular, human {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.H')  |>
+  filter(feature_lexeme == '3rd person singular, human')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -95,7 +95,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.H') |> 
+  filter(feature_lexeme == '3rd person singular, human') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -112,13 +112,13 @@ db |>
 ```
 
 
-## 3.NH {.tabset .tabset-fade .tabset-pills}
+## 3rd person singular, non-human {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.NH')  |>
+  filter(feature_lexeme == '3rd person singular, non-human')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -177,7 +177,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == '3.NH') |> 
+  filter(feature_lexeme == '3rd person singular, non-human') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 

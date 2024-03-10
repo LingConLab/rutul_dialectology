@@ -26,17 +26,17 @@ villages |>
   
 ```
 
-This feature shows the use of the emphatic prefix he-/ha- in proximal (mi-) and distal (ti-/či-) demonstratives. For each of the two types of demonstratives, speakers were provided a specific context which required the use of one of the demonstratives and asked to translate a Russian sentence with the word книга ‘book’. The contexts were as follows: ‘[I am holding this book.] I am going to give *this book* to you’ (for proximal) and ‘[There is a book lying in the corner of the room.] Give me *that book*!’ (for distal). In each context, use of a specific demonstrative root was expected: mi- for proximal and ti-/či- for distal. In a small number of cases, speakers used a demonstrative root which was not expected in the given context; such cases were marked as OTHER. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context). The prefix is never used with the medial demonstrative root ha- / hawa-.
+This feature shows the use of the emphatic prefix *he*-/*ha*- in proximal (*mi*-) and distal (*ti*-/*či*-) demonstratives. For each of the two types of demonstratives, speakers were provided a specific context which required the use of one of the demonstratives and asked to translate a Russian sentence with the word *книга* ‘book’. The contexts were as follows: ‘[I am holding this book.] I am going to give **this book** to you’ (for proximal) and ‘[There is a book lying in the corner of the room.] Give me **that book**!’ (for distal). In each context, use of a specific demonstrative root was expected: *mi*- for proximal and *ti*-/*či*- for distal. In a small number of cases, speakers used a demonstrative root which was not expected in the given context; such cases were marked as OTHER. For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context). The prefix is never used with the medial demonstrative root *ha*-/*hawa*-.
 The use of the prefix with the proximal demonstrative was attested in all villages except Khnov. The use of the prefix with the distal demonstrative is more areally restricted and was attested mostly in Myukhrek, Luchek and surrounding villages.
 
 
-## PROX {.tabset .tabset-fade .tabset-pills}
+## Proximal (*mi*-) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'PROX')  |>
+  filter(feature_lexeme == 'Proximal (*mi*-)')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -95,7 +95,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'PROX') |> 
+  filter(feature_lexeme == 'Proximal (*mi*-)') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
@@ -112,13 +112,13 @@ db |>
 ```
 
 
-## DIST {.tabset .tabset-fade .tabset-pills}
+## Distal (*ti*-/*či*-) {.tabset .tabset-fade .tabset-pills}
 
 ### Map
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'DIST')  |>
+  filter(feature_lexeme == 'Distal (*ti*-/*či*-)')  |>
   filter(!is.na(value),
          value != 'NO DATA') |>
   mutate(value = str_split(value, ' ; ')) |> 
@@ -177,7 +177,7 @@ map.feature(languages = 'Rutul',
 
 ```{r}
 db |> 
-  filter(feature_lexeme == 'DIST') |> 
+  filter(feature_lexeme == 'Distal (*ti*-/*či*-)') |> 
   select(settlement, value, stimuli, answer, collected) |> 
   DT::datatable(class = 'cell-border stripe', 
     rownames = FALSE, 
