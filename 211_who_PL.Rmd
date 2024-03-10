@@ -1,7 +1,7 @@
 ---
 title: who.PL
 author: Maksim Melenchenko
-date: 'Last update: `r lubridate::make_datetime(year = 2023, month = 12, day = 7)`'
+date: 'Last update: `r lubridate::make_datetime(year = 2024, month = 3, day = 8)`'
 output:
   html_document:
     number_sections: true
@@ -26,7 +26,8 @@ villages |>
   
 ```
 
-Plural suffix of the pronoun 'who' or use of the simple SG form (absolutive vs ergative forms)
+This feature shows the form of the pronoun ‘who?’ in absolutive plural and ergative plural. The speakers were asked to translate sentences ‘[Some people just came.] Who came?’ (absolutive) and ‘[Some people did this.] Who did this?’ (ergative). For each speaker, first reaction was coded (although the elicitor tried to make sure that this reaction was not an error due to the misunderstanding of the context).
+In the absolutive, speakers in Khnov and Rutul and some speakers in adjacent villages used the usual singular root ‘who?’ without modification. In other villages, speakers used the singular root with the plural marker -er attached to it. In the ergative, most villages use the singular root without modification. At the same time, several speakers from Kufa and Kala used a special ergative plural stem: hal-aš(e). Several speakers (from Khnov and some other villages) used the absolutive root in the ergative context, which was coded as OTHER.
 
 
 ## ABS {.tabset .tabset-fade .tabset-pills}
