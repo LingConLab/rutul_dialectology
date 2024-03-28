@@ -12,14 +12,14 @@ library(widyr)
 #   filter(domain != "Basic Lexicon") ->
 #   df
 # 
-# for_plot_title <- "with only 200 lists"
+# for_plot_title <- "without 200 lists"
 
 # just 200
 # read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |>
 #   filter(domain == "Basic Lexicon") ->
 #   df
-#
-# for_plot_title <- "based on 200 lists" 
+# 
+# for_plot_title <- "based on 200 lists"
 
 df |> 
   select(feature_title, feature_lexeme, value, settlement, value) |> 
@@ -105,6 +105,8 @@ title(main = str_c("neighborNet ", for_plot_title))
 # CA ----------------------------------------------------------------------
 
 df |> 
+  filter(value != "NO DATA",
+         value != "OTHER") |> 
   count(feature_id, feature_title, feature_lexeme, settlement, value) |> 
   mutate(feature_lexeme = ifelse(is.na(feature_lexeme), "", feature_lexeme),
          feature = str_c(feature_id, "_", feature_title, "_", feature_lexeme, ": ", value)) |> 
@@ -122,3 +124,46 @@ ca$rowcoord |>
   ggrepel::geom_label_repel()+
   theme_minimal()+
   labs(title = str_c("CA ", for_plot_title))
+
+# entropy_of_features -----------------------------------------------------
+
+df |> 
+  filter(value != "NO DATA",
+         value != "OTHER") |> 
+  count(feature_id, feature_title, feature_lexeme, compiled, value) |> 
+  group_by(feature_id, feature_title, feature_lexeme, compiled) |> 
+  mutate(ratio = n/sum(n)) |> 
+  summarise(entropy = -sum(ratio*log2(ratio)),
+            number_of_values = n()) |> 
+  arrange(-entropy) |> # writexl::write_xlsx("~/Desktop/features_by_entropy.xlsx")
+  ggplot(aes(entropy, number_of_values))+
+  geom_point()+
+  theme_minimal()+
+  labs(y = "number of values")
+  
+df |> 
+  filter(feature_title == "Non-specific indefinite pronouns") |> 
+  View()
+
+# table with common value in settlement pair ------------------------------
+library(tidyverse)
+df <- read_csv("https://github.com/LingConLab/rutul_dialectology/raw/master/data/database.csv")
+
+combn(unique(df$settlement), 2) |> 
+  t() |> 
+  as.data.frame() ->
+  villages
+
+map_dfr(1:nrow(villages), function(i){
+  village_pair <- unlist(villages[1,])
+  
+  df |> 
+    filter(!(value %in% c("NO DATA", "OTHER")),
+           settlement %in% village_pair) |> 
+    distinct(feature_title, feature_lexeme, value, settlement) |> 
+    count(feature_title, feature_lexeme, value) |> 
+    filter(n == 2) |> 
+    select(-n) |> 
+    mutate(village_pair = str_c(village_pair, collapse = " - "))
+}) |> 
+  writexl::write_xlsx("common_values_in_language_pair.xlsx")
