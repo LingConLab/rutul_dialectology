@@ -207,3 +207,6 @@ read_csv("data/database.csv") |>
          feature_lexeme = str_replace_all(feature_lexeme, "'", "’")) |> 
   write_csv("data/database.csv", na = "")
 
+read_csv("data/database.csv") |> 
+  writexl::write_xlsx("data/database.xlsx")
+

@@ -155,7 +155,7 @@ combn(unique(df$settlement), 2) |>
   villages
 
 map_dfr(1:nrow(villages), function(i){
-  village_pair <- unlist(villages[1,])
+  village_pair <- unlist(villages[i,])
   
   df |> 
     filter(!(value %in% c("NO DATA", "OTHER")),
