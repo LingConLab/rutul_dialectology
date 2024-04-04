@@ -1,0 +1,10 @@
+project:
+  type: website
+
+profile:
+  default: english
+  group: [english, russian]
+  
+format: 
+  html:
+    theme: litera   

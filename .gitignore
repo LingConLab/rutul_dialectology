@@ -4,16 +4,16 @@
 .RData
 .Ruserdata
 *.~lock.*
-*/asya_features.csv
+*/asya_features_dec2023.csv
 */phonetics_nikita.csv
-*/rutul_dialectology_ilya.csv
+*/other_ilya.csv
 */lexicon_moroz_full.csv
 */kostya_oblique.csv
-*/kostya_features_spatial_18_02.csv
 */nastya_verb_review-2.xlsx
 */NINA rutul_dialectology_merged_raw_data.xlsx
 */noun_features_2023-05-25.csv
 */rutul_dialectology_Maks.xlsx
-*/verb_2024-02-04.xlsx
-*/netkachev_oct23.csv
-*/rutul_dialects_200.csv
+*/nastya_verb_review-5.xlsx
+*/nastya_verb_review-6.xlsx
+
+/.quarto/

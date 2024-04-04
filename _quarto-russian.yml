@@ -1,0 +1,21 @@
+project:
+  title: "Атлас рутульских диалектов"
+  output-dir: ./docs/ru
+  render:
+    - index.qmd
+    - team.qmd
+    - features.qmd
+
+website:
+  navbar:
+    left:
+      - text: "Список признаков"
+        icon: fa-atlas
+        href: ./features.html
+      - text: "О нас"
+        href: ./team.html
+    right:
+      - text: "English"
+        href: ./../index.html
+
+lang: ru
