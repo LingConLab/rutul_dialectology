@@ -1,5 +1,6 @@
 .Rproj.user/*
 .Rproj.user
+*.Rproj
 .Rhistory
 .RData
 .Ruserdata
@@ -15,5 +16,4 @@
 */rutul_dialectology_Maks.xlsx
 */nastya_verb_review-5.xlsx
 */nastya_verb_review-6.xlsx
-
 /.quarto/
