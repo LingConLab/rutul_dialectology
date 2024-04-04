@@ -102,6 +102,7 @@ dist_gold_standard |>
   plot()
 title(main = str_c("neighborNet ", for_plot_title))
 
+
 dist_gold_standard |>
   cmdscale(k = 3) |> 
   as.data.frame() |> 

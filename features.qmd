@@ -1,13 +1,10 @@
 ::: {.content-visible when-profile="english"}
 # Features
-:::
 
-::: {.content-visible when-profile="russian"}
-# Список признаков
-:::
+```{r}
+#| echo: false
+#| message: false
 
-
-```{r, echo=FALSE, message = FALSE}
 library(tidyverse)
 library(DT)
 
@@ -36,3 +33,45 @@ db |>
                                autoWidth = TRUE,
                                dom = 'fltpi'))
 ```
+
+:::
+
+
+::: {.content-visible when-profile="russian"}
+
+# Список признаков
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(DT)
+
+# table with features
+db <- read_csv("data/database.csv")
+
+db |>
+  mutate(feature_id_0 = sprintf(paste0("%0", nchar(max(feature_id)), "d_"), 
+                                 db$feature_id),
+         feature_title_link = str_replace_all(feature_title, "[\\s:\\.]", "_"),
+         feature_title_link = str_replace_all(feature_title_link, "[\\(\\)]", "-"),
+         feature_title_link = str_c(feature_id_0, feature_title_link)) |>
+  mutate(feature_title = str_c("<a href='../",
+                               feature_title_link,
+                               ".html'>",
+                               feature_title,
+                               "</a>")) |>
+  select(feature_title, compiled, domain) |>
+  rename(feature = feature_title) |>
+  mutate(domain = factor(domain)) |>
+  distinct() |>
+  DT::datatable(filter = 'top', 
+                escape = FALSE,
+                rownames = FALSE,
+                options = list(pageLength = 150, 
+                               autoWidth = TRUE,
+                               dom = 'fltpi'))
+```
+:::
+
