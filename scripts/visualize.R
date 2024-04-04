@@ -2,10 +2,10 @@ library(tidyverse)
 library(widyr)
 
 # all
-# read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
-#   df
-# 
-# for_plot_title <- "with all stimuli"
+read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
+  df
+
+for_plot_title <- "with all stimuli"
 
 # without 200
 # read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") |>
@@ -101,6 +101,55 @@ dist_gold_standard |>
   neighborNet() |> 
   plot()
 title(main = str_c("neighborNet ", for_plot_title))
+
+dist_gold_standard |>
+  cmdscale(k = 3) |> 
+  as.data.frame() |> 
+  rownames_to_column() |> 
+  rename(dim1 = V1,
+         dim2 = V2,
+         dim3 = V3,
+         settlement = rowname) |>
+  mutate(dim1 = scale(dim1, center = min(dim1), scale = max(dim1) - min(dim1)),
+         dim2 = scale(dim2, center = min(dim2), scale = max(dim2) - min(dim2)),
+         dim3 = scale(dim3, center = min(dim3), scale = max(dim3) - min(dim3)))  |> 
+  mutate(rgb = rgb(dim1, dim2, dim3)) |> 
+  select(settlement, rgb) |> 
+  arrange(settlement)->
+  settlement_rgb
+  
+dist_gold_standard |>
+  cmdscale(k = 2) |> 
+  as.data.frame() |> 
+  rownames_to_column() |> 
+  rename(dim1 = V1,
+         dim2 = V2,
+         settlement = rowname) |> 
+  left_join(settlement_rgb) |> 
+  ggplot(aes(dim1, dim2, label = settlement, fill = settlement))+
+  geom_point()+
+  ggrepel::geom_label_repel(color = "white")+
+  scale_fill_manual(values=settlement_rgb$rgb)+
+  labs(title = str_c("MDS ", for_plot_title))+
+  theme(legend.position = "none")
+
+villages <- read_csv("data/villages.csv")
+villages |> 
+  left_join(settlement_rgb, by = c("village" = "settlement")) |> 
+  filter(!is.na(rgb)) ->
+  for_rgb_map
+
+library(lingtypology)
+map.feature(languages = "Rutul",
+            features = for_rgb_map$village,
+            latitude = for_rgb_map$lat,
+            longitude = for_rgb_map$lon,
+            color = for_rgb_map$rgb, 
+            legend = FALSE,
+            label = for_rgb_map$village,
+            label.hide = FALSE,
+            tile = 'Esri.WorldGrayCanvas', 
+            minimap = TRUE)
 
 # CA ----------------------------------------------------------------------
 
