@@ -166,7 +166,7 @@ read_csv("data/database.csv", col_select = "feature_id") |>
   pull(feature_id) ->
   max_id_in_db
 
-read_csv("data/netkachev_MERGED_fin_upd_mar24_1.csv") |>
+read_csv("data/netkachev_Rutul_data.csv") |>
   filter(!is.na(value)) ->
   df
 
