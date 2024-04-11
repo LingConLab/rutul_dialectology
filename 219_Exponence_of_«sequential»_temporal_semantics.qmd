@@ -26,7 +26,7 @@ villages |>
   
 ```
 
-The basic temporal semantics of sequence of events ("when X occured, Y occured") is expressed either with a dedicated converb affix or a separate construction.
+The basic temporal semantics of sequence of events ("when X occured, Y occured") is expressed either with a dedicated converb affix or a separate construction. Some constructions involve the participles combined with a locative case marker.
 
 
 ## IPFV

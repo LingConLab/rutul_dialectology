@@ -2580,7 +2580,7 @@
     "href": "219_Exponence_of_«sequential»_temporal_semantics.html",
     "title": "Exponence of «sequential» temporal semantics",
     "section": "",
-    "text": "The basic temporal semantics of sequence of events (“when X occured, Y occured”) is expressed either with a dedicated converb affix or a separate construction."
+    "text": "The basic temporal semantics of sequence of events (“when X occured, Y occured”) is expressed either with a dedicated converb affix or a separate construction. Some constructions involve the participles combined with a locative case marker."
   },
   {
     "objectID": "219_Exponence_of_«sequential»_temporal_semantics.html#ipfv",
@@ -4130,11 +4130,18 @@
     "text": "The converb suffix for a special series of conditional clauses - realis conditionals. They imply that the event described by the antecedent may have already happened in the past (“if X already happened”). In some cases, a specialized suffix is employed, while in others, the suffix for hypothetical conditionals may be used in this context as well."
   },
   {
-    "objectID": "226_Realis_conditional_converb_suffix.html#section",
-    "href": "226_Realis_conditional_converb_suffix.html#section",
+    "objectID": "226_Realis_conditional_converb_suffix.html#pfv",
+    "href": "226_Realis_conditional_converb_suffix.html#pfv",
     "title": "Realis conditional converb suffix",
-    "section": "",
-    "text": "MapData"
+    "section": "PFV",
+    "text": "PFV\n\nMapData"
+  },
+  {
+    "objectID": "226_Realis_conditional_converb_suffix.html#ipfv",
+    "href": "226_Realis_conditional_converb_suffix.html#ipfv",
+    "title": "Realis conditional converb suffix",
+    "section": "IPFV",
+    "text": "IPFV\n\nMapData"
   },
   {
     "objectID": "317_Basic_lexicon_item_‘know’.html",
