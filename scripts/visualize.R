@@ -2,8 +2,7 @@ library(tidyverse)
 library(widyr)
 
 # all
-read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv") ->
-  df
+df <- read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv")
 
 for_plot_title <- "with all stimuli"
 
@@ -101,7 +100,6 @@ dist_gold_standard |>
   neighborNet() |> 
   plot()
 title(main = str_c("neighborNet ", for_plot_title))
-
 
 dist_gold_standard |>
   cmdscale(k = 3) |> 
