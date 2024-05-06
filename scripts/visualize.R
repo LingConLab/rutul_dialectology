@@ -174,10 +174,13 @@ ca$rowcoord |>
   labs(title = str_c("CA ", for_plot_title))
 
 # entropy_of_features -----------------------------------------------------
-
+df <- read_csv("https://raw.githubusercontent.com/LingConLab/rutul_dialectology/master/data/database.csv")
 df |> 
   filter(value != "NO DATA",
          value != "OTHER") |> 
+  mutate(value = str_split(value, ";")) |> 
+  unnest_longer(value) |> 
+  mutate(value = str_squish(value)) |> 
   count(feature_id, feature_title, feature_lexeme, compiled, value) |> 
   group_by(feature_id, feature_title, feature_lexeme, compiled) |> 
   mutate(ratio = n/sum(n)) |> 
@@ -189,10 +192,6 @@ df |>
   theme_minimal()+
   labs(y = "number of values")
   
-df |> 
-  filter(feature_title == "Non-specific indefinite pronouns") |> 
-  View()
-
 # table with common value in settlement pair ------------------------------
 library(tidyverse)
 df <- read_csv("https://github.com/LingConLab/rutul_dialectology/raw/master/data/database.csv")
@@ -208,6 +207,9 @@ map_dfr(1:nrow(villages), function(i){
   df |> 
     filter(!(value %in% c("NO DATA", "OTHER")),
            settlement %in% village_pair) |> 
+    mutate(value = str_split(value, ";")) |> 
+    unnest_longer(value) |> 
+    mutate(value = str_squish(value)) |> 
     distinct(feature_title, feature_lexeme, value, settlement) |> 
     count(feature_title, feature_lexeme, value) |> 
     filter(n == 2) |> 
@@ -215,3 +217,21 @@ map_dfr(1:nrow(villages), function(i){
     mutate(village_pair = str_c(village_pair, collapse = " - "))
 }) |> 
   writexl::write_xlsx("common_values_in_language_pair.xlsx")
+
+# calculate mutual information --------------------------------------------
+library(tidyverse)
+df <- read_csv("https://github.com/LingConLab/rutul_dialectology/raw/master/data/database.csv")
+
+df |> 
+  filter(!is.na(value),
+         !(value %in% c("NO DATA", "OTHER", "\\?")),
+         !(settlement %in% c("Tsudik", "Borch"))) |> 
+  mutate(value = str_split(value, ";")) |> 
+  unnest_longer(value) |> 
+  mutate(value = str_squish(value)) |> 
+  filter(feature_id %in% c(192, 313)) |> 
+  distinct(feature_id, value, settlement) |> 
+  pivot_wider(names_from = feature_id, values_from = value, values_fill = NA) |> 
+  select(-settlement) |> 
+  infotheo::mutinformation()
+
