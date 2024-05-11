@@ -168,7 +168,7 @@ read_csv("data/database.csv", col_select = "feature_id") |>
   pull(feature_id) ->
   max_id_in_db
 
-read_csv("data/rutul_dialects_200.csv") |>
+read_tsv("data/rutul_dialects_200.tsv") |>
   filter(!is.na(value)) ->
   df
 
