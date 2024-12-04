@@ -147,7 +147,7 @@ map.feature(languages = "Rutul",
             legend = FALSE,
             label = for_rgb_map$village,
             label.hide = FALSE,
-            tile = 'Esri.WorldGrayCanvas', 
+            tile = 'Stadia.StamenTerrain', 
             minimap = TRUE)
 
 # CA ----------------------------------------------------------------------
@@ -235,3 +235,30 @@ df |>
   select(-settlement) |> 
   infotheo::mutinformation()
 
+
+# cluster features --------------------------------------------------------
+library(phangorn)
+
+df |> 
+  select(feature_title, feature_lexeme, value, settlement, value) |> 
+  filter(!is.na(value),
+         value != "NO DATA",
+         value != "OTHER",
+         value != "\\?",
+         !(settlement %in% c("Tsudik", "Borch"))) |> 
+  mutate(value = str_split(value, ";")) |> 
+  unnest_longer(value) |> 
+  mutate(value = str_squish(value)) |> 
+  group_by(feature_title, feature_lexeme, settlement) |> 
+  ungroup() |> 
+  arrange(feature_title, feature_lexeme, settlement)  |> 
+  distinct(settlement, value, feature_title, feature_lexeme) |> 
+  mutate(feature_lexeme = ifelse(is.na(feature_lexeme), "", feature_lexeme),
+         merged_value = str_c(feature_title, feature_lexeme, value)) |> 
+  select(settlement, merged_value) |> 
+  mutate(value = 1) |> 
+  pivot_wider(names_from = settlement, values_from = value, values_fill = 0) |> 
+  column_to_rownames("merged_value") |> 
+  dist(method = "binary") |> 
+  neighborNet() |> 
+  plot()
