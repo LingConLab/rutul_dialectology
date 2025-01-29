@@ -185,7 +185,8 @@ df |>
 read_csv("data/database.csv") |> 
   mutate_at(c("collected", "compiled", "domain", "settlement"), str_to_title) |> 
   mutate(feature_title = str_replace_all(feature_title, "'", "’"),
-         feature_lexeme = str_replace_all(feature_lexeme, "'", "’")) |> 
+         feature_lexeme = str_replace_all(feature_lexeme, "'", "’"),
+         value = str_replace_all(value, "\\s{2,}", " ")) |> 
   write_csv("data/database.csv", na = "")
 
 read_csv("data/database.csv") |> 
