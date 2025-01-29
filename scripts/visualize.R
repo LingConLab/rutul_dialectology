@@ -239,6 +239,10 @@ df |>
 # cluster features --------------------------------------------------------
 library(phangorn)
 
+png(filename="~/Desktop/feature_clustering.png",
+    height = 15000,
+    width = 2500)
+
 df |> 
   select(feature_title, feature_lexeme, value, settlement, value) |> 
   filter(!is.na(value),
@@ -253,12 +257,21 @@ df |>
   ungroup() |> 
   arrange(feature_title, feature_lexeme, settlement)  |> 
   distinct(settlement, value, feature_title, feature_lexeme) |> 
-  mutate(feature_lexeme = ifelse(is.na(feature_lexeme), "", feature_lexeme),
+  mutate(feature_lexeme = ifelse(is.na(feature_lexeme), ": ", feature_lexeme),
          merged_value = str_c(feature_title, feature_lexeme, value)) |> 
   select(settlement, merged_value) |> 
   mutate(value = 1) |> 
+  add_count(merged_value) |> 
+  filter(n > 1) |> 
+  group_by(merged_value) |> 
+  add_count(settlement) |> 
+  ungroup() |> 
+  filter(n < 12) |> 
   pivot_wider(names_from = settlement, values_from = value, values_fill = 0) |> 
+  #select(-merged_value) |> 
   column_to_rownames("merged_value") |> 
   dist(method = "binary") |> 
-  neighborNet() |> 
-  plot()
+  hclust() |>
+  as.phylo() |> 
+  plot(cex = 1)
+dev.off()
