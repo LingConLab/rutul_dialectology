@@ -6,13 +6,13 @@ All people listed below collected and compiled data.
 
 person                  | affiliation
 ------------------------|-----------------------------------------------
-Anastasia Alekseeva    |Linguistic convergence laboratory (HSE University, Moscow)
-Nikita Beklemishev      |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Michael Daniel          |
+Anastasia Alekseeva     |Linguistic convergence laboratory (HSE University, Moscow)
+Nikita Beklemishev      |University of Tübingen
+Michael Daniel          |University of Tübingen
 Nina Dobrushina         |Laboratoire Dynamique du Langage (CNRS, Lyon)
 Konstantin Filatov      |Linguistic convergence laboratory (HSE University, Moscow) / ILS RAS (Saint-Petersburg)
-Anastasija Ivanova      | University of Munich
-Timur Maisak            |Linguistic convergence laboratory (HSE University, Moscow) / ILS RAS
+Anastasia Ivanova       |University of Munich
+Timur Maisak            |Linguistic convergence laboratory (HSE University, Moscow) / IL RAS (Moscow)
 Maksim Melenchenko      |Linguistic convergence laboratory (HSE University, Moscow)
 George Moroz            |Linguistic convergence laboratory (HSE University, Moscow)
 Ivan Netkachev          |Linguistic convergence laboratory (HSE University, Moscow)
@@ -35,17 +35,17 @@ You can always leave an issue on the [GitHub page](https://github.com/LingConLab
 
 автор                   | аффилиация
 ------------------------|------------------------------------------------
-Анастасия Алексеева     |НИУ ВШЭ
-Никита Беклемишев       |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Михаил Даниэль          |
+Анастасия Алексеева     |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Никита Беклемишев       |University of Tübingen
+Михаил Даниэль          |University of Tübingen
 Нина Добрушина          |Laboratoire Dynamique du Langage (CNRS, Lyon)
-Константин Филатов      |НИУ ВШЭ / ИЛИ РАН
-Анастасия Иванова       |НИУ ВШЭ / LMU München
-Тимур Майсак            |НИУ ВШЭ / ИЯз РАН
-Максим Меленченко       |НИУ ВШЭ
-Георгий Мороз           |НИУ ВШЭ
-Иван Неткачев           |НИУ ВШЭ
-Илья Садаков            |НИУ ВШЭ
+Константин Филатов      |Международная лаборатория языковой конвергенции (НИУ ВШЭ) / ИЛИ РАН (Санкт-Петербург)
+Анастасия Иванова       |University of Munich
+Тимур Майсак            |Международная лаборатория языковой конвергенции (НИУ ВШЭ) / ИЯз РАН (Москва)
+Максим Меленченко       |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Георгий Мороз           |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Иван Неткачев           |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Илья Садаков            |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
 
 
 ![](images/road.JPG){fig-align="center" width="100%"}
