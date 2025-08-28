@@ -1,0 +1,85 @@
+letter,letter comment,replace,replace_to,replace_to comment
+:,обычное двоеточие,yes,ː,треугольное двоеточие
+',прогерские кавычки,yes,ʼ,Modifier Letter Apostrophe
+’,Right Single Quotation Mark,yes,ʼ,Modifier Letter Apostrophe
+а,cyrillic a,yes,a,latin a
+ӡ,Cyrillic Small Letter Abkhasian Dze,yes,ʒ,Latin Small Letter Ezh
+â,одинарный,yes,ɐ,другой правильный символ
+â,двойной символ,yes,ɐ,другой правильный символ
+ä,двойной символ,yes,ä,одинарный
+aa,,yes,aː,
+ää,двойной символ долгий,yes,äː,
+ää,одинарный символ долгий,yes,äː,
+č,двойной символ,yes,č,одинарный
+ê,одинарный,yes,ɛ,другой правильный символ
+ê,двойной символ,yes,ɛ,другой правильный символ
+ee,,yes,eː,
+ɡ,IPA symbol (Latin Small Letter Script G ɡ),yes,g,Latin Small Letter G g
+í,слитно с ударение,yes,í,раздельно с ударением
+ii,,yes,iː,
+ɨɨ,,yes,ɨː,
+ô,двойной символ,yes,ɞ,другой правильный символ
+ô,одинарный,yes,ɞ,другой правильный символ
+ö,двойной символ,yes,ö,одинарный
+oo,,yes,oː,
+öö,двойной символ долгий,yes,öː,
+öö,одинарный символ долгий,yes,öː,
+š,двойной символ,yes,š,одинарный
+ü,двойной символ,yes,ü,одинарный
+uu,,yes,uː,
+üü,двойной символ долгий,yes,üː,
+üü,одинарный символ долгий,yes,üː,
+ž,двойной символ,yes,ž,одинарный
+ǯ,двойной символ,yes,ǯ,одинарный
+ˁ,Modifier Letter Reversed Glottal Stop,yes,ˤ,Modifier Letter Small Reversed Glottal Stop
+́,,no,́,
+ː,,no,ː,
+a,,no,a,
+ä,,no,ä,
+b,,no,b,
+c,,no,c,
+č,,no,č,
+d,,no,d,
+e,,no,e,
+ə,,no,ə,
+ɛ,,no,ɛ,
+ɜ,,no,ɜ,
+ɞ,,no,ɞ,
+f,,no,f,
+g,,no,g,
+ɢ,,no,ɢ,
+ɣ,,no,ɣ,
+ˠ,,no,ˠ,
+h,,no,h,
+i,,no,i,
+ɨ,,no,ɨ,
+j,,no,j,
+ʲ,,no,ʲ,
+k,,no,k,
+l,,no,l,
+m,,no,m,
+n,,no,n,
+o,,no,o,
+ö,,no,ö,
+p,,no,p,
+q,,no,q,
+r,,no,r,
+ʁ,,no,ʁ,
+s,,no,s,
+š,,no,š,
+t,,no,t,
+u,,no,u,
+ü,,no,ü,
+v,,no,v,
+w,,no,w,
+ʷ,,no,ʷ,
+x,,no,x,
+y,,no,y,
+z,,no,z,
+ž,,no,ž,
+ʒ,,no,ʒ,
+ǯ,,no,ǯ,
+ʔ,,no,ʔ,
+ʼ,,no,ʼ,
+ˤ,,no,ˤ,
+χ,,no,χ,

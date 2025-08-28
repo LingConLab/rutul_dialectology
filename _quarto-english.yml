@@ -1,0 +1,20 @@
+project:
+  title: "Atlas of Rutul dialects"
+  output-dir: ./docs
+  render:
+    - "*.qmd"
+    - "!ru/*.qmd"
+
+website: 
+  navbar:
+    left:
+      - text: "Features"
+        icon: fa-atlas
+        href: ./features.html
+      - text: "Team"
+        href: ./team.html
+    right:
+      - text: "Русский"
+        href: ./ru/index.html
+
+lang: en

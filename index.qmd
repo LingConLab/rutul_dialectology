@@ -1,0 +1,72 @@
+---
+link-citations: true
+bibliography: bibliography.bib
+csl: apa.csl
+output:
+  html_document:
+    number_sections: false
+    anchor_sections: true
+    pandoc_args: --shift-heading-level-by=-1
+---
+
+
+
+::: {.content-visible when-profile="english"}
+## Atlas of Rutul dialects
+
+This website presents the results of a dialectological survey of twelve Rutul villages located in the Rutulsky district and Akhtynsky district of the Republic of Daghestan, Russian Federation. These settlements are Amsar, Dzhilikhur, Ikhrek, Kala, Khnov, Kiche, Kina, Kufa, Luchek, Myukhrek, Rutul, Shinaz.
+
+The [Rutul language](https://en.wikipedia.org/wiki/Rutul_language) (ISO 639–3 rut; glottocode rutu1240) belongs to the Lezgiс branch of the Nakh-Daghestanian (East Caucasian) language family. The majority of speakers (approximately 33 000, according to the [latest census](https://rosstat.gov.ru/vpn_popul) of 2020) live in Daghestan.
+
+The dialectological survey was carried out in July 2022 by [a group of linguists](team.html) from [HSE University](https://ling.hse.ru/en/). Speakers of various Rutul dialects were interviewed using the same questionnaire compiled by the research team. The questionnaire was partly based on the existing descriptions [@ibragimov2004; @alekseyev_rutul_2016; @alisultanov_suleymanova2019; @ismailova2011; @islamov2014; @alisultanov_islamov2022; @makhmudova2002; @ibragimov1978; @alekseyev_rutul_1994; @ibragimova2009; @authier_mukhad; @authier_ikhrek; @dirr1912; @dzhamalov2006; @authier2023] of the varieties of Rutul. Nevertheless, in addition to documentation and quantitative assessment of the established parameters of dialectal variation, we also aimed at identifying new, previously unreported regional variants.
+
+For each phenomenon selected for the comparison, several Russian stimuli were compiled. Translations of these sentences by two, three, or four speakers in each of the villages in the survey were recorded and transcribed. We are investigating dialectal differences at all levels of language structure, including lexicon, phonetics, morphology, and syntax.
+
+Our aim was a systematic mapping of dialectal variation of Rutul in a set of pre-selected parameters. As expected, in many cases, variation in the realization of a phenomenon was attested. The variation could be observed not only between villages, but also between villagers (different speakers from the same village) and also at the intra-speaker level (in the data recorded from an individual speaker). Such cases are reflected on the map as circles containing sectors of different colors. The relative frequency of variations is not reflected on the maps.
+
+Reporting dialectal differences in the Atlas is based exclusively on the data obtained in our elicitations. Therefore, it is possible that a certain feature value is absent from our data for a village while it has been reported for the same village in the literature. In other words, the Atlas is only a partial reflection of the dialectal diversity of Rutul.
+
+![](images/picture_2.JPG){fig-align="center" width="100%"}
+
+### Acknowledgements
+
+The authors of the project express their deep gratitude to the residents of Rutul villages for their hospitality and willingness to translate, explain, and help.
+
+### How to cite
+
+A. Alekseeva, N. Beklemishev, M. Daniel, N. Dobrushina, K. Filatov, A. Ivanova, T. Maisak, M. Melenchenko, G. Moroz, I. Netkachev, I. Sadakov. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. <https://lingconlab.github.io/rutul_dialectology/index.html>
+
+### Financial support
+
+This project supported by the [Linguistic Convergence Laboratory](). This work is an output of a research project implemented as part of the Basic Research Program at the [HSE University](https://www.hse.ru/en/).
+:::
+
+::: {.content-visible when-profile="russian"}
+## Атлас диалектов рутульского языка
+
+На сайте представлены результаты диалектологического обследования двенадцати рутульских сёл, расположенных в Рутульском и Ахтынском районах Республики Дагестан (Россия). Это сёла Амсар, Джилихур, Ихрек, Кала, Кина, Киче, Куфа, Лучек, Мюхрек, Рутул, Хнов, Шиназ.
+
+[Рутульский язык](https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%82%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA) принадлежит к лезгинской ветви нахско-дагестанской языковой семьи. Большинство носителей этого языка (около 33 тысяч человек, [согласно переписи 2020 года](https://rosstat.gov.ru/vpn_popul)) проживают в Дагестане.
+
+Рутульские диалекты были обследованы в июле 2022 года в рамках лингвистической экспедиции [Школы лингвистики НИУ ВШЭ](https://ling.hse.ru/) (Москва). Опрос носителей рутульских диалектов проводился по единой анкете, составленной [участниками исследовательской группы](team.html). При составлении анкеты были учтены имеющиеся описания рутульских диалектов [@ibragimov2004ru; @alekseyev_rutul_2016; @alisultanov_suleymanova2019ru; @ismailova2011ru; @islamov2014ru; @alisultanov_islamov2022ru; @makhmudova2002ru; @ibragimov1978ru; @alekseyev_rutul_1994; @ibragimova2009ru; @authier_mukhad; @authier_ikhrek; @dirr1912ru; @dzhamalov2006ru; @authier2023]. При этом мы стремились не только задокументировать и количественно оценить уже известные параметры диалектного варьирования, но и по возможности выявить новые, ранее не изученные региональные варианты.
+
+Для каждого исследуемого явления было составлено несколько предложений-стимулов на русском языке. В каждой обследованной деревне были записаны переводы этих предложений двумя, тремя или четырьмя носителями. Исследовались диалектные различия в области лексики, фонетики, морфологии и синтаксиса.
+
+Нашей основной целью являлось систематическое картирование диалектной вариативности. Вариативность в реализации того или иного явления (отражается на картах разным цветом) отмечается не только между деревнями, но и между жителями одной деревни, а иногда и в речи одного говорящего. Такие случаи отражены на карте в виде кружков, содержащих доли разного цвета. Относительная частотность вариантов на картах не отражается.
+
+Диалектные различия, представленные в Атласе, основаны исключительно на нашем исследовании. Поэтому возможна ситуация, когда некоторая диалектная черта не отражена на карте Атласа для определенной деревни, притом что она отмечена в литературе. Иными словами, Атлас отражает диалектное разнообразие рутульского языка лишь частично.
+
+![](images/picture_2.JPG){fig-align="center" width="100%"}
+
+### Благодарность
+
+Авторы проекта выражают глубокую благодарность жителям рутульских сёл за их гостеприимство и готовность переводить, объяснять и помогать.
+
+### Как ссылаться на данные проекта
+
+A. Alekseeva, N. Beklemishev, M. Daniel, N. Dobrushina, K. Filatov, A. Ivanova, T. Maisak, M. Melenchenko, G. Moroz, I. Netkachev, I. Sadakov. 2023. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. https://lingconlab.github.io/rutul_dialectology/index.html
+
+### Финансовая поддержка
+
+Проект поддерживается Международной лабораторией языковой конвергенции. Корпус создан в рамках Программы фундаментальных исследований [НИУ ВШЭ](https://www.hse.ru/).
+:::

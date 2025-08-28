@@ -1,0 +1,13 @@
+project:
+  title: "Atlas of Rutul dialects - Core Pages"
+  output-dir: ./docs
+
+format:
+  html:
+    theme: litera
+    css: styles.css
+
+execute:
+  echo: false
+  message: false
+  warning: false

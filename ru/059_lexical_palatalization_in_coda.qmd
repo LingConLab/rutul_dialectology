@@ -1,0 +1,2060 @@
+---
+title: "lexical palatalization in coda"
+author: "Nikita Beklemishev"
+date: 2025-08-28
+format: html
+lang: ru
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 9.5)
+```
+
+In Kina and other varieties of Rutul palatalized consonants occur not only before a front vowel. Consonants may be palatalized for reasons besides co-articulation, moreover, this can result in meaningful contrasts. [@danielfilatovms §2.7] Palatalization can derive from contraction of the following front vowel, which happens when a morpheme ending on a front vowel attaches to a morpheme beginning with a vowel. However, sometimes fronted velars (/k/, /g/, /x/, supposedly /ɣ/) and /lʲ/ occur morpheme-internally, most frequently in syllable codas and after a front vowel. This feature examines the consistency of such coda palatalization among dialects. In practice, we diagnose this by asking for cognates of one arbitrary set of Kina lexemes with and without coda palatalization after a front vowel: /begʲ/ ‘side (body part)’, /eg/ ‘horseshoe’; /uˁrdegʲ/ ‘wild duck’, /jileg/ ‘iron’; /külekʲ/ ‘elbow’, /nek/ ‘milk’; /vixʲ/ ‘shed’, /rixcʼɨr/ ‘sixty’; ‘tar, gum’ /bekʼʲ/, /jikʼʲ/ ‘heart’; /jimel/ ‘donkey’, /mel/ ‘collective work’; /šibilʲ/ ‘gravel’, /süpel/ ‘whisker, moustache(SG)’. The sounds in check (preliminary values) are the final consonants and the 1st syllable final in /rixʲcʼɨr/. Final values are **palatalized** for fronted velars and lʲ, and **not palatalized** for others. Note that the feature doesn’t aim to analyze phonology, merely the surface forms obseved.
+
+
+## ‘collective work’ /mel/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘collective work’ /mel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘collective work’ /mel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘donkey’ /jimel/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘donkey’ /jimel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘donkey’ /jimel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘elbow’ /külekʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘elbow’ /külekʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘elbow’ /külekʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘gravel’ /šibilʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘gravel’ /šibilʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘gravel’ /šibilʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘heart’ /jikʼʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘heart’ /jikʼʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘heart’ /jikʼʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘horseshoe’ /eg/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘horseshoe’ /eg/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘horseshoe’ /eg/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘iron’ /jileg/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘iron’ /jileg/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘iron’ /jileg/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘milk’ /nek/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘milk’ /nek/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘milk’ /nek/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘shed’ /vixʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘shed’ /vixʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘shed’ /vixʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘side (body part)’ /begʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘side (body part)’ /begʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘side (body part)’ /begʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘sixty’ /rixcʼɨr/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘sixty’ /rixcʼɨr/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘sixty’ /rixcʼɨr/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘tar, gum’ /bekʼʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘tar, gum’ /bekʼʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘tar, gum’ /bekʼʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘whisker, moustache(SG)’ /süpel/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘whisker, moustache(SG)’ /süpel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘whisker, moustache(SG)’ /süpel/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
+## ‘wild duck’ /uˁrdegʲ/
+
+::: {.panel-tabset}
+
+### Карта
+
+```{r}
+# Load data for this lexeme
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+villages <- read_csv("../data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |>
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this lexeme
+lexeme_data <- db |>
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘wild duck’ /uˁrdegʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this lexeme
+  mapping_data <- lexeme_data |>
+    mutate(value = str_split(value, " ; ")) |>
+    unnest_longer(value) |>
+    distinct(settlement, value) |>
+    mutate(n = 1) |>
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |>
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |>
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("Географические координаты недоступны для картографирования.\n")
+  }
+} else {
+  cat("Данные для этой лексемы недоступны или координаты деревень не найдены.\n")
+}
+```
+
+### Данные
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("../data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this lexeme
+lexeme_data <- db |> 
+  filter(feature_id == 59) |>  # First filter by feature_id
+  filter(feature_lexeme == "‘wild duck’ /uˁrdegʲ/") |>  # Then filter by feature_lexeme
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(lexeme_data) > 0) {
+  # Prepare data for display
+  display_data <- lexeme_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("Данные для этой лексемы недоступны.\n")
+}
+```
+
+:::
+
