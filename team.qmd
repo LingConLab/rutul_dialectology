@@ -8,8 +8,8 @@ person                  | affiliation
 ------------------------|-----------------------------------------------
 Anastasija Alekseeva    |HSE
 Nikita Beklemishev      |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Michael Daniel          |Collegium de Lyon / Laboratoire Dynamique du Langage
-Nina Dobrushina         |CNRS
+Michael Daniel          |
+Nina Dobrushina         |Laboratoire Dynamique du Langage (CNRS, Lyon)
 Konstantin Filatov      |HSE / ILS RAS
 Anastasija Ivanova      |HSE
 Timur Maisak            |HSE / ILS RAS
@@ -37,8 +37,8 @@ You can always leave an issue on the [GitHub page](https://github.com/LingConLab
 ------------------------|------------------------------------------------
 Анастасия Алексеева     |НИУ ВШЭ
 Никита Беклемишев       |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Михаил Даниэль          |Collegium de Lyon / Laboratoire Dynamique du Langage
-Нина Добрушина          |CNRS
+Михаил Даниэль          |
+Нина Добрушина          |Laboratoire Dynamique du Langage (CNRS, Lyon)
 Константин Филатов      |НИУ ВШЭ / ИЛИ РАН
 Анастасия Иванова       |НИУ ВШЭ / LMU München
 Тимур Майсак            |НИУ ВШЭ / ИЯз РАН
