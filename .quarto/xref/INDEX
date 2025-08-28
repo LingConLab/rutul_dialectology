@@ -1,0 +1,3872 @@
+{
+  "425_Basic_lexicon_item_‘you_(plural)’.qmd": {
+    "425_Basic_lexicon_item_‘you_(plural)’.html": "10155f2c"
+  },
+  "features.qmd": {
+    "features.html": "3ecfd74c"
+  },
+  "team.qmd": {
+    "team.html": "9253067c"
+  },
+  "index.qmd": {
+    "index.html": "a2052f57"
+  },
+  "001_Agreement_in_obliqueness.qmd": {
+    "001_Agreement_in_obliqueness.html": "aea38ba9"
+  },
+  "002_Attributive_marker.qmd": {
+    "002_Attributive_marker.html": "c60a3a1a"
+  },
+  "003_Comitative_marker.qmd": {
+    "003_Comitative_marker.html": "0feb3ec1"
+  },
+  "004_Ergative_marker_type.qmd": {
+    "004_Ergative_marker_type.html": "a97773bd"
+  },
+  "005_Ergative_marker_type_of_attributive_singular.qmd": {
+    "005_Ergative_marker_type_of_attributive_singular.html": "822623de"
+  },
+  "006_Ergative_marker_vowel_presence.qmd": {
+    "006_Ergative_marker_vowel_presence.html": "e238bb70"
+  },
+  "007_Ergative_marker_vowel_presence_variation.qmd": {
+    "007_Ergative_marker_vowel_presence_variation.html": "3425e3b2"
+  },
+  "008_Internal_capability_subject_marking.qmd": {
+    "008_Internal_capability_subject_marking.html": "eb2610c1"
+  },
+  "009_Lexical_item_for_the_concept_‘cattle_shed’.qmd": {
+    "009_Lexical_item_for_the_concept_‘cattle_shed’.html": "7c1711df"
+  },
+  "010_Marking_in_age_constructions.qmd": {
+    "010_Marking_in_age_constructions.html": "517eaf2c"
+  },
+  "011_Marking_of_possessor_in_possessive_predication.qmd": {
+    "011_Marking_of_possessor_in_possessive_predication.html": "4497c996"
+  },
+  "012_Marking_of_standard_of_comparison.qmd": {
+    "012_Marking_of_standard_of_comparison.html": "15c9dbb4"
+  },
+  "013_Marking_of_topological_relation_‘behind’.qmd": {
+    "013_Marking_of_topological_relation_‘behind’.html": "c70b0329"
+  },
+  "014_Marking_of_topological_relation_‘following,_after_(spatial)’.qmd": {
+    "014_Marking_of_topological_relation_‘following,_after_(spatial)’.html": "3325fa71"
+  },
+  "015_Marking_of_topological_relation_‘from_behind’.qmd": {
+    "015_Marking_of_topological_relation_‘from_behind’.html": "8ed0047e"
+  },
+  "016_Marking_of_topological_relation_‘from_in_contact_with’.qmd": {
+    "016_Marking_of_topological_relation_‘from_in_contact_with’.html": "c62438ae"
+  },
+  "017_Marking_of_topological_relation_‘from_the_top_of’.qmd": {
+    "017_Marking_of_topological_relation_‘from_the_top_of’.html": "134b6cd2"
+  },
+  "018_Marking_of_topological_relation_‘in_contact_on_top_of’.qmd": {
+    "018_Marking_of_topological_relation_‘in_contact_on_top_of’.html": "c83b77f0"
+  },
+  "019_Marking_of_topological_relation_‘inside_a_mass’.qmd": {
+    "019_Marking_of_topological_relation_‘inside_a_mass’.html": "c71cd5f8"
+  },
+  "020_Marking_of_topological_relation_‘inside_the_house’.qmd": {
+    "020_Marking_of_topological_relation_‘inside_the_house’.html": "92d9a4a0"
+  },
+  "021_Marking_of_topological_relation_’on_top_of’.qmd": {
+    "021_Marking_of_topological_relation_’on_top_of’.html": "3826d343"
+  },
+  "022_Marking_of_topological_relation_‘out_of’.qmd": {
+    "022_Marking_of_topological_relation_‘out_of’.html": "132e6cdd"
+  },
+  "023_Marking_of_topological_relation_‘under’.qmd": {
+    "023_Marking_of_topological_relation_‘under’.html": "d9ffc17b"
+  },
+  "024_Marking_of_topological_relation_of_proximity.qmd": {
+    "024_Marking_of_topological_relation_of_proximity.html": "4488fa92"
+  },
+  "025_Oblique_stem_formant_of_attributive_in_ergative_singular.qmd": {
+    "025_Oblique_stem_formant_of_attributive_in_ergative_singular.html": "f67494cb"
+  },
+  "026_Oblique_stem_of_the_noun_‘water’.qmd": {
+    "026_Oblique_stem_of_the_noun_‘water’.html": "0c0b20d4"
+  },
+  "027_Phonetic_variation_in_the_lexical_item_‘cow’.qmd": {
+    "027_Phonetic_variation_in_the_lexical_item_‘cow’.html": "8b49850e"
+  },
+  "028_Phonetic_variation_in_the_lexical_item_‘goat’.qmd": {
+    "028_Phonetic_variation_in_the_lexical_item_‘goat’.html": "b07ca8ca"
+  },
+  "029_Plural_marker_of_the_noun_‘brother’.qmd": {
+    "029_Plural_marker_of_the_noun_‘brother’.html": "76ba939e"
+  },
+  "030_Plural_of_objects_coming_in_pairs.qmd": {
+    "030_Plural_of_objects_coming_in_pairs.html": "58d5f2d5"
+  },
+  "031_Plural_of_the_noun_‘cow’.qmd": {
+    "031_Plural_of_the_noun_‘cow’.html": "9d343fe9"
+  },
+  "032_Plural_of_the_noun_‘goat’.qmd": {
+    "032_Plural_of_the_noun_‘goat’.html": "e5a7816f"
+  },
+  "033_Possessor_form_in_temporary_possessive_construction.qmd": {
+    "033_Possessor_form_in_temporary_possessive_construction.html": "df28c929"
+  },
+  "034_Vowel_presence_in_ergative_marker_of_attributive_singular.qmd": {
+    "034_Vowel_presence_in_ergative_marker_of_attributive_singular.html": "7b8f1cae"
+  },
+  "035_Change_of_a_to_o_before_labialized_stops.qmd": {
+    "035_Change_of_a_to_o_before_labialized_stops.html": "76fc4e3b"
+  },
+  "036_Change_of_a_to_o_before_w.qmd": {
+    "036_Change_of_a_to_o_before_w.html": "2f98316c"
+  },
+  "037_Claimed_geminates_in_intervocal_position.qmd": {
+    "037_Claimed_geminates_in_intervocal_position.html": "de7b411b"
+  },
+  "038_g_final_lenition.qmd": {
+    "038_g_final_lenition.html": "289feea6"
+  },
+  "039_lexical_palatalization_in_coda.qmd": {
+    "039_lexical_palatalization_in_coda.html": "8972ed38"
+  },
+  "040_Loanword_f_adopted_as_labialized_x.qmd": {
+    "040_Loanword_f_adopted_as_labialized_x.html": "e363e4d4"
+  },
+  "041_ö_in_loanwords.qmd": {
+    "041_ö_in_loanwords.html": "0add89a7"
+  },
+  "042_Paradigm_levelling_of_šu_“brother”.qmd": {
+    "042_Paradigm_levelling_of_šu_“brother”.html": "b08d6e92"
+  },
+  "043_Possible_reflexes_of_reconstructed_a.qmd": {
+    "043_Possible_reflexes_of_reconstructed_a.html": "eaec81fa"
+  },
+  "044_Possible_reflexes_of_reconstructed_ɣ.qmd": {
+    "044_Possible_reflexes_of_reconstructed_ɣ.html": "4f1c9989"
+  },
+  "045_Rounding_of_â_before_labialized_stops.qmd": {
+    "045_Rounding_of_â_before_labialized_stops.html": "f52794fb"
+  },
+  "046_Some_reflexes_of_reconstructed_ɢ.qmd": {
+    "046_Some_reflexes_of_reconstructed_ɢ.html": "f0263def"
+  },
+  "047_Sound_f_from_reconstructed_labialized_x.qmd": {
+    "047_Sound_f_from_reconstructed_labialized_x.html": "41c75db9"
+  },
+  "048_ü_in_loanwords.qmd": {
+    "048_ü_in_loanwords.html": "83097ca3"
+  },
+  "049_ü_in_native_nouns.qmd": {
+    "049_ü_in_native_nouns.html": "018fc577"
+  },
+  "050_ž_as_a_separate_phoneme.qmd": {
+    "050_ž_as_a_separate_phoneme.html": "edacefa4"
+  },
+  "051_Adverbial_marker_-na_as_depictive.qmd": {
+    "051_Adverbial_marker_-na_as_depictive.html": "b4ac7412"
+  },
+  "052_Adverbial_marker_-na_as_functive.qmd": {
+    "052_Adverbial_marker_-na_as_functive.html": "850f52a7"
+  },
+  "053_Basic_forms_of_the_first_person_pronoun.qmd": {
+    "053_Basic_forms_of_the_first_person_pronoun.html": "23422337"
+  },
+  "054_Basic_forms_of_the_second_person_pronoun.qmd": {
+    "054_Basic_forms_of_the_second_person_pronoun.html": "66f06345"
+  },
+  "055_Coalescence_in_I-ERG_you_sg-ABS_construction.qmd": {
+    "055_Coalescence_in_I-ERG_you_sg-ABS_construction.html": "a42cd29e"
+  },
+  "056_Coalescence_in_you_sg-ERG_I-ABS_construction.qmd": {
+    "056_Coalescence_in_you_sg-ERG_I-ABS_construction.html": "c766dc74"
+  },
+  "057_Contrastive_marker.qmd": {
+    "057_Contrastive_marker.html": "214f4e83"
+  },
+  "058_Equative-similative_marker.qmd": {
+    "058_Equative-similative_marker.html": "9954ab5d"
+  },
+  "059_Expression_“at_least”.qmd": {
+    "059_Expression_“at_least”.html": "93100c97"
+  },
+  "060_Gender_agreement_in_the_adjective_“good”.qmd": {
+    "060_Gender_agreement_in_the_adjective_“good”.html": "535739de"
+  },
+  "061_Gender_agreement_in_the_adjective_“hot”.qmd": {
+    "061_Gender_agreement_in_the_adjective_“hot”.html": "27bacd10"
+  },
+  "062_Gender_agreement_in_the_adjective_“young(er)”.qmd": {
+    "062_Gender_agreement_in_the_adjective_“young(er)”.html": "5be835ce"
+  },
+  "063_Headless_adjective_declension_—_human.qmd": {
+    "063_Headless_adjective_declension_—_human.html": "8b6bdc16"
+  },
+  "064_Headless_adjective_declension_—_non-human.qmd": {
+    "064_Headless_adjective_declension_—_non-human.html": "e9d8e062"
+  },
+  "065_Imperative_interjection_“here_you_are,_take_it!”.qmd": {
+    "065_Imperative_interjection_“here_you_are,_take_it!”.html": "a28a06a4"
+  },
+  "066_Inflection_of_the_first_person_plural_pronoun.qmd": {
+    "066_Inflection_of_the_first_person_plural_pronoun.html": "cbc7b46a"
+  },
+  "067_Lexical_item_for_“very”.qmd": {
+    "067_Lexical_item_for_“very”.html": "14ab15d7"
+  },
+  "068_Marking_on_adjective_in_adjectival_predication_“be_X”.qmd": {
+    "068_Marking_on_adjective_in_adjectival_predication_“be_X”.html": "d4b2fe86"
+  },
+  "069_Marking_on_adjective_in_adjectival_predication_“become_X”.qmd": {
+    "069_Marking_on_adjective_in_adjectival_predication_“become_X”.html": "3ea00aba"
+  },
+  "070_Oblique_stem_of_numeral_“one”.qmd": {
+    "070_Oblique_stem_of_numeral_“one”.html": "323ece3a"
+  },
+  "071_Oblique_stem_of_numeral_“two”.qmd": {
+    "071_Oblique_stem_of_numeral_“two”.html": "f2bd446d"
+  },
+  "072_Obliqueness_agreement_in_numerals.qmd": {
+    "072_Obliqueness_agreement_in_numerals.html": "107584a8"
+  },
+  "073_Presence_of_exclusive-inclusive_distinction.qmd": {
+    "073_Presence_of_exclusive-inclusive_distinction.html": "3dbe6954"
+  },
+  "074_Quotative_marker.qmd": {
+    "074_Quotative_marker.html": "88d85274"
+  },
+  "075_Superlative_marker.qmd": {
+    "075_Superlative_marker.html": "b94402b0"
+  },
+  "076_Lexical_item_for_“an_axe”.qmd": {
+    "076_Lexical_item_for_“an_axe”.html": "4b97600a"
+  },
+  "077_Lexical_item_for_“bone”.qmd": {
+    "077_Lexical_item_for_“bone”.html": "154a2e8d"
+  },
+  "078_Lexical_item_for_“bridle”.qmd": {
+    "078_Lexical_item_for_“bridle”.html": "b89ee83a"
+  },
+  "079_Lexical_item_for_“cow”.qmd": {
+    "079_Lexical_item_for_“cow”.html": "17c65573"
+  },
+  "080_Lexical_item_for_“cowhouse”.qmd": {
+    "080_Lexical_item_for_“cowhouse”.html": "74292e71"
+  },
+  "081_Lexical_item_for_“dew”.qmd": {
+    "081_Lexical_item_for_“dew”.html": "b662d71d"
+  },
+  "082_Lexical_item_for_“donkey”.qmd": {
+    "082_Lexical_item_for_“donkey”.html": "3cab2f4a"
+  },
+  "083_Lexical_item_for_“door”.qmd": {
+    "083_Lexical_item_for_“door”.html": "c8e8c24d"
+  },
+  "084_Lexical_item_for_“dress”.qmd": {
+    "084_Lexical_item_for_“dress”.html": "56495780"
+  },
+  "085_Lexical_item_for_“drop”.qmd": {
+    "085_Lexical_item_for_“drop”.html": "7d39cc4a"
+  },
+  "086_Lexical_item_for_“fish”.qmd": {
+    "086_Lexical_item_for_“fish”.html": "e40c264b"
+  },
+  "087_Lexical_item_for_“frog”.qmd": {
+    "087_Lexical_item_for_“frog”.html": "6a8b6f0a"
+  },
+  "088_Lexical_item_for_“hammer”.qmd": {
+    "088_Lexical_item_for_“hammer”.html": "84708986"
+  },
+  "089_Lexical_item_for_“hedgehog”.qmd": {
+    "089_Lexical_item_for_“hedgehog”.html": "347f0cc6"
+  },
+  "090_Lexical_item_for_“horse”.qmd": {
+    "090_Lexical_item_for_“horse”.html": "8e8c191a"
+  },
+  "091_Lexical_item_for_“horseshoe”.qmd": {
+    "091_Lexical_item_for_“horseshoe”.html": "afc9f045"
+  },
+  "092_Lexical_item_for_“hot”.qmd": {
+    "092_Lexical_item_for_“hot”.html": "3e28ddf1"
+  },
+  "093_Lexical_item_for_“light”.qmd": {
+    "093_Lexical_item_for_“light”.html": "34b4da1e"
+  },
+  "094_Lexical_item_for_“lock”.qmd": {
+    "094_Lexical_item_for_“lock”.html": "94b81c34"
+  },
+  "095_Lexical_item_for_“nest”.qmd": {
+    "095_Lexical_item_for_“nest”.html": "cbb38ce6"
+  },
+  "096_Lexical_item_for_“pants”.qmd": {
+    "096_Lexical_item_for_“pants”.html": "fcaa6dd6"
+  },
+  "097_Lexical_item_for_“plum”.qmd": {
+    "097_Lexical_item_for_“plum”.html": "4db9db62"
+  },
+  "098_Lexical_item_for_“river”.qmd": {
+    "098_Lexical_item_for_“river”.html": "ad7e38f0"
+  },
+  "099_Lexical_item_for_“saddle”.qmd": {
+    "099_Lexical_item_for_“saddle”.html": "c8257b9e"
+  },
+  "100_Lexical_item_for_“scissors_or_shears”.qmd": {
+    "100_Lexical_item_for_“scissors_or_shears”.html": "a623cf53"
+  },
+  "101_Lexical_item_for_“scythe”.qmd": {
+    "101_Lexical_item_for_“scythe”.html": "0764d585"
+  },
+  "102_Lexical_item_for_“shade_or_shadow”.qmd": {
+    "102_Lexical_item_for_“shade_or_shadow”.html": "c419d46a"
+  },
+  "103_Lexical_item_for_“sickle”.qmd": {
+    "103_Lexical_item_for_“sickle”.html": "ef654a88"
+  },
+  "104_Lexical_item_for_“whip”.qmd": {
+    "104_Lexical_item_for_“whip”.html": "02eaabb9"
+  },
+  "105_Lexical_item_for_“wolf”.qmd": {
+    "105_Lexical_item_for_“wolf”.html": "901b5f05"
+  },
+  "106_Associative_plural_marking.qmd": {
+    "106_Associative_plural_marking.html": "1ade1edf"
+  },
+  "107_Inanimate_plural_marking.qmd": {
+    "107_Inanimate_plural_marking.html": "2f15655c"
+  },
+  "108_Lexical_item_for_the_concept_‘dog’.qmd": {
+    "108_Lexical_item_for_the_concept_‘dog’.html": "a5e2b7ed"
+  },
+  "109_Lexical_item_for_the_concept_‘eye’.qmd": {
+    "109_Lexical_item_for_the_concept_‘eye’.html": "ccee9047"
+  },
+  "110_Marking_of_addressee.qmd": {
+    "110_Marking_of_addressee.html": "4cef911a"
+  },
+  "111_Marking_of_personal_elative.qmd": {
+    "111_Marking_of_personal_elative.html": "d1887509"
+  },
+  "112_Marking_of_personal_essive.qmd": {
+    "112_Marking_of_personal_essive.html": "6c0cfd56"
+  },
+  "113_Marking_of_personal_lative.qmd": {
+    "113_Marking_of_personal_lative.html": "74ea8451"
+  },
+  "114_Marking_of_topological_relation_‘from_inside_a_mass’.qmd": {
+    "114_Marking_of_topological_relation_‘from_inside_a_mass’.html": "76e5ac2d"
+  },
+  "115_Marking_of_topological_relation_‘from_under’.qmd": {
+    "115_Marking_of_topological_relation_‘from_under’.html": "72b27030"
+  },
+  "116_Marking_of_topological_relation_‘in_between’.qmd": {
+    "116_Marking_of_topological_relation_‘in_between’.html": "2c33d2d1"
+  },
+  "117_Marking_of_topological_relation_‘in_contact_with’.qmd": {
+    "117_Marking_of_topological_relation_‘in_contact_with’.html": "3f76dcf0"
+  },
+  "118_Marking_of_topological_relation_‘near,_by’.qmd": {
+    "118_Marking_of_topological_relation_‘near,_by’.html": "f537db86"
+  },
+  "119_Marking_of_topological_relation_‘towards_inside_a_mass’.qmd": {
+    "119_Marking_of_topological_relation_‘towards_inside_a_mass’.html": "eb329579"
+  },
+  "120_Oblique_stem_in_a_sonorant.qmd": {
+    "120_Oblique_stem_in_a_sonorant.html": "22fb6d60"
+  },
+  "121_Plural_marker_of_the_noun_‘daughter’.qmd": {
+    "121_Plural_marker_of_the_noun_‘daughter’.html": "3894c3e5"
+  },
+  "122_Plural_marker_of_the_noun_‘dog’.qmd": {
+    "122_Plural_marker_of_the_noun_‘dog’.html": "55130b35"
+  },
+  "123_Plural_marker_of_the_noun_‘sister’.qmd": {
+    "123_Plural_marker_of_the_noun_‘sister’.html": "7ce7da2c"
+  },
+  "124_Plural_marker_of_the_noun_‘son’.qmd": {
+    "124_Plural_marker_of_the_noun_‘son’.html": "6463e52b"
+  },
+  "125_Presence_of_palatalization_in_oblique_stems_with_a_sonorant.qmd": {
+    "125_Presence_of_palatalization_in_oblique_stems_with_a_sonorant.html": "cfd5f2d1"
+  },
+  "126_Retroactive_recipient_marking.qmd": {
+    "126_Retroactive_recipient_marking.html": "943aaefd"
+  },
+  "127_Temporary_recipient_marking.qmd": {
+    "127_Temporary_recipient_marking.html": "a7983a14"
+  },
+  "128_Unintentional_agent_marking.qmd": {
+    "128_Unintentional_agent_marking.html": "286401fc"
+  },
+  "129_Anterior_converb_‘before_P’.qmd": {
+    "129_Anterior_converb_‘before_P’.html": "fa1f624b"
+  },
+  "130_Avertive_construction.qmd": {
+    "130_Avertive_construction.html": "c98f9c70"
+  },
+  "131_Continuative_construction.qmd": {
+    "131_Continuative_construction.html": "642be4af"
+  },
+  "132_Copula,_past_tense_suffix.qmd": {
+    "132_Copula,_past_tense_suffix.html": "fd3b2838"
+  },
+  "133_Copula,_present_tense.qmd": {
+    "133_Copula,_present_tense.html": "b6e9b777"
+  },
+  "134_Imperfective_participle.qmd": {
+    "134_Imperfective_participle.html": "08fc89be"
+  },
+  "135_Indicative_verb_form_based_on_the_imperfective_participle.qmd": {
+    "135_Indicative_verb_form_based_on_the_imperfective_participle.html": "938654e4"
+  },
+  "136_Indicative_verb_form_based_on_the_perfective_participle.qmd": {
+    "136_Indicative_verb_form_based_on_the_perfective_participle.html": "25fbccb7"
+  },
+  "137_Indicative_verb_form_based_on_the_prospective_participle.qmd": {
+    "137_Indicative_verb_form_based_on_the_prospective_participle.html": "cdf6a932"
+  },
+  "138_Indicative_verb_forms__aorist.qmd": {
+    "138_Indicative_verb_forms__aorist.html": "c505441b"
+  },
+  "139_Indicative_verb_forms__future.qmd": {
+    "139_Indicative_verb_forms__future.html": "afbc0234"
+  },
+  "140_Indicative_verb_forms__negative_aorist.qmd": {
+    "140_Indicative_verb_forms__negative_aorist.html": "232d1832"
+  },
+  "141_Indicative_verb_forms__negative_future.qmd": {
+    "141_Indicative_verb_forms__negative_future.html": "6aa0c053"
+  },
+  "142_Indicative_verb_forms__negative_perfect.qmd": {
+    "142_Indicative_verb_forms__negative_perfect.html": "c6249c1d"
+  },
+  "143_Indicative_verb_forms__negative_present.qmd": {
+    "143_Indicative_verb_forms__negative_present.html": "34ac8cca"
+  },
+  "144_Indicative_verb_forms__negative_present_habitual.qmd": {
+    "144_Indicative_verb_forms__negative_present_habitual.html": "429305eb"
+  },
+  "145_Indicative_verb_forms__perfect.qmd": {
+    "145_Indicative_verb_forms__perfect.html": "1ee27aaf"
+  },
+  "146_Indicative_verb_forms__present.qmd": {
+    "146_Indicative_verb_forms__present.html": "f90cc558"
+  },
+  "147_Indicative_verb_forms__present_habitual.qmd": {
+    "147_Indicative_verb_forms__present_habitual.html": "2699cd6f"
+  },
+  "148_Indirect_content_question_marker.qmd": {
+    "148_Indirect_content_question_marker.html": "c14b5342"
+  },
+  "149_Inventory_of_locative_stative_verbs.qmd": {
+    "149_Inventory_of_locative_stative_verbs.html": "10db8fc4"
+  },
+  "150_Meditative_content_question_marker.qmd": {
+    "150_Meditative_content_question_marker.html": "ee233e15"
+  },
+  "151_Meditative_polar_question_marker.qmd": {
+    "151_Meditative_polar_question_marker.html": "240d00c5"
+  },
+  "152_Negative_copula,_past_tense_suffix.qmd": {
+    "152_Negative_copula,_past_tense_suffix.html": "a3907f0b"
+  },
+  "153_Negative_copula,_present_tense.qmd": {
+    "153_Negative_copula,_present_tense.html": "25267c7a"
+  },
+  "154_Perfective_participle.qmd": {
+    "154_Perfective_participle.html": "bfa0e9d3"
+  },
+  "155_Polar_interrogative_marker.qmd": {
+    "155_Polar_interrogative_marker.html": "7aeeb308"
+  },
+  "156_Prospective_participle.qmd": {
+    "156_Prospective_participle.html": "a7d76ff8"
+  },
+  "157_Stative_verb_‘be’,_negative_present_tense_suffix.qmd": {
+    "157_Stative_verb_‘be’,_negative_present_tense_suffix.html": "6f32b9c5"
+  },
+  "158_Stative_verb_‘be’,_past_tense_suffix.qmd": {
+    "158_Stative_verb_‘be’,_past_tense_suffix.html": "0be98cf7"
+  },
+  "159_Stative_verb_‘be’,_present_tense,_long_form.qmd": {
+    "159_Stative_verb_‘be’,_present_tense,_long_form.html": "ebedbf82"
+  },
+  "160_Stative_verb_‘be’,_present_tense,_short_form.qmd": {
+    "160_Stative_verb_‘be’,_present_tense,_short_form.html": "83c4f23f"
+  },
+  "161_Stative_verb_‘remain’_with_a_prefix_ǯV.qmd": {
+    "161_Stative_verb_‘remain’_with_a_prefix_ǯV.html": "7fd097dc"
+  },
+  "162_Stative_verb_‘remain’,_negative_past_tense_suffix.qmd": {
+    "162_Stative_verb_‘remain’,_negative_past_tense_suffix.html": "9f084864"
+  },
+  "163_Stative_verb_‘remain’,_negative_present_tense.qmd": {
+    "163_Stative_verb_‘remain’,_negative_present_tense.html": "e2853484"
+  },
+  "164_Stative_verb_‘remain’,_past_tense_suffix.qmd": {
+    "164_Stative_verb_‘remain’,_past_tense_suffix.html": "a240fb15"
+  },
+  "165_Stative_verb_‘remain’,_present_tense.qmd": {
+    "165_Stative_verb_‘remain’,_present_tense.html": "31ff4663"
+  },
+  "166_Stative_verb_a_‘be’,_negative_past_tense_suffix.qmd": {
+    "166_Stative_verb_a_‘be’,_negative_past_tense_suffix.html": "da149f24"
+  },
+  "167_The_verb_‘become’,_imperative_and_prohibitive.qmd": {
+    "167_The_verb_‘become’,_imperative_and_prohibitive.html": "c4c01657"
+  },
+  "168_The_verb_‘become’,_imperfective_stem.qmd": {
+    "168_The_verb_‘become’,_imperfective_stem.html": "2c5790fc"
+  },
+  "169_The_verb_‘become’,_infinitive.qmd": {
+    "169_The_verb_‘become’,_infinitive.html": "17a8d9da"
+  },
+  "170_The_verb_‘become’,_perfective_stem.qmd": {
+    "170_The_verb_‘become’,_perfective_stem.html": "f2876656"
+  },
+  "171_The_verb_‘say’,_perfective_and_imperfective_stems.qmd": {
+    "171_The_verb_‘say’,_perfective_and_imperfective_stems.html": "9802685d"
+  },
+  "172_Verb_form_used_in_perfective_past_contexts.qmd": {
+    "172_Verb_form_used_in_perfective_past_contexts.html": "317c21c7"
+  },
+  "173_Verb_form_used_in_present_habitual_contexts.qmd": {
+    "173_Verb_form_used_in_present_habitual_contexts.html": "46683b35"
+  },
+  "174_Causative_from_intransitive_verbs.qmd": {
+    "174_Causative_from_intransitive_verbs.html": "cc10df54"
+  },
+  "175_Causative_from_transitive_verbs.qmd": {
+    "175_Causative_from_transitive_verbs.html": "e4e8409f"
+  },
+  "176_Counterfactual_conditional_converb_suffixes.qmd": {
+    "176_Counterfactual_conditional_converb_suffixes.html": "8e3d7516"
+  },
+  "177_Differentiation_of_the_optative_and_the_jussive.qmd": {
+    "177_Differentiation_of_the_optative_and_the_jussive.html": "b4c1811a"
+  },
+  "178_Hortative_‘Let’s_go!’.qmd": {
+    "178_Hortative_‘Let’s_go!’.html": "7b898818"
+  },
+  "179_Hortative_marking.qmd": {
+    "179_Hortative_marking.html": "f9dbd754"
+  },
+  "180_Imperative.qmd": {
+    "180_Imperative.html": "0317b9be"
+  },
+  "181_Optative.qmd": {
+    "181_Optative.html": "5eec202f"
+  },
+  "182_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "182_Perfective_forms_of_the_verb_‘do’.html": "7c7fe28a"
+  },
+  "183_Refactive.qmd": {
+    "183_Refactive.html": "0ca5be0c"
+  },
+  "184_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "184_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.html": "7a78bfa8"
+  },
+  "185_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.qmd": {
+    "185_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.html": "864cfb8a"
+  },
+  "186_Universal_concessive_conditional_converb_suffixes.qmd": {
+    "186_Universal_concessive_conditional_converb_suffixes.html": "adb9874a"
+  },
+  "187_Vowel_fronting_in_human_and_animate_plural_forms.qmd": {
+    "187_Vowel_fronting_in_human_and_animate_plural_forms.html": "84655972"
+  },
+  "188_Wish_formula_‘Good_morning’.qmd": {
+    "188_Wish_formula_‘Good_morning’.html": "20142ff6"
+  },
+  "189_Wish_formula_‘Have_a_nice_trip’.qmd": {
+    "189_Wish_formula_‘Have_a_nice_trip’.html": "c8b748cf"
+  },
+  "190_Absolutive_suffix_in_negative_pronouns.qmd": {
+    "190_Absolutive_suffix_in_negative_pronouns.html": "0d34a37f"
+  },
+  "191_Choice_of_pronoun_in_reflexive_contexts_in_1st_person.qmd": {
+    "191_Choice_of_pronoun_in_reflexive_contexts_in_1st_person.html": "a2cabf58"
+  },
+  "192_Demonstrative_used_in_anaphoric_contexts.qmd": {
+    "192_Demonstrative_used_in_anaphoric_contexts.html": "7f661960"
+  },
+  "193_Demonstrative_used_in_anaphoric_contrast_(“that_one”).qmd": {
+    "193_Demonstrative_used_in_anaphoric_contrast_(“that_one”).html": "836858ea"
+  },
+  "194_Emphatic_prefix_he-,_ha-_in_demonstratives.qmd": {
+    "194_Emphatic_prefix_he-,_ha-_in_demonstratives.html": "49029570"
+  },
+  "195_Ergative_stem_in_negative_pronouns.qmd": {
+    "195_Ergative_stem_in_negative_pronouns.html": "5fdedba0"
+  },
+  "196_Ergative_stem_in_the_MED_demonstrative.qmd": {
+    "196_Ergative_stem_in_the_MED_demonstrative.html": "32b88742"
+  },
+  "197_Ergative_suffix_in_negative_pronouns.qmd": {
+    "197_Ergative_suffix_in_negative_pronouns.html": "9dfc54dc"
+  },
+  "198_Ergative_suffix_in_the_MED_demonstrative.qmd": {
+    "198_Ergative_suffix_in_the_MED_demonstrative.html": "04217ce7"
+  },
+  "199_Form_of_the_suffix_-d(V)_in_the_demonstrative.qmd": {
+    "199_Form_of_the_suffix_-d(V)_in_the_demonstrative.html": "8c2874b6"
+  },
+  "200_Formant_-n_in_the_DIST_demonstrative.qmd": {
+    "200_Formant_-n_in_the_DIST_demonstrative.html": "73497fa0"
+  },
+  "201_Stems_of_reflexive_pronouns.qmd": {
+    "201_Stems_of_reflexive_pronouns.html": "7e20474f"
+  },
+  "202_who_PL.qmd": {
+    "202_who_PL.html": "eb3ef1de"
+  },
+  "203_who_SG.qmd": {
+    "203_who_SG.html": "5dadd558"
+  },
+  "204_Additive_particle.qmd": {
+    "204_Additive_particle.html": "2aec9c3c"
+  },
+  "205_Alternative_concessive_conditionals.qmd": {
+    "205_Alternative_concessive_conditionals.html": "3bcb7cc0"
+  },
+  "206_Concessive_marking.qmd": {
+    "206_Concessive_marking.html": "288c393f"
+  },
+  "207_Concessive-conditional_marking.qmd": {
+    "207_Concessive-conditional_marking.html": "fa3cb126"
+  },
+  "208_Conjunction_particle.qmd": {
+    "208_Conjunction_particle.html": "0ab332ec"
+  },
+  "209_Disjunction_marker.qmd": {
+    "209_Disjunction_marker.html": "93bdf349"
+  },
+  "210_Exponence_of_«sequential»_temporal_semantics.qmd": {
+    "210_Exponence_of_«sequential»_temporal_semantics.html": "dab02237"
+  },
+  "211_Free-choice_indefinite.qmd": {
+    "211_Free-choice_indefinite.html": "db6f4562"
+  },
+  "212_Hypothetical_conditional_converb_suffix.qmd": {
+    "212_Hypothetical_conditional_converb_suffix.html": "558422c0"
+  },
+  "213_Limitative_converb.qmd": {
+    "213_Limitative_converb.html": "9919b32e"
+  },
+  "214_Non-specific_indefinite_pronouns.qmd": {
+    "214_Non-specific_indefinite_pronouns.html": "7b5a3ffe"
+  },
+  "215_Presence_of_additive_in_free-choice_indefinite_pronouns.qmd": {
+    "215_Presence_of_additive_in_free-choice_indefinite_pronouns.html": "313a3b6c"
+  },
+  "216_Presence_of_additive_in_non-specific_indefinite_pronouns.qmd": {
+    "216_Presence_of_additive_in_non-specific_indefinite_pronouns.html": "5c71ea95"
+  },
+  "217_Realis_conditional_converb_suffix.qmd": {
+    "217_Realis_conditional_converb_suffix.html": "f93552f4"
+  },
+  "218_Scalar_additive_context.qmd": {
+    "218_Scalar_additive_context.html": "4537d552"
+  },
+  "219_Basic_lexicon_item_‘all_(pl_)’.qmd": {
+    "219_Basic_lexicon_item_‘all_(pl_)’.html": "c06a8beb"
+  },
+  "220_Basic_lexicon_item_‘ant’.qmd": {
+    "220_Basic_lexicon_item_‘ant’.html": "991bbeb5"
+  },
+  "221_Basic_lexicon_item_‘ash’.qmd": {
+    "221_Basic_lexicon_item_‘ash’.html": "f63b2c4c"
+  },
+  "222_Basic_lexicon_item_‘back_(anatomical)’.qmd": {
+    "222_Basic_lexicon_item_‘back_(anatomical)’.html": "90425d67"
+  },
+  "223_Basic_lexicon_item_‘bad’.qmd": {
+    "223_Basic_lexicon_item_‘bad’.html": "87ef65b6"
+  },
+  "224_Basic_lexicon_item_‘bark_(n_)’.qmd": {
+    "224_Basic_lexicon_item_‘bark_(n_)’.html": "a0add7a6"
+  },
+  "225_Basic_lexicon_item_‘belly’.qmd": {
+    "225_Basic_lexicon_item_‘belly’.html": "e6db992b"
+  },
+  "226_Basic_lexicon_item_‘big’.qmd": {
+    "226_Basic_lexicon_item_‘big’.html": "8d09163d"
+  },
+  "227_Basic_lexicon_item_‘bird’.qmd": {
+    "227_Basic_lexicon_item_‘bird’.html": "814a7dc5"
+  },
+  "228_Basic_lexicon_item_‘bite’.qmd": {
+    "228_Basic_lexicon_item_‘bite’.html": "b65070bd"
+  },
+  "229_Basic_lexicon_item_‘bitter’.qmd": {
+    "229_Basic_lexicon_item_‘bitter’.html": "2ca18bf3"
+  },
+  "230_Basic_lexicon_item_‘black’.qmd": {
+    "230_Basic_lexicon_item_‘black’.html": "948ea33a"
+  },
+  "231_Basic_lexicon_item_‘blood’.qmd": {
+    "231_Basic_lexicon_item_‘blood’.html": "ba674fd4"
+  },
+  "232_Basic_lexicon_item_‘blow_(v,_of_person)’.qmd": {
+    "232_Basic_lexicon_item_‘blow_(v,_of_person)’.html": "958d2a8f"
+  },
+  "233_Basic_lexicon_item_‘bone’.qmd": {
+    "233_Basic_lexicon_item_‘bone’.html": "2735c974"
+  },
+  "234_Basic_lexicon_item_‘breathe’.qmd": {
+    "234_Basic_lexicon_item_‘breathe’.html": "581a6cff"
+  },
+  "235_Basic_lexicon_item_‘burn_(intr)’.qmd": {
+    "235_Basic_lexicon_item_‘burn_(intr)’.html": "f173901f"
+  },
+  "236_Basic_lexicon_item_‘burn_(tr)’.qmd": {
+    "236_Basic_lexicon_item_‘burn_(tr)’.html": "cced3b28"
+  },
+  "237_Basic_lexicon_item_‘carry’.qmd": {
+    "237_Basic_lexicon_item_‘carry’.html": "6fc25ba2"
+  },
+  "238_Basic_lexicon_item_‘chest’.qmd": {
+    "238_Basic_lexicon_item_‘chest’.html": "9782753e"
+  },
+  "239_Basic_lexicon_item_‘child’.qmd": {
+    "239_Basic_lexicon_item_‘child’.html": "fb290dbc"
+  },
+  "240_Basic_lexicon_item_‘claw’.qmd": {
+    "240_Basic_lexicon_item_‘claw’.html": "5ab28562"
+  },
+  "241_Basic_lexicon_item_‘cloud’.qmd": {
+    "241_Basic_lexicon_item_‘cloud’.html": "7403a16b"
+  },
+  "242_Basic_lexicon_item_‘cold’.qmd": {
+    "242_Basic_lexicon_item_‘cold’.html": "7e2b520d"
+  },
+  "243_Basic_lexicon_item_‘come’.qmd": {
+    "243_Basic_lexicon_item_‘come’.html": "76be86d1"
+  },
+  "244_Basic_lexicon_item_‘count’.qmd": {
+    "244_Basic_lexicon_item_‘count’.html": "3f578894"
+  },
+  "245_Basic_lexicon_item_‘cut’.qmd": {
+    "245_Basic_lexicon_item_‘cut’.html": "594dc258"
+  },
+  "246_Basic_lexicon_item_‘day_(daytime)’.qmd": {
+    "246_Basic_lexicon_item_‘day_(daytime)’.html": "6a0371c8"
+  },
+  "247_Basic_lexicon_item_‘die’.qmd": {
+    "247_Basic_lexicon_item_‘die’.html": "b2c5c614"
+  },
+  "248_Basic_lexicon_item_‘dig’.qmd": {
+    "248_Basic_lexicon_item_‘dig’.html": "333f0811"
+  },
+  "249_Basic_lexicon_item_‘dirty’.qmd": {
+    "249_Basic_lexicon_item_‘dirty’.html": "0fc51ba6"
+  },
+  "250_Basic_lexicon_item_‘do’.qmd": {
+    "250_Basic_lexicon_item_‘do’.html": "1368e83c"
+  },
+  "251_Basic_lexicon_item_‘dog’.qmd": {
+    "251_Basic_lexicon_item_‘dog’.html": "b8a38774"
+  },
+  "252_Basic_lexicon_item_‘drink’.qmd": {
+    "252_Basic_lexicon_item_‘drink’.html": "eea86379"
+  },
+  "253_Basic_lexicon_item_‘dry’.qmd": {
+    "253_Basic_lexicon_item_‘dry’.html": "c203f138"
+  },
+  "254_Basic_lexicon_item_‘dust’.qmd": {
+    "254_Basic_lexicon_item_‘dust’.html": "30145658"
+  },
+  "255_Basic_lexicon_item_‘ear’.qmd": {
+    "255_Basic_lexicon_item_‘ear’.html": "86e336ab"
+  },
+  "256_Basic_lexicon_item_‘earth’.qmd": {
+    "256_Basic_lexicon_item_‘earth’.html": "0281200a"
+  },
+  "257_Basic_lexicon_item_‘eat_(tr)’.qmd": {
+    "257_Basic_lexicon_item_‘eat_(tr)’.html": "808d75c3"
+  },
+  "258_Basic_lexicon_item_‘egg’.qmd": {
+    "258_Basic_lexicon_item_‘egg’.html": "4c31eebf"
+  },
+  "259_Basic_lexicon_item_‘eye’.qmd": {
+    "259_Basic_lexicon_item_‘eye’.html": "65d4ddb8"
+  },
+  "260_Basic_lexicon_item_‘fall’.qmd": {
+    "260_Basic_lexicon_item_‘fall’.html": "08017b0b"
+  },
+  "261_Basic_lexicon_item_‘far’.qmd": {
+    "261_Basic_lexicon_item_‘far’.html": "cf135ff7"
+  },
+  "262_Basic_lexicon_item_‘fat’.qmd": {
+    "262_Basic_lexicon_item_‘fat’.html": "36e6928c"
+  },
+  "263_Basic_lexicon_item_‘father’.qmd": {
+    "263_Basic_lexicon_item_‘father’.html": "332bb6ef"
+  },
+  "264_Basic_lexicon_item_‘fear’.qmd": {
+    "264_Basic_lexicon_item_‘fear’.html": "f2065f2e"
+  },
+  "265_Basic_lexicon_item_‘feather’.qmd": {
+    "265_Basic_lexicon_item_‘feather’.html": "3e758448"
+  },
+  "266_Basic_lexicon_item_‘fight_(vb)’.qmd": {
+    "266_Basic_lexicon_item_‘fight_(vb)’.html": "7d11b638"
+  },
+  "267_Basic_lexicon_item_‘fingernail’.qmd": {
+    "267_Basic_lexicon_item_‘fingernail’.html": "45ba3942"
+  },
+  "268_Basic_lexicon_item_‘fire’.qmd": {
+    "268_Basic_lexicon_item_‘fire’.html": "02a4073b"
+  },
+  "269_Basic_lexicon_item_‘fish’.qmd": {
+    "269_Basic_lexicon_item_‘fish’.html": "d7bf559a"
+  },
+  "270_Basic_lexicon_item_‘five’.qmd": {
+    "270_Basic_lexicon_item_‘five’.html": "a3d3b7a8"
+  },
+  "271_Basic_lexicon_item_‘flower’.qmd": {
+    "271_Basic_lexicon_item_‘flower’.html": "2ec5c9be"
+  },
+  "272_Basic_lexicon_item_‘fly_(v)’.qmd": {
+    "272_Basic_lexicon_item_‘fly_(v)’.html": "0a995c63"
+  },
+  "273_Basic_lexicon_item_‘fly’.qmd": {
+    "273_Basic_lexicon_item_‘fly’.html": "469e66f1"
+  },
+  "274_Basic_lexicon_item_‘fog’.qmd": {
+    "274_Basic_lexicon_item_‘fog’.html": "7333ff06"
+  },
+  "275_Basic_lexicon_item_‘foot’.qmd": {
+    "275_Basic_lexicon_item_‘foot’.html": "f05b7673"
+  },
+  "276_Basic_lexicon_item_‘forest’.qmd": {
+    "276_Basic_lexicon_item_‘forest’.html": "f7b9abd0"
+  },
+  "277_Basic_lexicon_item_‘four’.qmd": {
+    "277_Basic_lexicon_item_‘four’.html": "f92a5587"
+  },
+  "278_Basic_lexicon_item_‘freeze’.qmd": {
+    "278_Basic_lexicon_item_‘freeze’.html": "3b72859e"
+  },
+  "279_Basic_lexicon_item_‘fruit’.qmd": {
+    "279_Basic_lexicon_item_‘fruit’.html": "52b459ca"
+  },
+  "280_Basic_lexicon_item_‘full’.qmd": {
+    "280_Basic_lexicon_item_‘full’.html": "694458be"
+  },
+  "281_Basic_lexicon_item_‘give’.qmd": {
+    "281_Basic_lexicon_item_‘give’.html": "4667df5e"
+  },
+  "282_Basic_lexicon_item_‘go’.qmd": {
+    "282_Basic_lexicon_item_‘go’.html": "e5fa141d"
+  },
+  "283_Basic_lexicon_item_‘good’.qmd": {
+    "283_Basic_lexicon_item_‘good’.html": "1a4d32e7"
+  },
+  "284_Basic_lexicon_item_‘grass’.qmd": {
+    "284_Basic_lexicon_item_‘grass’.html": "76fe4181"
+  },
+  "285_Basic_lexicon_item_‘green’.qmd": {
+    "285_Basic_lexicon_item_‘green’.html": "ca401061"
+  },
+  "286_Basic_lexicon_item_‘grind_(flour)’.qmd": {
+    "286_Basic_lexicon_item_‘grind_(flour)’.html": "14e5210f"
+  },
+  "287_Basic_lexicon_item_‘hair_(mass)’.qmd": {
+    "287_Basic_lexicon_item_‘hair_(mass)’.html": "b5ac2795"
+  },
+  "288_Basic_lexicon_item_‘hand’.qmd": {
+    "288_Basic_lexicon_item_‘hand’.html": "1cc60c83"
+  },
+  "289_Basic_lexicon_item_‘hard’.qmd": {
+    "289_Basic_lexicon_item_‘hard’.html": "c93a4655"
+  },
+  "290_Basic_lexicon_item_‘head’.qmd": {
+    "290_Basic_lexicon_item_‘head’.html": "073fb926"
+  },
+  "291_Basic_lexicon_item_‘hear’.qmd": {
+    "291_Basic_lexicon_item_‘hear’.html": "92f1572f"
+  },
+  "292_Basic_lexicon_item_‘heart’.qmd": {
+    "292_Basic_lexicon_item_‘heart’.html": "c2ac8a26"
+  },
+  "293_Basic_lexicon_item_‘heavy’.qmd": {
+    "293_Basic_lexicon_item_‘heavy’.html": "0af09039"
+  },
+  "294_Basic_lexicon_item_‘here’.qmd": {
+    "294_Basic_lexicon_item_‘here’.html": "6c4e695e"
+  },
+  "295_Basic_lexicon_item_‘hide_(tr)’.qmd": {
+    "295_Basic_lexicon_item_‘hide_(tr)’.html": "104efd53"
+  },
+  "296_Basic_lexicon_item_‘hit_(once)’.qmd": {
+    "296_Basic_lexicon_item_‘hit_(once)’.html": "364abe4f"
+  },
+  "297_Basic_lexicon_item_‘horn’.qmd": {
+    "297_Basic_lexicon_item_‘horn’.html": "31270ed5"
+  },
+  "298_Basic_lexicon_item_‘hot’.qmd": {
+    "298_Basic_lexicon_item_‘hot’.html": "bbe16cba"
+  },
+  "299_Basic_lexicon_item_‘house’.qmd": {
+    "299_Basic_lexicon_item_‘house’.html": "d9043eb9"
+  },
+  "300_Basic_lexicon_item_‘how’.qmd": {
+    "300_Basic_lexicon_item_‘how’.html": "891e2aff"
+  },
+  "301_Basic_lexicon_item_‘hunt’.qmd": {
+    "301_Basic_lexicon_item_‘hunt’.html": "7bcb1116"
+  },
+  "302_Basic_lexicon_item_‘I_(OBL)’.qmd": {
+    "302_Basic_lexicon_item_‘I_(OBL)’.html": "c352eb40"
+  },
+  "303_Basic_lexicon_item_‘I’.qmd": {
+    "303_Basic_lexicon_item_‘I’.html": "18081720"
+  },
+  "304_Basic_lexicon_item_‘ice’.qmd": {
+    "304_Basic_lexicon_item_‘ice’.html": "39df23da"
+  },
+  "305_Basic_lexicon_item_‘intestines,_guts’.qmd": {
+    "305_Basic_lexicon_item_‘intestines,_guts’.html": "ed18b6f6"
+  },
+  "306_Basic_lexicon_item_‘kill’.qmd": {
+    "306_Basic_lexicon_item_‘kill’.html": "1c42cd69"
+  },
+  "307_Basic_lexicon_item_‘knee’.qmd": {
+    "307_Basic_lexicon_item_‘knee’.html": "1c165de7"
+  },
+  "308_Basic_lexicon_item_‘know’.qmd": {
+    "308_Basic_lexicon_item_‘know’.html": "85f17866"
+  },
+  "309_Basic_lexicon_item_‘lake’.qmd": {
+    "309_Basic_lexicon_item_‘lake’.html": "b8c2a17e"
+  },
+  "310_Basic_lexicon_item_‘laugh’.qmd": {
+    "310_Basic_lexicon_item_‘laugh’.html": "bb00d48e"
+  },
+  "311_Basic_lexicon_item_‘leaf’.qmd": {
+    "311_Basic_lexicon_item_‘leaf’.html": "8ca3bfa0"
+  },
+  "312_Basic_lexicon_item_‘left’.qmd": {
+    "312_Basic_lexicon_item_‘left’.html": "2a4376e1"
+  },
+  "313_Basic_lexicon_item_‘leg’.qmd": {
+    "313_Basic_lexicon_item_‘leg’.html": "148b442c"
+  },
+  "314_Basic_lexicon_item_‘lie’.qmd": {
+    "314_Basic_lexicon_item_‘lie’.html": "2fac19e5"
+  },
+  "315_Basic_lexicon_item_‘live,_exist’.qmd": {
+    "315_Basic_lexicon_item_‘live,_exist’.html": "42551673"
+  },
+  "316_Basic_lexicon_item_‘liver’.qmd": {
+    "316_Basic_lexicon_item_‘liver’.html": "cbfe7c23"
+  },
+  "317_Basic_lexicon_item_‘long’.qmd": {
+    "317_Basic_lexicon_item_‘long’.html": "1789f095"
+  },
+  "318_Basic_lexicon_item_‘louse’.qmd": {
+    "318_Basic_lexicon_item_‘louse’.html": "0a71cb6c"
+  },
+  "319_Basic_lexicon_item_‘man’.qmd": {
+    "319_Basic_lexicon_item_‘man’.html": "290eedae"
+  },
+  "320_Basic_lexicon_item_‘many’.qmd": {
+    "320_Basic_lexicon_item_‘many’.html": "f893b3cf"
+  },
+  "321_Basic_lexicon_item_‘meat’.qmd": {
+    "321_Basic_lexicon_item_‘meat’.html": "05a1f7a4"
+  },
+  "322_Basic_lexicon_item_‘moon’.qmd": {
+    "322_Basic_lexicon_item_‘moon’.html": "832a743e"
+  },
+  "323_Basic_lexicon_item_‘mother’.qmd": {
+    "323_Basic_lexicon_item_‘mother’.html": "2b4eba32"
+  },
+  "324_Basic_lexicon_item_‘mountain’.qmd": {
+    "324_Basic_lexicon_item_‘mountain’.html": "80d03c17"
+  },
+  "325_Basic_lexicon_item_‘mouth_(external)’.qmd": {
+    "325_Basic_lexicon_item_‘mouth_(external)’.html": "4dfd391c"
+  },
+  "326_Basic_lexicon_item_‘name’.qmd": {
+    "326_Basic_lexicon_item_‘name’.html": "766c541a"
+  },
+  "327_Basic_lexicon_item_‘narrow’.qmd": {
+    "327_Basic_lexicon_item_‘narrow’.html": "8c76737e"
+  },
+  "328_Basic_lexicon_item_‘navel’.qmd": {
+    "328_Basic_lexicon_item_‘navel’.html": "bbab8689"
+  },
+  "329_Basic_lexicon_item_‘near’.qmd": {
+    "329_Basic_lexicon_item_‘near’.html": "9a0e5aad"
+  },
+  "330_Basic_lexicon_item_‘neck’.qmd": {
+    "330_Basic_lexicon_item_‘neck’.html": "c902fd39"
+  },
+  "331_Basic_lexicon_item_‘new’.qmd": {
+    "331_Basic_lexicon_item_‘new’.html": "6744dce2"
+  },
+  "332_Basic_lexicon_item_‘night’.qmd": {
+    "332_Basic_lexicon_item_‘night’.html": "e4180e40"
+  },
+  "333_Basic_lexicon_item_‘nose’.qmd": {
+    "333_Basic_lexicon_item_‘nose’.html": "936e0518"
+  },
+  "334_Basic_lexicon_item_‘not_(indicative)’.qmd": {
+    "334_Basic_lexicon_item_‘not_(indicative)’.html": "2e5571ec"
+  },
+  "335_Basic_lexicon_item_‘one’.qmd": {
+    "335_Basic_lexicon_item_‘one’.html": "dd30a282"
+  },
+  "336_Basic_lexicon_item_‘person’.qmd": {
+    "336_Basic_lexicon_item_‘person’.html": "f989e03e"
+  },
+  "337_Basic_lexicon_item_‘play_(tr)’.qmd": {
+    "337_Basic_lexicon_item_‘play_(tr)’.html": "cefb4d27"
+  },
+  "338_Basic_lexicon_item_‘pull’.qmd": {
+    "338_Basic_lexicon_item_‘pull’.html": "782eeda1"
+  },
+  "339_Basic_lexicon_item_‘push’.qmd": {
+    "339_Basic_lexicon_item_‘push’.html": "c79b3d76"
+  },
+  "340_Basic_lexicon_item_‘rain’.qmd": {
+    "340_Basic_lexicon_item_‘rain’.html": "550e61b0"
+  },
+  "341_Basic_lexicon_item_‘red’.qmd": {
+    "341_Basic_lexicon_item_‘red’.html": "e9f78a3c"
+  },
+  "342_Basic_lexicon_item_‘right’.qmd": {
+    "342_Basic_lexicon_item_‘right’.html": "9422fe7d"
+  },
+  "343_Basic_lexicon_item_‘river’.qmd": {
+    "343_Basic_lexicon_item_‘river’.html": "bdd79ce7"
+  },
+  "344_Basic_lexicon_item_‘road’.qmd": {
+    "344_Basic_lexicon_item_‘road’.html": "ae6cd24a"
+  },
+  "345_Basic_lexicon_item_‘root’.qmd": {
+    "345_Basic_lexicon_item_‘root’.html": "99263040"
+  },
+  "346_Basic_lexicon_item_‘rotten’.qmd": {
+    "346_Basic_lexicon_item_‘rotten’.html": "7b579e6d"
+  },
+  "347_Basic_lexicon_item_‘round’.qmd": {
+    "347_Basic_lexicon_item_‘round’.html": "53d3348a"
+  },
+  "348_Basic_lexicon_item_‘run’.qmd": {
+    "348_Basic_lexicon_item_‘run’.html": "58c28972"
+  },
+  "349_Basic_lexicon_item_‘salt’.qmd": {
+    "349_Basic_lexicon_item_‘salt’.html": "c9b2a104"
+  },
+  "350_Basic_lexicon_item_‘sand’.qmd": {
+    "350_Basic_lexicon_item_‘sand’.html": "0f8cbc7a"
+  },
+  "351_Basic_lexicon_item_‘say’.qmd": {
+    "351_Basic_lexicon_item_‘say’.html": "31fa4463"
+  },
+  "352_Basic_lexicon_item_‘scratch’.qmd": {
+    "352_Basic_lexicon_item_‘scratch’.html": "da071330"
+  },
+  "353_Basic_lexicon_item_‘sea’.qmd": {
+    "353_Basic_lexicon_item_‘sea’.html": "bbfd1066"
+  },
+  "354_Basic_lexicon_item_‘see’.qmd": {
+    "354_Basic_lexicon_item_‘see’.html": "7076bfa1"
+  },
+  "355_Basic_lexicon_item_‘seed_granule’.qmd": {
+    "355_Basic_lexicon_item_‘seed_granule’.html": "d29bba72"
+  },
+  "356_Basic_lexicon_item_‘sew’.qmd": {
+    "356_Basic_lexicon_item_‘sew’.html": "9ac60e57"
+  },
+  "357_Basic_lexicon_item_‘shadow’.qmd": {
+    "357_Basic_lexicon_item_‘shadow’.html": "6d14fb2f"
+  },
+  "358_Basic_lexicon_item_‘sharp’.qmd": {
+    "358_Basic_lexicon_item_‘sharp’.html": "168e8f91"
+  },
+  "359_Basic_lexicon_item_‘short’.qmd": {
+    "359_Basic_lexicon_item_‘short’.html": "1b8cd163"
+  },
+  "360_Basic_lexicon_item_‘sing’.qmd": {
+    "360_Basic_lexicon_item_‘sing’.html": "bbad399a"
+  },
+  "361_Basic_lexicon_item_‘sit’.qmd": {
+    "361_Basic_lexicon_item_‘sit’.html": "8c3da27d"
+  },
+  "362_Basic_lexicon_item_‘skin’.qmd": {
+    "362_Basic_lexicon_item_‘skin’.html": "ac594dda"
+  },
+  "363_Basic_lexicon_item_‘sky’.qmd": {
+    "363_Basic_lexicon_item_‘sky’.html": "38a10f1e"
+  },
+  "364_Basic_lexicon_item_‘sleep’.qmd": {
+    "364_Basic_lexicon_item_‘sleep’.html": "3c4ba11b"
+  },
+  "365_Basic_lexicon_item_‘small’.qmd": {
+    "365_Basic_lexicon_item_‘small’.html": "b1773d23"
+  },
+  "366_Basic_lexicon_item_‘smell_(tr)’.qmd": {
+    "366_Basic_lexicon_item_‘smell_(tr)’.html": "f4385fda"
+  },
+  "367_Basic_lexicon_item_‘smoke’.qmd": {
+    "367_Basic_lexicon_item_‘smoke’.html": "e284bd38"
+  },
+  "368_Basic_lexicon_item_‘smooth’.qmd": {
+    "368_Basic_lexicon_item_‘smooth’.html": "24b6e128"
+  },
+  "369_Basic_lexicon_item_‘snake’.qmd": {
+    "369_Basic_lexicon_item_‘snake’.html": "b37ccd44"
+  },
+  "370_Basic_lexicon_item_‘snow’.qmd": {
+    "370_Basic_lexicon_item_‘snow’.html": "b43845c7"
+  },
+  "371_Basic_lexicon_item_‘spit’.qmd": {
+    "371_Basic_lexicon_item_‘spit’.html": "c9c6e53b"
+  },
+  "372_Basic_lexicon_item_‘stand’.qmd": {
+    "372_Basic_lexicon_item_‘stand’.html": "6ff192bd"
+  },
+  "373_Basic_lexicon_item_‘star’.qmd": {
+    "373_Basic_lexicon_item_‘star’.html": "5e70fe0f"
+  },
+  "374_Basic_lexicon_item_‘stick’.qmd": {
+    "374_Basic_lexicon_item_‘stick’.html": "556a5079"
+  },
+  "375_Basic_lexicon_item_‘stone’.qmd": {
+    "375_Basic_lexicon_item_‘stone’.html": "353c810e"
+  },
+  "376_Basic_lexicon_item_‘straight’.qmd": {
+    "376_Basic_lexicon_item_‘straight’.html": "81b1f3f7"
+  },
+  "377_Basic_lexicon_item_‘sun’.qmd": {
+    "377_Basic_lexicon_item_‘sun’.html": "61fa8152"
+  },
+  "378_Basic_lexicon_item_‘sweet’.qmd": {
+    "378_Basic_lexicon_item_‘sweet’.html": "af21b103"
+  },
+  "379_Basic_lexicon_item_‘swell’.qmd": {
+    "379_Basic_lexicon_item_‘swell’.html": "699fb4e2"
+  },
+  "380_Basic_lexicon_item_‘swim’.qmd": {
+    "380_Basic_lexicon_item_‘swim’.html": "07264b0a"
+  },
+  "381_Basic_lexicon_item_‘tail’.qmd": {
+    "381_Basic_lexicon_item_‘tail’.html": "90b115a5"
+  },
+  "382_Basic_lexicon_item_‘take’.qmd": {
+    "382_Basic_lexicon_item_‘take’.html": "a55767f9"
+  },
+  "383_Basic_lexicon_item_‘that_(medial)’.qmd": {
+    "383_Basic_lexicon_item_‘that_(medial)’.html": "901bfb5d"
+  },
+  "384_Basic_lexicon_item_‘there_(medial)’.qmd": {
+    "384_Basic_lexicon_item_‘there_(medial)’.html": "21ce6add"
+  },
+  "385_Basic_lexicon_item_‘they’.qmd": {
+    "385_Basic_lexicon_item_‘they’.html": "e37c77c6"
+  },
+  "386_Basic_lexicon_item_‘thick’.qmd": {
+    "386_Basic_lexicon_item_‘thick’.html": "e172dd16"
+  },
+  "387_Basic_lexicon_item_‘thigh’.qmd": {
+    "387_Basic_lexicon_item_‘thigh’.html": "12aabf64"
+  },
+  "388_Basic_lexicon_item_‘thin’.qmd": {
+    "388_Basic_lexicon_item_‘thin’.html": "9674a27c"
+  },
+  "389_Basic_lexicon_item_‘think’.qmd": {
+    "389_Basic_lexicon_item_‘think’.html": "e25db67a"
+  },
+  "390_Basic_lexicon_item_‘this’.qmd": {
+    "390_Basic_lexicon_item_‘this’.html": "e6c88fad"
+  },
+  "391_Basic_lexicon_item_‘thou_(obl)’.qmd": {
+    "391_Basic_lexicon_item_‘thou_(obl)’.html": "2d865edf"
+  },
+  "392_Basic_lexicon_item_‘thou’.qmd": {
+    "392_Basic_lexicon_item_‘thou’.html": "5bd730c9"
+  },
+  "393_Basic_lexicon_item_‘three’.qmd": {
+    "393_Basic_lexicon_item_‘three’.html": "322099f6"
+  },
+  "394_Basic_lexicon_item_‘throw_(v)’.qmd": {
+    "394_Basic_lexicon_item_‘throw_(v)’.html": "1f0bece1"
+  },
+  "395_Basic_lexicon_item_‘tie_(objects)’.qmd": {
+    "395_Basic_lexicon_item_‘tie_(objects)’.html": "26aa1c56"
+  },
+  "396_Basic_lexicon_item_‘tongue’.qmd": {
+    "396_Basic_lexicon_item_‘tongue’.html": "57329c33"
+  },
+  "397_Basic_lexicon_item_‘tooth’.qmd": {
+    "397_Basic_lexicon_item_‘tooth’.html": "a864b458"
+  },
+  "398_Basic_lexicon_item_‘tree’.qmd": {
+    "398_Basic_lexicon_item_‘tree’.html": "1cc8078a"
+  },
+  "399_Basic_lexicon_item_‘true’.qmd": {
+    "399_Basic_lexicon_item_‘true’.html": "dacf9e2e"
+  },
+  "400_Basic_lexicon_item_‘turn_(tr_)’.qmd": {
+    "400_Basic_lexicon_item_‘turn_(tr_)’.html": "8a29e16e"
+  },
+  "401_Basic_lexicon_item_‘two’.qmd": {
+    "401_Basic_lexicon_item_‘two’.html": "46e93f0d"
+  },
+  "402_Basic_lexicon_item_‘vomit’.qmd": {
+    "402_Basic_lexicon_item_‘vomit’.html": "2bd0ece9"
+  },
+  "403_Basic_lexicon_item_‘walk’.qmd": {
+    "403_Basic_lexicon_item_‘walk’.html": "31845702"
+  },
+  "404_Basic_lexicon_item_‘warm’.qmd": {
+    "404_Basic_lexicon_item_‘warm’.html": "14540a12"
+  },
+  "405_Basic_lexicon_item_‘wash’.qmd": {
+    "405_Basic_lexicon_item_‘wash’.html": "418ef5bf"
+  },
+  "406_Basic_lexicon_item_‘water’.qmd": {
+    "406_Basic_lexicon_item_‘water’.html": "0c310c6f"
+  },
+  "407_Basic_lexicon_item_‘we_(exclusive)’.qmd": {
+    "407_Basic_lexicon_item_‘we_(exclusive)’.html": "8488057b"
+  },
+  "408_Basic_lexicon_item_‘we_(inclusive)’.qmd": {
+    "408_Basic_lexicon_item_‘we_(inclusive)’.html": "3450790a"
+  },
+  "409_Basic_lexicon_item_‘weep’.qmd": {
+    "409_Basic_lexicon_item_‘weep’.html": "c47b73b6"
+  },
+  "410_Basic_lexicon_item_‘wet’.qmd": {
+    "410_Basic_lexicon_item_‘wet’.html": "d79c086d"
+  },
+  "411_Basic_lexicon_item_‘what’.qmd": {
+    "411_Basic_lexicon_item_‘what’.html": "f0697df5"
+  },
+  "412_Basic_lexicon_item_‘when’.qmd": {
+    "412_Basic_lexicon_item_‘when’.html": "27515b73"
+  },
+  "413_Basic_lexicon_item_‘where’.qmd": {
+    "413_Basic_lexicon_item_‘where’.html": "2d31907f"
+  },
+  "414_Basic_lexicon_item_‘white’.qmd": {
+    "414_Basic_lexicon_item_‘white’.html": "ca419dfa"
+  },
+  "415_Basic_lexicon_item_‘who’.qmd": {
+    "415_Basic_lexicon_item_‘who’.html": "e9784866"
+  },
+  "416_Basic_lexicon_item_‘wide’.qmd": {
+    "416_Basic_lexicon_item_‘wide’.html": "125ea263"
+  },
+  "417_Basic_lexicon_item_‘wind’.qmd": {
+    "417_Basic_lexicon_item_‘wind’.html": "40ae0455"
+  },
+  "418_Basic_lexicon_item_‘wing’.qmd": {
+    "418_Basic_lexicon_item_‘wing’.html": "2a2cddc2"
+  },
+  "419_Basic_lexicon_item_‘with’.qmd": {
+    "419_Basic_lexicon_item_‘with’.html": "2e71c68d"
+  },
+  "420_Basic_lexicon_item_‘woman’.qmd": {
+    "420_Basic_lexicon_item_‘woman’.html": "1e4f7dc0"
+  },
+  "421_Basic_lexicon_item_‘worm’.qmd": {
+    "421_Basic_lexicon_item_‘worm’.html": "ee5e5ff4"
+  },
+  "422_Basic_lexicon_item_‘year’.qmd": {
+    "422_Basic_lexicon_item_‘year’.html": "5aef6bb2"
+  },
+  "423_Basic_lexicon_item_‘yellow’.qmd": {
+    "423_Basic_lexicon_item_‘yellow’.html": "5e5a2a52"
+  },
+  "424_Basic_lexicon_item_‘yesterday’.qmd": {
+    "424_Basic_lexicon_item_‘yesterday’.html": "f01f7fcc"
+  },
+  "docs/site_libs/minichart-0.2.2/doc/introduction.Rmd": {
+    "introduction.html": "00a6a5b5"
+  },
+  "002_Associative_plural_marking.qmd": {
+    "002_Associative_plural_marking.html": "6a7e565b"
+  },
+  "010_Expression_of_the_spatial_meaning_‘behind’.qmd": {
+    "010_Expression_of_the_spatial_meaning_‘behind’.html": "4d091e1c"
+  },
+  "011_Expression_of_the_spatial_meaning_‘following,_after’.qmd": {
+    "011_Expression_of_the_spatial_meaning_‘following,_after’.html": "8224f406"
+  },
+  "012_Expression_of_the_spatial_meaning_‘from_behind’.qmd": {
+    "012_Expression_of_the_spatial_meaning_‘from_behind’.html": "1ebc12b0"
+  },
+  "013_Expression_of_the_spatial_meaning_‘from_in_contact_with’.qmd": {
+    "013_Expression_of_the_spatial_meaning_‘from_in_contact_with’.html": "1b932c8f"
+  },
+  "014_Expression_of_the_spatial_meaning_‘from_inside_a_mass’.qmd": {
+    "014_Expression_of_the_spatial_meaning_‘from_inside_a_mass’.html": "6981185e"
+  },
+  "015_Expression_of_the_spatial_meaning_‘from_the_top_of’.qmd": {
+    "015_Expression_of_the_spatial_meaning_‘from_the_top_of’.html": "2288d405"
+  },
+  "016_Expression_of_the_spatial_meaning_‘from_under’.qmd": {
+    "016_Expression_of_the_spatial_meaning_‘from_under’.html": "59e8680f"
+  },
+  "017_Expression_of_the_spatial_meaning_‘in_between’.qmd": {
+    "017_Expression_of_the_spatial_meaning_‘in_between’.html": "4231bd79"
+  },
+  "018_Expression_of_the_spatial_meaning_‘in_contact_on_top_of’.qmd": {
+    "018_Expression_of_the_spatial_meaning_‘in_contact_on_top_of’.html": "a66bc724"
+  },
+  "019_Expression_of_the_spatial_meaning_‘in_contact_with’.qmd": {
+    "019_Expression_of_the_spatial_meaning_‘in_contact_with’.html": "34219402"
+  },
+  "020_Expression_of_the_spatial_meaning_‘inside_a_mass’.qmd": {
+    "020_Expression_of_the_spatial_meaning_‘inside_a_mass’.html": "a61c469d"
+  },
+  "021_Expression_of_the_spatial_meaning_‘inside_the_house’.qmd": {
+    "021_Expression_of_the_spatial_meaning_‘inside_the_house’.html": "9bcebdc8"
+  },
+  "022_Expression_of_the_spatial_meaning_‘near,_by’.qmd": {
+    "022_Expression_of_the_spatial_meaning_‘near,_by’.html": "35e2a2fd"
+  },
+  "023_Expression_of_the_spatial_meaning_‘on_top_of’.qmd": {
+    "023_Expression_of_the_spatial_meaning_‘on_top_of’.html": "e1e38d87"
+  },
+  "024_Expression_of_the_spatial_meaning_‘out_of’.qmd": {
+    "024_Expression_of_the_spatial_meaning_‘out_of’.html": "6946710b"
+  },
+  "025_Expression_of_the_spatial_meaning_‘towards_inside_a_mass’.qmd": {
+    "025_Expression_of_the_spatial_meaning_‘towards_inside_a_mass’.html": "64ee4013"
+  },
+  "026_Expression_of_the_spatial_meaning_‘under’.qmd": {
+    "026_Expression_of_the_spatial_meaning_‘under’.html": "a3a7033e"
+  },
+  "027_Expression_of_the_spatial_meaning_of_proximity.qmd": {
+    "027_Expression_of_the_spatial_meaning_of_proximity.html": "d2329cec"
+  },
+  "029_Lexical_item_for_‘cowshed’.qmd": {
+    "029_Lexical_item_for_‘cowshed’.html": "73e9a01e"
+  },
+  "030_Marking_of_addressee.qmd": {
+    "030_Marking_of_addressee.html": "5f159e74"
+  },
+  "032_Marking_of_personal_essive.qmd": {
+    "032_Marking_of_personal_essive.html": "f6851b6f"
+  },
+  "033_Marking_of_personal_lative.qmd": {
+    "033_Marking_of_personal_lative.html": "c6cca711"
+  },
+  "038_Oblique_stem_of_the_noun_‘water’.qmd": {
+    "038_Oblique_stem_of_the_noun_‘water’.html": "da82c496"
+  },
+  "039_Phonetic_variation_in_the_noun_‘cow’.qmd": {
+    "039_Phonetic_variation_in_the_noun_‘cow’.html": "ec64ca17"
+  },
+  "040_Phonetic_variation_in_the_noun_‘goat’.qmd": {
+    "040_Phonetic_variation_in_the_noun_‘goat’.html": "1cd84d91"
+  },
+  "041_Plural_marker_of_the_noun_‘brother’.qmd": {
+    "041_Plural_marker_of_the_noun_‘brother’.html": "a8fd18c2"
+  },
+  "042_Plural_marker_of_the_noun_‘daughter’.qmd": {
+    "042_Plural_marker_of_the_noun_‘daughter’.html": "fd1d5d9b"
+  },
+  "043_Plural_marker_of_the_noun_‘dog’.qmd": {
+    "043_Plural_marker_of_the_noun_‘dog’.html": "5d432dea"
+  },
+  "044_Plural_marker_of_the_noun_‘sister’.qmd": {
+    "044_Plural_marker_of_the_noun_‘sister’.html": "8dbe599b"
+  },
+  "045_Plural_marker_of_the_noun_‘son’.qmd": {
+    "045_Plural_marker_of_the_noun_‘son’.html": "d32116af"
+  },
+  "047_Plural_of_the_noun_‘cow’.qmd": {
+    "047_Plural_of_the_noun_‘cow’.html": "cdd2e2b6"
+  },
+  "050_Presence_of_the_vowel_in_the_ergative_of_the_singular_attributive_form.qmd": {
+    "050_Presence_of_the_vowel_in_the_ergative_of_the_singular_attributive_form.html": "f847be33"
+  },
+  "060_Loanword_f_adopted_as_labialized_x.qmd": {
+    "060_Loanword_f_adopted_as_labialized_x.html": "654e3e3c"
+  },
+  "061_ö_in_loanwords.qmd": {
+    "061_ö_in_loanwords.html": "f8d20316"
+  },
+  "064_Possible_reflexes_of_reconstructed_ɣ.qmd": {
+    "064_Possible_reflexes_of_reconstructed_ɣ.html": "5dceae65"
+  },
+  "072_Adjectival_predication_‘become_A’.qmd": {
+    "072_Adjectival_predication_‘become_A’.html": "543aa972"
+  },
+  "073_Adverbial_-na_as_depictive.qmd": {
+    "073_Adverbial_-na_as_depictive.html": "6d3d03ba"
+  },
+  "074_Adverbial_-na_as_functive.qmd": {
+    "074_Adverbial_-na_as_functive.html": "009f8b1c"
+  },
+  "075_Agreement_in_obliqueness__numerals.qmd": {
+    "075_Agreement_in_obliqueness__numerals.html": "b99e9f67"
+  },
+  "076_Agreement_slot_in_the_adjective_‘good’.qmd": {
+    "076_Agreement_slot_in_the_adjective_‘good’.html": "b6312435"
+  },
+  "077_Agreement_slot_in_the_adjective_‘hot’.qmd": {
+    "077_Agreement_slot_in_the_adjective_‘hot’.html": "9b18d660"
+  },
+  "080_Equative-similative_marker.qmd": {
+    "080_Equative-similative_marker.html": "f0e265d8"
+  },
+  "081_Expression_of_the_meaning_‘at_least’.qmd": {
+    "081_Expression_of_the_meaning_‘at_least’.html": "9148eaf8"
+  },
+  "082_Fusion_in_I-ERG_you_sg-ABS_construction.qmd": {
+    "082_Fusion_in_I-ERG_you_sg-ABS_construction.html": "2f6ff1f7"
+  },
+  "085_Headless_adjective_declension__non-human_reference.qmd": {
+    "085_Headless_adjective_declension__non-human_reference.html": "1e12d581"
+  },
+  "086_Imperative_interjection_‘here,_take_it!’.qmd": {
+    "086_Imperative_interjection_‘here,_take_it!’.html": "bb491064"
+  },
+  "090_Inflection_of_the_second_person_singular_pronoun.qmd": {
+    "090_Inflection_of_the_second_person_singular_pronoun.html": "d1b26353"
+  },
+  "093_Oblique_stem_of_the_numeral_‘two’.qmd": {
+    "093_Oblique_stem_of_the_numeral_‘two’.html": "b8451d1c"
+  },
+  "094_Quotative_particle.qmd": {
+    "094_Quotative_particle.html": "9c86fca3"
+  },
+  "095_Superlative.qmd": {
+    "095_Superlative.html": "5bdaffde"
+  },
+  "096_Lexical_item_for_‘axe’.qmd": {
+    "096_Lexical_item_for_‘axe’.html": "7adc04da"
+  },
+  "097_Lexical_item_for_‘bone’.qmd": {
+    "097_Lexical_item_for_‘bone’.html": "7080f626"
+  },
+  "098_Lexical_item_for_‘bridle’.qmd": {
+    "098_Lexical_item_for_‘bridle’.html": "f9c39987"
+  },
+  "099_Lexical_item_for_‘cow’.qmd": {
+    "099_Lexical_item_for_‘cow’.html": "ad3d82f1"
+  },
+  "100_Lexical_item_for_‘cowshed’.qmd": {
+    "100_Lexical_item_for_‘cowshed’.html": "1ffd63e4"
+  },
+  "101_Lexical_item_for_‘dew’.qmd": {
+    "101_Lexical_item_for_‘dew’.html": "39b655d7"
+  },
+  "102_Lexical_item_for_‘donkey’.qmd": {
+    "102_Lexical_item_for_‘donkey’.html": "a7048e32"
+  },
+  "103_Lexical_item_for_‘door’.qmd": {
+    "103_Lexical_item_for_‘door’.html": "e3b03209"
+  },
+  "104_Lexical_item_for_‘dress’.qmd": {
+    "104_Lexical_item_for_‘dress’.html": "16bd46f1"
+  },
+  "105_Lexical_item_for_‘drop’.qmd": {
+    "105_Lexical_item_for_‘drop’.html": "fa1389b2"
+  },
+  "106_Lexical_item_for_‘fish’.qmd": {
+    "106_Lexical_item_for_‘fish’.html": "cefcae4d"
+  },
+  "107_Lexical_item_for_‘frog’.qmd": {
+    "107_Lexical_item_for_‘frog’.html": "5510650e"
+  },
+  "108_Lexical_item_for_‘gate’.qmd": {
+    "108_Lexical_item_for_‘gate’.html": "bd8e01a8"
+  },
+  "109_Lexical_item_for_‘hammer’.qmd": {
+    "109_Lexical_item_for_‘hammer’.html": "af7236cd"
+  },
+  "110_Lexical_item_for_‘hedgehog’.qmd": {
+    "110_Lexical_item_for_‘hedgehog’.html": "e9bcb84e"
+  },
+  "111_Lexical_item_for_‘horse’.qmd": {
+    "111_Lexical_item_for_‘horse’.html": "3501a69f"
+  },
+  "112_Lexical_item_for_‘horseshoe’.qmd": {
+    "112_Lexical_item_for_‘horseshoe’.html": "57ef1d43"
+  },
+  "113_Lexical_item_for_‘hot’.qmd": {
+    "113_Lexical_item_for_‘hot’.html": "d1cea207"
+  },
+  "114_Lexical_item_for_‘light’.qmd": {
+    "114_Lexical_item_for_‘light’.html": "588f37e2"
+  },
+  "115_Lexical_item_for_‘lock’.qmd": {
+    "115_Lexical_item_for_‘lock’.html": "9e49dc7c"
+  },
+  "116_Lexical_item_for_‘navel’.qmd": {
+    "116_Lexical_item_for_‘navel’.html": "5a608abd"
+  },
+  "117_Lexical_item_for_‘nest’.qmd": {
+    "117_Lexical_item_for_‘nest’.html": "dff38606"
+  },
+  "118_Lexical_item_for_‘pants’.qmd": {
+    "118_Lexical_item_for_‘pants’.html": "566bad21"
+  },
+  "119_Lexical_item_for_‘plum’.qmd": {
+    "119_Lexical_item_for_‘plum’.html": "ed38f273"
+  },
+  "120_Lexical_item_for_‘river’.qmd": {
+    "120_Lexical_item_for_‘river’.html": "472b6451"
+  },
+  "121_Lexical_item_for_‘saddle’.qmd": {
+    "121_Lexical_item_for_‘saddle’.html": "153570f5"
+  },
+  "122_Lexical_item_for_‘scissors_or_shears’.qmd": {
+    "122_Lexical_item_for_‘scissors_or_shears’.html": "b5d43f25"
+  },
+  "123_Lexical_item_for_‘scythe’.qmd": {
+    "123_Lexical_item_for_‘scythe’.html": "1c5ee1ca"
+  },
+  "124_Lexical_item_for_‘shade_or_shadow’.qmd": {
+    "124_Lexical_item_for_‘shade_or_shadow’.html": "2cb1f2f2"
+  },
+  "125_Lexical_item_for_‘sickle’.qmd": {
+    "125_Lexical_item_for_‘sickle’.html": "4263e9a2"
+  },
+  "126_Lexical_item_for_‘thimble’.qmd": {
+    "126_Lexical_item_for_‘thimble’.html": "e869e1b8"
+  },
+  "127_Lexical_item_for_‘whip’.qmd": {
+    "127_Lexical_item_for_‘whip’.html": "916d491d"
+  },
+  "128_Lexical_item_for_‘wolf’.qmd": {
+    "128_Lexical_item_for_‘wolf’.html": "3c0c9a14"
+  },
+  "129_Anterior_converb.qmd": {
+    "129_Anterior_converb.html": "67aacfd0"
+  },
+  "130_Aorist.qmd": {
+    "130_Aorist.html": "224b80b9"
+  },
+  "135_Copula__present_tense.qmd": {
+    "135_Copula__present_tense.html": "0b486dd9"
+  },
+  "136_Future.qmd": {
+    "136_Future.html": "80981943"
+  },
+  "140_Indicative_verb_form_based_on_the_prospective_participle.qmd": {
+    "140_Indicative_verb_form_based_on_the_prospective_participle.html": "edfa2c60"
+  },
+  "141_Indirect_content_question_marker.qmd": {
+    "141_Indirect_content_question_marker.html": "82fc83b6"
+  },
+  "142_Inventory_of_locative_stative_verbs.qmd": {
+    "142_Inventory_of_locative_stative_verbs.html": "6d4fc794"
+  },
+  "143_Meditative_content_question.qmd": {
+    "143_Meditative_content_question.html": "2424b64e"
+  },
+  "144_Meditative_polar_question.qmd": {
+    "144_Meditative_polar_question.html": "cbd05e56"
+  },
+  "145_Negative_aorist.qmd": {
+    "145_Negative_aorist.html": "503e4711"
+  },
+  "147_Negative_copula__present_tense.qmd": {
+    "147_Negative_copula__present_tense.html": "4d18b5b6"
+  },
+  "148_Negative_future.qmd": {
+    "148_Negative_future.html": "ebc06de8"
+  },
+  "149_Negative_perfect.qmd": {
+    "149_Negative_perfect.html": "798acb27"
+  },
+  "150_Negative_present.qmd": {
+    "150_Negative_present.html": "40808c3b"
+  },
+  "151_Negative_present_habitual.qmd": {
+    "151_Negative_present_habitual.html": "f6998168"
+  },
+  "152_Perfect.qmd": {
+    "152_Perfect.html": "a3220fd9"
+  },
+  "153_Perfective_participle.qmd": {
+    "153_Perfective_participle.html": "4d22f19e"
+  },
+  "154_Polar_interrogative_marker.qmd": {
+    "154_Polar_interrogative_marker.html": "bb5cb466"
+  },
+  "155_Present.qmd": {
+    "155_Present.html": "be43dcdd"
+  },
+  "156_Present_habitual.qmd": {
+    "156_Present_habitual.html": "cf382442"
+  },
+  "157_Prospective_participle.qmd": {
+    "157_Prospective_participle.html": "8a667a8b"
+  },
+  "159_Stative_verb_‘be’__negative_present.qmd": {
+    "159_Stative_verb_‘be’__negative_present.html": "0e661b32"
+  },
+  "161_Stative_verb_‘be’__periphrastic_present.qmd": {
+    "161_Stative_verb_‘be’__periphrastic_present.html": "d88316aa"
+  },
+  "162_Stative_verb_‘be’__synthetic_present.qmd": {
+    "162_Stative_verb_‘be’__synthetic_present.html": "2103c04e"
+  },
+  "163_Stative_verb_‘remain’_with_a_prefix_ǯV.qmd": {
+    "163_Stative_verb_‘remain’_with_a_prefix_ǯV.html": "8116a71f"
+  },
+  "164_Stative_verb_‘remain’_with_a_prefix_ǯV-.qmd": {
+    "164_Stative_verb_‘remain’_with_a_prefix_ǯV-.html": "3f2adcf7"
+  },
+  "166_Stative_verb_‘remain’__negative_present.qmd": {
+    "166_Stative_verb_‘remain’__negative_present.html": "02f4b961"
+  },
+  "170_The_verb_‘become’__imperfective_stem.qmd": {
+    "170_The_verb_‘become’__imperfective_stem.html": "8412ed90"
+  },
+  "173_The_verb_‘say’__perfective_and_imperfective_stems.qmd": {
+    "173_The_verb_‘say’__perfective_and_imperfective_stems.html": "8f8d96e7"
+  },
+  "174_Verb_form_used_in_perfective_past_contexts.qmd": {
+    "174_Verb_form_used_in_perfective_past_contexts.html": "013f2b10"
+  },
+  "175_Verb_form_used_in_present_habitual_contexts.qmd": {
+    "175_Verb_form_used_in_present_habitual_contexts.html": "58f64030"
+  },
+  "176_Causative_from_intransitive_verbs.qmd": {
+    "176_Causative_from_intransitive_verbs.html": "fc4a8ec0"
+  },
+  "177_Causative_from_transitive_verbs.qmd": {
+    "177_Causative_from_transitive_verbs.html": "b3e66e1a"
+  },
+  "178_Counterfactual_conditional_converb_suffixes.qmd": {
+    "178_Counterfactual_conditional_converb_suffixes.html": "ce711733"
+  },
+  "179_Differentiation_of_the_optative_and_the_jussive.qmd": {
+    "179_Differentiation_of_the_optative_and_the_jussive.html": "f2b8bef2"
+  },
+  "180_Hortative_‘Let’s_go!’.qmd": {
+    "180_Hortative_‘Let’s_go!’.html": "6d3895e7"
+  },
+  "182_Imperative.qmd": {
+    "182_Imperative.html": "e4af3aa3"
+  },
+  "184_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "184_Perfective_forms_of_the_verb_‘do’.html": "f42e4cb5"
+  },
+  "185_Perfective_Imperfective_converb_suffix.qmd": {
+    "185_Perfective_Imperfective_converb_suffix.html": "cd44582c"
+  },
+  "186_Refactive.qmd": {
+    "186_Refactive.html": "b03abb6a"
+  },
+  "187_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "187_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.html": "a0b9f830"
+  },
+  "188_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.qmd": {
+    "188_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.html": "079ff7a2"
+  },
+  "190_Vowel_fronting_in_human_and_animate_plural_forms.qmd": {
+    "190_Vowel_fronting_in_human_and_animate_plural_forms.html": "bacc1324"
+  },
+  "191_Wish_formula_‘Good_morning’.qmd": {
+    "191_Wish_formula_‘Good_morning’.html": "0b423fa9"
+  },
+  "192_Wish_formula_‘Have_a_nice_trip’.qmd": {
+    "192_Wish_formula_‘Have_a_nice_trip’.html": "e7073c59"
+  },
+  "194_Anaphoric_demonstrative.qmd": {
+    "194_Anaphoric_demonstrative.html": "613056b5"
+  },
+  "196_Emphatic_prefix_in_demonstratives.qmd": {
+    "196_Emphatic_prefix_in_demonstratives.html": "9b0e1895"
+  },
+  "198_Ergative_marker_of_the_medial_demonstrative.qmd": {
+    "198_Ergative_marker_of_the_medial_demonstrative.html": "c793c048"
+  },
+  "200_Ergative_stem_of_the_medial_demonstrative.qmd": {
+    "200_Ergative_stem_of_the_medial_demonstrative.html": "f3cb8c5b"
+  },
+  "201_First_person_reflexive_construction.qmd": {
+    "201_First_person_reflexive_construction.html": "f06b9a0e"
+  },
+  "206_Suffix_-d(V)_in_demonstratives.qmd": {
+    "206_Suffix_-d(V)_in_demonstratives.html": "35f7494d"
+  },
+  "207_Additive_particle.qmd": {
+    "207_Additive_particle.html": "14210249"
+  },
+  "208_Alternative_concessive_conditionals.qmd": {
+    "208_Alternative_concessive_conditionals.html": "49bd945d"
+  },
+  "209_Concessive-conditional_marking.qmd": {
+    "209_Concessive-conditional_marking.html": "0fc7b92b"
+  },
+  "210_Concessive_marking.qmd": {
+    "210_Concessive_marking.html": "7601d01c"
+  },
+  "211_Conjunction_particle.qmd": {
+    "211_Conjunction_particle.html": "c85a1375"
+  },
+  "213_Exponence_of_«sequential»_temporal_semantics.qmd": {
+    "213_Exponence_of_«sequential»_temporal_semantics.html": "f077e28e"
+  },
+  "214_Free-choice_indefinite.qmd": {
+    "214_Free-choice_indefinite.html": "1eeeada2"
+  },
+  "216_Limitative_converb.qmd": {
+    "216_Limitative_converb.html": "13196cef"
+  },
+  "217_Non-specific_indefinite_pronouns.qmd": {
+    "217_Non-specific_indefinite_pronouns.html": "0303e704"
+  },
+  "218_Presence_of_additive_in_free-choice_indefinite_pronouns.qmd": {
+    "218_Presence_of_additive_in_free-choice_indefinite_pronouns.html": "85b1525e"
+  },
+  "220_Realis_conditional_converb_suffix.qmd": {
+    "220_Realis_conditional_converb_suffix.html": "caeeaf04"
+  },
+  "221_Scalar_additive_context.qmd": {
+    "221_Scalar_additive_context.html": "d1256c75"
+  },
+  "222_Basic_lexicon_item_‘all_(pl_)’.qmd": {
+    "222_Basic_lexicon_item_‘all_(pl_)’.html": "7aa6d80f"
+  },
+  "223_Basic_lexicon_item_‘ant’.qmd": {
+    "223_Basic_lexicon_item_‘ant’.html": "ee220dad"
+  },
+  "224_Basic_lexicon_item_‘ash’.qmd": {
+    "224_Basic_lexicon_item_‘ash’.html": "21d2f061"
+  },
+  "225_Basic_lexicon_item_‘back_(anatomical)’.qmd": {
+    "225_Basic_lexicon_item_‘back_(anatomical)’.html": "fe24e000"
+  },
+  "226_Basic_lexicon_item_‘bad’.qmd": {
+    "226_Basic_lexicon_item_‘bad’.html": "f25eb158"
+  },
+  "227_Basic_lexicon_item_‘bark_(n_)’.qmd": {
+    "227_Basic_lexicon_item_‘bark_(n_)’.html": "1f1f36e2"
+  },
+  "228_Basic_lexicon_item_‘belly’.qmd": {
+    "228_Basic_lexicon_item_‘belly’.html": "85ae01ea"
+  },
+  "229_Basic_lexicon_item_‘big’.qmd": {
+    "229_Basic_lexicon_item_‘big’.html": "cb0bcb82"
+  },
+  "230_Basic_lexicon_item_‘bird’.qmd": {
+    "230_Basic_lexicon_item_‘bird’.html": "e6f3471c"
+  },
+  "231_Basic_lexicon_item_‘bite’.qmd": {
+    "231_Basic_lexicon_item_‘bite’.html": "cf9da2fd"
+  },
+  "232_Basic_lexicon_item_‘bitter’.qmd": {
+    "232_Basic_lexicon_item_‘bitter’.html": "45491194"
+  },
+  "233_Basic_lexicon_item_‘black’.qmd": {
+    "233_Basic_lexicon_item_‘black’.html": "a5ca383c"
+  },
+  "234_Basic_lexicon_item_‘blood’.qmd": {
+    "234_Basic_lexicon_item_‘blood’.html": "a25a1089"
+  },
+  "235_Basic_lexicon_item_‘blow_(v,_of_person)’.qmd": {
+    "235_Basic_lexicon_item_‘blow_(v,_of_person)’.html": "3d829de9"
+  },
+  "236_Basic_lexicon_item_‘bone’.qmd": {
+    "236_Basic_lexicon_item_‘bone’.html": "1e61ca16"
+  },
+  "237_Basic_lexicon_item_‘breathe’.qmd": {
+    "237_Basic_lexicon_item_‘breathe’.html": "4de042aa"
+  },
+  "238_Basic_lexicon_item_‘burn_(intr)’.qmd": {
+    "238_Basic_lexicon_item_‘burn_(intr)’.html": "b6384181"
+  },
+  "239_Basic_lexicon_item_‘burn_(tr)’.qmd": {
+    "239_Basic_lexicon_item_‘burn_(tr)’.html": "baccdf99"
+  },
+  "240_Basic_lexicon_item_‘carry’.qmd": {
+    "240_Basic_lexicon_item_‘carry’.html": "2fc82b62"
+  },
+  "241_Basic_lexicon_item_‘chest’.qmd": {
+    "241_Basic_lexicon_item_‘chest’.html": "6c112c7c"
+  },
+  "242_Basic_lexicon_item_‘child’.qmd": {
+    "242_Basic_lexicon_item_‘child’.html": "125075f9"
+  },
+  "243_Basic_lexicon_item_‘claw’.qmd": {
+    "243_Basic_lexicon_item_‘claw’.html": "ea18d717"
+  },
+  "244_Basic_lexicon_item_‘cloud’.qmd": {
+    "244_Basic_lexicon_item_‘cloud’.html": "bdac19aa"
+  },
+  "245_Basic_lexicon_item_‘cold’.qmd": {
+    "245_Basic_lexicon_item_‘cold’.html": "66029ab1"
+  },
+  "246_Basic_lexicon_item_‘come’.qmd": {
+    "246_Basic_lexicon_item_‘come’.html": "089a1176"
+  },
+  "247_Basic_lexicon_item_‘count’.qmd": {
+    "247_Basic_lexicon_item_‘count’.html": "3e9d0c0f"
+  },
+  "248_Basic_lexicon_item_‘cut’.qmd": {
+    "248_Basic_lexicon_item_‘cut’.html": "25c5e1af"
+  },
+  "249_Basic_lexicon_item_‘day_(daytime)’.qmd": {
+    "249_Basic_lexicon_item_‘day_(daytime)’.html": "5f7bfa85"
+  },
+  "250_Basic_lexicon_item_‘die’.qmd": {
+    "250_Basic_lexicon_item_‘die’.html": "a780e9f4"
+  },
+  "251_Basic_lexicon_item_‘dig’.qmd": {
+    "251_Basic_lexicon_item_‘dig’.html": "cd21473e"
+  },
+  "252_Basic_lexicon_item_‘dirty’.qmd": {
+    "252_Basic_lexicon_item_‘dirty’.html": "61aae3cf"
+  },
+  "253_Basic_lexicon_item_‘do’.qmd": {
+    "253_Basic_lexicon_item_‘do’.html": "968d843a"
+  },
+  "254_Basic_lexicon_item_‘dog’.qmd": {
+    "254_Basic_lexicon_item_‘dog’.html": "4bdd981d"
+  },
+  "255_Basic_lexicon_item_‘drink’.qmd": {
+    "255_Basic_lexicon_item_‘drink’.html": "fb428f02"
+  },
+  "256_Basic_lexicon_item_‘dry’.qmd": {
+    "256_Basic_lexicon_item_‘dry’.html": "746cf939"
+  },
+  "257_Basic_lexicon_item_‘dust’.qmd": {
+    "257_Basic_lexicon_item_‘dust’.html": "26d763b5"
+  },
+  "258_Basic_lexicon_item_‘ear’.qmd": {
+    "258_Basic_lexicon_item_‘ear’.html": "e0a77f66"
+  },
+  "259_Basic_lexicon_item_‘earth’.qmd": {
+    "259_Basic_lexicon_item_‘earth’.html": "554dc84a"
+  },
+  "260_Basic_lexicon_item_‘eat_(tr)’.qmd": {
+    "260_Basic_lexicon_item_‘eat_(tr)’.html": "952ecad5"
+  },
+  "261_Basic_lexicon_item_‘egg’.qmd": {
+    "261_Basic_lexicon_item_‘egg’.html": "9384d94b"
+  },
+  "262_Basic_lexicon_item_‘eye’.qmd": {
+    "262_Basic_lexicon_item_‘eye’.html": "e95dad06"
+  },
+  "263_Basic_lexicon_item_‘fall’.qmd": {
+    "263_Basic_lexicon_item_‘fall’.html": "4827649b"
+  },
+  "264_Basic_lexicon_item_‘far’.qmd": {
+    "264_Basic_lexicon_item_‘far’.html": "96156ef2"
+  },
+  "265_Basic_lexicon_item_‘fat’.qmd": {
+    "265_Basic_lexicon_item_‘fat’.html": "f7be72e5"
+  },
+  "266_Basic_lexicon_item_‘father’.qmd": {
+    "266_Basic_lexicon_item_‘father’.html": "3561fa5f"
+  },
+  "267_Basic_lexicon_item_‘fear’.qmd": {
+    "267_Basic_lexicon_item_‘fear’.html": "dd918a8c"
+  },
+  "268_Basic_lexicon_item_‘feather’.qmd": {
+    "268_Basic_lexicon_item_‘feather’.html": "5010f767"
+  },
+  "269_Basic_lexicon_item_‘fight_(vb)’.qmd": {
+    "269_Basic_lexicon_item_‘fight_(vb)’.html": "2acac447"
+  },
+  "270_Basic_lexicon_item_‘fingernail’.qmd": {
+    "270_Basic_lexicon_item_‘fingernail’.html": "b71bb894"
+  },
+  "271_Basic_lexicon_item_‘fire’.qmd": {
+    "271_Basic_lexicon_item_‘fire’.html": "7a58a0dc"
+  },
+  "272_Basic_lexicon_item_‘fish’.qmd": {
+    "272_Basic_lexicon_item_‘fish’.html": "4edbb1ea"
+  },
+  "273_Basic_lexicon_item_‘five’.qmd": {
+    "273_Basic_lexicon_item_‘five’.html": "e2792b42"
+  },
+  "274_Basic_lexicon_item_‘flower’.qmd": {
+    "274_Basic_lexicon_item_‘flower’.html": "69b4893d"
+  },
+  "275_Basic_lexicon_item_‘fly_(v)’.qmd": {
+    "275_Basic_lexicon_item_‘fly_(v)’.html": "4631bbca"
+  },
+  "276_Basic_lexicon_item_‘fly’.qmd": {
+    "276_Basic_lexicon_item_‘fly’.html": "6c1447f8"
+  },
+  "277_Basic_lexicon_item_‘fog’.qmd": {
+    "277_Basic_lexicon_item_‘fog’.html": "2401be5b"
+  },
+  "278_Basic_lexicon_item_‘foot’.qmd": {
+    "278_Basic_lexicon_item_‘foot’.html": "3b8e0261"
+  },
+  "279_Basic_lexicon_item_‘forest’.qmd": {
+    "279_Basic_lexicon_item_‘forest’.html": "c98daf69"
+  },
+  "280_Basic_lexicon_item_‘four’.qmd": {
+    "280_Basic_lexicon_item_‘four’.html": "d89ee2bf"
+  },
+  "281_Basic_lexicon_item_‘freeze’.qmd": {
+    "281_Basic_lexicon_item_‘freeze’.html": "363ff433"
+  },
+  "282_Basic_lexicon_item_‘fruit’.qmd": {
+    "282_Basic_lexicon_item_‘fruit’.html": "05e496a1"
+  },
+  "283_Basic_lexicon_item_‘full’.qmd": {
+    "283_Basic_lexicon_item_‘full’.html": "aa69c128"
+  },
+  "284_Basic_lexicon_item_‘give’.qmd": {
+    "284_Basic_lexicon_item_‘give’.html": "ac66e994"
+  },
+  "285_Basic_lexicon_item_‘go’.qmd": {
+    "285_Basic_lexicon_item_‘go’.html": "57b058d7"
+  },
+  "286_Basic_lexicon_item_‘good’.qmd": {
+    "286_Basic_lexicon_item_‘good’.html": "0878850b"
+  },
+  "287_Basic_lexicon_item_‘grass’.qmd": {
+    "287_Basic_lexicon_item_‘grass’.html": "9562b665"
+  },
+  "288_Basic_lexicon_item_‘green’.qmd": {
+    "288_Basic_lexicon_item_‘green’.html": "3b4cc955"
+  },
+  "289_Basic_lexicon_item_‘grind_(flour)’.qmd": {
+    "289_Basic_lexicon_item_‘grind_(flour)’.html": "7216efcc"
+  },
+  "290_Basic_lexicon_item_‘hair_(mass)’.qmd": {
+    "290_Basic_lexicon_item_‘hair_(mass)’.html": "ea818017"
+  },
+  "291_Basic_lexicon_item_‘hand’.qmd": {
+    "291_Basic_lexicon_item_‘hand’.html": "f06d4e3b"
+  },
+  "292_Basic_lexicon_item_‘hard’.qmd": {
+    "292_Basic_lexicon_item_‘hard’.html": "bc7730c5"
+  },
+  "293_Basic_lexicon_item_‘head’.qmd": {
+    "293_Basic_lexicon_item_‘head’.html": "7c3ef70f"
+  },
+  "294_Basic_lexicon_item_‘hear’.qmd": {
+    "294_Basic_lexicon_item_‘hear’.html": "75e8a92f"
+  },
+  "295_Basic_lexicon_item_‘heart’.qmd": {
+    "295_Basic_lexicon_item_‘heart’.html": "138e3632"
+  },
+  "296_Basic_lexicon_item_‘heavy’.qmd": {
+    "296_Basic_lexicon_item_‘heavy’.html": "39af880d"
+  },
+  "297_Basic_lexicon_item_‘here’.qmd": {
+    "297_Basic_lexicon_item_‘here’.html": "279e6ef5"
+  },
+  "298_Basic_lexicon_item_‘hide_(tr)’.qmd": {
+    "298_Basic_lexicon_item_‘hide_(tr)’.html": "6f1a4a04"
+  },
+  "299_Basic_lexicon_item_‘hit_(once)’.qmd": {
+    "299_Basic_lexicon_item_‘hit_(once)’.html": "e06b6270"
+  },
+  "300_Basic_lexicon_item_‘horn’.qmd": {
+    "300_Basic_lexicon_item_‘horn’.html": "d1dc4f4d"
+  },
+  "301_Basic_lexicon_item_‘hot’.qmd": {
+    "301_Basic_lexicon_item_‘hot’.html": "36ead5c4"
+  },
+  "302_Basic_lexicon_item_‘house’.qmd": {
+    "302_Basic_lexicon_item_‘house’.html": "667f1ba0"
+  },
+  "303_Basic_lexicon_item_‘how’.qmd": {
+    "303_Basic_lexicon_item_‘how’.html": "8de4f9d7"
+  },
+  "304_Basic_lexicon_item_‘hunt’.qmd": {
+    "304_Basic_lexicon_item_‘hunt’.html": "02be037a"
+  },
+  "305_Basic_lexicon_item_‘I_(OBL)’.qmd": {
+    "305_Basic_lexicon_item_‘I_(OBL)’.html": "276fa0fa"
+  },
+  "306_Basic_lexicon_item_‘I’.qmd": {
+    "306_Basic_lexicon_item_‘I’.html": "817f1dbf"
+  },
+  "307_Basic_lexicon_item_‘ice’.qmd": {
+    "307_Basic_lexicon_item_‘ice’.html": "667b3b9d"
+  },
+  "308_Basic_lexicon_item_‘intestines,_guts’.qmd": {
+    "308_Basic_lexicon_item_‘intestines,_guts’.html": "a7e12948"
+  },
+  "309_Basic_lexicon_item_‘kill’.qmd": {
+    "309_Basic_lexicon_item_‘kill’.html": "c175aaf2"
+  },
+  "310_Basic_lexicon_item_‘knee’.qmd": {
+    "310_Basic_lexicon_item_‘knee’.html": "a6d594d2"
+  },
+  "311_Basic_lexicon_item_‘know’.qmd": {
+    "311_Basic_lexicon_item_‘know’.html": "59d01715"
+  },
+  "312_Basic_lexicon_item_‘lake’.qmd": {
+    "312_Basic_lexicon_item_‘lake’.html": "d278b684"
+  },
+  "313_Basic_lexicon_item_‘laugh’.qmd": {
+    "313_Basic_lexicon_item_‘laugh’.html": "696a5736"
+  },
+  "314_Basic_lexicon_item_‘leaf’.qmd": {
+    "314_Basic_lexicon_item_‘leaf’.html": "90e1f8a5"
+  },
+  "315_Basic_lexicon_item_‘left’.qmd": {
+    "315_Basic_lexicon_item_‘left’.html": "d9546dfb"
+  },
+  "316_Basic_lexicon_item_‘leg’.qmd": {
+    "316_Basic_lexicon_item_‘leg’.html": "607fb74b"
+  },
+  "317_Basic_lexicon_item_‘lie’.qmd": {
+    "317_Basic_lexicon_item_‘lie’.html": "f121a0aa"
+  },
+  "318_Basic_lexicon_item_‘live,_exist’.qmd": {
+    "318_Basic_lexicon_item_‘live,_exist’.html": "a08c18a7"
+  },
+  "319_Basic_lexicon_item_‘liver’.qmd": {
+    "319_Basic_lexicon_item_‘liver’.html": "d6d1d4f2"
+  },
+  "320_Basic_lexicon_item_‘long’.qmd": {
+    "320_Basic_lexicon_item_‘long’.html": "2ecc13c1"
+  },
+  "321_Basic_lexicon_item_‘louse’.qmd": {
+    "321_Basic_lexicon_item_‘louse’.html": "809287c0"
+  },
+  "322_Basic_lexicon_item_‘man’.qmd": {
+    "322_Basic_lexicon_item_‘man’.html": "64a11448"
+  },
+  "323_Basic_lexicon_item_‘many’.qmd": {
+    "323_Basic_lexicon_item_‘many’.html": "2fa7e4bf"
+  },
+  "324_Basic_lexicon_item_‘meat’.qmd": {
+    "324_Basic_lexicon_item_‘meat’.html": "c82accfd"
+  },
+  "325_Basic_lexicon_item_‘moon’.qmd": {
+    "325_Basic_lexicon_item_‘moon’.html": "793d81fa"
+  },
+  "326_Basic_lexicon_item_‘mother’.qmd": {
+    "326_Basic_lexicon_item_‘mother’.html": "e98a8d6b"
+  },
+  "327_Basic_lexicon_item_‘mountain’.qmd": {
+    "327_Basic_lexicon_item_‘mountain’.html": "396d8dea"
+  },
+  "328_Basic_lexicon_item_‘mouth_(external)’.qmd": {
+    "328_Basic_lexicon_item_‘mouth_(external)’.html": "7f9f7216"
+  },
+  "329_Basic_lexicon_item_‘name’.qmd": {
+    "329_Basic_lexicon_item_‘name’.html": "9fc30108"
+  },
+  "330_Basic_lexicon_item_‘narrow’.qmd": {
+    "330_Basic_lexicon_item_‘narrow’.html": "cc2a2542"
+  },
+  "331_Basic_lexicon_item_‘navel’.qmd": {
+    "331_Basic_lexicon_item_‘navel’.html": "f10fe59c"
+  },
+  "332_Basic_lexicon_item_‘near’.qmd": {
+    "332_Basic_lexicon_item_‘near’.html": "5638c287"
+  },
+  "333_Basic_lexicon_item_‘neck’.qmd": {
+    "333_Basic_lexicon_item_‘neck’.html": "4517f3e9"
+  },
+  "334_Basic_lexicon_item_‘new’.qmd": {
+    "334_Basic_lexicon_item_‘new’.html": "47216bf6"
+  },
+  "335_Basic_lexicon_item_‘night’.qmd": {
+    "335_Basic_lexicon_item_‘night’.html": "d285abcd"
+  },
+  "336_Basic_lexicon_item_‘nose’.qmd": {
+    "336_Basic_lexicon_item_‘nose’.html": "c0cec486"
+  },
+  "337_Basic_lexicon_item_‘not_(indicative)’.qmd": {
+    "337_Basic_lexicon_item_‘not_(indicative)’.html": "a6e3bb85"
+  },
+  "338_Basic_lexicon_item_‘one’.qmd": {
+    "338_Basic_lexicon_item_‘one’.html": "065cb393"
+  },
+  "339_Basic_lexicon_item_‘person’.qmd": {
+    "339_Basic_lexicon_item_‘person’.html": "3e586ad6"
+  },
+  "340_Basic_lexicon_item_‘play_(tr)’.qmd": {
+    "340_Basic_lexicon_item_‘play_(tr)’.html": "10282ac8"
+  },
+  "341_Basic_lexicon_item_‘pull’.qmd": {
+    "341_Basic_lexicon_item_‘pull’.html": "73930928"
+  },
+  "342_Basic_lexicon_item_‘push’.qmd": {
+    "342_Basic_lexicon_item_‘push’.html": "8221feda"
+  },
+  "343_Basic_lexicon_item_‘rain’.qmd": {
+    "343_Basic_lexicon_item_‘rain’.html": "47086ea2"
+  },
+  "344_Basic_lexicon_item_‘red’.qmd": {
+    "344_Basic_lexicon_item_‘red’.html": "59bcfbcd"
+  },
+  "345_Basic_lexicon_item_‘right’.qmd": {
+    "345_Basic_lexicon_item_‘right’.html": "ebeca304"
+  },
+  "346_Basic_lexicon_item_‘river’.qmd": {
+    "346_Basic_lexicon_item_‘river’.html": "67239b17"
+  },
+  "347_Basic_lexicon_item_‘road’.qmd": {
+    "347_Basic_lexicon_item_‘road’.html": "d40b2498"
+  },
+  "348_Basic_lexicon_item_‘root’.qmd": {
+    "348_Basic_lexicon_item_‘root’.html": "517b2497"
+  },
+  "349_Basic_lexicon_item_‘rotten’.qmd": {
+    "349_Basic_lexicon_item_‘rotten’.html": "c358a737"
+  },
+  "350_Basic_lexicon_item_‘round’.qmd": {
+    "350_Basic_lexicon_item_‘round’.html": "56a6d687"
+  },
+  "351_Basic_lexicon_item_‘run’.qmd": {
+    "351_Basic_lexicon_item_‘run’.html": "6e930458"
+  },
+  "352_Basic_lexicon_item_‘salt’.qmd": {
+    "352_Basic_lexicon_item_‘salt’.html": "30a2fb3f"
+  },
+  "353_Basic_lexicon_item_‘sand’.qmd": {
+    "353_Basic_lexicon_item_‘sand’.html": "6b61862f"
+  },
+  "354_Basic_lexicon_item_‘say’.qmd": {
+    "354_Basic_lexicon_item_‘say’.html": "afef466c"
+  },
+  "355_Basic_lexicon_item_‘scratch’.qmd": {
+    "355_Basic_lexicon_item_‘scratch’.html": "c7ac1900"
+  },
+  "356_Basic_lexicon_item_‘sea’.qmd": {
+    "356_Basic_lexicon_item_‘sea’.html": "7bd89923"
+  },
+  "357_Basic_lexicon_item_‘see’.qmd": {
+    "357_Basic_lexicon_item_‘see’.html": "2a411e97"
+  },
+  "358_Basic_lexicon_item_‘seed_granule’.qmd": {
+    "358_Basic_lexicon_item_‘seed_granule’.html": "3722a455"
+  },
+  "359_Basic_lexicon_item_‘sew’.qmd": {
+    "359_Basic_lexicon_item_‘sew’.html": "1049554b"
+  },
+  "360_Basic_lexicon_item_‘shadow’.qmd": {
+    "360_Basic_lexicon_item_‘shadow’.html": "34d74827"
+  },
+  "361_Basic_lexicon_item_‘sharp’.qmd": {
+    "361_Basic_lexicon_item_‘sharp’.html": "54a0a52b"
+  },
+  "362_Basic_lexicon_item_‘short’.qmd": {
+    "362_Basic_lexicon_item_‘short’.html": "164429be"
+  },
+  "363_Basic_lexicon_item_‘sing’.qmd": {
+    "363_Basic_lexicon_item_‘sing’.html": "416b40c0"
+  },
+  "364_Basic_lexicon_item_‘sit’.qmd": {
+    "364_Basic_lexicon_item_‘sit’.html": "b1281f11"
+  },
+  "365_Basic_lexicon_item_‘skin’.qmd": {
+    "365_Basic_lexicon_item_‘skin’.html": "ccb924ad"
+  },
+  "366_Basic_lexicon_item_‘sky’.qmd": {
+    "366_Basic_lexicon_item_‘sky’.html": "1c909fac"
+  },
+  "367_Basic_lexicon_item_‘sleep’.qmd": {
+    "367_Basic_lexicon_item_‘sleep’.html": "6a9a7afc"
+  },
+  "368_Basic_lexicon_item_‘small’.qmd": {
+    "368_Basic_lexicon_item_‘small’.html": "6cf39a98"
+  },
+  "369_Basic_lexicon_item_‘smell_(tr)’.qmd": {
+    "369_Basic_lexicon_item_‘smell_(tr)’.html": "4ded4e6c"
+  },
+  "370_Basic_lexicon_item_‘smoke’.qmd": {
+    "370_Basic_lexicon_item_‘smoke’.html": "f0e36ad1"
+  },
+  "371_Basic_lexicon_item_‘smooth’.qmd": {
+    "371_Basic_lexicon_item_‘smooth’.html": "3107aead"
+  },
+  "372_Basic_lexicon_item_‘snake’.qmd": {
+    "372_Basic_lexicon_item_‘snake’.html": "6f9a5886"
+  },
+  "373_Basic_lexicon_item_‘snow’.qmd": {
+    "373_Basic_lexicon_item_‘snow’.html": "9c9049de"
+  },
+  "374_Basic_lexicon_item_‘spit’.qmd": {
+    "374_Basic_lexicon_item_‘spit’.html": "e56c931f"
+  },
+  "375_Basic_lexicon_item_‘stand’.qmd": {
+    "375_Basic_lexicon_item_‘stand’.html": "97ef7501"
+  },
+  "376_Basic_lexicon_item_‘star’.qmd": {
+    "376_Basic_lexicon_item_‘star’.html": "2c4bb68f"
+  },
+  "377_Basic_lexicon_item_‘stick’.qmd": {
+    "377_Basic_lexicon_item_‘stick’.html": "4ffd4acd"
+  },
+  "378_Basic_lexicon_item_‘stone’.qmd": {
+    "378_Basic_lexicon_item_‘stone’.html": "6cb8fde7"
+  },
+  "379_Basic_lexicon_item_‘straight’.qmd": {
+    "379_Basic_lexicon_item_‘straight’.html": "da5dcb9e"
+  },
+  "380_Basic_lexicon_item_‘sun’.qmd": {
+    "380_Basic_lexicon_item_‘sun’.html": "59b6eb1a"
+  },
+  "381_Basic_lexicon_item_‘sweet’.qmd": {
+    "381_Basic_lexicon_item_‘sweet’.html": "cef2984e"
+  },
+  "382_Basic_lexicon_item_‘swell’.qmd": {
+    "382_Basic_lexicon_item_‘swell’.html": "09976c53"
+  },
+  "383_Basic_lexicon_item_‘swim’.qmd": {
+    "383_Basic_lexicon_item_‘swim’.html": "9ebb1d38"
+  },
+  "384_Basic_lexicon_item_‘tail’.qmd": {
+    "384_Basic_lexicon_item_‘tail’.html": "4d80c4c2"
+  },
+  "385_Basic_lexicon_item_‘take’.qmd": {
+    "385_Basic_lexicon_item_‘take’.html": "263effe3"
+  },
+  "386_Basic_lexicon_item_‘that_(medial)’.qmd": {
+    "386_Basic_lexicon_item_‘that_(medial)’.html": "f6dccf3c"
+  },
+  "387_Basic_lexicon_item_‘there_(medial)’.qmd": {
+    "387_Basic_lexicon_item_‘there_(medial)’.html": "d89289a4"
+  },
+  "388_Basic_lexicon_item_‘they’.qmd": {
+    "388_Basic_lexicon_item_‘they’.html": "28396f35"
+  },
+  "389_Basic_lexicon_item_‘thick’.qmd": {
+    "389_Basic_lexicon_item_‘thick’.html": "c5ba5ef0"
+  },
+  "390_Basic_lexicon_item_‘thigh’.qmd": {
+    "390_Basic_lexicon_item_‘thigh’.html": "749d8f68"
+  },
+  "391_Basic_lexicon_item_‘thin’.qmd": {
+    "391_Basic_lexicon_item_‘thin’.html": "ffac1661"
+  },
+  "392_Basic_lexicon_item_‘think’.qmd": {
+    "392_Basic_lexicon_item_‘think’.html": "532ab07c"
+  },
+  "393_Basic_lexicon_item_‘this’.qmd": {
+    "393_Basic_lexicon_item_‘this’.html": "359c7415"
+  },
+  "394_Basic_lexicon_item_‘thou_(obl)’.qmd": {
+    "394_Basic_lexicon_item_‘thou_(obl)’.html": "ef522282"
+  },
+  "395_Basic_lexicon_item_‘thou’.qmd": {
+    "395_Basic_lexicon_item_‘thou’.html": "89917045"
+  },
+  "396_Basic_lexicon_item_‘three’.qmd": {
+    "396_Basic_lexicon_item_‘three’.html": "d7d0b030"
+  },
+  "397_Basic_lexicon_item_‘throw_(v)’.qmd": {
+    "397_Basic_lexicon_item_‘throw_(v)’.html": "365518aa"
+  },
+  "398_Basic_lexicon_item_‘tie_(objects)’.qmd": {
+    "398_Basic_lexicon_item_‘tie_(objects)’.html": "95167197"
+  },
+  "399_Basic_lexicon_item_‘tongue’.qmd": {
+    "399_Basic_lexicon_item_‘tongue’.html": "64b75417"
+  },
+  "400_Basic_lexicon_item_‘tooth’.qmd": {
+    "400_Basic_lexicon_item_‘tooth’.html": "218e8116"
+  },
+  "401_Basic_lexicon_item_‘tree’.qmd": {
+    "401_Basic_lexicon_item_‘tree’.html": "28b6f6e6"
+  },
+  "402_Basic_lexicon_item_‘true’.qmd": {
+    "402_Basic_lexicon_item_‘true’.html": "61a725cd"
+  },
+  "403_Basic_lexicon_item_‘turn_(tr_)’.qmd": {
+    "403_Basic_lexicon_item_‘turn_(tr_)’.html": "94142dfd"
+  },
+  "404_Basic_lexicon_item_‘two’.qmd": {
+    "404_Basic_lexicon_item_‘two’.html": "2c83defb"
+  },
+  "405_Basic_lexicon_item_‘vomit’.qmd": {
+    "405_Basic_lexicon_item_‘vomit’.html": "81c84cf8"
+  },
+  "406_Basic_lexicon_item_‘walk’.qmd": {
+    "406_Basic_lexicon_item_‘walk’.html": "44278859"
+  },
+  "407_Basic_lexicon_item_‘warm’.qmd": {
+    "407_Basic_lexicon_item_‘warm’.html": "29bbb77f"
+  },
+  "408_Basic_lexicon_item_‘wash’.qmd": {
+    "408_Basic_lexicon_item_‘wash’.html": "b43cc9b9"
+  },
+  "409_Basic_lexicon_item_‘water’.qmd": {
+    "409_Basic_lexicon_item_‘water’.html": "5ae46473"
+  },
+  "410_Basic_lexicon_item_‘we_(exclusive)’.qmd": {
+    "410_Basic_lexicon_item_‘we_(exclusive)’.html": "2e327f1a"
+  },
+  "411_Basic_lexicon_item_‘we_(inclusive)’.qmd": {
+    "411_Basic_lexicon_item_‘we_(inclusive)’.html": "2a43c1a9"
+  },
+  "412_Basic_lexicon_item_‘weep’.qmd": {
+    "412_Basic_lexicon_item_‘weep’.html": "165ba394"
+  },
+  "413_Basic_lexicon_item_‘wet’.qmd": {
+    "413_Basic_lexicon_item_‘wet’.html": "f95473d7"
+  },
+  "414_Basic_lexicon_item_‘what’.qmd": {
+    "414_Basic_lexicon_item_‘what’.html": "f05a7a63"
+  },
+  "415_Basic_lexicon_item_‘when’.qmd": {
+    "415_Basic_lexicon_item_‘when’.html": "cceeda35"
+  },
+  "416_Basic_lexicon_item_‘where’.qmd": {
+    "416_Basic_lexicon_item_‘where’.html": "18c513be"
+  },
+  "417_Basic_lexicon_item_‘white’.qmd": {
+    "417_Basic_lexicon_item_‘white’.html": "fbd960cc"
+  },
+  "418_Basic_lexicon_item_‘who’.qmd": {
+    "418_Basic_lexicon_item_‘who’.html": "ef230cf7"
+  },
+  "419_Basic_lexicon_item_‘wide’.qmd": {
+    "419_Basic_lexicon_item_‘wide’.html": "757fe6ff"
+  },
+  "420_Basic_lexicon_item_‘wind’.qmd": {
+    "420_Basic_lexicon_item_‘wind’.html": "2313995c"
+  },
+  "421_Basic_lexicon_item_‘wing’.qmd": {
+    "421_Basic_lexicon_item_‘wing’.html": "6bb2d227"
+  },
+  "422_Basic_lexicon_item_‘with’.qmd": {
+    "422_Basic_lexicon_item_‘with’.html": "16fcce35"
+  },
+  "423_Basic_lexicon_item_‘woman’.qmd": {
+    "423_Basic_lexicon_item_‘woman’.html": "4a3dba66"
+  },
+  "424_Basic_lexicon_item_‘worm’.qmd": {
+    "424_Basic_lexicon_item_‘worm’.html": "9c54384d"
+  },
+  "425_Basic_lexicon_item_‘year’.qmd": {
+    "425_Basic_lexicon_item_‘year’.html": "c6df6ee8"
+  },
+  "426_Basic_lexicon_item_‘yellow’.qmd": {
+    "426_Basic_lexicon_item_‘yellow’.html": "e4356b42"
+  },
+  "427_Basic_lexicon_item_‘yesterday’.qmd": {
+    "427_Basic_lexicon_item_‘yesterday’.html": "17bf156e"
+  },
+  "004_Capability_subject_marking.qmd": {
+    "004_Capability_subject_marking.html": "5556bccf"
+  },
+  "005_Comitative_marker.qmd": {
+    "005_Comitative_marker.html": "bea3280d"
+  },
+  "031_Marking_of_personal_elative.qmd": {
+    "031_Marking_of_personal_elative.html": "4c790b38"
+  },
+  "034_Marking_of_standard_of_comparison.qmd": {
+    "034_Marking_of_standard_of_comparison.html": "7db335a6"
+  },
+  "048_Plural_of_the_noun_‘goat’.qmd": {
+    "048_Plural_of_the_noun_‘goat’.html": "0d556415"
+  },
+  "051_Subject_marking_in_age_constructions.qmd": {
+    "051_Subject_marking_in_age_constructions.html": "633137b8"
+  },
+  "052_Temporary_possessor_form.qmd": {
+    "052_Temporary_possessor_form.html": "d9838a78"
+  },
+  "053_Temporary_recipient_marking.qmd": {
+    "053_Temporary_recipient_marking.html": "28694e2a"
+  },
+  "054_Unintentional_agent_marking.qmd": {
+    "054_Unintentional_agent_marking.html": "a9e53418"
+  },
+  "057_Claimed_geminates_in_intervocal_position.qmd": {
+    "057_Claimed_geminates_in_intervocal_position.html": "12041974"
+  },
+  "069_ü_in_native_nouns.qmd": {
+    "069_ü_in_native_nouns.html": "8d734472"
+  },
+  "070_ž_as_a_separate_phoneme.qmd": {
+    "070_ž_as_a_separate_phoneme.html": "f9547741"
+  },
+  "071_Adjectival_predication_‘be_A’.qmd": {
+    "071_Adjectival_predication_‘be_A’.html": "3c8bea49"
+  },
+  "079_Contrastive_attributive_marker.qmd": {
+    "079_Contrastive_attributive_marker.html": "187419ea"
+  },
+  "087_Inclusive_exclusive_distinction.qmd": {
+    "087_Inclusive_exclusive_distinction.html": "acfdbae2"
+  },
+  "088_Inflection_of_the_first_person_plural_pronoun.qmd": {
+    "088_Inflection_of_the_first_person_plural_pronoun.html": "660bd4d2"
+  },
+  "089_Inflection_of_the_first_person_singular_pronoun.qmd": {
+    "089_Inflection_of_the_first_person_singular_pronoun.html": "c3a4e6d0"
+  },
+  "091_Lexical_item_for_‘very’.qmd": {
+    "091_Lexical_item_for_‘very’.html": "fe9c5622"
+  },
+  "092_Oblique_stem_of_the_numeral_‘one’.qmd": {
+    "092_Oblique_stem_of_the_numeral_‘one’.html": "2aeb57b9"
+  },
+  "132_Avertive_construction.qmd": {
+    "132_Avertive_construction.html": "82a4c6ef"
+  },
+  "133_Continuative_construction.qmd": {
+    "133_Continuative_construction.html": "fe2b07ab"
+  },
+  "137_Imperfective_participle.qmd": {
+    "137_Imperfective_participle.html": "3f5cc213"
+  },
+  "138_Indicative_verb_form_based_on_the_imperfective_participle.qmd": {
+    "138_Indicative_verb_form_based_on_the_imperfective_participle.html": "d6af07e4"
+  },
+  "139_Indicative_verb_form_based_on_the_perfective_participle.qmd": {
+    "139_Indicative_verb_form_based_on_the_perfective_participle.html": "3ef54154"
+  },
+  "168_Stative_verb_‘remain’__present.qmd": {
+    "168_Stative_verb_‘remain’__present.html": "864e778c"
+  },
+  "169_The_verb_‘become’__imperative_and_prohibitive.qmd": {
+    "169_The_verb_‘become’__imperative_and_prohibitive.html": "907e0598"
+  },
+  "171_The_verb_‘become’__infinitive.qmd": {
+    "171_The_verb_‘become’__infinitive.html": "a9ff5507"
+  },
+  "172_The_verb_‘become’__perfective_stem.qmd": {
+    "172_The_verb_‘become’__perfective_stem.html": "29b5c9c8"
+  },
+  "193_Absolutive_marker_of_negative_pronouns.qmd": {
+    "193_Absolutive_marker_of_negative_pronouns.html": "2c83b793"
+  },
+  "195_Contrastive_anaphoric_demonstrative.qmd": {
+    "195_Contrastive_anaphoric_demonstrative.html": "7ec39218"
+  },
+  "202_Formant_-n_in_the_distal_demonstrative.qmd": {
+    "202_Formant_-n_in_the_distal_demonstrative.html": "5fc74151"
+  },
+  "203_Plural_of_‘who’.qmd": {
+    "203_Plural_of_‘who’.html": "3198a930"
+  },
+  "212_Disjunction_marker.qmd": {
+    "212_Disjunction_marker.html": "a19f1dd0"
+  },
+  "215_Hypothetical_conditional_converb_suffix.qmd": {
+    "215_Hypothetical_conditional_converb_suffix.html": "37941719"
+  },
+  "219_Presence_of_additive_in_non-specific_indefinite_pronouns.qmd": {
+    "219_Presence_of_additive_in_non-specific_indefinite_pronouns.html": "21642a7e"
+  },
+  "007_Ergative_marker_type_of_the_singular_attributive.qmd": {
+    "007_Ergative_marker_type_of_the_singular_attributive.html": "0b6b55a3"
+  },
+  "028_Inanimate_plural_marking.qmd": {
+    "028_Inanimate_plural_marking.html": "4b87474b"
+  },
+  "037_Oblique_stem_of_the_attributive_form_in_the_ergative_singular.qmd": {
+    "037_Oblique_stem_of_the_attributive_form_in_the_ergative_singular.html": "9dbc3684"
+  },
+  "046_Plural_of_objects_coming_in_pairs.qmd": {
+    "046_Plural_of_objects_coming_in_pairs.html": "ac76456c"
+  },
+  "049_Predicative_possessor_marking.qmd": {
+    "049_Predicative_possessor_marking.html": "1d4c9b3f"
+  },
+  "055_Change_of_a_to_o_before_labialized_stops.qmd": {
+    "055_Change_of_a_to_o_before_labialized_stops.html": "b1a8130d"
+  },
+  "078_Agreement_slot_in_the_adjective_‘young’.qmd": {
+    "078_Agreement_slot_in_the_adjective_‘young’.html": "ab446e49"
+  },
+  "131_Aorist__presence_of_the_copula.qmd": {
+    "131_Aorist__presence_of_the_copula.html": "3fec5fba"
+  },
+  "146_Negative_copula__past_tense.qmd": {
+    "146_Negative_copula__past_tense.html": "a3519b4f"
+  },
+  "158_Stative_verb_‘be’__negative_past.qmd": {
+    "158_Stative_verb_‘be’__negative_past.html": "d17e411e"
+  },
+  "183_Optative.qmd": {
+    "183_Optative.html": "162de70a"
+  },
+  "205_Stems_of_reflexive_pronouns.qmd": {
+    "205_Stems_of_reflexive_pronouns.html": "18ca49bc"
+  },
+  "067_Sound_f_from_reconstructed_labialized_x.qmd": {
+    "067_Sound_f_from_reconstructed_labialized_x.html": "91cde0c9"
+  },
+  "134_Copula__past_tense.qmd": {
+    "134_Copula__past_tense.html": "3abaa403"
+  },
+  "160_Stative_verb_‘be’__past.qmd": {
+    "160_Stative_verb_‘be’__past.html": "a1d4b09a"
+  },
+  "165_Stative_verb_‘remain’__negative_past.qmd": {
+    "165_Stative_verb_‘remain’__negative_past.html": "0876c1a5"
+  },
+  "167_Stative_verb_‘remain’__past.qmd": {
+    "167_Stative_verb_‘remain’__past.html": "8b37b3ed"
+  },
+  "197_Ergative_marker_of_negative_pronouns.qmd": {
+    "197_Ergative_marker_of_negative_pronouns.html": "72ed4c49"
+  },
+  "199_Ergative_stem_of_negative_pronouns.qmd": {
+    "199_Ergative_stem_of_negative_pronouns.html": "857368a5"
+  },
+  "059_lexical_palatalization_in_coda.qmd": {
+    "059_lexical_palatalization_in_coda.html": "b6951db8"
+  },
+  "065_Rounding_of_â_before_labialized_stops.qmd": {
+    "065_Rounding_of_â_before_labialized_stops.html": "04c5273d"
+  },
+  "006_Ergative_marker_type.qmd": {
+    "006_Ergative_marker_type.html": "7af6421f"
+  },
+  "008_Ergative_marker__presence_of_vowel.qmd": {
+    "008_Ergative_marker__presence_of_vowel.html": "2619825c"
+  },
+  "009_Ergative_marker__variation_in_the_presence_of_vowel.qmd": {
+    "009_Ergative_marker__variation_in_the_presence_of_vowel.html": "7ee7ad4e"
+  },
+  "083_Fusion_in_you_sg-ERG_I-ABS_construction.qmd": {
+    "083_Fusion_in_you_sg-ERG_I-ABS_construction.html": "3fc3144a"
+  },
+  "084_Headless_adjective_declension__human_reference.qmd": {
+    "084_Headless_adjective_declension__human_reference.html": "477274bb"
+  },
+  "063_Possible_reflexes_of_reconstructed_a.qmd": {
+    "063_Possible_reflexes_of_reconstructed_a.html": "98906620"
+  },
+  "066_Some_reflexes_of_reconstructed_ɢ.qmd": {
+    "066_Some_reflexes_of_reconstructed_ɢ.html": "3c865a72"
+  },
+  "062_Paradigm_levelling_of_šu_“brother”.qmd": {
+    "062_Paradigm_levelling_of_šu_“brother”.html": "fed5479b"
+  },
+  "068_ü_in_loanwords.qmd": {
+    "068_ü_in_loanwords.html": "5ea9df07"
+  },
+  "204_Singular_of_‘who’.qmd": {
+    "204_Singular_of_‘who’.html": "29b95048"
+  },
+  "003_Attributive_marker.qmd": {
+    "003_Attributive_marker.html": "24659ce2"
+  },
+  "056_Change_of_a_to_o_before_w.qmd": {
+    "056_Change_of_a_to_o_before_w.html": "824a44f2"
+  },
+  "181_Hortative_marking.qmd": {
+    "181_Hortative_marking.html": "668c3e78"
+  },
+  "189_Universal_concessive_conditional_converb_suffixes.qmd": {
+    "189_Universal_concessive_conditional_converb_suffixes.html": "2cc026e5"
+  },
+  "058_g_final_lenition.qmd": {
+    "058_g_final_lenition.html": "dd2a60e5"
+  },
+  "035_Oblique_stem_ending_in_a_sonorant.qmd": {
+    "035_Oblique_stem_ending_in_a_sonorant.html": "cb6d8046"
+  },
+  "036_Oblique_stem_ending_in_a_sonorant__presence_of_palatalization.qmd": {
+    "036_Oblique_stem_ending_in_a_sonorant__presence_of_palatalization.html": "414df799"
+  },
+  "209_Concessive_marking.qmd": {
+    "209_Concessive_marking.html": "f8bddb21"
+  },
+  "210_Concessive-conditional_marking.qmd": {
+    "210_Concessive-conditional_marking.html": "af1becf1"
+  },
+  "428_Basic_lexicon_item_‘you_(plural)’.qmd": {
+    "428_Basic_lexicon_item_‘you_(plural)’.html": "218b157b"
+  },
+  "ru/001_Agreement_in_obliqueness.qmd": {
+    "001_Agreement_in_obliqueness.html": "d34ac0bd"
+  },
+  "ru/002_Associative_plural_marking.qmd": {
+    "002_Associative_plural_marking.html": "d7ffaa0b"
+  },
+  "ru/003_Attributive_marker.qmd": {
+    "003_Attributive_marker.html": "f3ecf68e"
+  },
+  "ru/004_Capability_subject_marking.qmd": {
+    "004_Capability_subject_marking.html": "5aec23c8"
+  },
+  "ru/005_Comitative_marker.qmd": {
+    "005_Comitative_marker.html": "94906f70"
+  },
+  "ru/006_Ergative_marker_type.qmd": {
+    "006_Ergative_marker_type.html": "1cbf9d37"
+  },
+  "ru/007_Ergative_marker_type_of_the_singular_attributive.qmd": {
+    "007_Ergative_marker_type_of_the_singular_attributive.html": "afd49d09"
+  },
+  "ru/008_Ergative_marker__presence_of_vowel.qmd": {
+    "008_Ergative_marker__presence_of_vowel.html": "ed94cb0f"
+  },
+  "ru/009_Ergative_marker__variation_in_the_presence_of_vowel.qmd": {
+    "009_Ergative_marker__variation_in_the_presence_of_vowel.html": "8783f815"
+  },
+  "ru/010_Expression_of_the_spatial_meaning_‘behind’.qmd": {
+    "010_Expression_of_the_spatial_meaning_‘behind’.html": "11e3e641"
+  },
+  "ru/011_Expression_of_the_spatial_meaning_‘following,_after’.qmd": {
+    "011_Expression_of_the_spatial_meaning_‘following,_after’.html": "795a80c9"
+  },
+  "ru/012_Expression_of_the_spatial_meaning_‘from_behind’.qmd": {
+    "012_Expression_of_the_spatial_meaning_‘from_behind’.html": "0997399d"
+  },
+  "ru/013_Expression_of_the_spatial_meaning_‘from_in_contact_with’.qmd": {
+    "013_Expression_of_the_spatial_meaning_‘from_in_contact_with’.html": "ed47daae"
+  },
+  "ru/014_Expression_of_the_spatial_meaning_‘from_inside_a_mass’.qmd": {
+    "014_Expression_of_the_spatial_meaning_‘from_inside_a_mass’.html": "84664385"
+  },
+  "ru/015_Expression_of_the_spatial_meaning_‘from_the_top_of’.qmd": {
+    "015_Expression_of_the_spatial_meaning_‘from_the_top_of’.html": "f216070d"
+  },
+  "ru/016_Expression_of_the_spatial_meaning_‘from_under’.qmd": {
+    "016_Expression_of_the_spatial_meaning_‘from_under’.html": "dd62cbf9"
+  },
+  "ru/017_Expression_of_the_spatial_meaning_‘in_between’.qmd": {
+    "017_Expression_of_the_spatial_meaning_‘in_between’.html": "fcf3dfb8"
+  },
+  "ru/018_Expression_of_the_spatial_meaning_‘in_contact_on_top_of’.qmd": {
+    "018_Expression_of_the_spatial_meaning_‘in_contact_on_top_of’.html": "43661f2e"
+  },
+  "ru/019_Expression_of_the_spatial_meaning_‘in_contact_with’.qmd": {
+    "019_Expression_of_the_spatial_meaning_‘in_contact_with’.html": "f2e0f542"
+  },
+  "ru/020_Expression_of_the_spatial_meaning_‘inside_a_mass’.qmd": {
+    "020_Expression_of_the_spatial_meaning_‘inside_a_mass’.html": "8a35061b"
+  },
+  "ru/021_Expression_of_the_spatial_meaning_‘inside_the_house’.qmd": {
+    "021_Expression_of_the_spatial_meaning_‘inside_the_house’.html": "5cdace40"
+  },
+  "ru/022_Expression_of_the_spatial_meaning_‘near,_by’.qmd": {
+    "022_Expression_of_the_spatial_meaning_‘near,_by’.html": "170563aa"
+  },
+  "ru/023_Expression_of_the_spatial_meaning_‘on_top_of’.qmd": {
+    "023_Expression_of_the_spatial_meaning_‘on_top_of’.html": "27bd2484"
+  },
+  "ru/024_Expression_of_the_spatial_meaning_‘out_of’.qmd": {
+    "024_Expression_of_the_spatial_meaning_‘out_of’.html": "a6bd2e5e"
+  },
+  "ru/025_Expression_of_the_spatial_meaning_‘towards_inside_a_mass’.qmd": {
+    "025_Expression_of_the_spatial_meaning_‘towards_inside_a_mass’.html": "94207d7f"
+  },
+  "ru/026_Expression_of_the_spatial_meaning_‘under’.qmd": {
+    "026_Expression_of_the_spatial_meaning_‘under’.html": "9fedb47e"
+  },
+  "ru/027_Expression_of_the_spatial_meaning_of_proximity.qmd": {
+    "027_Expression_of_the_spatial_meaning_of_proximity.html": "1ee03d43"
+  },
+  "ru/028_Inanimate_plural_marking.qmd": {
+    "028_Inanimate_plural_marking.html": "487a03c0"
+  },
+  "ru/029_Lexical_item_for_‘cowshed’.qmd": {
+    "029_Lexical_item_for_‘cowshed’.html": "3f4d9810"
+  },
+  "ru/030_Marking_of_addressee.qmd": {
+    "030_Marking_of_addressee.html": "2ac9fc3f"
+  },
+  "ru/031_Marking_of_personal_elative.qmd": {
+    "031_Marking_of_personal_elative.html": "1f210a14"
+  },
+  "ru/032_Marking_of_personal_essive.qmd": {
+    "032_Marking_of_personal_essive.html": "1b44bc14"
+  },
+  "ru/033_Marking_of_personal_lative.qmd": {
+    "033_Marking_of_personal_lative.html": "49fd1293"
+  },
+  "ru/034_Marking_of_standard_of_comparison.qmd": {
+    "034_Marking_of_standard_of_comparison.html": "dbf77bb7"
+  },
+  "ru/035_Oblique_stem_ending_in_a_sonorant.qmd": {
+    "035_Oblique_stem_ending_in_a_sonorant.html": "5d14e1bd"
+  },
+  "ru/036_Oblique_stem_ending_in_a_sonorant__presence_of_palatalization.qmd": {
+    "036_Oblique_stem_ending_in_a_sonorant__presence_of_palatalization.html": "5b87d9c2"
+  },
+  "ru/037_Oblique_stem_of_the_attributive_form_in_the_ergative_singular.qmd": {
+    "037_Oblique_stem_of_the_attributive_form_in_the_ergative_singular.html": "64d83221"
+  },
+  "ru/038_Oblique_stem_of_the_noun_‘water’.qmd": {
+    "038_Oblique_stem_of_the_noun_‘water’.html": "b57346fe"
+  },
+  "ru/039_Phonetic_variation_in_the_noun_‘cow’.qmd": {
+    "039_Phonetic_variation_in_the_noun_‘cow’.html": "7b3da144"
+  },
+  "ru/040_Phonetic_variation_in_the_noun_‘goat’.qmd": {
+    "040_Phonetic_variation_in_the_noun_‘goat’.html": "644807d7"
+  },
+  "ru/041_Plural_marker_of_the_noun_‘brother’.qmd": {
+    "041_Plural_marker_of_the_noun_‘brother’.html": "94ec6bd5"
+  },
+  "ru/042_Plural_marker_of_the_noun_‘daughter’.qmd": {
+    "042_Plural_marker_of_the_noun_‘daughter’.html": "7046a123"
+  },
+  "ru/043_Plural_marker_of_the_noun_‘dog’.qmd": {
+    "043_Plural_marker_of_the_noun_‘dog’.html": "bc4e24d5"
+  },
+  "ru/044_Plural_marker_of_the_noun_‘sister’.qmd": {
+    "044_Plural_marker_of_the_noun_‘sister’.html": "846a67b3"
+  },
+  "ru/045_Plural_marker_of_the_noun_‘son’.qmd": {
+    "045_Plural_marker_of_the_noun_‘son’.html": "a6a2ea2d"
+  },
+  "ru/046_Plural_of_objects_coming_in_pairs.qmd": {
+    "046_Plural_of_objects_coming_in_pairs.html": "f15c363b"
+  },
+  "ru/047_Plural_of_the_noun_‘cow’.qmd": {
+    "047_Plural_of_the_noun_‘cow’.html": "d825c311"
+  },
+  "ru/048_Plural_of_the_noun_‘goat’.qmd": {
+    "048_Plural_of_the_noun_‘goat’.html": "98744b1d"
+  },
+  "ru/049_Predicative_possessor_marking.qmd": {
+    "049_Predicative_possessor_marking.html": "83d29686"
+  },
+  "ru/050_Presence_of_the_vowel_in_the_ergative_of_the_singular_attributive_form.qmd": {
+    "050_Presence_of_the_vowel_in_the_ergative_of_the_singular_attributive_form.html": "fb1194f8"
+  },
+  "ru/051_Subject_marking_in_age_constructions.qmd": {
+    "051_Subject_marking_in_age_constructions.html": "be75f9ec"
+  },
+  "ru/052_Temporary_possessor_form.qmd": {
+    "052_Temporary_possessor_form.html": "0679b0f6"
+  },
+  "ru/053_Temporary_recipient_marking.qmd": {
+    "053_Temporary_recipient_marking.html": "7a683d09"
+  },
+  "ru/054_Unintentional_agent_marking.qmd": {
+    "054_Unintentional_agent_marking.html": "9c4c2ea0"
+  },
+  "ru/055_Change_of_a_to_o_before_labialized_stops.qmd": {
+    "055_Change_of_a_to_o_before_labialized_stops.html": "fc059bc0"
+  },
+  "ru/056_Change_of_a_to_o_before_w.qmd": {
+    "056_Change_of_a_to_o_before_w.html": "bae0ea91"
+  },
+  "ru/057_Claimed_geminates_in_intervocal_position.qmd": {
+    "057_Claimed_geminates_in_intervocal_position.html": "821badd3"
+  },
+  "ru/058_g_final_lenition.qmd": {
+    "058_g_final_lenition.html": "bbccf38d"
+  },
+  "ru/059_lexical_palatalization_in_coda.qmd": {
+    "059_lexical_palatalization_in_coda.html": "540f6f9a"
+  },
+  "ru/060_Loanword_f_adopted_as_labialized_x.qmd": {
+    "060_Loanword_f_adopted_as_labialized_x.html": "5fe13729"
+  },
+  "ru/061_ö_in_loanwords.qmd": {
+    "061_ö_in_loanwords.html": "ac9552f8"
+  },
+  "ru/062_Paradigm_levelling_of_šu_“brother”.qmd": {
+    "062_Paradigm_levelling_of_šu_“brother”.html": "b286c8d5"
+  },
+  "ru/063_Possible_reflexes_of_reconstructed_a.qmd": {
+    "063_Possible_reflexes_of_reconstructed_a.html": "54adc47f"
+  },
+  "ru/064_Possible_reflexes_of_reconstructed_ɣ.qmd": {
+    "064_Possible_reflexes_of_reconstructed_ɣ.html": "d203bb36"
+  },
+  "ru/065_Rounding_of_â_before_labialized_stops.qmd": {
+    "065_Rounding_of_â_before_labialized_stops.html": "c29a69f0"
+  },
+  "ru/066_Some_reflexes_of_reconstructed_ɢ.qmd": {
+    "066_Some_reflexes_of_reconstructed_ɢ.html": "f748ae6a"
+  },
+  "ru/067_Sound_f_from_reconstructed_labialized_x.qmd": {
+    "067_Sound_f_from_reconstructed_labialized_x.html": "9ce48555"
+  },
+  "ru/068_ü_in_loanwords.qmd": {
+    "068_ü_in_loanwords.html": "9669f2bc"
+  },
+  "ru/069_ü_in_native_nouns.qmd": {
+    "069_ü_in_native_nouns.html": "64c026ad"
+  },
+  "ru/070_ž_as_a_separate_phoneme.qmd": {
+    "070_ž_as_a_separate_phoneme.html": "5e65d44f"
+  },
+  "ru/071_Adjectival_predication_‘be_A’.qmd": {
+    "071_Adjectival_predication_‘be_A’.html": "98c76b56"
+  },
+  "ru/072_Adjectival_predication_‘become_A’.qmd": {
+    "072_Adjectival_predication_‘become_A’.html": "cc3ec648"
+  },
+  "ru/073_Adverbial_-na_as_depictive.qmd": {
+    "073_Adverbial_-na_as_depictive.html": "1be2b935"
+  },
+  "ru/074_Adverbial_-na_as_functive.qmd": {
+    "074_Adverbial_-na_as_functive.html": "194c2919"
+  },
+  "ru/075_Agreement_in_obliqueness__numerals.qmd": {
+    "075_Agreement_in_obliqueness__numerals.html": "f52e4088"
+  },
+  "ru/076_Agreement_slot_in_the_adjective_‘good’.qmd": {
+    "076_Agreement_slot_in_the_adjective_‘good’.html": "0ced99ff"
+  },
+  "ru/077_Agreement_slot_in_the_adjective_‘hot’.qmd": {
+    "077_Agreement_slot_in_the_adjective_‘hot’.html": "268d1131"
+  },
+  "ru/078_Agreement_slot_in_the_adjective_‘young’.qmd": {
+    "078_Agreement_slot_in_the_adjective_‘young’.html": "fae24199"
+  },
+  "ru/079_Contrastive_attributive_marker.qmd": {
+    "079_Contrastive_attributive_marker.html": "6ec0c0a2"
+  },
+  "ru/080_Equative-similative_marker.qmd": {
+    "080_Equative-similative_marker.html": "a1a46e39"
+  },
+  "ru/081_Expression_of_the_meaning_‘at_least’.qmd": {
+    "081_Expression_of_the_meaning_‘at_least’.html": "8c5937c3"
+  },
+  "ru/082_Fusion_in_I-ERG_you_sg-ABS_construction.qmd": {
+    "082_Fusion_in_I-ERG_you_sg-ABS_construction.html": "eb296e3c"
+  },
+  "ru/083_Fusion_in_you_sg-ERG_I-ABS_construction.qmd": {
+    "083_Fusion_in_you_sg-ERG_I-ABS_construction.html": "a59a4375"
+  },
+  "ru/084_Headless_adjective_declension__human_reference.qmd": {
+    "084_Headless_adjective_declension__human_reference.html": "4d7860a8"
+  },
+  "ru/085_Headless_adjective_declension__non-human_reference.qmd": {
+    "085_Headless_adjective_declension__non-human_reference.html": "731cfd76"
+  },
+  "ru/086_Imperative_interjection_‘here,_take_it!’.qmd": {
+    "086_Imperative_interjection_‘here,_take_it!’.html": "6752bcdb"
+  },
+  "ru/087_Inclusive_exclusive_distinction.qmd": {
+    "087_Inclusive_exclusive_distinction.html": "e91751b8"
+  },
+  "ru/088_Inflection_of_the_first_person_plural_pronoun.qmd": {
+    "088_Inflection_of_the_first_person_plural_pronoun.html": "2af0b1c5"
+  },
+  "ru/089_Inflection_of_the_first_person_singular_pronoun.qmd": {
+    "089_Inflection_of_the_first_person_singular_pronoun.html": "7d752f81"
+  },
+  "ru/090_Inflection_of_the_second_person_singular_pronoun.qmd": {
+    "090_Inflection_of_the_second_person_singular_pronoun.html": "068b2b69"
+  },
+  "ru/091_Lexical_item_for_‘very’.qmd": {
+    "091_Lexical_item_for_‘very’.html": "cebd8781"
+  },
+  "ru/092_Oblique_stem_of_the_numeral_‘one’.qmd": {
+    "092_Oblique_stem_of_the_numeral_‘one’.html": "da363a6e"
+  },
+  "ru/093_Oblique_stem_of_the_numeral_‘two’.qmd": {
+    "093_Oblique_stem_of_the_numeral_‘two’.html": "b3ee80f3"
+  },
+  "ru/094_Quotative_particle.qmd": {
+    "094_Quotative_particle.html": "32cd5efe"
+  },
+  "ru/095_Superlative.qmd": {
+    "095_Superlative.html": "20401bb2"
+  },
+  "ru/096_Lexical_item_for_‘axe’.qmd": {
+    "096_Lexical_item_for_‘axe’.html": "5a6fb213"
+  },
+  "ru/097_Lexical_item_for_‘bone’.qmd": {
+    "097_Lexical_item_for_‘bone’.html": "e557ac8d"
+  },
+  "ru/098_Lexical_item_for_‘bridle’.qmd": {
+    "098_Lexical_item_for_‘bridle’.html": "3c3c303b"
+  },
+  "ru/099_Lexical_item_for_‘cow’.qmd": {
+    "099_Lexical_item_for_‘cow’.html": "614eed07"
+  },
+  "ru/100_Lexical_item_for_‘cowshed’.qmd": {
+    "100_Lexical_item_for_‘cowshed’.html": "7fbb8851"
+  },
+  "ru/101_Lexical_item_for_‘dew’.qmd": {
+    "101_Lexical_item_for_‘dew’.html": "e6da69aa"
+  },
+  "ru/102_Lexical_item_for_‘donkey’.qmd": {
+    "102_Lexical_item_for_‘donkey’.html": "7c82b262"
+  },
+  "ru/103_Lexical_item_for_‘door’.qmd": {
+    "103_Lexical_item_for_‘door’.html": "a387e0c9"
+  },
+  "ru/104_Lexical_item_for_‘dress’.qmd": {
+    "104_Lexical_item_for_‘dress’.html": "c3d7dec8"
+  },
+  "ru/105_Lexical_item_for_‘drop’.qmd": {
+    "105_Lexical_item_for_‘drop’.html": "c981bcf6"
+  },
+  "ru/106_Lexical_item_for_‘fish’.qmd": {
+    "106_Lexical_item_for_‘fish’.html": "72585aae"
+  },
+  "ru/107_Lexical_item_for_‘frog’.qmd": {
+    "107_Lexical_item_for_‘frog’.html": "84e226fb"
+  },
+  "ru/108_Lexical_item_for_‘gate’.qmd": {
+    "108_Lexical_item_for_‘gate’.html": "a40e4365"
+  },
+  "ru/109_Lexical_item_for_‘hammer’.qmd": {
+    "109_Lexical_item_for_‘hammer’.html": "a309c2d1"
+  },
+  "ru/110_Lexical_item_for_‘hedgehog’.qmd": {
+    "110_Lexical_item_for_‘hedgehog’.html": "a996b581"
+  },
+  "ru/111_Lexical_item_for_‘horse’.qmd": {
+    "111_Lexical_item_for_‘horse’.html": "7c0cf89a"
+  },
+  "ru/112_Lexical_item_for_‘horseshoe’.qmd": {
+    "112_Lexical_item_for_‘horseshoe’.html": "dffed974"
+  },
+  "ru/113_Lexical_item_for_‘hot’.qmd": {
+    "113_Lexical_item_for_‘hot’.html": "fa8659f2"
+  },
+  "ru/114_Lexical_item_for_‘light’.qmd": {
+    "114_Lexical_item_for_‘light’.html": "733c075d"
+  },
+  "ru/115_Lexical_item_for_‘lock’.qmd": {
+    "115_Lexical_item_for_‘lock’.html": "9193a069"
+  },
+  "ru/116_Lexical_item_for_‘navel’.qmd": {
+    "116_Lexical_item_for_‘navel’.html": "b1757aa5"
+  },
+  "ru/117_Lexical_item_for_‘nest’.qmd": {
+    "117_Lexical_item_for_‘nest’.html": "b39782e4"
+  },
+  "ru/118_Lexical_item_for_‘pants’.qmd": {
+    "118_Lexical_item_for_‘pants’.html": "0be48161"
+  },
+  "ru/119_Lexical_item_for_‘plum’.qmd": {
+    "119_Lexical_item_for_‘plum’.html": "6c5eea65"
+  },
+  "ru/120_Lexical_item_for_‘river’.qmd": {
+    "120_Lexical_item_for_‘river’.html": "0d4954e5"
+  },
+  "ru/121_Lexical_item_for_‘saddle’.qmd": {
+    "121_Lexical_item_for_‘saddle’.html": "5ffe0355"
+  },
+  "ru/122_Lexical_item_for_‘scissors_or_shears’.qmd": {
+    "122_Lexical_item_for_‘scissors_or_shears’.html": "68f11a16"
+  },
+  "ru/123_Lexical_item_for_‘scythe’.qmd": {
+    "123_Lexical_item_for_‘scythe’.html": "892f5267"
+  },
+  "ru/124_Lexical_item_for_‘shade_or_shadow’.qmd": {
+    "124_Lexical_item_for_‘shade_or_shadow’.html": "b3ac4c26"
+  },
+  "ru/125_Lexical_item_for_‘sickle’.qmd": {
+    "125_Lexical_item_for_‘sickle’.html": "9191c825"
+  },
+  "ru/126_Lexical_item_for_‘thimble’.qmd": {
+    "126_Lexical_item_for_‘thimble’.html": "0a545bca"
+  },
+  "ru/127_Lexical_item_for_‘whip’.qmd": {
+    "127_Lexical_item_for_‘whip’.html": "be3250c8"
+  },
+  "ru/128_Lexical_item_for_‘wolf’.qmd": {
+    "128_Lexical_item_for_‘wolf’.html": "acdc079f"
+  },
+  "ru/129_Anterior_converb.qmd": {
+    "129_Anterior_converb.html": "311b2cd4"
+  },
+  "ru/130_Aorist.qmd": {
+    "130_Aorist.html": "e0f1cf1f"
+  },
+  "ru/131_Aorist__presence_of_the_copula.qmd": {
+    "131_Aorist__presence_of_the_copula.html": "9483aac9"
+  },
+  "ru/132_Avertive_construction.qmd": {
+    "132_Avertive_construction.html": "45698e0f"
+  },
+  "ru/133_Continuative_construction.qmd": {
+    "133_Continuative_construction.html": "2fc3c9a8"
+  },
+  "ru/134_Copula__past_tense.qmd": {
+    "134_Copula__past_tense.html": "95cbd3f7"
+  },
+  "ru/135_Copula__present_tense.qmd": {
+    "135_Copula__present_tense.html": "16a437e0"
+  },
+  "ru/136_Future.qmd": {
+    "136_Future.html": "d54f76e0"
+  },
+  "ru/137_Imperfective_participle.qmd": {
+    "137_Imperfective_participle.html": "e06b76f9"
+  },
+  "ru/138_Indicative_verb_form_based_on_the_imperfective_participle.qmd": {
+    "138_Indicative_verb_form_based_on_the_imperfective_participle.html": "1994545b"
+  },
+  "ru/139_Indicative_verb_form_based_on_the_perfective_participle.qmd": {
+    "139_Indicative_verb_form_based_on_the_perfective_participle.html": "7d7b5e0c"
+  },
+  "ru/140_Indicative_verb_form_based_on_the_prospective_participle.qmd": {
+    "140_Indicative_verb_form_based_on_the_prospective_participle.html": "8878bd85"
+  },
+  "ru/141_Indirect_content_question_marker.qmd": {
+    "141_Indirect_content_question_marker.html": "42711b0e"
+  },
+  "ru/142_Inventory_of_locative_stative_verbs.qmd": {
+    "142_Inventory_of_locative_stative_verbs.html": "18616ed5"
+  },
+  "ru/143_Meditative_content_question.qmd": {
+    "143_Meditative_content_question.html": "52ee7e6e"
+  },
+  "ru/144_Meditative_polar_question.qmd": {
+    "144_Meditative_polar_question.html": "8942f18a"
+  },
+  "ru/145_Negative_aorist.qmd": {
+    "145_Negative_aorist.html": "4f8892c5"
+  },
+  "ru/146_Negative_copula__past_tense.qmd": {
+    "146_Negative_copula__past_tense.html": "e59de85b"
+  },
+  "ru/147_Negative_copula__present_tense.qmd": {
+    "147_Negative_copula__present_tense.html": "94966478"
+  },
+  "ru/148_Negative_future.qmd": {
+    "148_Negative_future.html": "3125e350"
+  },
+  "ru/149_Negative_perfect.qmd": {
+    "149_Negative_perfect.html": "2da7c53d"
+  },
+  "ru/150_Negative_present.qmd": {
+    "150_Negative_present.html": "f1e9e5ce"
+  },
+  "ru/151_Negative_present_habitual.qmd": {
+    "151_Negative_present_habitual.html": "d05064d4"
+  },
+  "ru/152_Perfect.qmd": {
+    "152_Perfect.html": "c0ed6214"
+  },
+  "ru/153_Perfective_participle.qmd": {
+    "153_Perfective_participle.html": "b166ade1"
+  },
+  "ru/154_Polar_interrogative_marker.qmd": {
+    "154_Polar_interrogative_marker.html": "146cd979"
+  },
+  "ru/155_Present.qmd": {
+    "155_Present.html": "2feaabf6"
+  },
+  "ru/156_Present_habitual.qmd": {
+    "156_Present_habitual.html": "5ed8bf31"
+  },
+  "ru/157_Prospective_participle.qmd": {
+    "157_Prospective_participle.html": "1c9d1baa"
+  },
+  "ru/158_Stative_verb_‘be’__negative_past.qmd": {
+    "158_Stative_verb_‘be’__negative_past.html": "7482e1aa"
+  },
+  "ru/159_Stative_verb_‘be’__negative_present.qmd": {
+    "159_Stative_verb_‘be’__negative_present.html": "cb30cd2a"
+  },
+  "ru/160_Stative_verb_‘be’__past.qmd": {
+    "160_Stative_verb_‘be’__past.html": "e12588ee"
+  },
+  "ru/161_Stative_verb_‘be’__periphrastic_present.qmd": {
+    "161_Stative_verb_‘be’__periphrastic_present.html": "00f031a7"
+  },
+  "ru/162_Stative_verb_‘be’__synthetic_present.qmd": {
+    "162_Stative_verb_‘be’__synthetic_present.html": "e0af035e"
+  },
+  "ru/163_Stative_verb_‘remain’_with_a_prefix_ǯV.qmd": {
+    "163_Stative_verb_‘remain’_with_a_prefix_ǯV.html": "f3d0863a"
+  },
+  "ru/164_Stative_verb_‘remain’_with_a_prefix_ǯV-.qmd": {
+    "164_Stative_verb_‘remain’_with_a_prefix_ǯV-.html": "87c555b5"
+  },
+  "ru/165_Stative_verb_‘remain’__negative_past.qmd": {
+    "165_Stative_verb_‘remain’__negative_past.html": "138a1b24"
+  },
+  "ru/166_Stative_verb_‘remain’__negative_present.qmd": {
+    "166_Stative_verb_‘remain’__negative_present.html": "5d087015"
+  },
+  "ru/167_Stative_verb_‘remain’__past.qmd": {
+    "167_Stative_verb_‘remain’__past.html": "7984c7d3"
+  },
+  "ru/168_Stative_verb_‘remain’__present.qmd": {
+    "168_Stative_verb_‘remain’__present.html": "848ee2e0"
+  },
+  "ru/169_The_verb_‘become’__imperative_and_prohibitive.qmd": {
+    "169_The_verb_‘become’__imperative_and_prohibitive.html": "5937b77f"
+  },
+  "ru/170_The_verb_‘become’__imperfective_stem.qmd": {
+    "170_The_verb_‘become’__imperfective_stem.html": "cc87278d"
+  },
+  "ru/171_The_verb_‘become’__infinitive.qmd": {
+    "171_The_verb_‘become’__infinitive.html": "ec3113c9"
+  },
+  "ru/172_The_verb_‘become’__perfective_stem.qmd": {
+    "172_The_verb_‘become’__perfective_stem.html": "9705c52a"
+  },
+  "ru/173_The_verb_‘say’__perfective_and_imperfective_stems.qmd": {
+    "173_The_verb_‘say’__perfective_and_imperfective_stems.html": "83d03fe8"
+  },
+  "ru/174_Verb_form_used_in_perfective_past_contexts.qmd": {
+    "174_Verb_form_used_in_perfective_past_contexts.html": "8dc6fa80"
+  },
+  "ru/175_Verb_form_used_in_present_habitual_contexts.qmd": {
+    "175_Verb_form_used_in_present_habitual_contexts.html": "ffbdfa00"
+  },
+  "ru/176_Causative_from_intransitive_verbs.qmd": {
+    "176_Causative_from_intransitive_verbs.html": "134be7bb"
+  },
+  "ru/177_Causative_from_transitive_verbs.qmd": {
+    "177_Causative_from_transitive_verbs.html": "d08273d0"
+  },
+  "ru/178_Counterfactual_conditional_converb_suffixes.qmd": {
+    "178_Counterfactual_conditional_converb_suffixes.html": "d9b677c3"
+  },
+  "ru/179_Differentiation_of_the_optative_and_the_jussive.qmd": {
+    "179_Differentiation_of_the_optative_and_the_jussive.html": "683e077a"
+  },
+  "ru/180_Hortative_‘Let’s_go!’.qmd": {
+    "180_Hortative_‘Let’s_go!’.html": "32224214"
+  },
+  "ru/181_Hortative_marking.qmd": {
+    "181_Hortative_marking.html": "cb64b054"
+  },
+  "ru/182_Imperative.qmd": {
+    "182_Imperative.html": "1b226f48"
+  },
+  "ru/183_Optative.qmd": {
+    "183_Optative.html": "541baa10"
+  },
+  "ru/184_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "184_Perfective_forms_of_the_verb_‘do’.html": "77e15382"
+  },
+  "ru/185_Perfective_Imperfective_converb_suffix.qmd": {
+    "185_Perfective_Imperfective_converb_suffix.html": "701b9287"
+  },
+  "ru/186_Refactive.qmd": {
+    "186_Refactive.html": "c29f2d51"
+  },
+  "ru/187_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.qmd": {
+    "187_Stem_consonant_deletion_in_Perfective_forms_of_the_verb_‘do’.html": "531f9551"
+  },
+  "ru/188_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.qmd": {
+    "188_Universal_concessive_conditional_clauses__presence_of_the_additive_markers.html": "781bec11"
+  },
+  "ru/189_Universal_concessive_conditional_converb_suffixes.qmd": {
+    "189_Universal_concessive_conditional_converb_suffixes.html": "4bb082a2"
+  },
+  "ru/190_Vowel_fronting_in_human_and_animate_plural_forms.qmd": {
+    "190_Vowel_fronting_in_human_and_animate_plural_forms.html": "43f1981e"
+  },
+  "ru/191_Wish_formula_‘Good_morning’.qmd": {
+    "191_Wish_formula_‘Good_morning’.html": "87c86606"
+  },
+  "ru/192_Wish_formula_‘Have_a_nice_trip’.qmd": {
+    "192_Wish_formula_‘Have_a_nice_trip’.html": "b8b599b5"
+  },
+  "ru/193_Absolutive_marker_of_negative_pronouns.qmd": {
+    "193_Absolutive_marker_of_negative_pronouns.html": "99f8b91d"
+  },
+  "ru/194_Anaphoric_demonstrative.qmd": {
+    "194_Anaphoric_demonstrative.html": "a8af9c72"
+  },
+  "ru/195_Contrastive_anaphoric_demonstrative.qmd": {
+    "195_Contrastive_anaphoric_demonstrative.html": "5779692e"
+  },
+  "ru/196_Emphatic_prefix_in_demonstratives.qmd": {
+    "196_Emphatic_prefix_in_demonstratives.html": "dd50fe10"
+  },
+  "ru/197_Ergative_marker_of_negative_pronouns.qmd": {
+    "197_Ergative_marker_of_negative_pronouns.html": "1ea7f770"
+  },
+  "ru/198_Ergative_marker_of_the_medial_demonstrative.qmd": {
+    "198_Ergative_marker_of_the_medial_demonstrative.html": "9a6f0559"
+  },
+  "ru/199_Ergative_stem_of_negative_pronouns.qmd": {
+    "199_Ergative_stem_of_negative_pronouns.html": "d9207b42"
+  },
+  "ru/200_Ergative_stem_of_the_medial_demonstrative.qmd": {
+    "200_Ergative_stem_of_the_medial_demonstrative.html": "a324bfdb"
+  },
+  "ru/201_First_person_reflexive_construction.qmd": {
+    "201_First_person_reflexive_construction.html": "1bb5ab6c"
+  },
+  "ru/202_Formant_-n_in_the_distal_demonstrative.qmd": {
+    "202_Formant_-n_in_the_distal_demonstrative.html": "51ffbded"
+  },
+  "ru/203_Plural_of_‘who’.qmd": {
+    "203_Plural_of_‘who’.html": "9d9aa46a"
+  },
+  "ru/204_Singular_of_‘who’.qmd": {
+    "204_Singular_of_‘who’.html": "cdd2d47e"
+  },
+  "ru/205_Stems_of_reflexive_pronouns.qmd": {
+    "205_Stems_of_reflexive_pronouns.html": "fb78d215"
+  },
+  "ru/206_Suffix_-d(V)_in_demonstratives.qmd": {
+    "206_Suffix_-d(V)_in_demonstratives.html": "c3ca6bde"
+  },
+  "ru/207_Additive_particle.qmd": {
+    "207_Additive_particle.html": "8cb5044f"
+  },
+  "ru/208_Alternative_concessive_conditionals.qmd": {
+    "208_Alternative_concessive_conditionals.html": "e8f268b1"
+  },
+  "ru/209_Concessive_marking.qmd": {
+    "209_Concessive_marking.html": "771d26ff"
+  },
+  "ru/210_Concessive-conditional_marking.qmd": {
+    "210_Concessive-conditional_marking.html": "50eb02d6"
+  },
+  "ru/211_Conjunction_particle.qmd": {
+    "211_Conjunction_particle.html": "12544d50"
+  },
+  "ru/212_Disjunction_marker.qmd": {
+    "212_Disjunction_marker.html": "1d27cee0"
+  },
+  "ru/213_Exponence_of_«sequential»_temporal_semantics.qmd": {
+    "213_Exponence_of_«sequential»_temporal_semantics.html": "30919ecf"
+  },
+  "ru/214_Free-choice_indefinite.qmd": {
+    "214_Free-choice_indefinite.html": "30825199"
+  },
+  "ru/215_Hypothetical_conditional_converb_suffix.qmd": {
+    "215_Hypothetical_conditional_converb_suffix.html": "7fa5aa84"
+  },
+  "ru/216_Limitative_converb.qmd": {
+    "216_Limitative_converb.html": "04358841"
+  },
+  "ru/217_Non-specific_indefinite_pronouns.qmd": {
+    "217_Non-specific_indefinite_pronouns.html": "637b8028"
+  },
+  "ru/218_Presence_of_additive_in_free-choice_indefinite_pronouns.qmd": {
+    "218_Presence_of_additive_in_free-choice_indefinite_pronouns.html": "4041e776"
+  },
+  "ru/219_Presence_of_additive_in_non-specific_indefinite_pronouns.qmd": {
+    "219_Presence_of_additive_in_non-specific_indefinite_pronouns.html": "c2f79b1a"
+  },
+  "ru/220_Realis_conditional_converb_suffix.qmd": {
+    "220_Realis_conditional_converb_suffix.html": "2af762d1"
+  },
+  "ru/221_Scalar_additive_context.qmd": {
+    "221_Scalar_additive_context.html": "43768f95"
+  },
+  "ru/222_Basic_lexicon_item_‘all_(pl_)’.qmd": {
+    "222_Basic_lexicon_item_‘all_(pl_)’.html": "98076b60"
+  },
+  "ru/223_Basic_lexicon_item_‘ant’.qmd": {
+    "223_Basic_lexicon_item_‘ant’.html": "656ce755"
+  },
+  "ru/224_Basic_lexicon_item_‘ash’.qmd": {
+    "224_Basic_lexicon_item_‘ash’.html": "af0d6e9d"
+  },
+  "ru/225_Basic_lexicon_item_‘back_(anatomical)’.qmd": {
+    "225_Basic_lexicon_item_‘back_(anatomical)’.html": "f7ab505a"
+  },
+  "ru/226_Basic_lexicon_item_‘bad’.qmd": {
+    "226_Basic_lexicon_item_‘bad’.html": "270d1877"
+  },
+  "ru/227_Basic_lexicon_item_‘bark_(n_)’.qmd": {
+    "227_Basic_lexicon_item_‘bark_(n_)’.html": "2b1ce3c6"
+  },
+  "ru/228_Basic_lexicon_item_‘belly’.qmd": {
+    "228_Basic_lexicon_item_‘belly’.html": "88b08204"
+  },
+  "ru/229_Basic_lexicon_item_‘big’.qmd": {
+    "229_Basic_lexicon_item_‘big’.html": "930b5886"
+  },
+  "ru/230_Basic_lexicon_item_‘bird’.qmd": {
+    "230_Basic_lexicon_item_‘bird’.html": "e6963f9b"
+  },
+  "ru/231_Basic_lexicon_item_‘bite’.qmd": {
+    "231_Basic_lexicon_item_‘bite’.html": "bf6f8d52"
+  },
+  "ru/232_Basic_lexicon_item_‘bitter’.qmd": {
+    "232_Basic_lexicon_item_‘bitter’.html": "93fad793"
+  },
+  "ru/233_Basic_lexicon_item_‘black’.qmd": {
+    "233_Basic_lexicon_item_‘black’.html": "7482a29a"
+  },
+  "ru/234_Basic_lexicon_item_‘blood’.qmd": {
+    "234_Basic_lexicon_item_‘blood’.html": "3d2a60b2"
+  },
+  "ru/235_Basic_lexicon_item_‘blow_(v,_of_person)’.qmd": {
+    "235_Basic_lexicon_item_‘blow_(v,_of_person)’.html": "7dd66018"
+  },
+  "ru/236_Basic_lexicon_item_‘bone’.qmd": {
+    "236_Basic_lexicon_item_‘bone’.html": "5bc7db9e"
+  },
+  "ru/237_Basic_lexicon_item_‘breathe’.qmd": {
+    "237_Basic_lexicon_item_‘breathe’.html": "9c3303a8"
+  },
+  "ru/238_Basic_lexicon_item_‘burn_(intr)’.qmd": {
+    "238_Basic_lexicon_item_‘burn_(intr)’.html": "cbfa80af"
+  },
+  "ru/239_Basic_lexicon_item_‘burn_(tr)’.qmd": {
+    "239_Basic_lexicon_item_‘burn_(tr)’.html": "fbcf9a8c"
+  },
+  "ru/240_Basic_lexicon_item_‘carry’.qmd": {
+    "240_Basic_lexicon_item_‘carry’.html": "f77830bf"
+  },
+  "ru/241_Basic_lexicon_item_‘chest’.qmd": {
+    "241_Basic_lexicon_item_‘chest’.html": "27753ac1"
+  },
+  "ru/242_Basic_lexicon_item_‘child’.qmd": {
+    "242_Basic_lexicon_item_‘child’.html": "b0ec0d41"
+  },
+  "ru/243_Basic_lexicon_item_‘claw’.qmd": {
+    "243_Basic_lexicon_item_‘claw’.html": "9982219b"
+  },
+  "ru/244_Basic_lexicon_item_‘cloud’.qmd": {
+    "244_Basic_lexicon_item_‘cloud’.html": "452e9733"
+  },
+  "ru/245_Basic_lexicon_item_‘cold’.qmd": {
+    "245_Basic_lexicon_item_‘cold’.html": "795007e5"
+  },
+  "ru/246_Basic_lexicon_item_‘come’.qmd": {
+    "246_Basic_lexicon_item_‘come’.html": "97c20eed"
+  },
+  "ru/247_Basic_lexicon_item_‘count’.qmd": {
+    "247_Basic_lexicon_item_‘count’.html": "f9512cb3"
+  },
+  "ru/248_Basic_lexicon_item_‘cut’.qmd": {
+    "248_Basic_lexicon_item_‘cut’.html": "f4e9422c"
+  },
+  "ru/249_Basic_lexicon_item_‘day_(daytime)’.qmd": {
+    "249_Basic_lexicon_item_‘day_(daytime)’.html": "0665083a"
+  },
+  "ru/250_Basic_lexicon_item_‘die’.qmd": {
+    "250_Basic_lexicon_item_‘die’.html": "75e3263b"
+  },
+  "ru/251_Basic_lexicon_item_‘dig’.qmd": {
+    "251_Basic_lexicon_item_‘dig’.html": "9632154f"
+  },
+  "ru/252_Basic_lexicon_item_‘dirty’.qmd": {
+    "252_Basic_lexicon_item_‘dirty’.html": "f5fb4d5c"
+  },
+  "ru/253_Basic_lexicon_item_‘do’.qmd": {
+    "253_Basic_lexicon_item_‘do’.html": "0996fe72"
+  },
+  "ru/254_Basic_lexicon_item_‘dog’.qmd": {
+    "254_Basic_lexicon_item_‘dog’.html": "f448b1e3"
+  },
+  "ru/255_Basic_lexicon_item_‘drink’.qmd": {
+    "255_Basic_lexicon_item_‘drink’.html": "d293ad6c"
+  },
+  "ru/256_Basic_lexicon_item_‘dry’.qmd": {
+    "256_Basic_lexicon_item_‘dry’.html": "248cb56e"
+  },
+  "ru/257_Basic_lexicon_item_‘dust’.qmd": {
+    "257_Basic_lexicon_item_‘dust’.html": "3a474679"
+  },
+  "ru/258_Basic_lexicon_item_‘ear’.qmd": {
+    "258_Basic_lexicon_item_‘ear’.html": "8a153498"
+  },
+  "ru/259_Basic_lexicon_item_‘earth’.qmd": {
+    "259_Basic_lexicon_item_‘earth’.html": "79d54116"
+  },
+  "ru/260_Basic_lexicon_item_‘eat_(tr)’.qmd": {
+    "260_Basic_lexicon_item_‘eat_(tr)’.html": "a4596c11"
+  },
+  "ru/261_Basic_lexicon_item_‘egg’.qmd": {
+    "261_Basic_lexicon_item_‘egg’.html": "72caa7e4"
+  },
+  "ru/262_Basic_lexicon_item_‘eye’.qmd": {
+    "262_Basic_lexicon_item_‘eye’.html": "33463a3a"
+  },
+  "ru/263_Basic_lexicon_item_‘fall’.qmd": {
+    "263_Basic_lexicon_item_‘fall’.html": "08f3b92e"
+  },
+  "ru/264_Basic_lexicon_item_‘far’.qmd": {
+    "264_Basic_lexicon_item_‘far’.html": "f8d5e6a7"
+  },
+  "ru/265_Basic_lexicon_item_‘fat’.qmd": {
+    "265_Basic_lexicon_item_‘fat’.html": "f9967be1"
+  },
+  "ru/266_Basic_lexicon_item_‘father’.qmd": {
+    "266_Basic_lexicon_item_‘father’.html": "9b047ffd"
+  },
+  "ru/267_Basic_lexicon_item_‘fear’.qmd": {
+    "267_Basic_lexicon_item_‘fear’.html": "2e6874c1"
+  },
+  "ru/268_Basic_lexicon_item_‘feather’.qmd": {
+    "268_Basic_lexicon_item_‘feather’.html": "32737507"
+  },
+  "ru/269_Basic_lexicon_item_‘fight_(vb)’.qmd": {
+    "269_Basic_lexicon_item_‘fight_(vb)’.html": "3e644e65"
+  },
+  "ru/270_Basic_lexicon_item_‘fingernail’.qmd": {
+    "270_Basic_lexicon_item_‘fingernail’.html": "934638dd"
+  },
+  "ru/271_Basic_lexicon_item_‘fire’.qmd": {
+    "271_Basic_lexicon_item_‘fire’.html": "d3d95386"
+  },
+  "ru/272_Basic_lexicon_item_‘fish’.qmd": {
+    "272_Basic_lexicon_item_‘fish’.html": "f714d12b"
+  },
+  "ru/273_Basic_lexicon_item_‘five’.qmd": {
+    "273_Basic_lexicon_item_‘five’.html": "7e53418e"
+  },
+  "ru/274_Basic_lexicon_item_‘flower’.qmd": {
+    "274_Basic_lexicon_item_‘flower’.html": "a86028a0"
+  },
+  "ru/275_Basic_lexicon_item_‘fly_(v)’.qmd": {
+    "275_Basic_lexicon_item_‘fly_(v)’.html": "83b36b75"
+  },
+  "ru/276_Basic_lexicon_item_‘fly’.qmd": {
+    "276_Basic_lexicon_item_‘fly’.html": "ce410061"
+  },
+  "ru/277_Basic_lexicon_item_‘fog’.qmd": {
+    "277_Basic_lexicon_item_‘fog’.html": "9d4726cb"
+  },
+  "ru/278_Basic_lexicon_item_‘foot’.qmd": {
+    "278_Basic_lexicon_item_‘foot’.html": "ffc22431"
+  },
+  "ru/279_Basic_lexicon_item_‘forest’.qmd": {
+    "279_Basic_lexicon_item_‘forest’.html": "9ceeebb8"
+  },
+  "ru/280_Basic_lexicon_item_‘four’.qmd": {
+    "280_Basic_lexicon_item_‘four’.html": "dc6baa9c"
+  },
+  "ru/281_Basic_lexicon_item_‘freeze’.qmd": {
+    "281_Basic_lexicon_item_‘freeze’.html": "7c1500c2"
+  },
+  "ru/282_Basic_lexicon_item_‘fruit’.qmd": {
+    "282_Basic_lexicon_item_‘fruit’.html": "afdf2239"
+  },
+  "ru/283_Basic_lexicon_item_‘full’.qmd": {
+    "283_Basic_lexicon_item_‘full’.html": "bb313d09"
+  },
+  "ru/284_Basic_lexicon_item_‘give’.qmd": {
+    "284_Basic_lexicon_item_‘give’.html": "0e7e8196"
+  },
+  "ru/285_Basic_lexicon_item_‘go’.qmd": {
+    "285_Basic_lexicon_item_‘go’.html": "1dff671e"
+  },
+  "ru/286_Basic_lexicon_item_‘good’.qmd": {
+    "286_Basic_lexicon_item_‘good’.html": "c8bb3066"
+  },
+  "ru/287_Basic_lexicon_item_‘grass’.qmd": {
+    "287_Basic_lexicon_item_‘grass’.html": "1061417a"
+  },
+  "ru/288_Basic_lexicon_item_‘green’.qmd": {
+    "288_Basic_lexicon_item_‘green’.html": "9323e7e6"
+  },
+  "ru/289_Basic_lexicon_item_‘grind_(flour)’.qmd": {
+    "289_Basic_lexicon_item_‘grind_(flour)’.html": "f525a0c0"
+  },
+  "ru/290_Basic_lexicon_item_‘hair_(mass)’.qmd": {
+    "290_Basic_lexicon_item_‘hair_(mass)’.html": "2e405178"
+  },
+  "ru/291_Basic_lexicon_item_‘hand’.qmd": {
+    "291_Basic_lexicon_item_‘hand’.html": "591567a2"
+  },
+  "ru/292_Basic_lexicon_item_‘hard’.qmd": {
+    "292_Basic_lexicon_item_‘hard’.html": "81ce5691"
+  },
+  "ru/293_Basic_lexicon_item_‘head’.qmd": {
+    "293_Basic_lexicon_item_‘head’.html": "c90c5ff8"
+  },
+  "ru/294_Basic_lexicon_item_‘hear’.qmd": {
+    "294_Basic_lexicon_item_‘hear’.html": "f9f6dff8"
+  },
+  "ru/295_Basic_lexicon_item_‘heart’.qmd": {
+    "295_Basic_lexicon_item_‘heart’.html": "7f32d10e"
+  },
+  "ru/296_Basic_lexicon_item_‘heavy’.qmd": {
+    "296_Basic_lexicon_item_‘heavy’.html": "cb747daf"
+  },
+  "ru/297_Basic_lexicon_item_‘here’.qmd": {
+    "297_Basic_lexicon_item_‘here’.html": "762f521f"
+  },
+  "ru/298_Basic_lexicon_item_‘hide_(tr)’.qmd": {
+    "298_Basic_lexicon_item_‘hide_(tr)’.html": "ccf30723"
+  },
+  "ru/299_Basic_lexicon_item_‘hit_(once)’.qmd": {
+    "299_Basic_lexicon_item_‘hit_(once)’.html": "928ffbe5"
+  },
+  "ru/300_Basic_lexicon_item_‘horn’.qmd": {
+    "300_Basic_lexicon_item_‘horn’.html": "7e0e283d"
+  },
+  "ru/301_Basic_lexicon_item_‘hot’.qmd": {
+    "301_Basic_lexicon_item_‘hot’.html": "3e180e64"
+  },
+  "ru/302_Basic_lexicon_item_‘house’.qmd": {
+    "302_Basic_lexicon_item_‘house’.html": "e77d1aa3"
+  },
+  "ru/303_Basic_lexicon_item_‘how’.qmd": {
+    "303_Basic_lexicon_item_‘how’.html": "dee94087"
+  },
+  "ru/304_Basic_lexicon_item_‘hunt’.qmd": {
+    "304_Basic_lexicon_item_‘hunt’.html": "d3b429ae"
+  },
+  "ru/305_Basic_lexicon_item_‘I_(OBL)’.qmd": {
+    "305_Basic_lexicon_item_‘I_(OBL)’.html": "7ea9315c"
+  },
+  "ru/306_Basic_lexicon_item_‘I’.qmd": {
+    "306_Basic_lexicon_item_‘I’.html": "88041681"
+  },
+  "ru/307_Basic_lexicon_item_‘ice’.qmd": {
+    "307_Basic_lexicon_item_‘ice’.html": "6413111f"
+  },
+  "ru/308_Basic_lexicon_item_‘intestines,_guts’.qmd": {
+    "308_Basic_lexicon_item_‘intestines,_guts’.html": "9c00445d"
+  },
+  "ru/309_Basic_lexicon_item_‘kill’.qmd": {
+    "309_Basic_lexicon_item_‘kill’.html": "08e3cb15"
+  },
+  "ru/310_Basic_lexicon_item_‘knee’.qmd": {
+    "310_Basic_lexicon_item_‘knee’.html": "03cd7269"
+  },
+  "ru/311_Basic_lexicon_item_‘know’.qmd": {
+    "311_Basic_lexicon_item_‘know’.html": "458d2a7f"
+  },
+  "ru/312_Basic_lexicon_item_‘lake’.qmd": {
+    "312_Basic_lexicon_item_‘lake’.html": "b86521c1"
+  },
+  "ru/313_Basic_lexicon_item_‘laugh’.qmd": {
+    "313_Basic_lexicon_item_‘laugh’.html": "587d6f1c"
+  },
+  "ru/314_Basic_lexicon_item_‘leaf’.qmd": {
+    "314_Basic_lexicon_item_‘leaf’.html": "e07c035e"
+  },
+  "ru/315_Basic_lexicon_item_‘left’.qmd": {
+    "315_Basic_lexicon_item_‘left’.html": "cd91acb6"
+  },
+  "ru/316_Basic_lexicon_item_‘leg’.qmd": {
+    "316_Basic_lexicon_item_‘leg’.html": "ef58dfc4"
+  },
+  "ru/317_Basic_lexicon_item_‘lie’.qmd": {
+    "317_Basic_lexicon_item_‘lie’.html": "ba8806c3"
+  },
+  "ru/318_Basic_lexicon_item_‘live,_exist’.qmd": {
+    "318_Basic_lexicon_item_‘live,_exist’.html": "61752071"
+  },
+  "ru/319_Basic_lexicon_item_‘liver’.qmd": {
+    "319_Basic_lexicon_item_‘liver’.html": "8d3d0ae9"
+  },
+  "ru/320_Basic_lexicon_item_‘long’.qmd": {
+    "320_Basic_lexicon_item_‘long’.html": "8a9a8891"
+  },
+  "ru/321_Basic_lexicon_item_‘louse’.qmd": {
+    "321_Basic_lexicon_item_‘louse’.html": "9c5acffc"
+  },
+  "ru/322_Basic_lexicon_item_‘man’.qmd": {
+    "322_Basic_lexicon_item_‘man’.html": "1eed7bcc"
+  },
+  "ru/323_Basic_lexicon_item_‘many’.qmd": {
+    "323_Basic_lexicon_item_‘many’.html": "c3aef6aa"
+  },
+  "ru/324_Basic_lexicon_item_‘meat’.qmd": {
+    "324_Basic_lexicon_item_‘meat’.html": "2dee13e5"
+  },
+  "ru/325_Basic_lexicon_item_‘moon’.qmd": {
+    "325_Basic_lexicon_item_‘moon’.html": "096e0366"
+  },
+  "ru/326_Basic_lexicon_item_‘mother’.qmd": {
+    "326_Basic_lexicon_item_‘mother’.html": "c2e3456a"
+  },
+  "ru/327_Basic_lexicon_item_‘mountain’.qmd": {
+    "327_Basic_lexicon_item_‘mountain’.html": "5d97ead1"
+  },
+  "ru/328_Basic_lexicon_item_‘mouth_(external)’.qmd": {
+    "328_Basic_lexicon_item_‘mouth_(external)’.html": "f381a5c9"
+  },
+  "ru/329_Basic_lexicon_item_‘name’.qmd": {
+    "329_Basic_lexicon_item_‘name’.html": "3ad3babd"
+  },
+  "ru/330_Basic_lexicon_item_‘narrow’.qmd": {
+    "330_Basic_lexicon_item_‘narrow’.html": "fc27cee7"
+  },
+  "ru/331_Basic_lexicon_item_‘navel’.qmd": {
+    "331_Basic_lexicon_item_‘navel’.html": "26613c72"
+  },
+  "ru/332_Basic_lexicon_item_‘near’.qmd": {
+    "332_Basic_lexicon_item_‘near’.html": "41ca3d2c"
+  },
+  "ru/333_Basic_lexicon_item_‘neck’.qmd": {
+    "333_Basic_lexicon_item_‘neck’.html": "427e97be"
+  },
+  "ru/334_Basic_lexicon_item_‘new’.qmd": {
+    "334_Basic_lexicon_item_‘new’.html": "e79b7330"
+  },
+  "ru/335_Basic_lexicon_item_‘night’.qmd": {
+    "335_Basic_lexicon_item_‘night’.html": "aa767337"
+  },
+  "ru/336_Basic_lexicon_item_‘nose’.qmd": {
+    "336_Basic_lexicon_item_‘nose’.html": "5a5b2614"
+  },
+  "ru/337_Basic_lexicon_item_‘not_(indicative)’.qmd": {
+    "337_Basic_lexicon_item_‘not_(indicative)’.html": "ff71cf49"
+  },
+  "ru/338_Basic_lexicon_item_‘one’.qmd": {
+    "338_Basic_lexicon_item_‘one’.html": "d1676e29"
+  },
+  "ru/339_Basic_lexicon_item_‘person’.qmd": {
+    "339_Basic_lexicon_item_‘person’.html": "17a38438"
+  },
+  "ru/340_Basic_lexicon_item_‘play_(tr)’.qmd": {
+    "340_Basic_lexicon_item_‘play_(tr)’.html": "86222177"
+  },
+  "ru/341_Basic_lexicon_item_‘pull’.qmd": {
+    "341_Basic_lexicon_item_‘pull’.html": "dbb40eae"
+  },
+  "ru/342_Basic_lexicon_item_‘push’.qmd": {
+    "342_Basic_lexicon_item_‘push’.html": "73aa7978"
+  },
+  "ru/343_Basic_lexicon_item_‘rain’.qmd": {
+    "343_Basic_lexicon_item_‘rain’.html": "50119d6c"
+  },
+  "ru/344_Basic_lexicon_item_‘red’.qmd": {
+    "344_Basic_lexicon_item_‘red’.html": "444b8945"
+  },
+  "ru/345_Basic_lexicon_item_‘right’.qmd": {
+    "345_Basic_lexicon_item_‘right’.html": "ef8c5b7d"
+  },
+  "ru/346_Basic_lexicon_item_‘river’.qmd": {
+    "346_Basic_lexicon_item_‘river’.html": "b144514e"
+  },
+  "ru/347_Basic_lexicon_item_‘road’.qmd": {
+    "347_Basic_lexicon_item_‘road’.html": "a6eda1fe"
+  },
+  "ru/348_Basic_lexicon_item_‘root’.qmd": {
+    "348_Basic_lexicon_item_‘root’.html": "e9587ea8"
+  },
+  "ru/349_Basic_lexicon_item_‘rotten’.qmd": {
+    "349_Basic_lexicon_item_‘rotten’.html": "873177b5"
+  },
+  "ru/350_Basic_lexicon_item_‘round’.qmd": {
+    "350_Basic_lexicon_item_‘round’.html": "5052f348"
+  },
+  "ru/351_Basic_lexicon_item_‘run’.qmd": {
+    "351_Basic_lexicon_item_‘run’.html": "b1b79f57"
+  },
+  "ru/352_Basic_lexicon_item_‘salt’.qmd": {
+    "352_Basic_lexicon_item_‘salt’.html": "2b8c9f18"
+  },
+  "ru/353_Basic_lexicon_item_‘sand’.qmd": {
+    "353_Basic_lexicon_item_‘sand’.html": "5de4de96"
+  },
+  "ru/354_Basic_lexicon_item_‘say’.qmd": {
+    "354_Basic_lexicon_item_‘say’.html": "b6e18c98"
+  },
+  "ru/355_Basic_lexicon_item_‘scratch’.qmd": {
+    "355_Basic_lexicon_item_‘scratch’.html": "eca67bb3"
+  },
+  "ru/356_Basic_lexicon_item_‘sea’.qmd": {
+    "356_Basic_lexicon_item_‘sea’.html": "64177c39"
+  },
+  "ru/357_Basic_lexicon_item_‘see’.qmd": {
+    "357_Basic_lexicon_item_‘see’.html": "a5920fbe"
+  },
+  "ru/358_Basic_lexicon_item_‘seed_granule’.qmd": {
+    "358_Basic_lexicon_item_‘seed_granule’.html": "5322f35d"
+  },
+  "ru/359_Basic_lexicon_item_‘sew’.qmd": {
+    "359_Basic_lexicon_item_‘sew’.html": "c9c828c5"
+  },
+  "ru/360_Basic_lexicon_item_‘shadow’.qmd": {
+    "360_Basic_lexicon_item_‘shadow’.html": "3750e4bc"
+  },
+  "ru/361_Basic_lexicon_item_‘sharp’.qmd": {
+    "361_Basic_lexicon_item_‘sharp’.html": "e96ff19d"
+  },
+  "ru/362_Basic_lexicon_item_‘short’.qmd": {
+    "362_Basic_lexicon_item_‘short’.html": "ea994c35"
+  },
+  "ru/363_Basic_lexicon_item_‘sing’.qmd": {
+    "363_Basic_lexicon_item_‘sing’.html": "8828d039"
+  },
+  "ru/364_Basic_lexicon_item_‘sit’.qmd": {
+    "364_Basic_lexicon_item_‘sit’.html": "ef20d2b2"
+  },
+  "ru/365_Basic_lexicon_item_‘skin’.qmd": {
+    "365_Basic_lexicon_item_‘skin’.html": "be286e62"
+  },
+  "ru/366_Basic_lexicon_item_‘sky’.qmd": {
+    "366_Basic_lexicon_item_‘sky’.html": "f349c707"
+  },
+  "ru/367_Basic_lexicon_item_‘sleep’.qmd": {
+    "367_Basic_lexicon_item_‘sleep’.html": "3ad705d6"
+  },
+  "ru/368_Basic_lexicon_item_‘small’.qmd": {
+    "368_Basic_lexicon_item_‘small’.html": "6db5782d"
+  },
+  "ru/369_Basic_lexicon_item_‘smell_(tr)’.qmd": {
+    "369_Basic_lexicon_item_‘smell_(tr)’.html": "85355612"
+  },
+  "ru/370_Basic_lexicon_item_‘smoke’.qmd": {
+    "370_Basic_lexicon_item_‘smoke’.html": "1b09fffd"
+  },
+  "ru/371_Basic_lexicon_item_‘smooth’.qmd": {
+    "371_Basic_lexicon_item_‘smooth’.html": "512fa538"
+  },
+  "ru/372_Basic_lexicon_item_‘snake’.qmd": {
+    "372_Basic_lexicon_item_‘snake’.html": "818ee131"
+  },
+  "ru/373_Basic_lexicon_item_‘snow’.qmd": {
+    "373_Basic_lexicon_item_‘snow’.html": "28dce945"
+  },
+  "ru/374_Basic_lexicon_item_‘spit’.qmd": {
+    "374_Basic_lexicon_item_‘spit’.html": "f6b595fd"
+  },
+  "ru/375_Basic_lexicon_item_‘stand’.qmd": {
+    "375_Basic_lexicon_item_‘stand’.html": "12e8e2cf"
+  },
+  "ru/376_Basic_lexicon_item_‘star’.qmd": {
+    "376_Basic_lexicon_item_‘star’.html": "a6fd6556"
+  },
+  "ru/377_Basic_lexicon_item_‘stick’.qmd": {
+    "377_Basic_lexicon_item_‘stick’.html": "7a0e5ad7"
+  },
+  "ru/378_Basic_lexicon_item_‘stone’.qmd": {
+    "378_Basic_lexicon_item_‘stone’.html": "21baf814"
+  },
+  "ru/379_Basic_lexicon_item_‘straight’.qmd": {
+    "379_Basic_lexicon_item_‘straight’.html": "9f9f6793"
+  },
+  "ru/380_Basic_lexicon_item_‘sun’.qmd": {
+    "380_Basic_lexicon_item_‘sun’.html": "4cb19aa7"
+  },
+  "ru/381_Basic_lexicon_item_‘sweet’.qmd": {
+    "381_Basic_lexicon_item_‘sweet’.html": "b1bbcd3d"
+  },
+  "ru/382_Basic_lexicon_item_‘swell’.qmd": {
+    "382_Basic_lexicon_item_‘swell’.html": "90d44965"
+  },
+  "ru/383_Basic_lexicon_item_‘swim’.qmd": {
+    "383_Basic_lexicon_item_‘swim’.html": "c1b6bb50"
+  },
+  "ru/384_Basic_lexicon_item_‘tail’.qmd": {
+    "384_Basic_lexicon_item_‘tail’.html": "33b65cde"
+  },
+  "ru/385_Basic_lexicon_item_‘take’.qmd": {
+    "385_Basic_lexicon_item_‘take’.html": "317a34f7"
+  },
+  "ru/386_Basic_lexicon_item_‘that_(medial)’.qmd": {
+    "386_Basic_lexicon_item_‘that_(medial)’.html": "971b9288"
+  },
+  "ru/387_Basic_lexicon_item_‘there_(medial)’.qmd": {
+    "387_Basic_lexicon_item_‘there_(medial)’.html": "82e477da"
+  },
+  "ru/388_Basic_lexicon_item_‘they’.qmd": {
+    "388_Basic_lexicon_item_‘they’.html": "6a6d063b"
+  },
+  "ru/389_Basic_lexicon_item_‘thick’.qmd": {
+    "389_Basic_lexicon_item_‘thick’.html": "89654cbe"
+  },
+  "ru/390_Basic_lexicon_item_‘thigh’.qmd": {
+    "390_Basic_lexicon_item_‘thigh’.html": "d0f43ece"
+  },
+  "ru/391_Basic_lexicon_item_‘thin’.qmd": {
+    "391_Basic_lexicon_item_‘thin’.html": "81ff516a"
+  },
+  "ru/392_Basic_lexicon_item_‘think’.qmd": {
+    "392_Basic_lexicon_item_‘think’.html": "f26bf788"
+  },
+  "ru/393_Basic_lexicon_item_‘this’.qmd": {
+    "393_Basic_lexicon_item_‘this’.html": "e83202de"
+  },
+  "ru/394_Basic_lexicon_item_‘thou_(obl)’.qmd": {
+    "394_Basic_lexicon_item_‘thou_(obl)’.html": "12fe508d"
+  },
+  "ru/395_Basic_lexicon_item_‘thou’.qmd": {
+    "395_Basic_lexicon_item_‘thou’.html": "a3e7ea38"
+  },
+  "ru/396_Basic_lexicon_item_‘three’.qmd": {
+    "396_Basic_lexicon_item_‘three’.html": "b308eb16"
+  },
+  "ru/397_Basic_lexicon_item_‘throw_(v)’.qmd": {
+    "397_Basic_lexicon_item_‘throw_(v)’.html": "b419d922"
+  },
+  "ru/398_Basic_lexicon_item_‘tie_(objects)’.qmd": {
+    "398_Basic_lexicon_item_‘tie_(objects)’.html": "cd224b54"
+  },
+  "ru/399_Basic_lexicon_item_‘tongue’.qmd": {
+    "399_Basic_lexicon_item_‘tongue’.html": "f7651600"
+  },
+  "ru/400_Basic_lexicon_item_‘tooth’.qmd": {
+    "400_Basic_lexicon_item_‘tooth’.html": "43d6c11f"
+  },
+  "ru/401_Basic_lexicon_item_‘tree’.qmd": {
+    "401_Basic_lexicon_item_‘tree’.html": "33c4c188"
+  },
+  "ru/402_Basic_lexicon_item_‘true’.qmd": {
+    "402_Basic_lexicon_item_‘true’.html": "7c2f7913"
+  },
+  "ru/403_Basic_lexicon_item_‘turn_(tr_)’.qmd": {
+    "403_Basic_lexicon_item_‘turn_(tr_)’.html": "41232899"
+  },
+  "ru/404_Basic_lexicon_item_‘two’.qmd": {
+    "404_Basic_lexicon_item_‘two’.html": "2e605e7c"
+  },
+  "ru/405_Basic_lexicon_item_‘vomit’.qmd": {
+    "405_Basic_lexicon_item_‘vomit’.html": "772fc61c"
+  },
+  "ru/406_Basic_lexicon_item_‘walk’.qmd": {
+    "406_Basic_lexicon_item_‘walk’.html": "20269b0f"
+  },
+  "ru/407_Basic_lexicon_item_‘warm’.qmd": {
+    "407_Basic_lexicon_item_‘warm’.html": "07ae4d96"
+  },
+  "ru/408_Basic_lexicon_item_‘wash’.qmd": {
+    "408_Basic_lexicon_item_‘wash’.html": "9b2fc1a1"
+  },
+  "ru/409_Basic_lexicon_item_‘water’.qmd": {
+    "409_Basic_lexicon_item_‘water’.html": "1e74e84d"
+  },
+  "ru/410_Basic_lexicon_item_‘we_(exclusive)’.qmd": {
+    "410_Basic_lexicon_item_‘we_(exclusive)’.html": "aac51cde"
+  },
+  "ru/411_Basic_lexicon_item_‘we_(inclusive)’.qmd": {
+    "411_Basic_lexicon_item_‘we_(inclusive)’.html": "a2208e84"
+  },
+  "ru/412_Basic_lexicon_item_‘weep’.qmd": {
+    "412_Basic_lexicon_item_‘weep’.html": "c2cf11dc"
+  },
+  "ru/413_Basic_lexicon_item_‘wet’.qmd": {
+    "413_Basic_lexicon_item_‘wet’.html": "55777c8e"
+  },
+  "ru/414_Basic_lexicon_item_‘what’.qmd": {
+    "414_Basic_lexicon_item_‘what’.html": "ca8700b4"
+  },
+  "ru/415_Basic_lexicon_item_‘when’.qmd": {
+    "415_Basic_lexicon_item_‘when’.html": "7e38860e"
+  },
+  "ru/416_Basic_lexicon_item_‘where’.qmd": {
+    "416_Basic_lexicon_item_‘where’.html": "08d88878"
+  },
+  "ru/417_Basic_lexicon_item_‘white’.qmd": {
+    "417_Basic_lexicon_item_‘white’.html": "9b94d8d5"
+  },
+  "ru/418_Basic_lexicon_item_‘who’.qmd": {
+    "418_Basic_lexicon_item_‘who’.html": "eb95ce3f"
+  },
+  "ru/419_Basic_lexicon_item_‘wide’.qmd": {
+    "419_Basic_lexicon_item_‘wide’.html": "3f150be6"
+  },
+  "ru/420_Basic_lexicon_item_‘wind’.qmd": {
+    "420_Basic_lexicon_item_‘wind’.html": "93be5354"
+  },
+  "ru/421_Basic_lexicon_item_‘wing’.qmd": {
+    "421_Basic_lexicon_item_‘wing’.html": "dc313f88"
+  },
+  "ru/422_Basic_lexicon_item_‘with’.qmd": {
+    "422_Basic_lexicon_item_‘with’.html": "84987d2e"
+  },
+  "ru/423_Basic_lexicon_item_‘woman’.qmd": {
+    "423_Basic_lexicon_item_‘woman’.html": "06d010f6"
+  },
+  "ru/424_Basic_lexicon_item_‘worm’.qmd": {
+    "424_Basic_lexicon_item_‘worm’.html": "a776ebbf"
+  },
+  "ru/425_Basic_lexicon_item_‘year’.qmd": {
+    "425_Basic_lexicon_item_‘year’.html": "748eb65b"
+  },
+  "ru/426_Basic_lexicon_item_‘yellow’.qmd": {
+    "426_Basic_lexicon_item_‘yellow’.html": "51bbd911"
+  },
+  "ru/427_Basic_lexicon_item_‘yesterday’.qmd": {
+    "427_Basic_lexicon_item_‘yesterday’.html": "40917fe0"
+  },
+  "ru/428_Basic_lexicon_item_‘you_(plural)’.qmd": {
+    "428_Basic_lexicon_item_‘you_(plural)’.html": "6fff1f0e"
+  },
+  "ru/index.qmd": {
+    "index.html": "375ad7d8"
+  },
+  "ru/team.qmd": {
+    "team.html": "9ca44c60"
+  },
+  "ru/features.qmd": {
+    "features.html": "e1a27077"
+  },
+  "R_PROGRESS_SUMMARY.md": {
+    "R_PROGRESS_SUMMARY.html": "a3b95338"
+  }
+}
