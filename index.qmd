@@ -34,7 +34,7 @@ The authors of the project express their deep gratitude to the residents of Rutu
 
 ### How to cite
 
-A. Alekseeva, N. Beklemishev, M. Daniel, N. Dobrushina, K. Filatov, A. Ivanova, T. Maisak, M. Melenchenko, G. Moroz, I. Netkachev, I. Sadakov. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. <https://lingconlab.github.io/rutul_dialectology/index.html>
+Anastasia Alekseeva, Nikita Beklemishev, Michael Daniel, Nina Dobrushina, Konstantin Filatov, Anastasia Ivanova, Timur Maisak, Maxim Melenchenko, George Moroz, Ivan Netkachev, Ilya Sadakov. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. <https://lingconlab.github.io/rutul_dialectology/index.html>
 
 ### Financial support
 
@@ -64,7 +64,7 @@ This project supported by the [Linguistic Convergence Laboratory](). This work i
 
 ### Как ссылаться на данные проекта
 
-A. Alekseeva, N. Beklemishev, M. Daniel, N. Dobrushina, K. Filatov, A. Ivanova, T. Maisak, M. Melenchenko, G. Moroz, I. Netkachev, I. Sadakov. 2023. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. https://lingconlab.github.io/rutul_dialectology/index.html
+Anastasia Alekseeva, Nikita Beklemishev, Michael Daniel, Nina Dobrushina, Konstantin Filatov, Anastasia Ivanova, Timur Maisak, Maxim Melenchenko, George Moroz, Ivan Netkachev, Ilya Sadakov. Atlas of Rutul dialects. Moscow: Linguistic Convergence Laboratory, HSE University. https://lingconlab.github.io/rutul_dialectology/index.html
 
 ### Финансовая поддержка
 
