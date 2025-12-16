@@ -1,20 +1,15 @@
 #!/usr/bin/env Rscript
 
-# ============================================================
-# COMPLETE PIPELINE FOR RUTUL DIALECTOLOGY WEBSITE USING QUARTO
-# ============================================================
 # This script:
 # 1. Generates all QMD files (English and Russian)
 # 2. Renders everything to HTML using Quarto profiles
 # 3. Creates a complete multilingual website
 
-cat("🚀 Starting complete Quarto pipeline for Rutul dialectology website...\n\n")
-
 # Install and load required packages
 packages <- c("tidyverse", "lingtypology", "DT", "knitr", "glue")
 to_install <- packages[!(packages %in% installed.packages()[,"Package"])]
 if(length(to_install) > 0) {
-  cat("📦 Installing required packages...\n")
+  cat("Installing required packages...\n")
   install.packages(to_install, dependencies = TRUE)
 }
 
@@ -26,20 +21,12 @@ suppressPackageStartupMessages({
   library(glue)
 })
 
-cat("✅ All packages loaded successfully\n\n")
-
-# ============================================================
-# STEP 1: GENERATE ALL QMD FILES
-# ============================================================
+cat("All packages loaded successfully\n\n")
 
 # Source the multilingual QMD generation script
 source("scripts/generate_multilingual_qmd.R")
 
 cat("QMD generation completed!\n\n")
-
-# ============================================================
-# STEP 2: RENDER CORE PAGES WITH QUARTO
-# ============================================================
 
 # Render core pages (index, team, features)
 cat("Rendering core pages...\n")
@@ -53,9 +40,6 @@ if (file.exists("docs/index.html") && file.exists("docs/team.html") && file.exis
 
 cat("\n")
 
-# ============================================================
-# STEP 3: RENDER ENGLISH FEATURE PAGES WITH QUARTO
-# ============================================================
 # Render English feature pages
 cat("Rendering English feature pages...\n")
 system("quarto render --profile english", intern = FALSE)
@@ -93,7 +77,4 @@ if (dir.exists("docs/ru") && length(list.files("docs/ru", pattern = "\\.html$"))
 
 cat("\n")
 
-# ============================================================
-# COMPLETION SUMMARY
-# ============================================================
 cat("QUARTO PIPELINE COMPLETED!\n")

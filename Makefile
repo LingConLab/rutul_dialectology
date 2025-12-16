@@ -6,7 +6,7 @@ R_OPTS = --vanilla
 all: compile clean
 
 compile:
-	Rscript scripts/generate_qmd_and_compile.R
+	Rscript scripts/generate_multilingual_qmd.R
 clean:
 	rm -rf docs/data docs/html docs/tests docs/data docs/DESCRIPTION docs/LICENSE docs/Makefile docs/scripts *.html
 test:
