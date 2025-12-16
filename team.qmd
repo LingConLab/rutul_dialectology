@@ -1,22 +1,25 @@
 ::: {.content-visible when-profile="english"}
 
-# Our team
+## Our team
 
-All people listed below collected and coded data. [George Moroz](https://orcid.org/0000-0003-1990-6083) is responsible for the website.
+All people listed below collected and compiled data.
 
 person                  | affiliation
 ------------------------|-----------------------------------------------
-Anastasija Alekseeva    |HSE
-Nikita Beklemishev      |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Michael Daniel          |Collegium de Lyon / Laboratoire Dynamique du Langage
-Nina Dobrushina         |CNRS
-Konstantin Filatov      |HSE / ILS RAS
-Anastasija Ivanova      |HSE
-Timur Maisak            |HSE / ILS RAS
-Maksim Melenchenko      |HSE
-George Moroz            |HSE
-Ivan Netkachev          |HSE
-Ilja Sadakov            |HSE
+Anastasia Alekseeva     |Linguistic convergence laboratory (HSE University, Moscow)
+Nikita Beklemishev      |University of Tübingen
+Michael Daniel          |University of Tübingen
+Nina Dobrushina         |Laboratoire Dynamique du Langage (CNRS, Lyon)
+Konstantin Filatov      |Linguistic convergence laboratory (HSE University, Moscow) / ILS RAS (Saint-Petersburg)
+Anastasia Ivanova       |University of Munich
+Timur Maisak            |Linguistic convergence laboratory (HSE University, Moscow) / IL RAS (Moscow)
+Maksim Melenchenko      |Linguistic convergence laboratory (HSE University, Moscow)
+George Moroz            |Linguistic convergence laboratory (HSE University, Moscow)
+Ivan Netkachev          |Linguistic convergence laboratory (HSE University, Moscow)
+Ilya Sadakov            |Linguistic convergence laboratory (HSE University, Moscow)
+
+
+![](images/road.JPG){fig-align="center" width="100%"}
 
 ## Contact us
 
@@ -26,23 +29,26 @@ You can always leave an issue on the [GitHub page](https://github.com/LingConLab
 
 ::: {.content-visible when-profile="russian"}
 
-# Группа исследователей
+## Группа исследователей
 
 Все перечисленные люди собирали и кодировали данные. [Георгий Мороз](https://orcid.org/0000-0003-1990-6083) отвественный за сайт.
 
 автор                   | аффилиация
 ------------------------|------------------------------------------------
-Анастасия Алексеева     |НИУ ВШЭ
-Никита Беклемишев       |Universität Tübingen / Leibniz-Zentrum Allgemeine Sprachwissenschaft (ZAS)
-Михаил Даниэль          |Collegium de Lyon / Laboratoire Dynamique du Langage
-Нина Добрушина          |CNRS
-Константин Филатов      |НИУ ВШЭ / ИЛИ РАН
-Анастасия Иванова       |НИУ ВШЭ
-Тимур Майсак            |НИУ ВШЭ / ИЯз РАН
-Максим Меленченко       |НИУ ВШЭ
-Георгий Мороз           |НИУ ВШЭ
-Иван Неткачев           |НИУ ВШЭ
-Илья Садаков            |НИУ ВШЭ
+Анастасия Алексеева     |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Никита Беклемишев       |University of Tübingen
+Михаил Даниэль          |University of Tübingen
+Нина Добрушина          |Laboratoire Dynamique du Langage (CNRS, Lyon)
+Константин Филатов      |Международная лаборатория языковой конвергенции (НИУ ВШЭ) / ИЛИ РАН (Санкт-Петербург)
+Анастасия Иванова       |University of Munich
+Тимур Майсак            |Международная лаборатория языковой конвергенции (НИУ ВШЭ) / ИЯз РАН (Москва)
+Максим Меленченко       |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Георгий Мороз           |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Иван Неткачев           |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+Илья Садаков            |Международная лаборатория языковой конвергенции (НИУ ВШЭ)
+
+
+![](images/road.JPG){fig-align="center" width="100%"}
 
 ## Пишите нам
 

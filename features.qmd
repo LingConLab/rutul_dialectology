@@ -57,7 +57,7 @@ db |>
          feature_title_link = str_replace_all(feature_title, "[\\s:\\.]", "_"),
          feature_title_link = str_replace_all(feature_title_link, "[\\\\]", "-"),
          feature_title_link = str_c(feature_id_0, feature_title_link)) |>
-  mutate(feature_title = str_c("<a href='../",
+  mutate(feature_title = str_c("<a href='./",
                                feature_title_link,
                                ".html'>",
                                feature_title,
@@ -74,3 +74,4 @@ db |>
                                dom = 'fltpi'))
 ```
 :::
+

@@ -1,12 +1,15 @@
 project:
   title: "Атлас рутульских диалектов"
+  type: website
   output-dir: ./docs/ru
   render:
+    - ru/*.qmd
     - index.qmd
-    - team.qmd
     - features.qmd
+    - team.qmd
 
 website:
+  title: "Атлас рутульских диалектов"
   navbar:
     left:
       - text: "Список признаков"
@@ -19,3 +22,12 @@ website:
         href: ./../index.html
 
 lang: ru
+
+format:
+  html:
+    theme: litera
+    toc: false
+    number-sections: false
+    code-fold: false
+    code-tools: false
+    self-contained: true

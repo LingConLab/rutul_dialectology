@@ -1,0 +1,167 @@
+---
+title: "Inclusive/exclusive distinction"
+author: "Ilya Sadakov"
+date: 2025-08-28
+format: html
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 9.5)
+```
+
+The map shows whether exclusive reference (‘we, but not you’) and inclusive reference (‘we, including you’) are formally distinguished. We used two contexts: ‘You did not see us’ (exclusive) and ‘We are all human beings’ (inclusive).
+
+The distinction is PRESENT in Khnov where two different pronouns are used: inclusive *jinewi* and exclusive *juˁqumbɨ*.
+
+The distinction is OPTIONAL in Kufa, Rutul and Kiche. For exclusive reference the form *je* is used, and for inclusive reference — the form *je wɨ* (juxtaposition of two pronouns, lit. ‘we you (sg.)’). In our data this distinction is optional, i.e. *je* could be used in place of *je wɨ*. 
+
+In the rest of the villages the distinction is ABSENT.
+
+The case of Ikhrek needs to be discussed in more detail. According to (Ibragimov 2004: 181), Ikhrek does not have inclusive/exclusive distinction. Yet, two forms are used for 1PL — *ži* and *ji* (cf. the form for 1PL *je* in Kina and *ži* in Shinaz). Ibragimov (ibid.) states that these forms are in free distribution, and that *ži* is used more often. Authier (2021: 215) suggests that the two pronouns in Ikhrek distinguishes the inclusive (*ji*) and the exclusive (*ži*). Our field data does not support this claim and confirms Ibragimov’s statement. Both *ji* and *ži* were used in inclusive and exclusive contexts. Our first consultant used *ji* for both contexts, and the second consultant used *ži* for the inclusive and *ji* for the exclusive (which is the distribution opposite to the one observed by Authier). We collected some additional data (not presented on the map). These data supports the claim that the distribution of these forms does not correlate with inclusive/exclusive distinction. Both answers from Ikhrek are thus labeled as ABSENT.
+
+
+## Feature Map
+
+::: {.panel-tabset}
+
+### Map
+
+```{r}
+# Load data for this feature
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lingtypology)
+
+# Read the database and villages data
+db <- read_csv("data/database.csv", show_col_types = FALSE)
+villages <- read_csv("data/villages.csv", show_col_types = FALSE)
+
+# Filter villages like in original script (exclude certain villages)
+villages4map <- villages |> 
+  filter(!(village %in% c("Kazankulak", "Novyy Borch", "Vrush", "Aran", "Khnyukh")))
+
+# Create mapping data for this feature
+feature_data <- db |> 
+  filter(feature_id == 87) |>  # Filter by feature_id
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(feature_data) > 0 && nrow(villages4map) > 0) {
+  # Create mapping data for this feature
+  mapping_data <- feature_data |>
+    mutate(value = str_split(value, " ; ")) |> 
+    unnest_longer(value) |> 
+    distinct(settlement, value) |> 
+    mutate(n = 1) |> 
+    pivot_wider(names_from = value, values_from = n, values_fill = 0) |> 
+    left_join(villages4map[,c("village","lat","lon")], by = c("settlement" = "village")) |> 
+    mutate(language = "Rutul") |>
+    filter(!is.na(lat) & !is.na(lon))
+  
+  if (nrow(mapping_data) > 0) {
+    # Convert feature columns to numeric
+    feature_cols <- setdiff(colnames(mapping_data), c("settlement","lat","lon","language"))
+    mapping_data <- mapping_data |> mutate(across(all_of(feature_cols), as.numeric))
+    
+    # Create sophisticated mapping approach with ALWAYS visible village names
+    if(length(feature_cols) == 1){
+      # single feature column - show all villages in gray, feature data in color
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+      
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE,
+                                width = 10,
+                                tile = "OpenStreetMap.HOT",
+                                features = feature_cols)
+      
+      # Show both maps
+      base_map
+      feature_map
+    } else {
+      # multiple feature columns - use pie charts with ALWAYS visible village names
+      base_map <- map.feature(languages = "Rutul",
+                             latitude = villages4map$lat,
+                             longitude = villages4map$lon,
+                             label = villages4map$village,
+                             label.position = "top",
+                             label.hide = FALSE,
+                             width = 10,
+                             color = "gray",
+                             tile = "OpenStreetMap.HOT",
+                             opacity = 0.4)
+      
+      feature_map <- map.feature(languages = "Rutul",
+                                latitude = mapping_data$lat,
+                                longitude = mapping_data$lon,
+                                minichart.data = mapping_data |> select(all_of(feature_cols)),
+                                minichart = "pie",
+                                width = 3,
+                                tile = "OpenStreetMap.HOT",
+                                label = mapping_data$settlement,
+                                label.position = "top",
+                                label.hide = FALSE)
+      
+      # Show both maps
+      base_map
+      feature_map
+    }
+  } else {
+    cat("No geographical coordinates available for mapping.\n")
+  }
+} else {
+  cat("No data available for this feature or no village coordinates found.\n")
+}
+```
+
+### Data
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(DT)
+
+# Read the database data
+db <- read_csv("data/database.csv", show_col_types = FALSE)
+
+# Create interactive table for this feature
+feature_data <- db |> 
+  filter(feature_id == 87) |>  # Filter by feature_id
+  filter(!is.na(value), value != "NO DATA")
+
+if (nrow(feature_data) > 0) {
+  # Prepare data for display
+  display_data <- feature_data |>
+    select(settlement, value, stimuli, answer, collected) |>
+    arrange(settlement, value)
+  
+  # Use DT package for interactive table
+  DT::datatable(display_data, 
+                class = "cell-border stripe",
+                rownames = FALSE,
+                filter = "top",
+                options = list(pageLength = 25, 
+                             autoWidth = TRUE,
+                             info = FALSE))
+} else {
+  cat("No data available for this feature.\n")
+}
+```
+
+:::
+

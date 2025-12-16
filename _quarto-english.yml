@@ -1,6 +1,9 @@
 project:
   title: "Atlas of Rutul dialects"
   output-dir: ./docs
+  render:
+    - "*.qmd"
+    - "!ru/*.qmd"
 
 website: 
   navbar:
